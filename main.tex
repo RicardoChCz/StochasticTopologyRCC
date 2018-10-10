@@ -1,0 +1,292 @@
+\documentclass[11pt, a4paper, doubleside]{Thesis}
+\graphicspath{{./Pictures/}} % Specifies the directory where pictures are stored
+\usepackage[utf8]{inputenc}
+\setlength\parindent{24pt}
+
+\usepackage{arydshln}%dibujar lineas verticales y horizontales
+\usepackage{mathtools}
+\usepackage{graphicx}
+\usepackage[T1]{fontenc}
+\usepackage{amssymb,graphicx}
+\usepackage[utf8]{inputenc}
+\usepackage{mathtools}
+\usepackage{MnSymbol}
+\usepackage{stmaryrd}
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage[all]{xy}
+
+\usepackage[USenglish]{babel}
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{coro}{Corollary}[theorem]
+\newtheorem{propo}{Proposition}[theorem]
+\newtheorem{lemma}{Lemma}[theorem]
+\newtheorem{defini}{Definition}[theorem]
+\newtheorem{conje}[theorem]{Conjecture}
+\newtheorem{prob}[theorem]{Problem}
+
+\newtheorem{ejemp}[theorem]{Example}
+\newtheorem{cond}[theorem]{Condition}
+\newtheorem{nota}[theorem]{Note}
+\newtheorem{notation}[theorem]{Notation}
+\newtheorem{conv}[theorem]{Convention}
+
+
+\newcommand{\ESim}{\mathrlap{\nearrow}^{s} \ }
+\newcommand{\CSim}{\mathrlap{\searrow}^{\ s} \ }
+\newcommand{\EElem}{\mathrlap{\nearrow}^{e} \ }
+\newcommand{\CElem}{\mathrlap{\searrow}^{\ e} \ }
+\newcommand{\SimpHomEq}{\mathrlap{\hspace{0.10cm}\ssearrow}/\hspace{0.15cm}}
+\newcommand{\RFD}{\selsquigarrow}
+\newcommand{\cl}{\tilde{L}}
+\newcommand{\cel}{e_{\alpha}}
+\newcommand{\gfk}{\pi_{1}(K)}
+\newcommand{\gfky}{\pi_{1}(K, y)}
+\newcommand{\Ckglg}{C(\tilde{K}, \tilde{L})}
+\newcommand{\CKgLg}{C(\tilde{K}, \tilde{L})}
+\newcommand{\CLgMg}{C(\tilde{L}, \tilde{M})}
+\newcommand{\CKgMg}{C(\tilde{K}, \tilde{M})}
+\newcommand{\E}{\mathbb{E}}
+\newcommand{\F}{\mathcal{F}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\renewcommand{\P}{\mathbb{P}}
+\renewcommand{\G}{\mathcal{G}}
+
+
+\newcommand{\yg}{\tilde{y}}
+\newcommand{\xg}{\tilde{x}}
+\newcommand{\ck}{\tilde{K}}
+\newcommand{\gfxx}{\pi_{1}(X, x)}
+\newcommand{\gfkx}{\pi_{1}(K, x)}
+\newcommand{\wvb}{\widehat{\varphi{\beta}}}
+\newcommand{\wva}{\widehat{\varphi{\alpha}}}
+\newcommand{\tva}{\tilde{\varphi{\alpha}}}
+\newcommand{\Xg}{\tilde{X}}
+\newcommand{\kg}{\tilde{K}}
+\newcommand{\ii}{i_{*}}
+\newcommand{\ji}{j_{*}}
+\newcommand{\gi}{g_{*}}
+\newcommand{\al}{\alpha}
+\newcommand{\alg}{\tilde{\alpha}}
+\newcommand{\fl}{\tilde{f}}
+\renewcommand{\tilde}{\widetilde}
+\renewcommand{\S}{\mathbb{S}}
+
+\usepackage[table]{xcolor}
+\definecolor{Blue}{HTML}{006699}
+\definecolor{Green}{HTML}{4F9C45}
+
+\providecommand{\abs}[1]{\lvert#1\rvert}
+
+\title{\ttitle} % Defines the thesis title - don't touch this
+
+\begin{document}
+
+\frontmatter % Use roman page numbering style (i, ii, iii, iv...) for the pre-content pages
+
+\setstretch{1.3} % Line spacing of 1.3
+
+% Define the page headers using the FancyHdr package and set up for one-sided printing
+\fancyhead{} % Clears all page headers and footers
+\rhead{\thepage} % Sets the right side header to show the page number
+\lhead{} % Clears the left side page header
+
+\pagestyle{fancy} % Finally, use the "fancy" page style to implement the FancyHdr headers
+
+\newcommand{\HRule}{\rule{\linewidth}{0.5mm}} % New command to make the lines in the title page
+
+% PDF meta-data
+\hypersetup{pdftitle={\ttitle}}
+\hypersetup{pdfsubject=\subjectname}
+\hypersetup{pdfauthor=\authornames}
+\hypersetup{pdfkeywords=\keywordnames}
+
+%----------------------------------------------------------------------------------------
+%	TITLE PAGE
+%----------------------------------------------------------------------------------------
+
+%\begin{titlepage}
+%\phantom{Hola}
+%\end{titlepage}
+%\clearpage
+
+%----------------------------------------------------------------------------------------
+%	Frase conmovedora
+%----------------------------------------------------------------------------------------
+
+%\pagestyle{empty} % No headers or footers for the following pages
+
+%\null\vfill % Add some space to move the quote down the page a bit
+%\begin{flushright}
+%\textit{
+%Que nuestra voz no desmaye\\
+%y que cante sin cesar\\
+%que el corazón nunca calle,\\
+%nunca deje de cantar.
+%}
+%\end{flushright}
+
+%\begin{flushright}
+%Celso Chávez Mendoza (fragmento).
+%\end{flushright}
+
+%\vfill\vfill\vfill\vfill\vfill\vfill\null % Add some space at the bottom to position the quote just right
+%\clearpage
+
+
+%----------------------------------------------------------------------------------------
+%	ACKNOWLEDGEMENTS
+%----------------------------------------------------------------------------------------
+
+%\setstretch{1.3} % Reset the line-spacing to 1.3 for body text (if it has changed)
+
+%\acknowledgements{\addtocontents{toc}{\vspace{1em}} % Add a gap in the Contents, for aesthetics
+%}
+%\clearpage % Start a new page
+
+%----------------------------------------------------------------------------------------
+%	LIST OF CONTENTS/FIGURES/TABLES PAGES
+%----------------------------------------------------------------------------------------
+
+\pagestyle{fancy} % The page style headers have been "empty" all this time, now use the "fancy" headers as defined before to bring them back
+
+\lhead{\emph{Indice}} % Set the left side page header to "Contents"
+\tableofcontents % Write out the Table of Contents
+
+%\lhead{\emph{List of Figures}} % Set the left side page header to "List of Figures"
+%\listoffigures % Write out the List of Figures
+
+%\lhead{\emph{List of Tables}} % Set the left side page header to "List of Tables"
+%\listoftables % Write out the List of Tables
+
+%----------------------------------------------------------------------------------------
+%	RESUMEN PAGE
+%----------------------------------------------------------------------------------------
+
+%\begin{Resumen}
+
+
+%\vspace{5cm}
+
+%\textit{Palabras clave:} 
+%\end{Resumen}
+
+%----------------------------------------------------------------------------------------
+%	ABSTRACT PAGE
+%----------------------------------------------------------------------------------------
+
+\begin{abstract}
+The study of rigidity in the curve complex borns from the desire to describe  morphisms between mapping class groups of surfaces using the information of the underlaying surfaces. We propose the use of random topology to provide tractable toy models using the translation of the subject into a combinatorial language 
+
+\end{abstract}
+
+%----------------------------------------------------------------------------------------
+%	ABBREVIATIONS
+%----------------------------------------------------------------------------------------
+
+%\clearpage % Start a new page
+
+%\setstretch{1.5} % Set the line spacing to 1.5, this makes the following tables easier to read
+
+%\lhead{\emph{Abbreviations}} % Set the left side page header to "Abbreviations"
+
+%\listofsymbols{ll} % Include a list of Abbreviations (a table of two columns)
+%{
+%\textbf{LAH} & \textbf{L}ist \textbf{A}bbreviations \textbf{H}ere \\
+%\textbf{Acronym} & \textbf{W}hat (it) \textbf{S}tands \textbf{F}or \\
+%}
+
+%----------------------------------------------------------------------------------------
+%	SYMBOLS
+%----------------------------------------------------------------------------------------
+
+\clearpage % Start a new page
+
+\lhead{\emph{Símbolos}} % Set the left side page header to "Symbols"
+
+%\listofnomenclature{ll}{ % Include a list of Symbols (a three column table)
+%$K\RFD L$ & Retracto por deformación fuerte. \\
+%$J^{n}$& $Cl(\partial I^{n+1} - I^{n})$ (Caja sin tapa inferior).\\
+%$L < K$& $L$ es un subcomplejo de $K$.\\
+%$K\CElem L$ & $K$ colapsa elementalmente a $L$. \\
+%$K\EElem L$ & $K$ se expande elementalmente a $L$. \\
+%$K\searrow L$ & Existe una sucesión finita de colapsos elementales de $K$ a $L.$
+%\\
+%$K\nearrow L$ & Existe una sucesión finita de expansiones elementales de $K$ a $L.$
+%\\
+%$K\SimpHomEq L$ & Existe una sucesión finita de colapsos y expansiones elementales de $K$ a $L.$
+%}
+
+%----------------------------------------------------------------------------------------
+%	DEDICATION
+%----------------------------------------------------------------------------------------
+
+\setstretch{1.3} % Return the line spacing back to 1.3
+
+\pagestyle{empty} % Page style needs to be empty for this page
+
+\dedicatory{} % Dedication text
+
+\addtocontents{toc}{\vspace{2em}} % Add a gap in the Contents, for aesthetics
+
+
+
+%----------------------------------------------------------------------------------------
+%	THESIS CONTENT - CHAPTERS
+%----------------------------------------------------------------------------------------
+
+\mainmatter % Begin numeric (1,2,3...) page numbering
+
+\pagestyle{fancy} % Return the page headers back to the "fancy" style
+
+% Include the chapters of the thesis as separate files from the Chapters folder
+% Uncomment the lines as you write the chapters
+\input{./Chapters/Introduction}
+\input{./Chapters/Chapter1}
+\input{./Chapters/Chapter2} 
+\input{./Chapters/Chapter3}
+%\input{./Chapters/Chapter4} 
+%\input{./Chapters/Chapter5} 
+%\input{./Chapters/Chapter6} 
+%\input{./Chapters/Chapter7} 
+
+%----------------------------------------------------------------------------------------
+%	THESIS CONTENT - APPENDICES
+%----------------------------------------------------------------------------------------
+
+\addtocontents{toc}{\vspace{2em}} % Add a gap in the Contents, for aesthetics
+
+\appendix % Cue to tell LaTeX that the following 'chapters' are Appendices
+
+% Include the appendices of the thesis as separate files from the Appendices folder
+% Uncomment the lines as you write the Appendices
+
+%\input{./Appendices/AppendixA}
+%\input{./Appendices/AppendixB}
+%\input{./Appendices/AppendixC}
+
+\addtocontents{toc}{\vspace{2em}} % Add a gap in the Contents, for aesthetics
+
+\backmatter
+
+%----------------------------------------------------------------------------------------
+%	BIBLIOGRAPHY
+%----------------------------------------------------------------------------------------
+
+\label{Bibliography}
+
+\lhead{\emph{Bibliography}} % Change the page header to say "Bibliography"
+
+\bibliographystyle{ieeetr} % Use the "unsrtnat" BibTeX style for formatting the Bibliography
+
+\bibliography{Bibliography} % The references (bibliography) information are stored in the file named "Bibliography.bib"
+
+
+
+
+\end{document}

@@ -1,0 +1,30 @@
+% Chapter 3
+
+\chapter{Results} % Main chapter title
+
+\label{Chapter3} % For referencing the chapter elsewhere, use \ref{Chapter1} 
+
+\lhead{Chapter 3. \emph{Results}} % This is for the header on each page - perhaps a shortened title
+
+%----------------------------------------------------------------------------------------
+
+{\color{Blue} Here goes a brief introduction of the results, mention some optimization found in the literature of the erdos Renyi graphs, and other used in the work}
+
+\section{Simulating graphs}
+%We know that $C(S)$ is connected
+
+%We know that $C(S)$ it's locally infinite when the surface has enough holes. So the question is:
+%In the Erdös Renyi model how does $p$ have to be, to have a model that asymptotically fits the combinatorial structure for $C(S)$.
+%We know that in the Erdös Renyi model
+
+
+\section{The algorithm}
+The aim of this section is to discuss the computational difficulties of implementing an algorithm which produces rigid expansions on a graph $G$, starting from a subset $A$. We'll be taking about the algorithm regardless of whether the optimizations and considerations appear in the context of the graph of curves. Then by the end of the chapter we'll fit the results to the context that we described in the pasts chapters. The purpose to do it so, is because the combinatorial nature of the phenomena make sense by it self, even more in the stochastic point of view we're considering a non-monothonous process.
+
+A priori, the algorithm to determine a first rigid expansion it's supposed to be executed in a large amount of time, as the definition let us see, it depends not only on the size of $G$, it also depends on the size of $A$; it's necessarily to seek among all the possible subsets of $A$ that's $2^{m}$ verifications where $|A| = m$. This tells us that if we are going to be dealing with large stochastic graphs it's important to do some optimization to the algorithms and see when does this have more impact in the expected execution time according to the taken parameters.
+
+Any isolated vertex in $A$ wont have any impact at the moment of doing rigid expansions, so they shouldn't be consider, also whenever leaves appear in the set it's convenient to ignore them. Unique neighbors of leaves which we will call \textit{petioles} should be automatically added to set because of the definition of a single rigid expansion.
+
+It means that we are now working with the set:
+$$A' = A - \{v: deg(v)\leq 1 \} \cup \{u: \exists x, N(x)=\{u\}\} $$
+
