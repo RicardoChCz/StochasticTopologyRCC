@@ -40,8 +40,8 @@ def erdosRenyi(n,p):
     #Añade n nodos
     G.add_nodes_from(list(range(0, n)))
     #Añade aristas según e reultado de v.a. ~ Bernoulli(p)
-    for i in xrange(0,n):
-        for j in xrange(i+1,n):
+    for i in range(0,n):
+        for j in range(i+1,n):
             if Bernoulli(p)==1:
                 G.add_edge(i,j)                            
     return G
@@ -53,7 +53,7 @@ def conexidad(n,p,M):
     Output: float (probabilidad estimada)
     """
     r=0.0
-    for i in xrange(0,M):
+    for i in range(0,M):
         G=erdosRenyi(n,p)
         if nx.is_connected(G)==True:
             r=r+1
@@ -97,8 +97,8 @@ def graficaGrafos():
     c=3
     k=1.0
     f, axarr = plt.subplots(r, c,figsize=(6, 6.3), dpi=80)
-    for i in xrange(0,3):
-        for j in xrange(0,3):
+    for i in range(0,3):
+        for j in range(0,3):
             G = erdosRenyi(10,(k/10))
             nx.draw_shell(G,node_size=50, node_color='#003366',ax=axarr[i, j])
             axarr[i, j].set_title('p = ' + str(int(k)) + "/10")
@@ -116,8 +116,8 @@ def graficaArboles(n):
     r=4
     c=4
     f, axarr = plt.subplots(r, c,figsize=(6, 6), dpi=80)
-    for i in xrange(0,4):
-        for j in xrange(0,4):
+    for i in range(0,4):
+        for j in range(0,4):
             G = generate(nx.complete_graph(n))
             nx.draw_random(G,node_size=30, node_color='#006600',ax=axarr[i, j])
     plt.savefig('Arboles'+str(n)+'.png')
@@ -128,12 +128,12 @@ if __name__ == "__main__":
     """
     Obtener gráfica de comportamiento de la cota y los umbrales
     """
-    print "Gráfica de comportamiento de la cota y los umbrales de conexidad en modelo Erdös-Rényi"
+    print ("Gráfica de comportamiento de la cota y los umbrales de conexidad en modelo Erdös-Rényi")
     I = np.arange(2, 201, 1)
     y1= np.zeros(len(I))
     y2= np.zeros(len(I))
     y3= np.zeros(len(I))
-    for t in xrange(0,len(I)):
+    for t in range(0,len(I)):
         y1[t] = (log(I[t]) + log(I[t]/2.0)) /I[t]  
         y2[t] = log(I[t])/I[t] 
         y3[t] = (log(I[t]) - log(I[t]/2.0))/I[t] 
@@ -146,27 +146,29 @@ if __name__ == "__main__":
     plt.legend(bbox_to_anchor=(1.05, 1), loc=2, borderaxespad=0.)
     plt.savefig("Cota.png")
     plt.show()
+    print(y1[len(I)-1])
+    print(y3[len(I)-1])
     
     """
     Muestra de gráficas obtenidas con erdosRenyi
     """
-    print "Muestra de gráficas obtenidas con erdosRenyi"
+    print ("Muestra de gráficas obtenidas con erdosRenyi")
     graficaGrafos()
     
     """
     Obtener gráfica de estimadas de probabilidades del teorema ER 
     """
-    print "Gráfica de estimadas de probabilidades del teorema ER" 
+    print ("Gráfica de estimadas de probabilidades del teorema ER")
     R=50    
     N = np.arange(2, R+1, 1)    
     y1= np.zeros(len(N))
     y2= np.zeros(len(N))
 
     for n in N:
-        p=(log(n) + log(n/2.0))/n 
+        p=(log(n) + 0.2)/n
         y1[n-2] = conexidad(n,p,30)
         
-        p=(log(n) - log(n/2.0))/n 
+        p=(log(n) - 0.2)/n 
         y2[n-2] = conexidad(n,p,30) 
         
     plt.xlabel('Tamano de la grafica')
@@ -179,14 +181,11 @@ if __name__ == "__main__":
     
     """
     Muestra de árboles obtenidos con algoritmo generate.
-    """
-    print"Muestra de árboles obtenidos con algoritmo generate."
+    print ("Muestra de árboles obtenidos con algoritmo generate.")
     graficaArboles(8)
 
-    """
     Pruebas de tiempo para algoritmos
-    """
-    print "Haciendo pruebas de tiempo para algoritmo erdosRenyi. Esto puede tardar un tiempo"
+    print ("Haciendo pruebas de tiempo para algoritmo erdosRenyi. Esto puede tardar un tiempo")
     R=1000
     T = np.arange(1, R+5, 5)    
     y1= np.zeros(len(T))
@@ -206,8 +205,7 @@ if __name__ == "__main__":
     axarr[1].set_xlabel('Tamano de la grafica')
     plt.savefig("TiemposER.png")
     plt.show()
-
-    print "Haciendo pruebas de tiempo para algoritmo generate. Esto puede tardar un tiempo"    
+    print ("Haciendo pruebas de tiempo para algoritmo generate. Esto puede tardar un tiempo")
     R=1000
     T = np.arange(1, R+5, 5)    
     y1= np.zeros(len(T))
@@ -227,3 +225,4 @@ if __name__ == "__main__":
     axarr[1].set_xlabel('Tamano de la grafica')
     plt.savefig("TiemposG.png")
     plt.show()
+    """

@@ -10,8 +10,8 @@ import numpy as np
 import networkx as nx
 import matplotlib.pyplot as plt
 
-from aux import randomSet
-from aux import powerset
+from auxiliar import randomSet
+from auxiliar import powerset
 from time import clock
 from numpy.random import randint
 
@@ -53,6 +53,28 @@ def singleVerification(G,S):
             Int = set(Int).intersection(Neigh[i])        
     
         return set(Int)
+
+def singleExpansion(G,A,R, visual=True):
+    """
+    Auxiliar method which give a single Expansion in the algorithm rigid
+    expansion. Given a graph G and a subset of vertices A, returns the set 
+    of vertices that can be uniquely determined using A
+    Input: Graph G (dictionary), set A 
+    Output: Set
+    """   
+    if (visual):
+        layoutGraph(G,A.union(R))
+    P = [x for x in powerset(A)]
+    N = set()
+     
+    for S in P:        
+        I = singleVerification(G,S)
+        if len(I)==1 and next(iter(I)) not in A:
+            N = N.union(I)
+ 
+    if len(N)>0:
+        A = A.union(N)
+        singleExpansion(G,A,R,visual)
 
         
 def rigidExpansion(G,A, visual=True):
@@ -151,7 +173,7 @@ def verifyIny2(f):
     else:
         return True
   
-def verifyLocIny(f,G):
+def verifyLocIny(f,G, Y):
     """
     Verifies if the function f is locally inyective.
     Input:
@@ -175,7 +197,6 @@ if __name__ == "__main__":
     n=15
     p=0.5
     G=nx.gnp_random_graph(n, p)
-    #singleVerification(G, set([0,1,2]))
         
     rigidExpansion(G, randomSet(7,n))
     

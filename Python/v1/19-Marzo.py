@@ -14,8 +14,8 @@ from auxiliar import intervalo
 from auxiliar import is_notempty
 from time import clock
 from numpy.random import randint
-from scipy.misc import comb
-
+from scipy.special import comb
+from numpy import arange
 
 def layoutGraph(G,S):
     """
@@ -86,14 +86,14 @@ def doesItExpands(G,A):
 def probabiltyRigidExpansion(n,p,k):
     """
     Returns the probability (aproximated) that in a G(n,p) i.e. ER-model a 
-    random set of size k generates a rigid expantion
+    random set of size k generates a rigid expansion
     Input: int n, float p, int k
     Output: float
     """
     exitos=0   
     total=100
      
-    for i in range(0,total):
+    for i in range(0,total,1):
         G=nx.gnp_random_graph(n, p)
         A=randomSet(k,n)
         exitos = exitos + doesItExpands(G,A)
@@ -105,14 +105,13 @@ def cotaExp(n,p,k):
     Returns lower and upper bound for the probaility that in a ER graph G a set
     of size k generates a rigid expansion
     """
-    M=range(0,k+1)
- 
-    print M   
-    for m in M:
-        M[m] = comb(k, m, exact=True) * (p**m) * (1-p)**(n-m-1)
-    print M
-    
-    return (max(M), sum(M)) 
+    M=arange(0,k+1,1)
+    I=[0]*len(M)
+
+    for m in M:        
+        I[m] = comb(k, m, exact=False) * (p**m) * (1-p)**(n-m-1)
+        
+    return (max(I), sum(I)) 
     
 if __name__ == "__main__":
     """    
@@ -165,5 +164,4 @@ if __name__ == "__main__":
     plt.plot(I, cotaS,linewidth=2,color='#ff6600', label="Upper bound")
     plt.legend(bbox_to_anchor=(1.05, 1), loc=2, borderaxespad=0.)    
     plt.show()
-    
     

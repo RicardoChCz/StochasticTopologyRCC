@@ -70,17 +70,18 @@ def mapeaHistogramas(n,r):
 
 
 if __name__ == "__main__":
+    """
     mapeaHistogramas(10,2)
 
     s = np.random.poisson(10000, 10000)
     count, bins, ignored = plt.hist(s, 14, normed=True, color = '#339933', alpha=0.8)
     plt.show()
     
-    print "Gráfica de comportamiento de las cota para conexidad y grado en el modelo Erdös-Rényi"
+    print ("Gráfica de comportamiento de las cota para conexidad y grado en el modelo Erdös-Rényi")
     I = np.arange(2000, 2100, 1)
     y1= np.zeros(len(I))
     y2= np.zeros(len(I))
-    for t in xrange(0,len(I)):
+    for t in range(0,len(I)):
         y1[t] = (2.0) /I[t]  
         y2[t] = log(I[t])/I[t] 
         
@@ -90,16 +91,21 @@ if __name__ == "__main__":
     plt.plot(I, y2, linestyle='-', color='#0066cc', label="Conexidad")
     plt.legend(bbox_to_anchor=(1.05, 1), loc=2, borderaxespad=0.)
     plt.show()
-
-    print "Grafica conexa"
+    print ("Grafica conexa")
     n=50
-    p=0.9
+    p=(log(n))/n + 0.05
     
     G = nx.gnp_random_graph(n, p)
     plt.figure(num=None, figsize=(5, 5), dpi=80)
-    nx.draw_shell(G,node_size=10, node_color='#003366', width=0.1 )
+    nx.draw_spring(G,node_size=10, node_color='#003366', width=0.3 )
     plt.show()
-    print nx.is_connected(G)
+    print (nx.is_connected(G))
+    """
+    a=0.8
+    n=500
+    p=1/n**a
+    
+    G = nx.gnp_random_graph(n, p)
     
     degree_sequence = sorted([d for n, d in G.degree()], reverse=True)  # degree sequence
     # print "Degree sequence", degree_sequence
@@ -124,4 +130,3 @@ if __name__ == "__main__":
     nx.draw_networkx_edges(G, pos, alpha=0.4)
     
     plt.show()
-    
