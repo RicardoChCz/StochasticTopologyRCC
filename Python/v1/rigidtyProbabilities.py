@@ -113,7 +113,7 @@ def cotaAnyone(n,p,m):
     Returns the probaility that in a ER graph G a set of size k uniquely deter-
     minates the last vertex.
     """
-    return (n-m) * p**(m) * (1-p**m)**(n-m-1)
+    return 1- (1 - cotaLast(n,p,m))**(n-m)
 
 """
 3. Funciones para determinar si un conjunto de tamaño m puede expandirse
@@ -167,15 +167,18 @@ def cotaExpansion(n,p,k):
     if k==0:
         return 0
     else:
+        #Probability that none of the vertex outside of A_k is u.d by B_m 
+        # a subset of A_k
+        rho = [(1-cotaLast(n,p,m))**(n-k) for m in range(1,k+1)]
         
-        rho = [(n-k)/n * cotaAnyone(n,p,m) for m in range(1,k+1)]
-        
-        exp =[1-(1-rho[m-1])**comb(k,m,exact=True) for m in range(1,k+1)]
+        #Probability that none of the posible subsets of size m expand outside 
+        #of A_k
+        exp =[(rho[m-1])**comb(k,m) for m in range(1,k+1)]
         
         prod=1
         
         for e in exp:
-            prod = prod*(1-e)
+            prod = prod*e
  
         return 1-prod
 
@@ -307,7 +310,7 @@ if __name__ == "__main__":
     # 2. Any vertex
     # 3. Expansion
     """
-    N=[5,8,12]
-    P=[0.1,0.5,0.9]
+    N=[5,7,10]
+    P=[0.2,0.5,0.8]
     #setOfExperiments(N,P,1)
     setOfExperiments(N,P,3)
