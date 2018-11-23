@@ -33,21 +33,6 @@
 \newtheorem{notation}[theorem]{Notation}
 \newtheorem{conv}[theorem]{Convention}
 
-
-\newcommand{\ESim}{\mathrlap{\nearrow}^{s} \ }
-\newcommand{\CSim}{\mathrlap{\searrow}^{\ s} \ }
-\newcommand{\EElem}{\mathrlap{\nearrow}^{e} \ }
-\newcommand{\CElem}{\mathrlap{\searrow}^{\ e} \ }
-\newcommand{\SimpHomEq}{\mathrlap{\hspace{0.10cm}\ssearrow}/\hspace{0.15cm}}
-\newcommand{\RFD}{\selsquigarrow}
-\newcommand{\cl}{\tilde{L}}
-\newcommand{\cel}{e_{\alpha}}
-\newcommand{\gfk}{\pi_{1}(K)}
-\newcommand{\gfky}{\pi_{1}(K, y)}
-\newcommand{\Ckglg}{C(\tilde{K}, \tilde{L})}
-\newcommand{\CKgLg}{C(\tilde{K}, \tilde{L})}
-\newcommand{\CLgMg}{C(\tilde{L}, \tilde{M})}
-\newcommand{\CKgMg}{C(\tilde{K}, \tilde{M})}
 \newcommand{\E}{\mathbb{E}}
 \newcommand{\F}{\mathcal{F}}
 \newcommand{\R}{\mathbb{R}}
@@ -56,26 +41,19 @@
 \newcommand{\Z}{\mathbb{Z}}
 \renewcommand{\P}{\mathbb{P}}
 \renewcommand{\G}{\mathcal{G}}
-
-
-\newcommand{\yg}{\tilde{y}}
-\newcommand{\xg}{\tilde{x}}
-\newcommand{\ck}{\tilde{K}}
-\newcommand{\gfxx}{\pi_{1}(X, x)}
-\newcommand{\gfkx}{\pi_{1}(K, x)}
-\newcommand{\wvb}{\widehat{\varphi{\beta}}}
-\newcommand{\wva}{\widehat{\varphi{\alpha}}}
-\newcommand{\tva}{\tilde{\varphi{\alpha}}}
-\newcommand{\Xg}{\tilde{X}}
-\newcommand{\kg}{\tilde{K}}
-\newcommand{\ii}{i_{*}}
-\newcommand{\ji}{j_{*}}
-\newcommand{\gi}{g_{*}}
-\newcommand{\al}{\alpha}
-\newcommand{\alg}{\tilde{\alpha}}
-\newcommand{\fl}{\tilde{f}}
-\renewcommand{\tilde}{\widetilde}
 \renewcommand{\S}{\mathbb{S}}
+
+\newenvironment{cajita}
+    {\begin{center}
+    \begin{tabular}{|p{0.9\textwidth}|}
+    \hline\\
+    }
+    { 
+    \\\\\hline
+    \end{tabular} 
+    \end{center}
+    }  
+    
 
 \usepackage[table]{xcolor}
 \definecolor{Blue}{HTML}{006699}
@@ -266,7 +244,7 @@ The study of rigidity in the curve complex borns from the desire to describe  mo
 % Include the appendices of the thesis as separate files from the Appendices folder
 % Uncomment the lines as you write the Appendices
 
-%\input{./Appendices/AppendixA}
+\input{./Appendices/GenerateAlgorithm}
 %\input{./Appendices/AppendixB}
 %\input{./Appendices/AppendixC}
 
