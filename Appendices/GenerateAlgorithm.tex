@@ -32,20 +32,20 @@ El algoritmo \texttt{Generate} está basado en simulación de cadenas de Markov 
 
 Denotaremos por $\mathcal{T}_{i}(G_{M})$ a la familia de árboles maximales dirgidos de $G_{M}$ con raíz $i$ cuando no hacemos reparación sobre la raíz los denotaremos simplemente por $\mathcal{T}(G_{M})$ 
 
-\begin{teo}
+\begin{theorem}
 Sea $M$ una cadena de Markov irreducible en $n$ estados con distribución estacionaria $\pi_1, \dots, \pi_n$. Sea $G_{M}$ la digráfica ponderada asociada a $M$. Entonces
 $$\pi_{i} = \frac{\sum_{ T \in \mathcal{T}_{i}(G_{M})} \omega (T)}{\sum _{T \in \mathcal{T}(G_{M})} \omega (T)}$$
 donde $\omega(T) = \prod_{a\in A(T)}\omega(a)$, es decir que el peso de un árbol dirigido ponderado se define como el producto de los pesos de las aristas del árbol. 
-\end{teo}
+\end{theorem}
 
 Definimos el árbol de proa (\textit{forward tree}) a tiempo $t$, $F_{t}$ como sigue: Sea $I_{t}$ el conjunto de estados visitados hasta antes del tiempo $t+1$. Para cada $i\in I_{t}$, sea $p(i,t)$ la primera vez que el estado $i$ fue visitado. La raíz del árbol $F_{t}$ es $X_{0}$ y los aristas de $F_{t}$ son $\{(X_{p(i,t)},X_{p(i,t)-1}) | i\in I_{t}-X_{0}\}$, donde $(X_{t})_{t\in \N}$ corresponde a la cadena de Markov dada por la caminata aleatoria. En otras palabras $F_{t}$ está formado superponiendo las aristas que corresponden a la primera entrada a cada estado con orientación invertida. Claramente $F_{t}$ es un árbol dirigido con raíz donde cada arista apunta desde las hojas a la raíz.
 
 Sea $C$ el \textit{tiempo de cubrimiento}, es decir la primera vez que todos los estados fueron visitados. Claramente para $t\geq C$ el árbol $F_{t}$ es un árbol dirigido maximal y $F_{t}=F_{C}$. Note que con la definición anterior la caminata aleatoria $\{X_{t}\}$ en los vértices de $G_{M}$ induce una cadena de Markov $\{F_{t}\}$ en el espacio de todos los árboles dirigidos de $G_{M}$, llamada la cadena de árboles de proa. Para esta cadena todos los árboles no maximales son estados transitivos y cada árbol maximal es un estado absorbente. Más aún, el siguiente teorema establece la distribución de $F_{C}$.
 
-\begin{teo}
+\begin{theorem}
 Con la notación y condiciones del teorema anterior, denotando por $C$ el tiempo de cubrimiento de $M$ empezando de la distribución estacionaria. Sea $F_{C}$ el árbol de proa en tiempo $C$. Entonces para cualquier árbol maximal dirigido con raíz, $T$ de $G_{M}$
 $$\P(F_{C} = T) = \frac{\prod_{(i,j)\in T} P_{i,j}}{\sum_{T\in T(G_{M})} \prod_{(i,j)\in T'} P_{i,j}}$$
-\end{teo}
+\end{theorem}
 
 \begin{coro}
 (prueba del algoritmo \texttt{Generate}) Sea $M$ una caminata aleatoria simple en una gráfica conexa no dirigida $G = (V, E)$ empezando en algún vértice $s$, $G_{M}$ la gráfica dirigida asociada a $M$ y $C$ tiempo de cubierta para $G$ empezando de la distribución estacionaria, tenemos que $F_{C}$ (el árbol de proa en $G_{M}$ en tiempo $C$) sin considerar dirección es un árbol maximal de $G$ con distribución aleatoria uniforme entre todos los posible árboles maximales de $G$.
@@ -55,7 +55,7 @@ La implementación en \texttt{Python} del algortimo \texttt{Generate} puede enco
 
 \begin{figure}[h!]
 	\centering
-	\includegraphics[scale=0.8]{Arboles8.png}
+	\includegraphics[scale=0.8]{Python/Figures/Arboles8.png}
 	\caption{Árboles maximales escogidos aleatoriamente con distribución uniforme entre todos los posibles en una gráfica completa de $8$ vértices}
 	\label{fig:Arboles8}
 \end{figure}
@@ -64,7 +64,7 @@ Llamaremos \textit{tiempo de cubrimiento} $C_{v}$ a el primer momento en que la 
 
 \begin{figure}[h!]
 	\centering
-	\includegraphics[scale=0.8]{tiemposGEN.png}
+	\includegraphics[scale=0.8]{Python/Figures/Time-generate.png}
 	\caption{Tiempos de ejecución en segundos del algoritmo generate variando el tamaño del árbol. Se presenta la escala norma y la logarítmica}
 	\label{fig:tiemposGEN}
 \end{figure}

@@ -12,41 +12,79 @@ The use of the probabilistic method in discrete mathematics has become a promine
 
 Leaving aside all the applied problems, probability theory can help us to understand the ubiquity of certain mathematical phenomena. For example, \textit{many} simplicial complexes and posets which arise from combinatorial constructions are homotopy equivalent to a wedge of spheres. There's also a well-known theorem that states that hiperbolicity is \textit{quite common} in random groups, meaning that even under different measures, almost every group is hyperbolic.
 
-We are interested in giving formal meaning to expressions like \textit{"quite common"} or \textit{"many"}. In particular we're interested in studying \textit{"typical"} topological properties of random simplicial complexes, for a great survey in this subject we can refer to \cite[M. Khale]{surveyStochastic}. The idea is to provide tractable toy models using the combinatorial language that was obtained from the translation of rigidity phenomena. In chapter one we precisely settle the base that will allow us to model the curve complex or the curve graph associated to any given surface. In this chapter we'll will review the most popular and feasible models and explain how to choose the parameters to couple the model into the desire framework. We'll also review rigid expansions in a probabilistic perspective.
+We are interested in giving formal meaning to expressions like \textit{"quite common"} or \textit{"many"}. For a great survey in
+studying \textit{"typical"} topological properties of random simplicial complexes we can refer to \cite[M. Khale]{surveyStochastic}. The idea is to provide a probabilistic model for the curve complex and use the combinatorial language for rigidity phenomena. 
+
+In chapter one, we settled the bases to model the curve complex or the curve graph associated to any given surface. Summarizing the results of the past chapter, we're looking to have a model which can guarantee the following properties:
+
+\begin{enumerate}
+\item Countably infinite number of vertices
+\item Connectedness
+\item Locally infinite
+\item Clique number $3g-3+m$
+\item Infinite diameter
+\end{enumerate}
+
+In this chapter, we'll review feasible probabilistic models and explain how does the parameters should be chosen so that we can couple the model into the desired framework. We'll also review rigid expansions from a probabilistic point of view.
 
 Familiarity with basic concepts in probability theory such as probability spaces, random variables, and basic theorems will be assumed.
 
 \section{The Radó graph}
 
-The curve graph satisfy the following properties:
+Let $0 < p < 1$ be fixed, $\G(\N, p)$ consists of all graphs with vertex set $\N$, whose edges are chosen independently and with probability $p$. In other words a random graph $G \in \G(\N,p)$ is a collection $(X_{ij}) = \{ X_{ij} : 1 \leq i < j\}$ of independent r.vs with $\P(X_{ij} = 1) = p$ and $P(X_{ij} = 0) = 1-p$: a pair $ij$ is an edge of $G$ if and only if $X_{ij} = 1$.
 
-\begin{enumerate}
-\item Infinite countable number of vertices
-\item Connected.
-\item Locally infinite.
-\item Clique number $3g-3+m$.
-\item Infinite diameter.
-\end{enumerate}
+Erdös and Rényi proved in \cite[Erdös, Rényi]{RadoUnique}, that every infinite random graph is isomorphic to the \textbf{Radó graph}. This graph have a countably infinite number of vertices, and can be constructed (with probability one) by deciding independently for each pair of its vertices whether to connect them by an edge or not.
 
-The first property might tell us to directly look for a model which consider an infinite number of vertex, it's well know by \cite[Erdös, Rényi]{RadoUnique} that every infinite random graph is isomorphic to the Radó graph. The Radó graph is a countably infinite graph that can be constructed (with probability one) by deciding independently for each pair of its vertices whether to connect them by an edge or not.
+A construction of this graph can be done using binary numbers. To do this we identify the vertices of the graph with the natural numbers, and then every edge appears between vertices $x$ and $y$ in the graph (assuming $x < y$) whenever the $x$-th bit of the binary representation of $y$ is nonzero. This means, for example, that all odd-numbered vertices will be neighbors of vertex $0$, and that the larger neighbors of vertex $1$ are all vertices with numbers congruent to $2$ or $3$ mod $4$.
 
-A construction for this graph can be done by using binary numbers. To do this we identify the vertices of the graph with the natural numbers, and then every edge appears between vertices $x$ and $y$ in the graph (assuming $x < y$) whenever the $x$-th bit of the binary representation of $y$ is nonzero. This means that all odd-numbered vertices will be neighbors of vertex 0. The larger neighbors of vertex 1 are all vertices with numbers congruent to 2 or 3 mod 4.
+\begin{figure}[h!]
+	\centering
+	\includegraphics[scale=0.7]{Figures/Rado-graph.png}
+	\caption{Binary construction of the Radó graph}
+\end{figure}
 
-This graph satisfy that every finite or countably infinite graph is an induced subgraph of it. Even more, any graph of this type can be found as an induced subgraph by an algorithm (more precisely a greedy algorithm) that builds up the subgraph one vertex at a time. From here we can see that if we start from a surface $S$ of finite genus then, because of the restriction of the clique number in $C(S)$, it's not possible that the Rado graph is embeded into $C(S)$. Not only that, it turns out that the converse is also valid, there's the following result by \cite{} (Bering and Gaster).
+This graph satisfy that every finite or countably infinite graph is an induced subgraph of it \cite{DarReferenciaAqui1}. Notice that if we have a surface $S$ of finite genus it's not possible that the Radó graph is embedded into $C(S)$. This because of the restriction in the clique number of $C(S)$. Not only that, it turns out that the converse is also valid; this is claimed in the following result by bering and Gaster \cite{}.
 
 \begin{theorem}
 The random graph embeds into the curve graph $C(S)$ of a surface $S$ if and only if $S$ has infinite genus.
 \end{theorem}
 
-So, if we want to study the curve graph of a surface of finite genus through the Rado graph, we have to think it as a subgraph of it. If we take uniformly random vertices of the Rado graph then
+Therefore, if we want to study the curve graph of a surface of finite genus using the Radó graph, we have to think it as a subgraph of it. A simple but naive approach to do it so is to take a random subset of vertices of a graph $G\in \G(\N, p)$ and then consider the vertex induced subgraph. It turns out that for a.e. $G\in \G(\N, p)$ the sequence $cl(G_n)$ is almost entirely determined.
 
+Let $X_r$ denote the random variable which counts the number of complete $r-$graphs in a graph $G$. We have
+$$E_{r} = E(X_r) = \binom{n}{r}p^{\binom{r}{2}}$$
+Let $r_0 = r_0(n,p)$ be the positive real number satisfying
+$$f (r_0) = (2\pi)^{- 1/2} n^{n+ 1/2} (n - r_0)^{-n+r_0-1/2} r_0^{-r_0- 1/2} p^{r_0(r- 1)/2} =1$$
+$f(r)$ is the expression for $E_r$ replacing $\binom{n}{r}$ with its Stirling approximation.
+It is easily checked that
+\begin{center}
+\begin{tabular}{ r l }
+$r_0$ & $ = 2 \text{log}_{b}(n) - 2 \text{log}_{b} \text{log}_{b}(n) + 2 \text{log}_{b}(e/ 2) + 1 + o(1)$ \\
+& $= 2 \text{log}_{b}(n) + O(\text{loglog} (n))$\\
+& $= \frac{2log(n)}{log(b)} + O(\text{loglog}(n))$
+\end{tabular}
+\end{center}
 
+to simplify the notation, let $b=1/p$.
 
-At this point we have that we will not be able to build the curve graph by an uniform selection of vertices. The problem here is that we want to sample a space with very specific clique number (notice that this is the only property of the curve complex listed above which actually depends on the genus of the surface). But this isn't new, a common problem is that some times we want to sample in spaces with certain properties. 
+Let $0<\epsilon<\frac{1}{2}$. Given a natural number $r \geq 2$, let $n_r$ be the maximal natural number for which
+$$E(n_r, r) \leq r^{-(1+\epsilon)}$$
+and let $n'_{r}$ be the minimal natural number for which
+$$E(n'_{r}, r)\geq r^{1+\epsilon}$$
 
-An example of this is when we want to ensure that the random graph doesn't have cycles \cite{Alcazar15})( in this case it's implied that the clique number is 2). If we don't do things carefully we'll lose the i.i.d properties that we are looking for. A discrete MCMC algorithm can be used to sample uniformly random trees of size $n$, for example with the \texttt{generate algorithm} we can produce a maximal tree of any not directed graph with $n$ vertices taken uniformly among all the possibles ones. The justification of this last fact can be found in \cite{Broder89}. A summarize of this method can be find in the appendix.
+\begin{theorem}
+For a.e. $G \in \G(\N,p)$ there is a constant $m_0 = m_{0}(G)$ such that if $n \geq m_o$ and $n'_{r} \leq n \leq n_{r+1}$, then $cl(G_{n}) = r$.
+\end{theorem}
 
-Even if we can provide an analog of the generate algorithm which ensure any other fixed clique number, the idea is to study rigid expansions in a simpler probabilistic approach. So another good idea will be to use a finite proposal for random graphs such as the Erdös-Rényi model, and then make asymptotic arguments. The simplicity of the model had made it very popular in stochastic topology; it consists in considering $n$ vertices and then each of the possible edges appear with probability $p$ (usually we want to take $p=p(n)$). With this prospect in mind we will keep the idea of having a uniform simple model.
+Notice that if $r$ is a fixed finite number the number for vertices should be finite as well. Thus we will not be able to build the curve graph by an uniform selection of vertices. 
+
+The problem here is that we want to obtain a space with very specific clique number (notice that this is the only property of the curve complex listed above which actually depends on the genus of the surface). 
+
+This isn't new, for example in \cite{Alcazar15}) they want to ensure that the random graph doesn't have cycles (in this case it's implied that the clique number is 2). The model should be taken carefully not to lose the uniformity that we are looking for. A discrete MCMC algorithm can be used to sample uniformly random trees of size $n$, with the \texttt{generate algorithm} we can produce a maximal tree of any not directed graph with $n$ vertices taken uniformly among all the possibles ones. In the appendix we summarize the results of this method, for a deeper analysis look at \cite{Broder89}.
+
+Even if we can provide an analog of the generate algorithm which ensure any other fixed clique number, the idea is to study rigid expansions in a simpler probabilistic approach. So another good idea will be to use a finite proposal for random graphs such as the Erdös-Rényi model, and then make asymptotic arguments. The simplicity of the model had made it very popular in stochastic topology; it consists in considering $n$ vertices and then each of the possible edges appear with probability $p$ (usually we want to take $p=p(n)$). With this prospect in mind we will keep the idea of having a uniform simple model. We'll review the plausibility of this model in the next chapter.
+
+\section{Erdös-Rényi model}
 
 \begin{defini}
 We will denote by $\G(n,p)$ to the probability space formed by all the graphs of $n$ vertices and probability measure 
@@ -67,12 +105,6 @@ $$b(k; n-1,p) = \binom{n-1}{k} \cdot p^{k} \cdot (p-1)^{n-k-1}$$
 
 We'll keep in mind the degree distribution because, as we'll see in the next chapter, it will be important to keep track of leaves and isolated vertices to do some optimizations in our algorithms.
 
-We can use the Erdös-Rényi model to obtain random simplicial complexes through clique complexes. The clique complex or flag complex $X(G)$, of a graph $G$ is the simplicial complex with all complete subgraphs of $G$ as its faces. The 1-skeleton of $X(G)$ is $G$ itself. $X(G(n, p))$ will be abbreviated by $X(n, p)$ for now on.
-
-\section{Finding the parameters of the model}
-
-In this section we present a recompilation of asymptotic claims for the Erdös-Rényi model for properties that concern the curve complex.
-
 \subsection{Connectivity}
 \begin{theorem}
 Let $\omega(n)$ be a function that tends to infinity arbitrarily slow as $n$ tends to infinity
@@ -84,8 +116,7 @@ $$\lim_{n \to \infty} \P(G \in \G(n,p) \text{ is disconnected}) = 1$$
 \end{itemize}
 \end{theorem}
  
- This can be proven by first showing that for a large $n$ almost all graphs consists of a connected graph having $n-k$ effective vertices and $k$ isolated points, the theorem follows from a counting argument. The complete proof can be found in \cite[Erdös-Rényi, 59]{OnRandomGraphs}.
- 
+This can be proven by first showing that for a large $n$ almost all graphs consists of a connected graph having $n-k$ effective vertices and $k$ isolated points, the theorem follows from a counting argument. The complete proof can be found in \cite[Erdös-Rényi, 59]{OnRandomGraphs}.
  
 \subsection{Locally infinity}
 
@@ -137,6 +168,20 @@ If $k$ is a finite fixed number, then the past theorem is saying that when $\lim
 $$\lambda_{k} = n \binom{n-1}{k} p^{k} (1-p)^{n-k-1} \to 0$$
 
 \subsection{Clique number}
+
+As we mention the finite clique number is the a nongeneric property in the random graphs. 
+
+Let $X_r$ be the random variable that counts the number of complete $r-$graphs in a graph $G$. We have
+$$E_{r} = E(X_r) = \binom{n}{r}p^{\binom{r}{2}}$$
+Using again the Stirling approximation for $\binom{n}{r}$ we have
+$$E_{r} = (2\pi)^{- 1/2} n^{n+ 1/2} (n - r)^{-n+r-1/2} r^{-r-1/2} p^{r(r- 1)/2}$$
+The premise of proposing the ER Model is that it is necesary to do a asymptotic analysis. If $r$ is a fixed finite number we obtain
+$$\lim E_{r} = C_{r} \cdot p(n)^{\lambda_{r}}$$
+where $C_{r}$ and $\lambda_{r}$ are fixed finite constants. To guarantee a finite clique number is necesary that $E_{r+1} \to 0$ and simultaneously $E_{r+1} \to \infty$ but this will no be possible.
+
+Again, this property interfere with the proposed model, but this is not enteried lost, we can still provide an analogue of the result from bering et all by noticing that waht we actually showing here is a asymptotic aproximation analogue.
+We have the folllowing result for that.
+
 Let $Y_{r}$ be the random variable that counts the number of $r-$cliques.
 $$\E(Y_{r}) = \binom{n}{r} \cdot (1-p^{r})^{n-r} \cdot p^{\binom{r}{2}}  $$
 The following theorem describe the conditions to obtain a particular clique number.
@@ -149,33 +194,6 @@ Then a.e $G_{p}$ has clique number $r$
 The second condition on $p$ implies that almost no $G_{p}$ contains a $K^{r+1}$ so $cl(G_{p})\leq r$ asymptotically almost surely. The first condition on $p$ is simply that $\E (Y_{r}) \to  \infty$. The idea to proof this theorem is to use the calculations for $\E(Y_{r})$ and a first moment argument will work for the rest of the argument. A full proof can be find in \cite[Bollobás, p.290]{Bollobas}.
 
 We want $r = 3g-3+m$, where $g$ is the genus and $m$ is the number of punctures. $p(n)$ should be taken in a way that the hypothesis in the theorem gets satisfied when we take $r$ to be a constant.
-
-%$$\binom{n}{r} p^{\binom{r}{2}} \sim \frac{n^{r}}{r!} p^{\frac{r(r-1)}{2}} = \lambda (np^{r-1/2})^{r} $$
-
-%where $\lambda$ its a constant and $ \lim_{n \to \infty} \lambda (np^{r/2})^{r+1} = 0  \iff  (np^{r/2}) \to $
-
-%$$\binom{n}{r+1} p^{\binom{r+1}{2}} \sim \frac{n^{r+1}}{(r+1)!} p^{\frac{(r+1)r}{2}} = \lambda (np^{r/2})^{r+1} $$
-
-%where $ \lambda (np^{r/2})^{r+1} \to 0  \iff  (np^{r/2}) \to $
-
-
-%--------------------------%
-%We can checked that if $\epsilon > 0 $ and $n$ is sufficiently large, then $\E(Z_{r})$ is large for all $r$'s between $(\frac{1}{2} + \epsilon)r_{0}(n)$ and $(1 - \epsilon)r_{0}(n)$ and small for all $r$'s outside the range $\{ (\frac{1}{2} - \epsilon)r_{0}(n), (1 + \epsilon)r_{0}(n) \}$
-
-
-
-%\begin{theorem}
-%Given constants $0 < p < 1$ and $0<\epsilon<\frac{1}{2}$ a.e. random graph in $\G(n,p)$ is such that it has a clique of order $r$ for all $r$ satisfying 
-%$(1+\epsilon)log_{b}(n) < r <(2-\epsilon) log_{b}(n)$
-%but has no clique of order $r$ if $r < (1-\epsilon)log_{b} (n)$ or if $r<(2+\epsilon)log_{b}(n)$
-%\end{theorem}
-
-%There's another point of view which is more popular to study the question for the clique number of a random graph. Matula was the first to notice that for fixed values of $p$ the distribution of the clique number of a random Graph is highly concentrated: almost all $G_{p}$ have about the same clique number. Results asserting this phenomenon were proved by Grimmett and McDiarmid.
-
-%{\color{Blue} Bólobas 290}
-
-%There's a result for the clique number for random graphs in the sense of the Rado Graph}
-%--------------------------%
 
 
 \subsection{Diameter}
@@ -217,7 +235,7 @@ For the first event take a look to the following picture
 
 \begin{figure}[h!]
 	\centering
-	\includegraphics[scale=0.8]{figures/uni.png}
+	\includegraphics[scale=0.8]{Figures/uni.png}
 	\caption{Probability of uniquely determined vertices}
 \end{figure}
 
@@ -234,13 +252,13 @@ Using the \texttt{networkx} library in \texttt{python} we obtained simulations f
 
 \begin{figure}[h!]
 	\centering
-	\includegraphics[scale=0.5]{figures/fixed-uniq-det.png}
+	\includegraphics[scale=0.5]{Python/Figures/Uniquely-determinated-fixed-vertex.png}
 	\caption{Probability of uniquely determined vertex, varying $k$ in $A_k$}
 \end{figure}
 
 \begin{figure}[h!]
 	\centering
-	\includegraphics[scale=0.5]{figures/rig-prob.png}
+	\includegraphics[scale=0.5]{Python/Figures/Expansion-probability.png}
 	\caption{Probability of having a rigid expansion,  varying $k$ in $A_k$}
 \end{figure}
 
@@ -255,6 +273,7 @@ where $C_{3} = 3$ and $C_{k} = k/2 + 1$ for $k > 3$, then w.h.p. $X$ is rational
 equivalent to a bouquet of $k$-dimensional spheres.
 \end{theorem}
 
+We can use the Erdös-Rényi model to obtain random simplicial complexes through clique complexes. The clique complex or flag complex $X(G)$, of a graph $G$ is the simplicial complex with all complete subgraphs of $G$ as its faces. The 1-skeleton of $X(G)$ is $G$ itself. $X(G(n, p))$ will be abbreviated by $X(n, p)$ for now on.
 The main remaining conjecture for the topology of random clique complexes is that these rational homotopy equivalences are actually homotopy equivalences.
 
 \begin{conje}

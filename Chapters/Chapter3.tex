@@ -17,9 +17,23 @@ For theoretical develop it has allowed to verify if the established conditions i
 In this work we propose to generate random graphs for the Ërdos Renyi model using \textbf{python}
 
 \section{Simulating graphs in G(n,p)}
- To simulate graphs in this model we can notice that the information of the graph is summarized in its adyacency matrix. If the graph has $n$ vertices then the we'll have a matriz of size $n \times n$, where the entry $a_{i,j}$ it's equal to 1 if the vertex $i$ and the vertex $j$ are connected, and it's $0$ otherwise. As we are considering simple no-directed graphs, this matrix is symetric with zeros in the diagonal. Thus it's enough to simulate each entry above the diagonal with a r.v. $Bernoulli(p)$.
+ To simulate graphs in this model we can use the adyacency matrix of the graph which summarize all the information of the graph. If the graph has $n$ vertices then the we'll have a matriz of size $n \times n$, where the entry $a_{i,j}$ it's equal to 1 if the vertex $i$ and the vertex $j$ are connected, and it's $0$ otherwise. As we are considering simple no-directed graphs, this matrix is symetric with zeros in the diagonal. Thus it's enough to simulate each entry above the diagonal with a r.v. $Bernoulli(p)$.
+ 
 
-WE can directly do the implementation of this simulation can be find in the function: \texttt{erdosRenyi}. Usying the libary \href{https://networkx.github.io/}{NetworkX} we can create and modify graphs directly taken grpahs as objects in python.
+We can do the implementation of this simulation directly. In the code can be find in the function: \texttt{erdosRenyi}. Usying the libary \href{https://networkx.github.io/}{NetworkX} we can create and modify graphs directly taken grpahs as objects in python.
+
+Returns a $G_{n,p}$ random graph, also known as an Erdős-Rényi graph or a binomial graph.
+
+The $G_{n,p}$ model chooses each of the possible edges with probability p.
+
+The functions $binomial_graph()$ and $erdos_renyi_graph()$ are aliases of this function.
+
+
+$fast_gnp_random_graph()$
+
+Notes
+
+This algorithm runs in $O(n^2)$ time. For sparse graphs (that is, for small values of $p$), $fast_gnp_random_graph()$ is a faster algorithm.
 
 In the figure \ref{fig:ErdosRenyi10} we can see a set of graphs obtained with such algorithm, fixing $n=10$ an varing the parameter $p$
 \begin{figure}[h!]
@@ -31,20 +45,11 @@ In the figure \ref{fig:ErdosRenyi10} we can see a set of graphs obtained with su
 
 As we mention in the introduction the utility of doing Como se menciona en la introducción la utilidad de las simulaciones para el desarrollo de la topología estocástica reside en poder verificar la rigurosidad de las condiciones impuestas para que cierta propiedad se satisfaga, en este caso la propiedad es la conexidad y las condiciones están dadas por la cota $log(n)/n$ para $p$. Para ejemplificar esto se hicieron simulaciones en Python de gráficas variando $n$ y tomando $p$ como indica el teorema con $\omega(n)= log(n/2)$. Para cada tamaño de $n$ se repite la simulación 30 veces y se verifica si la gráfica simulada es conexa o no con la función \texttt{is$\_$connected(G)} de la librería de \texttt{networkX}. De esta manera obtenemos una aproximación de la probabilidad de que una gráfica sea conexa si se toma con las condiciones indicadas en el teorema. En la figura \ref{fig:Estimadas}, se graficó para cada $n$ dicha probabilidad estimada para cada caso de $p$.
 
-\begin{figure}[h!]
-	\centering
-	\includegraphics[scale=0.8]{estimadas.png}
-	\caption{Probabilidad estimada de conexidad para distintas gráficas tomando el parámetro p como se indica en el teorema}
-	\label{fig:Estimadas}
-\end{figure}
-
-Analizando la figura \ref{fig:Estimadas} es fácil convencerse de la validez del teorema viendo que para $n$ suficientemente grande $n=50$, la gráfica muestra lo establecido en el teorema.
-
 La ejecución del algoritmo erdosRenyi implementado requiere de la generación de $\binom{n}{2}$ variables aleatorias Bernoulli las cuales son simuladas en el código de Python adjunto en la función \texttt{Bernoulli}, las cuales hacen uso de la librería de \texttt{numpy} para generar los números aleatorios básicos, librería que usa el algoritmo \textbf{Mersenne-Twister}. Por lo que el tiempo de ejecución del algoritmo es de $O(n^{2})$. En la figura \ref{fig:tiemposER} se muestran los resultados de los tiempos de ejecución haciendo variar $n$.
 
 \begin{figure}[h!]
 	\centering
-	\includegraphics[scale=0.8]{tiemposER.png}
+	\includegraphics[scale=0.8]{Python/Figures/Times-ER.png}
 	\caption{Tiempos de ejecución en segundos del algoritmo erdosRenyi variando el tamaño de la gráfica. Se presenta la escala norma y la logarítmica}
 	\label{fig:tiemposER}
 \end{figure}
