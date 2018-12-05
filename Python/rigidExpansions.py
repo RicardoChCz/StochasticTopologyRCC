@@ -97,10 +97,9 @@ def singleExpansion(G,A):
     Input: Graph G (dictionary), set A 
     Output: Set
     """
-    P = [x for x in powerset(A)]
     N = set()
     
-    for S in P:        
+    for S in powerset(A):        
         I = singleVerification(G,S)
         if len(I)==1 and next(iter(I)) not in A:
             N = N.union(I)
@@ -128,9 +127,8 @@ def singleExpansionC(G,A):
 
     for b in B:
         AN = A.intersection(G.neighbors(b))
-        P = [x for x in powerset(AN)]
     
-        for S in P:
+        for S in powerset(AN):
             if isThisUniquelyDet(G,S,b) == 1:
                 N = N.union(set([b]))
                 break
