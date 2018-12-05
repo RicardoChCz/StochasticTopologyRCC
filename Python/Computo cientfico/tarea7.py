@@ -124,7 +124,7 @@ def Bernoulli(p,n):
     if p > 1 or p<0:
         raise ValueError("El parametro no es apropiado") 
     r = 0
-    for i in xrange(0, n):
+    for i in range(0, n):
         if M[i] < p:
             M[i]=1
             r=r+1
@@ -166,7 +166,7 @@ def MHMC(tam,s1,s2,r1,r2,n):
     
     ef=0.0    
     
-    for i in xrange(1,tam):
+    for i in range(1,tam):
         a=M[i-1,0]
         b=M[i-1,1]
     
@@ -190,7 +190,7 @@ def MHMC(tam,s1,s2,r1,r2,n):
             M[i,1] = M[i-1,1]
             ef=ef+1
     
-    print "se rechazaron el " + str(ef/tam)+'%de los puntos propuestos'
+    print ("se rechazaron el " + str(ef/tam)+'%de los puntos propuestos')
     return M
 
 def gamaEntera(z,tam):
@@ -207,7 +207,7 @@ def MHMC2(tam,a,a0):
     M[0] = a0
     
     ef=0.0
-    for i in xrange(1,tam):
+    for i in range(1,tam):
         y= gamaEntera(a,1)[0]
         d=a-int(round(a))
         ro = min(1, (y**(d))/(M[i-1]**(d)) )
@@ -218,7 +218,7 @@ def MHMC2(tam,a,a0):
             M[i] = M[i-1]
             ef=ef+1
             
-    print "Porcentaje de rechazos " + str(ef/tam)
+    print ("Porcentaje de rechazos " + str(ef/tam))
     return M
 
 def ev4(y1,y2):
@@ -235,7 +235,7 @@ def MHMC3(tam,a0,b0,s):
     M[0,0] = a0
     M[0,1] = b0
     
-    for i in xrange(1,tam):        
+    for i in range(1,tam):        
         y= M[i-1] + normal(0,s,2)
         y0= y[0]
         y1= y[1]
@@ -284,7 +284,7 @@ def curvasGamma(n,r1,r2):
 def erres(x):
     r1=1.0
     r2=0.0
-    for i in xrange(0, len(x)):
+    for i in range(0, len(x)):
         r1=r1*x[i]
         r2=r2+x[i]
         
@@ -358,8 +358,8 @@ if __name__ == "__main__":
     r1=erres(x)[0]
     r2=erres(x)[1]
     
-    print "r1 vale " + str(r1)
-    print "r2 vale " + str(r2)
+    print ("r1 vale " + str(r1))
+    print ("r2 vale " + str(r2))
     
     curvasGamma(n,r1,r2)
     M1 = MHMC(tam,s1,s2,r1,r2,n)
@@ -397,8 +397,8 @@ if __name__ == "__main__":
     
     evalua(M1[:,0])
     evalua(M1[:,1])
-    print "estimada de alfa" + str(mean(M1[:,0]))
-    print "estimada de beta" + str(mean(M1[:,1]))
+    print ("estimada de alfa" + str(mean(M1[:,0])))
+    print ("estimada de beta" + str(mean(M1[:,1])))
     
     """
     2. Simular de la distribuci´on Gamma(α,1) con la propuesta Gamma([α],1),

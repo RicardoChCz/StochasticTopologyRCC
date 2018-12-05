@@ -30,7 +30,23 @@ def layoutGraph(G,S):
     plt.figure(num=None, figsize=(3, 3), dpi=80)
     nx.draw_circular(G, node_color=colores)
     plt.show()
-
+    
+def isThisUniquelyDet(G,A,v):
+    """
+    Given a graph G and a subset of vertices A, it says if the subset A 
+    determine the vertex v uniquely
+    Input: Graph G (dictionary), A set, v int
+    Output: int (0 or 1) 0 stands for failure and 1 for success 
+    """
+    Int = list(singleVerification(G,A))
+     
+    if (len(Int)!=1):
+        return 0
+    elif (v==Int[0]):
+        return 1
+    else:
+        return 0
+    
 def singleVerification(G,S):
     """
     Given a graph G and a subset of vertices S, it says if the subset determine
@@ -62,13 +78,14 @@ def iterativeExpansions(G,A,R, visual=True):
     Input: Graph G (dictionary), set A 
     Output: Set
     """
-    A,areThereNewOnes = singleExpansion(G,A)
+    A,areThereNewOnes = singleExpansionC(G,A)
     
     while areThereNewOnes:
         if (visual):
             layoutGraph(G,A.union(R))        
         #Another Expansion
-        A,areThereNewOnes = singleExpansion(G,A)
+        
+        A,areThereNewOnes = singleExpansionC(G,A)
                 
     return A.union(R)
 
@@ -87,6 +104,36 @@ def singleExpansion(G,A):
         I = singleVerification(G,S)
         if len(I)==1 and next(iter(I)) not in A:
             N = N.union(I)
+ 
+    if len(N)>0:
+        areThereNewOnes = True
+        A = A.union(N)
+
+    else:
+        areThereNewOnes = False
+        
+    return (A,areThereNewOnes)
+
+def singleExpansionC(G,A):
+    """
+    Auxiliar method which give a single Expansion in the algorithm rigid
+    expansion. Given a graph G and a subset of vertices A, returns the set 
+    of vertices that can be uniquely determined using A, this algorithm review
+    which of the vertices in the complement can be u.d. using A
+    Input: Graph G (dictionary), set A 
+    Output: Set
+    """
+    B = set(G.nodes) - A
+    N = set()
+
+    for b in B:
+        AN = A.intersection(G.neighbors(b))
+        P = [x for x in powerset(AN)]
+    
+        for S in P:
+            if isThisUniquelyDet(G,S,b) == 1:
+                N = N.union(set([b]))
+                break
  
     if len(N)>0:
         areThereNewOnes = True

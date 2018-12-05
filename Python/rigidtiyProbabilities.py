@@ -16,6 +16,7 @@ from auxiliar import powerset
 from auxiliar import intervalo
 from auxiliar import is_notempty
 from rigidExpansions import singleVerification
+from rigidExpansions import isThisUniquelyDet
 from time import clock
 from numpy.random import randint
 from scipy.special import comb
@@ -26,22 +27,6 @@ numExperiments = 500
 1. Functions to determine whether or not a vertex v is uniquely determinated by
 a random subset of vertices of the graph in G(n,p).
 """
-
-def isThisUniquelyDet(G,A,v):
-    """
-    Given a graph G and a subset of vertices A, it says if the subset A 
-    determine the vertex v uniquely
-    Input: Graph G (dictionary), A set, v int
-    Output: int (0 or 1) 0 stands for failure and 1 for success 
-    """
-    Int = list(singleVerification(G,A))
-     
-    if (len(Int)!=1):
-        return 0
-    elif (v==Int[0]):
-        return 1
-    else:
-        return 0
 
 def probabilityLast(n,p,k):
     """
