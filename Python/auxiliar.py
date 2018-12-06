@@ -29,6 +29,8 @@ def powerset(seq):
     Output: list
     """
     seq = list(seq)
+    
+    #Empty set or one element sets
     if len(seq) <= 1:
         yield seq
         yield []
@@ -37,6 +39,27 @@ def powerset(seq):
         for item in powerset(seq[1:]):
             yield [seq[0]]+item
             yield item
+
+def powersetEfective(seq,kMin,kMax):
+    """
+    Returns all the possible subsets that can be made with the input set.
+    Input: Set
+    Output: list
+    """
+    
+    seq = list(seq)
+    
+    #Empty set or one element sets
+    if len(seq) <= 1:
+        yield seq
+        yield []
+
+    else:
+        for item in powerset(seq[1:]):
+            if (len([seq[0]]+item) <= kMax and len([seq[0]]+item) >= kMin):
+                yield [seq[0]]+item
+            if (len(item) <= kMax and len(item) >= kMin):    
+                yield item
             
 def intervalo (x0, x1, d):
     """

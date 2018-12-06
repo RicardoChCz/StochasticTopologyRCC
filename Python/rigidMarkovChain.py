@@ -58,7 +58,7 @@ def jumpExperiment(G,A,method=1):
     return len(A.union(R))
 
 if __name__ == "__main__":
-    n=50
+    n=30
     p=0.1
     
     fig, ax = plt.subplots()

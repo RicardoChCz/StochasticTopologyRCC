@@ -10,8 +10,10 @@ import numpy as np
 import networkx as nx
 import matplotlib.pyplot as plt
 
+from numpy import log
 from auxiliar import randomSet
 from auxiliar import powerset
+from auxiliar import powersetEfective
 from time import clock
 from numpy.random import randint
 
@@ -70,7 +72,7 @@ def singleVerification(G,S):
     
         return set(Int)
 
-def iterativeExpansions(G,A,R, visual=True):
+def iterativeExpansions(G,A,R, visual=True, method=1):
     """
     Auxiliar method which give a single Expansion in the algorithm rigid
     expansion. Given a graph G and a subset of vertices A, returns the set 
@@ -78,7 +80,10 @@ def iterativeExpansions(G,A,R, visual=True):
     Input: Graph G (dictionary), set A 
     Output: Set
     """
-    A,areThereNewOnes = singleExpansionC(G,A)
+    if method==1:    
+        A,areThereNewOnes = singleExpansion(G,A)
+    else:
+        A,areThereNewOnes = singleExpansionC(G,A)
     
     while areThereNewOnes:
         if (visual):
@@ -99,7 +104,7 @@ def singleExpansion(G,A):
     """
     N = set()
     
-    for S in powerset(A):        
+    for S in powerset(A):      
         I = singleVerification(G,S)
         if len(I)==1 and next(iter(I)) not in A:
             N = N.union(I)
@@ -196,11 +201,15 @@ def rigidExpansion(G,A, visual=True):
     #Optimization 1
     A,R = sparseGraphsOptimization(G,A)   
     
-    if (visual):
-        print("Afer first optimization, A change to:", A)
-        
+    #Optimization 2
+    n,k=len(G.nodes),len(A)
+    if k*log(2) < log(n-k) + (k*p)*log(2):
+        method = 1
+    else:
+        method = 2
+
     #Call iterative method wich gives multiple single expansions
-    return (iterativeExpansions(G,A,R,visual))
+    return (iterativeExpansions(G,A,R,visual,method))
     
     
 def f(Y,G):
