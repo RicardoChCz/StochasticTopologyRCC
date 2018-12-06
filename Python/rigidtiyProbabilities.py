@@ -16,6 +16,10 @@ from auxiliar import powerset
 from auxiliar import intervalo
 from auxiliar import is_notempty
 from rigidExpansions import singleVerification
+from rigidExpansions import isThisUniquelyDet
+from bundles import cotaLast
+from bundles import cotaAnyone
+from bundles import cotaExpansion
 from time import clock
 from numpy.random import randint
 from scipy.special import comb
@@ -27,22 +31,6 @@ numExperiments = 500
 a random subset of vertices of the graph in G(n,p).
 """
 
-def isThisUniquelyDet(G,A,v):
-    """
-    Given a graph G and a subset of vertices A, it says if the subset A 
-    determine the vertex v uniquely
-    Input: Graph G (dictionary), A set, v int
-    Output: int (0 or 1) 0 stands for failure and 1 for success 
-    """
-    Int = list(singleVerification(G,A))
-     
-    if (len(Int)!=1):
-        return 0
-    elif (v==Int[0]):
-        return 1
-    else:
-        return 0
-
 def probabilityLast(n,p,k):
     """
     Returns the probability (aproximated) that in a G(n,p) i.e. ER-model a 
@@ -50,7 +38,7 @@ def probabilityLast(n,p,k):
     Input:(int, float, int)
     Output: float
     """
-    exitos=0   
+    exitos=0
     total=numExperiments
     if k==n:
         return 0
@@ -61,17 +49,7 @@ def probabilityLast(n,p,k):
             A=randomSet(k,n-1)
             exitos = exitos + isThisUniquelyDet(G,A,n-1)
              
-        return exitos/float(total)
-    
-def cotaLast(n,p,m):
-    """
-    Returns the probaility that in a ER graph G a set of size k uniquely deter-
-    minates the n-th vertex.
-    """
-    if m==n:
-        return 0
-    else:
-        return p**(m) * (1-p**m)**(n-m-1)
+        return exitos/float(total)    
     
 """
 2. Funciones para determinar si un conjunto de tamaño m puede determinar de 
@@ -107,13 +85,6 @@ def probabilityAnyone(n,p,k):
         exitos = exitos + doesThisUniquelyDetSomeone(G,A)
          
     return exitos/float(total)
-
-def cotaAnyone(n,p,m):
-    """
-    Returns the probaility that in a ER graph G a set of size k uniquely deter-
-    minates the last vertex.
-    """
-    return 1- (1 - cotaLast(n,p,m))**(n-m)
 
 """
 3. Funciones para determinar si un conjunto de tamaño m puede expandirse
@@ -156,31 +127,6 @@ def probabilityRigidExpansion(n,p,k):
         exitos = exitos + doesItExpands(G,A)
          
     return exitos/float(total)
-
-def cotaExpansion(n,p,k):
-    """
-    Returns lower and upper bound for the probaility that in a ER graph G a set
-    of size k generates a rigid expansion
-    Input: int n, float p, int k
-    Output: float
-    """
-    if k==0:
-        return 0
-    else:
-        #Probability that none of the vertex outside of A_k is u.d by B_m 
-        # a subset of A_k
-        rho = [(1-cotaLast(n,p,m))**(n-k) for m in range(1,k+1)]
-        
-        #Probability that none of the posible subsets of size m expand outside 
-        #of A_k
-        exp =[(rho[m-1])**comb(k,m) for m in range(1,k+1)]
-        
-        prod=1
-        
-        for e in exp:
-            prod = prod*e
- 
-        return 1-prod
 
 """
 Funciones para graficar

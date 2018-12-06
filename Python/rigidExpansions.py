@@ -10,8 +10,10 @@ import numpy as np
 import networkx as nx
 import matplotlib.pyplot as plt
 
+from numpy import log
 from auxiliar import randomSet
 from auxiliar import powerset
+from auxiliar import powersetEfective
 from time import clock
 from numpy.random import randint
 
@@ -22,15 +24,31 @@ def layoutGraph(G,S):
     Input: Graph G (dictionary), S set
     Output: none
     """
-    colores=['#339966']*len(G.nodes())
+    colores=['#0074d9']*len(G.nodes())
     #Paint S
     for j in S:    
-        colores[j]='#99004d'
+        colores[j]='#001f3f'
         
     plt.figure(num=None, figsize=(3, 3), dpi=80)
     nx.draw_circular(G, node_color=colores)
     plt.show()
-
+    
+def isThisUniquelyDet(G,A,v):
+    """
+    Given a graph G and a subset of vertices A, it says if the subset A 
+    determine the vertex v uniquely
+    Input: Graph G (dictionary), A set, v int
+    Output: int (0 or 1) 0 stands for failure and 1 for success 
+    """
+    Int = list(singleVerification(G,A))
+     
+    if (len(Int)!=1):
+        return 0
+    elif (v==Int[0]):
+        return 1
+    else:
+        return 0
+    
 def singleVerification(G,S):
     """
     Given a graph G and a subset of vertices S, it says if the subset determine
@@ -54,29 +72,121 @@ def singleVerification(G,S):
     
         return set(Int)
 
-def singleExpansion(G,A,R, visual=True):
+def iterativeExpansions(G,A,R, visual=True, method=1):
     """
     Auxiliar method which give a single Expansion in the algorithm rigid
     expansion. Given a graph G and a subset of vertices A, returns the set 
     of vertices that can be uniquely determined using A
     Input: Graph G (dictionary), set A 
     Output: Set
-    """   
-    if (visual):
-        layoutGraph(G,A.union(R))
-    P = [x for x in powerset(A)]
+    """
+    if method==1:    
+        A,areThereNewOnes = singleExpansion(G,A)
+    else:
+        A,areThereNewOnes = singleExpansionC(G,A)
+    
+    while areThereNewOnes:
+        if (visual):
+            layoutGraph(G,A.union(R))        
+        #Another Expansion
+        
+        A,areThereNewOnes = singleExpansionC(G,A)
+                
+    return A.union(R)
+
+def singleExpansion(G,A):
+    """
+    Auxiliar method which give a single Expansion in the algorithm rigid
+    expansion. Given a graph G and a subset of vertices A, returns the set 
+    of vertices that can be uniquely determined using A
+    Input: Graph G (dictionary), set A 
+    Output: Set
+    """
     N = set()
-     
-    for S in P:        
+    
+    for S in powerset(A):      
         I = singleVerification(G,S)
         if len(I)==1 and next(iter(I)) not in A:
             N = N.union(I)
  
     if len(N)>0:
+        areThereNewOnes = True
         A = A.union(N)
-        singleExpansion(G,A,R,visual)
 
+    else:
+        areThereNewOnes = False
         
+    return (A,areThereNewOnes)
+
+def singleExpansionC(G,A):
+    """
+    Auxiliar method which give a single Expansion in the algorithm rigid
+    expansion. Given a graph G and a subset of vertices A, returns the set 
+    of vertices that can be uniquely determined using A, this algorithm review
+    which of the vertices in the complement can be u.d. using A
+    Input: Graph G (dictionary), set A 
+    Output: Set
+    """
+    B = set(G.nodes) - A
+    N = set()
+
+    for b in B:
+        AN = A.intersection(G.neighbors(b))
+    
+        for S in powerset(AN):
+            if isThisUniquelyDet(G,S,b) == 1:
+                N = N.union(set([b]))
+                break
+ 
+    if len(N)>0:
+        areThereNewOnes = True
+        A = A.union(N)
+
+    else:
+        areThereNewOnes = False
+        
+    return (A,areThereNewOnes)
+
+def sparseGraphsOptimization(G,A):
+    """
+    ---------------------------------------------------------------------------
+    Optimization.
+    ---------------------------------------------------------------------------
+    Hermits (no neighbors). This vertices don't have an effect to rigid 
+    expansions, that's why it's posible to remove them.
+    Leaves should be removed and petioles (neighbors of leaves) should be added
+    to the set to expand.
+    
+    ---------------------------------------------------------------------------
+    Given a graph G and a subset of vertices A, returns two parts:
+    1. The usefull set A' without leves and isolated points but with petioles
+    added.
+    2. Leaves and isolated points.
+    Input: Graph G (dictionary), set A 
+    Output: (set, set)
+    """
+    
+    A=list(A)
+    hermits = []
+    leaves = []
+    for u in A:
+        N = list(G.neighbors(u))
+        if len(N) == 0:
+            hermits.append(u)
+        elif len(N) == 1:
+            leaves.append(u)
+            #Adding petioles
+            A=A+N
+
+    leaves= set(leaves)
+    hermits= set(hermits)
+    A=set(A)
+    A = A.difference(leaves)
+    A = A.difference(hermits)
+    R=leaves.union(hermits)
+    
+    return(A, R)
+
 def rigidExpansion(G,A, visual=True):
     """
     Given a graph G and a subset of vertices A, returns the set obtained by a
@@ -85,38 +195,21 @@ def rigidExpansion(G,A, visual=True):
     Output: Set
     """
     if (visual):
+        print("Input:")
         layoutGraph(G,A)
-    
-    """
-    ---------------------------------------------------------------------------
-    Optimization.
-    ---------------------------------------------------------------------------
-    Hermits (no neighbors). This vertices don't have an effect to rigid 
-    expansions, that's why it's posible to remove them.
-    Leaves should be removes and petioles (neighbors of leaves) should be added
-    to the set to expand 
-    """
-    A=list(A)
-    hermits = []
-    leaves = []
 
-    for u in A:
-        N = list(G.neighbors(u))
-        if len(N) == 0:
-            hermits.append(u)
-        elif len(N) == 1:
-            leaves.append(u)
-            A=A+N
-
-    leaves= set(leaves)
-    hermits= set(hermits)
-    A=set(A)
-    A = A.difference(leaves)
-    A = A.difference(hermits)
+    #Optimization 1
+    A,R = sparseGraphsOptimization(G,A)   
     
-    R=leaves.union(hermits)
+    #Optimization 2
+    n,k=len(G.nodes),len(A)
+    if k*log(2) < log(n-k) + (k*p)*log(2):
+        method = 1
+    else:
+        method = 2
+
     #Call iterative method wich gives multiple single expansions
-    singleExpansion(G,A,R,visual)
+    return (iterativeExpansions(G,A,R,visual,method))
     
     
 def f(Y,G):
@@ -197,8 +290,9 @@ if __name__ == "__main__":
     n=15
     p=0.5
     G=nx.gnp_random_graph(n, p)
-        
-    rigidExpansion(G, randomSet(7,n))
+    A=randomSet(7,n)
+    print("A = ", A)
+    print("expanded A = ", rigidExpansion(G, A))
     
  #   verifyLocIny(g,G)
             
