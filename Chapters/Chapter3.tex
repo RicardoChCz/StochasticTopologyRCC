@@ -42,10 +42,7 @@ In the figure \ref{fig:ErdosRenyi10} we can see a set of graphs obtained with su
 	\caption{Erdös-Rényi random graphs with $n$ fixed and varing $p$}
 	\label{fig:ErdosRenyi10}
 \end{figure}
-
-As we mention in the introduction the utility of doing Como se menciona en la introducción la utilidad de las simulaciones para el desarrollo de la topología estocástica reside en poder verificar la rigurosidad de las condiciones impuestas para que cierta propiedad se satisfaga, en este caso la propiedad es la conexidad y las condiciones están dadas por la cota $log(n)/n$ para $p$. Para ejemplificar esto se hicieron simulaciones en Python de gráficas variando $n$ y tomando $p$ como indica el teorema con $\omega(n)= log(n/2)$. Para cada tamaño de $n$ se repite la simulación 30 veces y se verifica si la gráfica simulada es conexa o no con la función \texttt{is$\_$connected(G)} de la librería de \texttt{networkX}. De esta manera obtenemos una aproximación de la probabilidad de que una gráfica sea conexa si se toma con las condiciones indicadas en el teorema. En la figura \ref{fig:Estimadas}, se graficó para cada $n$ dicha probabilidad estimada para cada caso de $p$.
-
-La ejecución del algoritmo erdosRenyi implementado requiere de la generación de $\binom{n}{2}$ variables aleatorias Bernoulli las cuales son simuladas en el código de Python adjunto en la función \texttt{Bernoulli}, las cuales hacen uso de la librería de \texttt{numpy} para generar los números aleatorios básicos, librería que usa el algoritmo \textbf{Mersenne-Twister}. Por lo que el tiempo de ejecución del algoritmo es de $O(n^{2})$. En la figura \ref{fig:tiemposER} se muestran los resultados de los tiempos de ejecución haciendo variar $n$.
+The execution of the erdosRenyo algorithm requiere to generate  $\binom{n}{2}$ Bernoulli random variables which were simulated variables aleatorias Bernoulli las cuales son simuladas en el código de Python adjunto en la función \texttt{Bernoulli}, las cuales hacen uso de la librería de \texttt{numpy} para generar los números aleatorios básicos, librería que usa el algoritmo \textbf{Mersenne-Twister}. Por lo que el tiempo de ejecución del algoritmo es de $O(n^{2})$. En la figura \ref{fig:tiemposER} se muestran los resultados de los tiempos de ejecución haciendo variar $n$.
 
 \begin{figure}[h!]
 	\centering

@@ -1,35 +1,31 @@
 % Chapter 2
 
-\chapter{Models for random simplicial complexes} % Main chapter title
+\chapter{Rigidity in graphs from the random viewpoint} % Main chapter title
 
 \label{Chapter2} % For referencing the chapter elsewhere, use \ref{Chapter1} 
 
-\lhead{Chapter 2. \emph{Random models for the curve complex}} % This is for the header on each page - perhaps a shortened title
+\lhead{Chapter 2. \emph{Rigidity in graphs from the random viewpoint}} % This is for the header on each page - perhaps a shortened title
 
 %----------------------------------------------------------------------------------------
 
-The use of the probabilistic method in discrete mathematics has become a prominent ideas in the area in recent times. It has been used to provide existence proofs where objects have certain desirable properties and it's not always easy to construct explicit examples. This has been just the beginning of the use of probabilistic tools in a deterministic context.
+The use of the probabilistic method in discrete mathematics has become a prominent idea in the area in recent times. It has been used to provide existence proofs where objects have certain desirable properties and it's not always easy to construct explicit examples. This has been just the beginning of the use of probabilistic tools in a deterministic context.
+
+Complex topological spaces arise quite natural in a lot of scientific contexts. Probability theory provides different approaches to model those spaces; even in complex configurations, it can be possible, by doing approximations, to study topological invariants. Most of the times the main goal is to study the asymptotic behavior when a parameter of the model tends to infinity. 
+
+In this sense stochastic topology can be thought as a tool for topology in the same sense as statistical mechanics is used to study a macroscopic physical systems when the classical mechanics finds these systems very complicated to solve.
+
+Stochastic topology finds its motivation in applied problems such as statistical mechanics, configuration spaces of mechanic links, robotics, animated simulations, manufacture, and so on. Nevertheless recent articles have used its techniques to provide probabilistic analogs of very classical topology conjectures, like Whitehead conjecture \cite{Costa15}. This analogues can be interpreted like statistical evidence for the conjecture. The idea is to proof that the sentence is true (almost surely), under certain conditions in the probabilistic model.
 
 Leaving aside all the applied problems, probability theory can help us to understand the ubiquity of certain mathematical phenomena. For example, \textit{many} simplicial complexes and posets which arise from combinatorial constructions are homotopy equivalent to a wedge of spheres. There's also a well-known theorem that states that hiperbolicity is \textit{quite common} in random groups, meaning that even under different measures, almost every group is hyperbolic.
 
-We are interested in giving formal meaning to expressions like \textit{"quite common"} or \textit{"many"}. For a great survey in
-studying \textit{"typical"} topological properties of random simplicial complexes we can refer to \cite[M. Khale]{surveyStochastic}. The idea is to provide a probabilistic model for the curve complex and use the combinatorial language for rigidity phenomena. 
+We are interested in giving formal meaning to expressions like \textit{"quite common"} or \textit{"many"}. For a great survey in studying \textit{"typical"} topological properties of random simplicial complexes we can refer to \cite[M. Khale]{surveyStochastic}. The idea is to provide a probabilistic model for the curve complex and use the combinatorial language for rigidity phenomena. 
 
-In chapter one, we settled the bases to model the curve complex or the curve graph associated to any given surface. Summarizing the results of the past chapter, we're looking to have a model which can guarantee the following properties:
-
-\begin{enumerate}
-\item Countably infinite number of vertices
-\item Connectedness
-\item Locally infinite
-\item Clique number $3g-3+m$
-\item Infinite diameter
-\end{enumerate}
-
-In this chapter, we'll review feasible probabilistic models and explain how does the parameters should be chosen so that we can couple the model into the desired framework. We'll also review rigid expansions from a probabilistic point of view.
+First we'll review rigid expansions from a probabilistic point of view. And then we'll analyze feasible probabilistic models and explain how does the parameters should be chosen so that we can couple the model into the desired framework for the curves graph. 
 
 Familiarity with basic concepts in probability theory such as probability spaces, random variables, and basic theorems will be assumed.
 
-\section{The Radó graph}
+\section{Models for random graphs}
+\subsection{The Radó graph}
 
 Let $0 < p < 1$ be fixed, $\G(\N, p)$ consists of all graphs with vertex set $\N$, whose edges are chosen independently and with probability $p$. In other words a random graph $G \in \G(\N,p)$ is a collection $(X_{ij}) = \{ X_{ij} : 1 \leq i < j\}$ of independent r.vs with $\P(X_{ij} = 1) = p$ and $P(X_{ij} = 0) = 1-p$: a pair $ij$ is an edge of $G$ if and only if $X_{ij} = 1$.
 
@@ -43,7 +39,78 @@ A construction of this graph can be done using binary numbers. To do this we ide
 	\caption{Binary construction of the Radó graph}
 \end{figure}
 
-This graph satisfy that every finite or countably infinite graph is an induced subgraph of it \cite{DarReferenciaAqui1}. Notice that if we have a surface $S$ of finite genus it's not possible that the Radó graph is embedded into $C(S)$. This because of the restriction in the clique number of $C(S)$. Not only that, it turns out that the converse is also valid; this is claimed in the following result by bering and Gaster \cite{}.
+\subsection{Erdös-Rényi model}
+\begin{defini}
+We will denote by $\G(n,p)$ to the probability space formed by all the graphs of $n$ vertices and probability measure 
+$$ \P(G\in \G(n,p)) = p^{k} (1-p)^{\binom{n}{2}-k} $$
+where $k$ is the number of edges in $G$, the $\sigma$-algebra is given by the power set.
+\end{defini}
+
+It's usual to find a variation of the model where $m$ is rather consider as a parameter of the model. We pick randomly $k$ edges among the $\binom{n}{2}$ possible. 
+
+Notice that we can also think this model like $\binom{n}{2}$ Bernoulli random variables identically and independently distributed with parameter $p$ that represents the edges. Using what we know about the Binomial r.v. we can immediately get some properties of the degree of a given vertex $v$. 
+
+\begin{itemize}
+\item The probability that a given vertex $v$ has degree $k$ is given by
+$$b(k; n-1,p) = \binom{n-1}{k} \cdot p^{k} \cdot (p-1)^{n-k-1}$$
+\item The expected degree is $(n-1)\cdot p$
+\item The variance of this degree is $(n-1)\cdot p \cdot (1-p)$
+\end{itemize}
+
+We'll keep in mind the degree distribution because, as we'll see in the next chapter, it will be important to keep track of leaves and isolated vertices to do some optimizations in our algorithms.
+
+\section{Rigid expansions}
+
+In the last chapter we settled the background for rigid expansions, with this combinatorial approach we should have the following calculations to study rigidity phenomena.
+
+\begin{itemize}
+\item What is the probability that a vertex $v$ is uniquely determined by a set of size $k$? (Event $E_1$)
+\item What is the probability that a set of size $k$ generate a rigid expansion? (Event $E_3$)
+\end{itemize}
+
+For the first event take a look to the following picture
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[scale=0.8]{Figures/uni.png}
+	\caption{Probability of uniquely determined vertices}
+\end{figure}
+
+i.e. if $<A> = v$ with $|A| = m$ then there's a edge between $v$ and every vertex in $A$, and none of the $n-m-1$ remaining vertices is also connected to every vertex in $A$, i.e.
+$$\P(E_1(m)) = p^{m}(1-p^{m})^{n-m-1}$$
+
+For the second question we have that if $A_k$ does not generate a rigid expansion is because none of the possible subsets of $A_k$ determined uniquely a vertex outside of $A_k$. 
+
+We have that the probability that none of the vertices outside of $A_k$ is uniquely determined by $A_m\subset A_k$ is $\rho_{m,k} = (1 -  \P(E_1(m) )^{n-k}$.
+
+$$\P(A_k \text{generates a rigid expansion}) = 1 -  \Pi_{m=1}^{k} (\rho_{k,m})^{\binom{k}{m}}  $$
+
+Using the \texttt{networkx} library in \texttt{python} we obtained simulations for this phenomena and then compare them with the past calculations, in the next chapter we'll explain a little bit more
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[scale=0.5]{Python/Figures/Uniquely-determinated-fixed-vertex.png}
+	\caption{Probability of uniquely determined vertex, varying $k$ in $A_k$}
+\end{figure}
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[scale=0.5]{Python/Figures/Expansion-probability.png}
+	\caption{Probability of having a rigid expansion,  varying $k$ in $A_k$}
+\end{figure}
+
+\section{Models for the curve graph}
+In chapter one, we settled the bases to model the curve complex or the curve graph associated to any given surface. Summarizing the results of the past chapter, we're looking to have a model which can guarantee the following properties:
+
+\begin{enumerate}
+\item Countably infinite number of vertices
+\item Connectedness
+\item Locally infinite
+\item Clique number $3g-3+m$
+\item Infinite diameter
+\end{enumerate}
+
+The Rado graph satisfy that every finite or countably infinite graph is an induced subgraph of it \cite{DarReferenciaAqui1}. Notice that if we have a surface $S$ of finite genus it's not possible that the Radó graph is embedded into $C(S)$. This because of the restriction in the clique number of $C(S)$. Not only that, it turns out that the converse is also valid; this is claimed in the following result by bering and Gaster \cite{}.
 
 \begin{theorem}
 The random graph embeds into the curve graph $C(S)$ of a surface $S$ if and only if $S$ has infinite genus.
@@ -84,26 +151,7 @@ This isn't new, for example in \cite{Alcazar15}) they want to ensure that the ra
 
 Even if we can provide an analog of the generate algorithm which ensure any other fixed clique number, the idea is to study rigid expansions in a simpler probabilistic approach. So another good idea will be to use a finite proposal for random graphs such as the Erdös-Rényi model, and then make asymptotic arguments. The simplicity of the model had made it very popular in stochastic topology; it consists in considering $n$ vertices and then each of the possible edges appear with probability $p$ (usually we want to take $p=p(n)$). With this prospect in mind we will keep the idea of having a uniform simple model. We'll review the plausibility of this model in the next chapter.
 
-\section{Erdös-Rényi model}
 
-\begin{defini}
-We will denote by $\G(n,p)$ to the probability space formed by all the graphs of $n$ vertices and probability measure 
-$$ \P(G\in \G(n,p)) = p^{k} (1-p)^{\binom{n}{2}-k} $$
-where $k$ is the number of edges in $G$, the $\sigma$-algebra is given by the power set.
-\end{defini}
-
-It's usual to find a variation of the model where $m$ is rather consider as a parameter of the model. We pick randomly $k$ edges among the $\binom{n}{2}$ possible. 
-
-Notice that we can also think this model like $\binom{n}{2}$ Bernoulli random variables identically and independently distributed with parameter $p$ that represents the edges. Using what we know about the Binomial r.v. we can immediately get some properties of the degree of a given vertex $v$. 
-
-\begin{itemize}
-\item The probability that a given vertex $v$ has degree $k$ is given by
-$$b(k; n-1,p) = \binom{n-1}{k} \cdot p^{k} \cdot (p-1)^{n-k-1}$$
-\item The expected degree is $(n-1)\cdot p$
-\item The variance of this degree is $(n-1)\cdot p \cdot (1-p)$
-\end{itemize}
-
-We'll keep in mind the degree distribution because, as we'll see in the next chapter, it will be important to keep track of leaves and isolated vertices to do some optimizations in our algorithms.
 
 \subsection{Connectivity}
 \begin{theorem}
@@ -179,7 +227,7 @@ The premise of proposing the ER Model is that it is necesary to do a asymptotic 
 $$\lim E_{r} = C_{r} \cdot p(n)^{\lambda_{r}}$$
 where $C_{r}$ and $\lambda_{r}$ are fixed finite constants. To guarantee a finite clique number is necesary that $E_{r+1} \to 0$ and simultaneously $E_{r+1} \to \infty$ but this will no be possible.
 
-Again, this property interfere with the proposed model, but this is not enteried lost, we can still provide an analogue of the result from bering et all by noticing that waht we actually showing here is a asymptotic aproximation analogue.
+Again, this property interfere with the proposed model, but this is not enteried lost, we can still provide an analogue of the result from bering et all by noticing that waht we actually showing here is a asymptotic aproximation analogue.º
 We have the folllowing result for that.
 
 Let $Y_{r}$ be the random variable that counts the number of $r-$cliques.
@@ -220,47 +268,6 @@ $$\P(X_{n} \geq 1)\leq \E(X_{n}) = \binom{n}{2} \cdot \P(\text{two vertices does
 which tends to zero as $n\to \infty$
 \end{proof}
 
-
-
-\section{Uniquely determined vertices}
-
-In the last chapter we settled the background for rigid expansions, with this combinatorial approach we should have the following calculations to study rigidity phenomena.
-
-\begin{itemize}
-\item What is the probability that a vertex $v$ is uniquely determined by a set of size $k$? (Event $E_1$)
-\item What is the probability that a set of size $k$ generate a rigid expansion? (Event $E_3$)
-\end{itemize}
-
-For the first event take a look to the following picture
-
-\begin{figure}[h!]
-	\centering
-	\includegraphics[scale=0.8]{Figures/uni.png}
-	\caption{Probability of uniquely determined vertices}
-\end{figure}
-
-i.e. if $<A> = v$ with $|A| = m$ then there's a edge between $v$ and every vertex in $A$, and none of the $n-m-1$ remaining vertices is also connected to every vertex in $A$, i.e.
-$$\P(E_1(m)) = p^{m}(1-p^{m})^{n-m-1}$$
-
-For the second question we have that if $A_k$ does not generate a rigid expansion is because none of the possible subsets of $A_k$ determined uniquely a vertex outside of $A_k$. 
-
-We have that the probability that none of the vertices outside of $A_k$ is uniquely determined by $A_m\subset A_k$ is $\rho_{m,k} = (1 -  \P(E_1(m) )^{n-k}$.
-
-$$\P(A_k \text{generates a rigid expansion}) = 1 -  \Pi_{m=1}^{k} (\rho_{k,m})^{\binom{k}{m}}  $$
-
-Using the \texttt{networkx} library in \texttt{python} we obtained simulations for this phenomena and then compare them with the past calculations, in the next chapter we'll explain a little bit more
-
-\begin{figure}[h!]
-	\centering
-	\includegraphics[scale=0.5]{Python/Figures/Uniquely-determinated-fixed-vertex.png}
-	\caption{Probability of uniquely determined vertex, varying $k$ in $A_k$}
-\end{figure}
-
-\begin{figure}[h!]
-	\centering
-	\includegraphics[scale=0.5]{Python/Figures/Expansion-probability.png}
-	\caption{Probability of having a rigid expansion,  varying $k$ in $A_k$}
-\end{figure}
 
 We mention in the first chapter the property that 
 
