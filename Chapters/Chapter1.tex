@@ -1,21 +1,21 @@
 % Chapter 1
 
-\chapter{The curve complex of a surface} % Main chapter title
+\chapter{The curve graph of a surface} % Main chapter title
 
 \label{Chapter1} % For referencing the chapter elsewhere, use \ref{Chapter1} 
 
-\lhead{Chapter 1. \emph{The curve complex of a surface}} % This is for the header on each page - perhaps a shortened title
+\lhead{Chapter 1. \emph{The curve graph of a surface}} % This is for the header on each page - perhaps a shortened title
 
 %----------------------------------------------------------------------------------------
 
-The study of surfaces in a strictly topological viewpoint has made us to forgot significant information about them. A way to revert this is to attach a group to it, the \textbf{mapping class group} of the surface, it's denoted by $Mod(S)$ and encode the \textit{symmetries} of the surface. This group is defined as the set of isotopy classes of orientation-preserving homeomorphisms of $S$. In the first section of this chapter we'll give the formal definition of this group and establish the very important role of this concept in Mathematics. 
+The study of surfaces in a strictly topological viewpoint has made us to forgot significant information about them. A way to revert this is to attach a group to it, the \textbf{mapping class group} of the surface. It is denoted by $Mod(S)$ and encode the \textit{symmetries} of the surface. This group is defined as the set of isotopy classes of orientation-preserving homeomorphisms of $S$. In the first section of this chapter we give the formal definition of this group and establish the very important role of this concept in Mathematics. 
 
-There's a widely accepted idea that Mathematics can be thought as a story of groups and that groups as men are judged by their actions. Taken this point of view, the \textbf{curve complex} of the surface, denoted by $C(S)$ appears naturally in the study of $Mod(S)$. It is a simplicial complex that encodes intersection patterns of simple closed curves in $S$. We will focus part of the discussion in the relationship between the algebraic structure of $Mod(S)$ and the combinatorial topology of $S$.
+There is a widely accepted idea that Mathematics can be thought as a story of groups and that groups as men are judged by their actions. Taken this point of view, the \textbf{curve complex} of the surface, denoted by $C(S)$ appears naturally in the study of $Mod(S)$. It is a simplicial complex that encodes intersection patterns of simple closed curves in $S$. We focus part of the discussion in the relationship between the algebraic structure of $Mod(S)$ and the combinatorial topology of $S$.
 
 Many of the progress in understanding $Mod(S)$ has been possible by a well-known comparison among two very important classes of groups: arithmetic groups and mapping class groups. In this parallelism panorama arises the desire for an equivalent, until some extent, of the Margulis Superrigidity for mapping class groups.
 
-Rigidity phenomena called mathematicians attention because it uses the structure of the objects to describe morphisms between them. In the aim to extend the results of rigidity in simplicial maps there's an approach called \textit{rigid expansions} see \cite[Aramayona 16]{rigidExpJA} and \cite[Hernandez 16]{rigidExpJH}, which allows us to generate rigid sets from an initial one. We'll take particular interest in this point of view because of its combinatorial nature and therefore its compatibility with the stochastic background that will be settled in the following chapter.
-
+In the last section of this chapter we settled the bases that allow us to understand a notion of rigidity in graph theory. There is an approach called \textit{rigid expansions}, see \cite[Aramayona 16]{rigidExpJA} and \cite[Hernandez 16]{rigidExpJH}. It allows us to build up subgraphs preserving the rigidity property and is compatible with the stochastic scheme outlined in chapter 2.
+ 
 Many results and definitions in this chapter where extracted from \cite[Farb]{Farb}. They're quite popular and equivalents can easily be find in the literature, however they are written here to establish nomenclature. Familiarity with basic concepts will be assumed.
 
 \section{Mapping class group of a surface}
@@ -26,11 +26,11 @@ We have the following fundamental, well-known result about surfaces.
 Any closed, connected, orientable surface is homeomorphic to the connect sum of a 2-dimensional sphere with $g \geq 0$ tori. Any compact, connected, orientable surface is obtained from a closed surface by removing $b \geq 0 $ open disks with disjoint closures. Even more, the set of homeomorphism types of compact surfaces is in bijective correspondence with the set $\{ (g, b) : g, b \geq 0\}$.
 \end{theorem}
 
-We are so familiarized whit this result that we forget what it's saying. It seems like, in the eyes of a topologyst, there's nothing much interesting about surfaces, but this is because we are forgetting all the geometric information about them. $Mod(S)$ helps to recover this data, the magic happens when this group acts on the \textbf{Teichmüller space} of $S$, that is the space of hyperbolic metrics on $S$ up to isotopy. A central result is that this action results to be properly discontinuous and the quotient space $M(S) = Teich(S)/ Mod(S)$ is the \textbf{moduli space of Riemannian surfaces} homeomorphic to $S$. The space $M(S)$ is a essential object in mathematics and the group $Mod(S)$ encodes most of the topological features of $M(S)$.
+We are so familiarize with this result that we usually forget what is saying. It seems like, in the eyes of a topologyst, there's nothing much interesting about surfaces, but this is because we are forgetting all the geometric information about them. $Mod(S)$ helps to recover this data, the magic happens when this group acts on the \textbf{Teichmüller space} of $S$, that is the space of hyperbolic metrics on $S$ up to isotopy. A central result is that this action results to be properly discontinuous and the quotient space $M(S) = Teich(S)/ Mod(S)$ is the \textbf{moduli space of Riemannian surfaces} homeomorphic to $S$. The space $M(S)$ is a essential object in mathematics and the group $Mod(S)$ encodes most of the topological features of $M(S)$.
 
 $Mod(S)$, $Teich(S)$, and $M(S)$ can be found in a lot of different contexts in mathematics: hyperbolic geometry, algebraic geometry, combinatorial group theory, symplectic geometry, 3-manifold theory, dynamics and so on. The algebraic structure of $Mod(S)$, the geometry of $Teich(S)$, and the topology of $M(S)$ are just the strands which are used to weave the rich tapestry of the combinatorial topology of the surface.
 
-Before we continue, let's establish some nomenclature. The $g$ in \ref{CST} is called the \textit{genus} of the surface and the $b$ is the number of \textit{boundary components}. One way to obtain a non-compact surface from a compact one is to remove $m$ points from the interior of it; in this case, we say that the resulting surface has $m$ punctures. For now on, unless otherwise specified, we will be thinking in compact, connected, oriented surfaces that are possibly punctured (in this case they ceases to be compact). We can therefore specify our surfaces by the triple $(g, b, m)$. We will denote by $S_{g,m}$ a surface of genus $g$ with $m$ punctures and empty boundary; such a surface is homeomorphic to the interior of a compact surface with $m$ boundary components. Also, for a closed surface of genus $g$, we will abbreviate $S_{g,0}$ as $S_{g}$ and $\partial S$ will denote the (possibly disconnected) boundary of $S$.
+Before we continue, let's establish some nomenclature. The $g$ in \ref{CST} is called the \textit{genus} of the surface and the $b$ is the number of \textit{boundary components}. One way to obtain a non-compact surface from a compact one is to remove $m$ points from the interior of it; in this case, we say that the resulting surface has $m$ punctures. For now on, unless otherwise specified, we will be thinking in compact, connected, oriented surfaces that are possibly punctured (in this case they ceases to be compact). Therefore, we can specify the surfaces by the triplet $(g, b, m)$. We will denote by $S_{g,m}$ a surface of genus $g$ with $m$ punctures and empty boundary; such a surface is homeomorphic to the interior of a compact surface with $m$ boundary components. Also, for a closed surface of genus $g$, we will abbreviate $S_{g,0}$ as $S_{g}$ and $\partial S$ denote the (possibly disconnected) boundary of $S$.
 
 There are a number of definitions for the mapping class group of a surface. We will be working with the following:
 
@@ -48,7 +48,7 @@ $Mod(S)$ & $=$ & $\pi_{0}(Homeo^{+}(S, \partial S))$\\
  & $\approx$ & $\pi_{0} (\textit{Diff}^{+}(S,\partial S))$\\
 \end{tabular}}
 
-where $\textit{Diff}^{+}(S, \partial S)$ is the group of orientation-preserving diffeomorphisms of $S$ that are the identity on the boundary and can be taken to be either smooth homotopy relative to the boundary or smooth isotopy relative to the boundary.
+where $\textit{Diff}^{+}(S, \partial S)$ is the group of orientation-preserving diffeomorphisms of $S$ that are the identity on the boundary. It can be taken to be either smooth homotopy relative to the boundary or smooth isotopy relative to the boundary.
 
 A lot of work had been made to describe the types of elements in $Mod(S)$. Thanks to the Thurston's classification theorem there's a characterization of the homeomorphisms of a compact orientable surface. This classification is useful to describe the curve complex which will be analyzed in the next section.
 
@@ -61,9 +61,9 @@ Given a homeomorphism $f: S \to  S$, there is a map $g$ isotopic to $f$ such tha
 \item $g$ is pseudo-Anosov.
 \end{itemize}
 
-The definition of a \textbf{pseudo-Anosov map} relies on the notion of a measured foliation which is a geometric structure on $S$. It consists of a singular foliation and a measure in the transverse direction (i.e. that it's constant in transverse arches). For the full definition of pseudo-Anosov elements and the proof of this theorem we can refer to \cite[Farb, Chapter 13]{Farb}
+The definition of a \textbf{pseudo-Anosov map} relies on the notion of a measured foliation, a geometric structure on $S$. It consists of a singular foliation and a measure in the transverse direction (i.e. that is constant in transverse arches). For the full definition of pseudo-Anosov elements and the proof of this theorem we can refer to \cite[Farb, Chapter 13]{Farb}.
 
-The study of mapping class groups it's a wide and challenging area of the mathematics by it self. It's outside of the interests of this thesis to review the details and repercussions of this vastly field. Yet, there are a number of known properties of $Mod(S)$ that it would be nice to have in mind in further work, although different tools that the ones here presented might be required.
+The study of mapping class groups is a wide and challenging area by it self. It is outside of the interests of this thesis to review the details and repercussions of this vastly field. Yet, there are a number of known properties of $Mod(S)$ that it would be nice to have in mind in further work, although different tools might be required.
 
 \begin{itemize}
 \item Finitely generated and presented
@@ -77,7 +77,7 @@ The study of mapping class groups it's a wide and challenging area of the mathem
 \subsection{Simple closed curves}
 
 \begin{defini}
-A \textbf{closed curve} in a surface $S$ is a continuous map $\S^{1}\to S$, it's called \textbf{simple} if the map is injective. We'll usually identify a closed curve with its image in $S$. A closed curve is called \textbf{essential} if it's not homotopic to a point, a puncture, or a boundary component.
+A \textbf{closed curve} in a surface $S$ is a continuous map $\S^{1}\to S$, it's called \textbf{simple} if the map is injective. We will usually identify a closed curve with its image in $S$. A closed curve is called \textbf{essential} if it is not homotopic to a point, a puncture, or a boundary component.
 \end{defini}
 Among the adjectives that a curve can acquired we have the following:
 \begin{itemize}
@@ -90,12 +90,12 @@ We are interested in \textbf{essential} and \textbf{non-peripherial} curves, the
 
 The idea behind the construction of the curve complex is to stratify the set of homotopy classes of curves on a surface. For this to make sense we define the \textbf{geometric intersection number} between free homotopy classes $a$ and $b$ of simple closed curves in a surface $S$. This is defined to be the minimal number of intersection points between a representative curve in the class $a$ and a representative curve in the class $b$:
 $$i(a,b) = min \{ |\alpha \cap \beta| : \alpha \in a, \beta \in b \}$$
-Sometimes it'll be convenient to adopt a slight abuse of notation by writing $i(\alpha, \beta)$ for the intersection number between the homotopy classes of simple closed curves $\alpha$ and $\beta$. It's useful to think that this number can be calculate by finding representatives $\alpha$ and $\beta$ that realize the minimal intersection in their homotopy classes, so that $i(a, b) = |\alpha \cap \beta|$. When this is the case, we say that $\alpha$ and $\beta$ are in minimal position. Although the geometric intersection number is a useful and intuitive invariant it's not always easy to compute, whenever this is the case we can appeal to the algebraic intersection number. For a further discussion of this see \cite[Farb]{Farb}
+It is convenient to adopt a slight abuse of notation by writing $i(\alpha, \beta)$ for the intersection number between the homotopy classes of simple closed curves $\alpha$ and $\beta$. It is useful to think that this number can be calculate by finding representatives $\alpha$ and $\beta$ that realize the minimal intersection in their homotopy classes, so that $i(a, b) = |\alpha \cap \beta|$. When this is the case, we say that $\alpha$ and $\beta$ are in minimal position. Although the geometric intersection number is a useful and intuitive invariant it's not always easy to compute, whenever this is the case we can appeal to the algebraic intersection number. For a further discussion of this see \cite[Farb]{Farb}
 
-\subsection{The curve complex}
+\subsection{The curve graph}
 
 \begin{defini}
-The \textbf{curve graph} $\Gamma(S)$ of a surface $S$, is constructed by the following data:
+The \textbf{curve graph} $\Gamma(S)$ of a surface $S$ is constructed by the following data:
 \begin{itemize}
 \item \textbf{Vertices}. There's a vertex in $\Gamma(S)$ for every isotopy class of essential closed curves in $S$.
 \item \textbf{Edges}. There's an edge between the corresponding vertices of isotopy classes $a$ and $b$ whenever $i(a,b)=0$.
@@ -106,12 +106,12 @@ The \textbf{curve graph} $\Gamma(S)$ of a surface $S$, is constructed by the fol
 The \textbf{curve complex of the surface}, $C(S)$ is defined to be the flag complex of the graph of curves just defined.
 \end{defini}
 
-\section{Properties of the curve complex}
-The goal of this sections is to enumerate known properties of the curve complex that will be useful to establish the appropriate parameters in the probabilistic model. Notice that the construction of the curve complex is completely given by the curve graph, the probabilistic model will work in the same sense and that's why we'll be jumping between the complex to the graph whenever it's more convenient. Let's keep in mind the following exceptional cases; they are the responsible for the conditions stated in the hypothesis of the following theorems for $g$ and $n$. For $ S^2, S_{0,1}, S _{0,2}, S_{0,3} $ the curve complex is empty and for  $ T^{2} $, $ S_{1,1}$ and $ S_{0,4}$ is a countable disjoint union of points.
+\section{Properties of the curve graph}
+The goal of this sections is to enumerate known properties of the curve graph that will be useful to establish the appropriate parameters in the probabilistic model. Notice that the construction of the curve complex is completely determine by the curve graph, hence the probabilistic models can work in the same sense. Let's keep in mind the following exceptional cases, as they are the responsible for the conditions stated in the hypothesis of the following theorems for $g$ and $n$. For $ S^2, S_{0,1}, S _{0,2}, S_{0,3} $ the curve graph is empty and for  $ T^{2} $, $ S_{1,1}$ and $ S_{0,4}$ is a countable disjoint union of points.
 
 \subsection{Cardinality of the number of vertices}
 \begin{theorem}
-If $g\geq 1$ or $n\geq 4$ then the set of vertices in $C(S_{g,n})$ is countably infinite.
+If $g\geq 1$ or $n\geq 4$ then the set of vertices in $\Gamma(S_{g,n})$ is countably infinite.
 \end{theorem}
 
 It's well known that for $T^{2}$ there's an explicit identification for the isotopy classes of essential curves with the rational numbers. In this case there aren't disjoint curves, this easy to believe by looking the following picture.
@@ -122,22 +122,22 @@ It's well known that for $T^{2}$ there's an explicit identification for the isot
 	\caption{$T^{2}$ with representatives of typical elements of curves}
 \end{figure}
 
-This identification can be seen as the induction basis and then the induction step over $g$ comes from splitting the surface, by the induction hypotheses none of the resulting surfaces can have a non-countable number of curves.
+This identification can be seen as the induction basis and then the induction step over $g$ comes from splitting the surface, by the induction hypotheses none of the resulting surfaces can have a non-countable number of classes of curves.
 
 \subsection{Connectivity}
 \begin{theorem}
-If $3g+n\geq 5$, then $C(S_{g,n})$ is connected.
+If $3g+n\geq 5$, then $\Gamma(S_{g,n})$ is connected.
 \end{theorem}
 
-The $3g+n\geq 5$ hypothesis means that the result exclude the problematic cases which we already discuss. To proof this theorem we can show that for any two isotopy classes $a$ and $b$ of simple closed curves in $s_{g,n}$ exists a sequence of isotopy classes
+The $3g+n\geq 5$ hypothesis means that the result exclude the problematic cases already discussed. To proof this theorem we can show that for any two isotopy classes $a$ and $b$ of simple closed curves in $s_{g,n}$ exists a sequence of isotopy classes
 $$a=c_{1},\dots,c_{k}=b$$
 where $i(c_{i},c_{i+1})=0$, this can be done proceeding by induction over $i(a,b)$ The proof of this theorem can be found in \cite[Farb p.~93]{Farb} 
 
 \subsection{Locally infinity}
 \begin{theorem}
-If $3g+m\geq 5$, then $C(S_{g,n})$ is locally infinity.
+If $3g+m\geq 5$, then $\Gamma(S_{g,n})$ is locally infinity.
 \end{theorem}
-The idea behind the proof of this theorem is that given any $\alpha \in C(S)$ we can construct a family of isotopy classes of curves which are disjoint to $\alpha$. The following picture gives us an intuitive idea on how to do this.
+The idea behind the proof of this theorem is that given any $\alpha \in \Gamma(S)$ we can construct a family of isotopy classes of curves which are disjoint to $\alpha$. The following picture gives us an intuitive idea on how to do this.
 \vspace{1cm}
 \begin{figure}[h!]
 	\centering
@@ -145,46 +145,48 @@ The idea behind the proof of this theorem is that given any $\alpha \in C(S)$ we
 	\caption{$S_{3}$ with typical representative curves which provide the locally infinity property}
 \end{figure}
 
-For the complete argument let $\alpha$ be any simple closed curve on $S$, the surface $S-\alpha$ which we obtain by cutting $S$ open along $\alpha$ contains at least one connected component of Euler characteristic at most $-2$, and such a component contains infinitely many distinct homotopy classes of simple closed curves which viewed as curves in $S$ are disjoint from $\alpha$ 
+For the complete argument let $\alpha$ be any simple closed curve on $S$, the surface $S-\alpha$ which we obtain by cutting $S$ open along $\alpha$ contains at least one connected component of Euler characteristic at most $-2$, and such component contains infinitely many distinct homotopy classes of simple closed curves which viewed as curves in $S$ are disjoint from $\alpha$.
 
 \subsection{Clique number}
 A \textbf{clique} in a graph $G$ is a complete subgraph of $G$. The clique number $cl(G)$ of a graph $G$ is the maximum order of a clique of $G$.
 
 \begin{theorem}
-If $3g+n\geq 5$, then $3g - 3 + m$ is the clique number of $C(S_{g,m})$.
+If $3g+n\geq 5$, then $3g - 3 + m$ is the clique number of $\Gamma(S_{g,m})$.
 \end{theorem}
 
- This is because $3g-3+m$ is the number of curves in a pants decomposition of $S$, i.e. a maximal collection of disjoint mutually not freely homotopic essential simple closed curves which decompose $S$ into $2g-2+m$ open subsurfaces homeomorphic to a thrice punctures sphere, making the dimension of $C(S)$ equals $3g-4+m$, for a full proof of this well-known fact refer to \cite[Hatcher]{Pants}
+ This is because $3g-3+m$ is the number of curves in a pants decomposition of $S$, i.e. a maximal collection of disjoint mutually not freely homotopic essential simple closed curves which decompose $S$ into $2g-2+m$ open subsurfaces homeomorphic to a thrice punctures sphere, making the dimension of $\Gamma(S)$ equals $3g-4+m$, for a full proof of this well-known fact refer to \cite[Hatcher]{Pants}
  
 \vspace{1cm}
 \begin{figure}[h!]
 	\centering
 	\includegraphics[scale=0.4]{Figures/Pantalones.png}
-	\caption{Exemplification of a panths decomposition of a surface}
+	\caption{Exemplification of a pants decomposition of a surface}
 \end{figure}
 
 \subsection{Infinite Diameter}
 \begin{theorem}
-If $3g+m\geq 5$ then $diam(C(S)) = \infty$
+If $3g+m\geq 5$ then $diam(\Gamma(S)) = \infty$
 \end{theorem}
 
-The proof for this theorem relies on the fact that for any psuedo-Anosov element $h \in Mod(S)$, any $\gamma \in V(C(S))$ and any $k\in \Z$
+The proof for this theorem relies on the fact that for any pseudo-Anosov element $h \in Mod(S)$, any $\gamma \in V(\Gamma(S))$ and any $k\in \Z$
 
 $$d_{C}(h^{k}(\gamma), \gamma) \geq c|k|$$
  
 For details on the proof refer to \cite[Masur and Minsky]{Masur}
 
-The curve complex is a fundamental tool in the study of the geometry and combinatorial topology of the surfaces. It's interesting and challenging enough to study $C(S)$ by its own. There are a number of known properties of it that it would be nice to have in mind to refine the probabilistic model in further work.
+The curve graph and the curve complex are fundamental tools in the study of the surfaces. There are a number of known properties of them that it would be nice to have in mind to refine the probabilistic model in further work.
 
 \begin{enumerate}
-\item C(S) is hyperbolic
-\item In the infinite case $diam(C(S))= 2$
-\item There's an isomorphism between $Mod(S)$ and $Aut(C(S))$ (except when $(g,m) \in \{(1,2), (1,1), (2,0), (0,4)\}$
+\item $C(S)$ is hyperbolic
+\item In the infinite case $diam(\Gamma(S))= 2$
+\item There's an isomorphism between $Mod(S)$ and $Aut(C(S))$, except when $(g,m) \in \{(1,2), (1,1), (2,0), (0,4)\}$
 \end{enumerate}
 
-\section{Rigidity}
+\section{Rigidity in graphs}
 
-As we talk in the introduction of the chapter, rigidity appears in the mapping class group context in light of its comparison with arithmetic groups. In \cite[Aramayona, S.]{rigidityJA} we can find a survey on the search of an analogue for the Margulis Superrigidity theorem. They propose three different perspectives: a Lie theoretical, a geometric and a folkloric one.
+The intention of this section is to track down the motivation to do rigid expansions and give the basic definitions. 
+
+As mention in the introduction of the chapter, rigidity appears in the mapping class group context in light of its comparison with arithmetic groups. In \cite[Aramayona, S.]{rigidityJA} we can find a survey on the search of an analogue for the Margulis Superrigidity theorem. They analyze three different perspectives: a Lie theoretical, a geometric and a folkloric one.
 
 The Lie theoretic version of superrigidity says that every homomorphism $Mod(X) \to Mod(Y)$ is induced by a homomorphism $\textit{Diff}_{c}(X) \to \textit{Diff}_{c}(Y)$ between the associated groups of diffeomorphisms with compact support disjoint from the boundary.
 
@@ -192,9 +194,11 @@ A direct formulation of geometric superrigidity cannot hold when the moduli spac
 
 The folkloric version of Mostow and Margulis superrigidity claims that the only homomorphisms between lattices are the “obvious ones”, in the $Mods(S)$ context this will mean that if we consider $X$ and $Y$, under suitable conditions, then every homomorphism $Mod(X) \to Mod(Y)$ will be induced by a manipulation of the underlying surfaces. 
 
-A result due to Ivanov asserts that every automorphism of $C(S)$ is induced by a self-homeomorphism of $S$. This argument is the favorite in the literature to do the bridging among this two worlds; it is easy, beautiful and parallels the proof of the Mostow Rigidity theorem in higher rank, replacing the Tits building by the curve complex. A lot of work has been developed trying to generalize this result, in \cite[J. Hernández]{rigidExpJH} we can find a summary of the state of the art of this pipeline with the appropriate bibliographic references. 
+A result due to Ivanov \cite{celebratedIvanov}, Korkmaz \cite{celebratedKorkmaz} and Luo \cite{celebratedLuo}, asserts that, excluding few well-understood cases, the curve complexes are simplicially rigid. This means that the group $Aut(C(S))$ of simplicial automorphisms of $C(S)$ is isomorphic to the extended mapping class group, this result is sometimes interpreted as a proof that \textbf{the automorphisms  of  the  curve  complex  are  all geometric}.
 
-There's a method to expand subgraphs developed in \cite[Aramayona, Leininger]{rigidExpJH} which can be used to obtain new results concerning edge-preserving maps. We'll take particular interest to this method due to it's combinatorial nature.
+In the aim to generalize this result to broader types of simplicial self-maps, in \cite[Aramayona, Leininger - 13]{finiteRigidSetsJA} was introduced the concept of rigid sets in the curve graph. Later on in \cite[Aramayona, Leininger - 13]{exhaustionByRigidSets}, they developed a method for expanding subgraphs and proved that for almost all surfaces of finite topological type, there exists an increasing sequence of finite rigid sets that exhaust the curve graph, each of which has trivial pointwise stabilizer in $Mod^{∗}(S_{g},n)$. 
+
+In \cite[J. Hernández]{exhaustionCurveGraph} there is the proof of a similar result to Aramayona and Leininger's and a summary of the progress of the generalization of Ivanov, Korkmaz and Luo's result. In this same article, the method to obtain new results concerning edge-preserving maps was retaken. This method is called rigid expansions, which inspire the develop of this thesis.
 
 \begin{defini}
 Let $\Gamma$ be a simplicial graph and let $H<\Gamma$ be a vertex-induced subgraph. A function $f:y\to \Gamma$ is \textbf{locally injective} if $f|_{star(v)}$ is injective for all $v \in V(y)$. 
@@ -212,8 +216,11 @@ A vertex $v \in V$ in a graph it's called to be uniquely determined by $A\subset
 $$ \{ v \} = \bigcap_{w\in B} lnk(w) $$
 
 \begin{defini}
-The first rigid expansion of $Y\subset \Gamma$ is the vertex-induced subgraph whose vertices are
+The first rigid expansion of $Y\subset \Gamma$, denoted by $Y^{1}$, is the vertex-induced subgraph whose vertices are
 $$ V(Y) \cup \{ v\in V(\Gamma) :  \exists A \subset V(Y) \text{ where } v = <A>  \}$$
+We also define $Y^{0} = Y$ and, inductively, $Y^{k} = (Y^{k-1})^{1}$.\textbf{}
 \end{defini}
 
-To motivate the computational approach, it would be nice to have conditions which determine whether a subcomplex is rigid or not. So far we know that there aren't non-trivial necessary conditions to check rigidity, i.e. other than connectivity there's not much else.
+%Motivación de las expansiones rígidas. y Justificación de extensión de propiedad
+
+To motivate the computational approach, it would be nice to have conditions which determine whether a subgraph is rigid or not. So far we know that there aren't non-trivial necessary conditions to check rigidity, i.e. other than connectivity there's not much else.
