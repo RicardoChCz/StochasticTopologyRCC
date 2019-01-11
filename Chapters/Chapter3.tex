@@ -1,6 +1,6 @@
 % Chapter 3
 
-\chapter{Results} % Main chapter title
+\chapter{Computational experimentation} % Main chapter title
 
 \label{Chapter3} % For referencing the chapter elsewhere, use \ref{Chapter1} 
 
@@ -12,57 +12,102 @@ Nowadays scientific computing is one the most important tools for scientific dis
 
 Stochastic topology has embraced the methods of scientific computing to provide a better insight of complex phenomena. A lot of techniques has been used in this sense, for example, the use of algorithms that sample the search space.
 
-For theoretical develop it has allowed to verify if the established conditions in a probabilistic model are sharp enough, meaning that a random object satisfy certain property  so that the model describe desire properties or if the conjectures on certain properties are valid or not \cite{Meshulam13}.
+For theoretical develop it has allowed to verify if the established conditions in a probabilistic model are sharp enough, for example in \cite{Meshulam13}.
 
-In this work we propose to generate random graphs for the Ërdos Renyi model using \textbf{python}
+In this chapter we propose the computational experimentation as a tool to understand rigidity phenomena. Using the \texttt{python} library \texttt{\href{https://networkx.github.io/}{NetworkX}} is possible to create and modify graphs as objects.
 
-\section{Simulating graphs in G(n,p)}
- To simulate graphs in this model we can use the adyacency matrix of the graph which summarize all the information of the graph. If the graph has $n$ vertices then the we'll have a matriz of size $n \times n$, where the entry $a_{i,j}$ it's equal to 1 if the vertex $i$ and the vertex $j$ are connected, and it's $0$ otherwise. As we are considering simple no-directed graphs, this matrix is symetric with zeros in the diagonal. Thus it's enough to simulate each entry above the diagonal with a r.v. $Bernoulli(p)$.
- 
+\section{Simulating graphs in $G(n,p)$}
 
-We can do the implementation of this simulation directly. In the code can be find in the function: \texttt{erdosRenyi}. Usying the libary \href{https://networkx.github.io/}{NetworkX} we can create and modify graphs directly taken grpahs as objects in python.
+There is a direct algorithm to obtain a graph in $G(n,p)$, it simulate a $Bernoulli(p)$ r.v. for each of the $\frac{n(n-1)}{2}$ possible edges. Thus, it runs in $O(n^2)$ time. It is possible to do faster algorithms for small values of $p$ that runs in $O(n + m)$ time, where $m$ is the expected number of edges, which equals $\frac{pn(n - 1)}{2}$ \cite{fastER}.
 
-Returns a $G_{n,p}$ random graph, also known as an Erdős-Rényi graph or a binomial graph.
-
-The $G_{n,p}$ model chooses each of the possible edges with probability p.
-
-The functions $binomial_graph()$ and $erdos_renyi_graph()$ are aliases of this function.
-
-
-$fast_gnp_random_graph()$
-
-Notes
-
-This algorithm runs in $O(n^2)$ time. For sparse graphs (that is, for small values of $p$), $fast_gnp_random_graph()$ is a faster algorithm.
-
-In the figure \ref{fig:ErdosRenyi10} we can see a set of graphs obtained with such algorithm, fixing $n=10$ an varing the parameter $p$
+In the figure \ref{fig:ErdosRenyi10} appears a set of graphs obtained with such algorithm, fixing $n=10$ an varying the parameter $p$
 \begin{figure}[h!]
 	\centering
 	\includegraphics[scale=1]{Figures/ER-10.png}
-	\caption{Erdös-Rényi random graphs with $n$ fixed and varing $p$}
+	\caption{Erdös-Rényi random graphs with $n$ fixed and varying $p$}
 	\label{fig:ErdosRenyi10}
 \end{figure}
 
-As we mention in the introduction the utility of doing Como se menciona en la introducción la utilidad de las simulaciones para el desarrollo de la topología estocástica reside en poder verificar la rigurosidad de las condiciones impuestas para que cierta propiedad se satisfaga, en este caso la propiedad es la conexidad y las condiciones están dadas por la cota $log(n)/n$ para $p$. Para ejemplificar esto se hicieron simulaciones en Python de gráficas variando $n$ y tomando $p$ como indica el teorema con $\omega(n)= log(n/2)$. Para cada tamaño de $n$ se repite la simulación 30 veces y se verifica si la gráfica simulada es conexa o no con la función \texttt{is$\_$connected(G)} de la librería de \texttt{networkX}. De esta manera obtenemos una aproximación de la probabilidad de que una gráfica sea conexa si se toma con las condiciones indicadas en el teorema. En la figura \ref{fig:Estimadas}, se graficó para cada $n$ dicha probabilidad estimada para cada caso de $p$.
-
-La ejecución del algoritmo erdosRenyi implementado requiere de la generación de $\binom{n}{2}$ variables aleatorias Bernoulli las cuales son simuladas en el código de Python adjunto en la función \texttt{Bernoulli}, las cuales hacen uso de la librería de \texttt{numpy} para generar los números aleatorios básicos, librería que usa el algoritmo \textbf{Mersenne-Twister}. Por lo que el tiempo de ejecución del algoritmo es de $O(n^{2})$. En la figura \ref{fig:tiemposER} se muestran los resultados de los tiempos de ejecución haciendo variar $n$.
-
+Figure \ref{fig:tiemposER} show the execution times varying $n$
 \begin{figure}[h!]
 	\centering
 	\includegraphics[scale=0.8]{Python/Figures/Times-ER.png}
-	\caption{Tiempos de ejecución en segundos del algoritmo erdosRenyi variando el tamaño de la gráfica. Se presenta la escala norma y la logarítmica}
+	\caption{Execution times varying $n$. Both normal and logarithmic scale appear in the figure}
 	\label{fig:tiemposER}
 \end{figure}
 
-
-
 \section{The algorithm}
-The aim of this section is to discuss the computational difficulties of implementing an algorithm which produces rigid expansions on a graph $G$, starting from a subset $A$. We'll be taking about the algorithm regardless of whether the optimizations and considerations appear in the context of the graph of curves. Then by the end of the chapter we'll fit the results to the context that we described in the pasts chapters. The purpose to do it so, is because the combinatorial nature of the phenomena make sense by it self, even more in the stochastic point of view we're considering a non-monothonous process.
+The aim of this section is to discuss the computational difficulties of implementing an algorithm which produces rigid expansions on a graph $G$, starting from a subset $A$.
 
-A priori, the algorithm to determine a first rigid expansion it's supposed to be executed in a large amount of time, as the definition let us see, it depends not only on the size of $G$, it also depends on the size of $A$; it's necessarily to seek among all the possible subsets of $A$ that's $2^{m}$ verifications where $|A| = m$. This tells us that if we are going to be dealing with large stochastic graphs it's important to do some optimization to the algorithms and see when does this have more impact in the expected execution time according to the taken parameters.
+A priori, the algorithm to determine a rigid expansion is supposed to be executed in a large amount of time. As the definition let us see, it depends on the size of $ G $, and it depends exponentially on the size of $A$; it must check among all the possible subsets of $ A $, that is $ 2 ^ {m} $ verifications, where $ | A | = m $. Thus, it is important to do some optimization to the algorithms and them evaluate when this have more impact in the expected execution time according to the parameters taken.
 
-Any isolated vertex in $A$ wont have any impact at the moment of doing rigid expansions, so they shouldn't be consider, also whenever leaves appear in the set it's convenient to ignore them. Unique neighbors of leaves which we will call \textit{petioles} should be automatically added to set because of the definition of a single rigid expansion.
+The following is the straightforward algorithm for rigid expansions.
 
-It means that we are now working with the set:
+\begin{cajita}
+\textbf{Rigid Expansions Algorithm} \hfill \break
+
+\begin{tabular}{ l l }
+\texttt{Input:} &  \texttt{Random graph $G$ (dictionary),} \\
+                &  \texttt{set of vertices $A$ (array).}\\
+\texttt{Output:} & \texttt{Set of vertices obtained after expanding $A$ (array)} \\
+\end{tabular}
+\begin{enumerate}
+\item Initialize N as empty (the set of new vertices)
+\item For every $B$, subset of A:\hfill \break
+\hphantom{12} If $\bigcap\limits_{b\in B} N(b) = v$ and $v\not\in A\cup N$: \hfill \break
+\hphantom{1234} Add $v$ to $N$
+\item If $N$ is not empty: \hfill \break
+\hphantom{12} Replace $A$ by $A\cup N$ and return to step 1. \hfill \break
+      Otherwise:\hfill \break
+\hphantom{12} Return $A$
+\end{enumerate}
+\end{cajita}
+
+To optimize the use of memory in step two the iterations were indexed by \texttt{generators}. These are iterators in \texttt{python} were you can only iterate over once, they do not store all the values in memory, they generate the values on the fly.
+
+The proposed optimizations are:
+
+\begin{enumerate}
+\item \textbf{Consideration of isolated vertices and leaves.} Any isolated vertex in $A$ will not have any impact at the moment of doing rigid expansions, so they should not be consider. Also, whenever $A$ contains a leave is convenient to ignore them; the unique neighbor of a leave, which we will call \textit{petioles} should be automatically added in the first expansion
+This means that the input should be replace with:
 $$A' = A - \{v: deg(v)\leq 1 \} \cup \{u: \exists x, N(x)=\{u\}\} $$
+and at the end of the expansions just add again leaves and isolated vertices.
+\item \textbf{Relative size of $A$.} Notice that in Step 2, if $A$ big enough is faster to check if a vertex outside of $A$ can be uniquely determinate by a subset of $A$. 
+This can reduce dramatically the execution time when $p$ is small. This test allow to reduce the size of revisions by taking only the \textit{effective} part of $A$, this is convenient to do whenever
+$$k\cdot log(2) > log(n-k) + (kp)\cdot log(2)$$
+were $k$ is the size of $A$
+\item \textbf{Restriction to effective subsets}. Calculations in Chapter 2 showed that there are subsets which are more likely to generate rigid expansions than others. This depend on the parameters of the space and the size of the subsets. If we restrict to these effective subsets we can reduce the number of verifications.
+\end{enumerate}
 
+With these optimizations we obtain the following algorithm
+
+\begin{cajita}
+\textbf{Optimized Rigid Expansions Algorithm} \hfill \break
+
+\begin{tabular}{ l l }
+\texttt{Input:} &  \texttt{Random graph $G$ (dictionary),} \\
+                &  \texttt{set of vertices $A$ (array),} \\
+                &  \texttt{$n$(int) and $p$(float)} \\
+\texttt{Output:} & \texttt{Set of vertices obtained after expanding $A$ (array)} \\
+\end{tabular}
+\begin{enumerate}
+\item Replace $A$ by $A'$
+\item Initialize $N$ as petioles of $A$ (the set of new vertices)
+\item Calculate the range of effective subsets.\hfill \break
+If $k\cdot log(2) > log(n-k) + (kp)\cdot log(2)$: \hfill \break
+\hphantom{12} For every $v\in V-A$:\hfill \break
+\hphantom{1234} Take $C = A\cap N(v)$ and for every $B$, effective subset of C:\hfill \break
+\hphantom{123456} If $\bigcap\limits_{b\in B} N(b) = v$ and $v\not\in A\cup N$: \hfill \break
+\hphantom{12341234} Add $v$ to $N$
+
+Otherwise:\hfill \break
+\hphantom{12} For every $B$, effective subset of A:\hfill \break
+\hphantom{1234} If $\bigcap\limits_{b\in B} N(b) = v$ and $v\not\in A\cup N$: \hfill \break
+\hphantom{123456} Add $v$ to $N$
+
+\item If $N$ is not empty: \hfill \break
+\hphantom{12} Replace $A$ by $A\cup N$, initialize $N$ as empty and return to step 3. \hfill \break
+      Otherwise:\hfill \break
+\hphantom{12} Return $A\cup\{v: deg(v)\leq 1 \}$
+\end{enumerate}
+\end{cajita}
