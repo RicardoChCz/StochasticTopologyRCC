@@ -6,13 +6,9 @@
 
 \lhead{Appendix A. \emph{The generate algorithm}} % Change X to a consecutive letter; this is for the header on each page - perhaps a shortened title
 
-In this section we describe an algorithm that given a not directed graph $G$ with $n$ vertices, it produces a maximal tree of $G$ sampled uniformaly among all the posibles. We also give references to proof that the expected executed time of the algorithm for each tree is $O(n\cdot log(n) )$ for almost every graph and O($n^{3}$) in the worst cases. We also mention deterministic known more complex algortihms which execution time it's at least $O(n^{3})$ to generate a tree in such conditions.
+In this section we describe an algorithm that given a not directed graph $G$ with $n$ vertices, it produces a maximal tree of $G$ sampled uniformly among all the possibles. We also give references to proof that the expected executed time of the algorithm for each tree is $O(n\cdot log(n) )$ for almost every graph and O($n^{3}$) in the worst cases. We also mention deterministic known more complex algorithms which execution time it's at least $O(n^{3})$ to generate a tree in such conditions.
 
-One of the first algorithms published for this problem has an execution time o $n^{5}$, it's based on the fact that the total number of firected trees in a graph can be explicitly calculated thorug a deteminant of $n \times n$ size. The algorithm consider the edges of graph labeled from $1$ to $m$. Each maximal tree is label by the set of its edges. This induces a lexigraphic order in the set of trees and the same tree can be fund calculation at most $m$ determinates. Further improvments by \cite{CDN88}, \cite{CDM88} reduce the number of calculations reducing the exeecution time to  $O(n3)$ or $O(L(n))$ where $L(n)$ is the execution time to multiply  matrices of size $n\times n$, the new algorithms turn out to be far more complicated.
-
-
-
-Consider a particle moving through a simple non directed graph $G=(V,A)$ with $n$ vertices. 
+One of the first algorithms published for this problem has an execution time o $n^{5}$, it's based on the fact that the total number of directed trees in a graph can be explicitly calculated through a determinant of $n \times n$ size. The algorithm consider the edges of graph labeled from $1$ to $m$. Each maximal tree is label by the set of its edges. This induces a lexicographic order in the set of trees and the same tree can be fund calculation at most $m$ determinants. Further improvements by \cite{CDN88}, \cite{CDM88} reduce the number of calculations reducing the execution time to  $O(n3)$ or $O(L(n))$ where $L(n)$ is the execution time to multiply  matrices of size $n\times n$, the new algorithms turn out to be far more complicated.
 
 En cada paso la partícula se mueve aleatoriamente del vértice en el que está a alguno de sus vecinos escogido de manera uniforme. Este proceso estocástico es una cadena de Markov; llamada caminata aleatoria simple en la gráfica $G$. Simulaciones de una caminata de este tipo son usadas para generar un árbol maximal de $G$ uniformemente sobre todos los posibles árboles de $G$ con un algoritmo muy simple:
 

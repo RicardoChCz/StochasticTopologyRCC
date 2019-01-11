@@ -50,7 +50,7 @@ $Mod(S)$ & $=$ & $\pi_{0}(Homeo^{+}(S, \partial S))$\\
 
 where $\textit{Diff}^{+}(S, \partial S)$ is the group of orientation-preserving diffeomorphisms of $S$ that are the identity on the boundary. It can be taken to be either smooth homotopy relative to the boundary or smooth isotopy relative to the boundary.
 
-A lot of work had been made to describe the types of elements in $Mod(S)$. Thanks to the Thurston's classification theorem there's a characterization of the homeomorphisms of a compact orientable surface. This classification is useful to describe the curve complex which will be analyzed in the next section.
+A lot of work had been made to describe the types of elements in $Mod(S)$. Thanks to the Thurston's classification theorem there's a characterization of the homeomorphisms of a compact orientable surface. This classification is useful to describe the curve graph which will be analyzed in the next section.
 
 \subsection{Nielsen–Thurston classification}
 Given a homeomorphism $f: S \to  S$, there is a map $g$ isotopic to $f$ such that at least one of the following holds:
@@ -72,25 +72,25 @@ The study of mapping class groups is a wide and challenging area by it self. It 
 \item $H_{1}(Mod(S_{g,m}), \Z) = 1$ when $(g\geq3, m=0)$
 \end{itemize}
 
-\section{Curve complex}
+\section{Curve graph}
 
 \subsection{Simple closed curves}
 
 \begin{defini}
-A \textbf{closed curve} in a surface $S$ is a continuous map $\S^{1}\to S$, it's called \textbf{simple} if the map is injective. We will usually identify a closed curve with its image in $S$. A closed curve is called \textbf{essential} if it is not homotopic to a point, a puncture, or a boundary component.
+A \textbf{closed curve} in a surface $S$ is a continuous map $\S^{1}\to S$, is called \textbf{simple} if the map is injective. We will usually identify a closed curve with its image in $S$. A closed curve is called \textbf{essential} if it is not homotopic to a point, a puncture, or a boundary component.
 \end{defini}
 Among the adjectives that a curve can acquired we have the following:
 \begin{itemize}
     \item $\alpha$ is \textbf{separating}, if $S-\alpha$ has two components, otherwise it is called \textbf{non separating}.
-    \item it's called \textbf{essential} if no component of $S- \alpha$ is a disk.
-    \item it's \textbf{non-peripheral} if no component of $S - \alpha$ is an annulus. 
+    \item It is called \textbf{essential} if no component of $S- \alpha$ is a disk.
+    \item It is \textbf{non-peripheral} if no component of $S - \alpha$ is an annulus. 
 \end{itemize}
 
 We are interested in \textbf{essential} and \textbf{non-peripherial} curves, they will be assumed in this sense, unless otherwise specified.
 
-The idea behind the construction of the curve complex is to stratify the set of homotopy classes of curves on a surface. For this to make sense we define the \textbf{geometric intersection number} between free homotopy classes $a$ and $b$ of simple closed curves in a surface $S$. This is defined to be the minimal number of intersection points between a representative curve in the class $a$ and a representative curve in the class $b$:
+The idea behind the construction of the curve graph is to stratify the set of homotopy classes of curves on a surface. For this to make sense we define the \textbf{geometric intersection number} between free homotopy classes $a$ and $b$ of simple closed curves in a surface $S$. This is defined to be the minimal number of intersection points between a representative curve in the class $a$ and a representative curve in the class $b$:
 $$i(a,b) = min \{ |\alpha \cap \beta| : \alpha \in a, \beta \in b \}$$
-It is convenient to adopt a slight abuse of notation by writing $i(\alpha, \beta)$ for the intersection number between the homotopy classes of simple closed curves $\alpha$ and $\beta$. It is useful to think that this number can be calculate by finding representatives $\alpha$ and $\beta$ that realize the minimal intersection in their homotopy classes, so that $i(a, b) = |\alpha \cap \beta|$. When this is the case, we say that $\alpha$ and $\beta$ are in minimal position. Although the geometric intersection number is a useful and intuitive invariant it's not always easy to compute, whenever this is the case we can appeal to the algebraic intersection number. For a further discussion of this see \cite[Farb]{Farb}
+It is convenient to adopt a slight abuse of notation by writing $i(\alpha, \beta)$ for the intersection number between the homotopy classes of simple closed curves $\alpha$ and $\beta$. It is useful to think that this number can be calculate by finding representatives $\alpha$ and $\beta$ that realize the minimal intersection in their homotopy classes, so that $i(a, b) = |\alpha \cap \beta|$. When this is the case, we say that $\alpha$ and $\beta$ are in minimal position. Although the geometric intersection number is a useful and intuitive invariant it is not always easy to compute, whenever this is the case we can appeal to the algebraic intersection number. For a further discussion of this see \cite[Farb]{Farb}
 
 \subsection{The curve graph}
 
@@ -114,7 +114,7 @@ The goal of this sections is to enumerate known properties of the curve graph th
 If $g\geq 1$ or $n\geq 4$ then the set of vertices in $\Gamma(S_{g,n})$ is countably infinite.
 \end{theorem}
 
-It's well known that for $T^{2}$ there's an explicit identification for the isotopy classes of essential curves with the rational numbers. In this case there aren't disjoint curves, this easy to believe by looking the following picture.
+It is well known that for $T^{2}$ there's an explicit identification for the isotopy classes of essential curves with the rational numbers. In this case there aren't disjoint curves, this easy to believe by looking the following picture.
 \vspace{1cm}
 \begin{figure}[h!]
 	\centering
@@ -190,13 +190,13 @@ As mention in the introduction of the chapter, rigidity appears in the mapping c
 
 The Lie theoretic version of superrigidity says that every homomorphism $Mod(X) \to Mod(Y)$ is induced by a homomorphism $\textit{Diff}_{c}(X) \to \textit{Diff}_{c}(Y)$ between the associated groups of diffeomorphisms with compact support disjoint from the boundary.
 
-A direct formulation of geometric superrigidity cannot hold when the moduli space it's endowed with any reasonable metric. However, there are ways to turn this around, saying that every (irreducible) homomorphism between mapping class groups induces a holomorphic map between the corresponding moduli spaces.
+A direct formulation of geometric superrigidity cannot hold when the moduli space is endowed with any reasonable metric. However, there are ways to turn this around, saying that every (irreducible) homomorphism between mapping class groups induces a holomorphic map between the corresponding moduli spaces.
 
 The folkloric version of Mostow and Margulis superrigidity claims that the only homomorphisms between lattices are the “obvious ones”, in the $Mods(S)$ context this will mean that if we consider $X$ and $Y$, under suitable conditions, then every homomorphism $Mod(X) \to Mod(Y)$ will be induced by a manipulation of the underlying surfaces. 
 
 A result due to Ivanov \cite{celebratedIvanov}, Korkmaz \cite{celebratedKorkmaz} and Luo \cite{celebratedLuo}, asserts that, excluding few well-understood cases, the curve complexes are simplicially rigid. This means that the group $Aut(C(S))$ of simplicial automorphisms of $C(S)$ is isomorphic to the extended mapping class group, this result is sometimes interpreted as a proof that \textbf{the automorphisms  of  the  curve  complex  are  all geometric}.
 
-In the aim to generalize this result to broader types of simplicial self-maps, in \cite[Aramayona, Leininger - 13]{finiteRigidSetsJA} was introduced the concept of rigid sets in the curve graph. Later on in \cite[Aramayona, Leininger - 13]{exhaustionByRigidSets}, they developed a method for expanding subgraphs and proved that for almost all surfaces of finite topological type, there exists an increasing sequence of finite rigid sets that exhaust the curve graph, each of which has trivial pointwise stabilizer in $Mod^{∗}(S_{g},n)$. 
+In the aim to generalize this result to broader types of simplicial self-maps, in \cite[Aramayona, Leininger - 13]{finiteRigidSetsJA} was introduced the concept of rigid sets in the curve graph. Later on in \cite[Aramayona, Leininger - 13]{exhaustionByRigidSets}, they developed a method for expanding subgraphs and proved that for almost all surfaces of finite topological type, there exists an increasing sequence of finite rigid sets that exhaust the curve graph, each of which has trivial pointwise stabilizer in $Mod^{\text{*}}(S_{g},n)$. 
 
 In \cite[J. Hernández]{exhaustionCurveGraph} there is the proof of a similar result to Aramayona and Leininger's and a summary of the progress of the generalization of Ivanov, Korkmaz and Luo's result. In this same article, the method to obtain new results concerning edge-preserving maps was retaken. This method is called rigid expansions, which inspire the develop of this thesis.
 
@@ -211,7 +211,7 @@ Remember, $star(v)$ is the vertex-induced subgraph with vertices $\{ v \} \cup N
 \begin{defini}
 $H<\Gamma$ is \textbf{rigid} if every locally injective function defined in $H$ can be extended to an automorphism of $\Gamma$. \end{defini}
 
-A vertex $v \in V$ in a graph it's called to be uniquely determined by $A\subset V(G)$, denoted $v=<A>$, if $v$ is the unique neighbor of every element of $B$, i.e.
+A vertex $v \in V$ in a graph is called to be uniquely determined by $A\subset V(G)$, denoted $v=<A>$, if $v$ is the unique neighbor of every element of $B$, i.e.
 
 $$ \{ v \} = \bigcap_{w\in B} lnk(w) $$
 
