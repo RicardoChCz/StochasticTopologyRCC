@@ -24,7 +24,7 @@ from scipy.special import comb
 
 numExperiments = 500
 
-def cotaLast(n,p,m):
+def bundleLast(n,p,m):
     """
     Returns the probaility that in a ER graph G a set of size k uniquely deter-
     minates the n-th vertex.
@@ -34,14 +34,24 @@ def cotaLast(n,p,m):
     else:
         return p**(m) * (1-p**m)**(n-m-1)
 
-def cotaAnyone(n,p,m):
+def bundleAnyone(n,p,m):
     """
     Returns the probaility that in a ER graph G a set of size k uniquely deter-
     minates the last vertex.
     """
-    return 1- (1 - cotaLast(n,p,m))**(n-m)
+    return 1- (1 - bundleLast(n,p,m))**(n-m)
 
-def cotaExpansion(n,p,k):
+def bundleNewBySubset(n,p,k,m):
+    """
+    Returns the probaility that in a ER graph G a A_m \subset A_k uniquely de-
+    terminates the a vertex outside of A_k.
+    """
+    if m==0:
+        return 0
+    else:
+        return 1 - (1- ((n-k)/n)*bundleLast(n,p,m))**(n-k) 
+
+def bundleExpansion(n,p,k):
     """
     Returns lower and upper bound for the probaility that in a ER graph G a set
     of size k generates a rigid expansion
@@ -53,7 +63,7 @@ def cotaExpansion(n,p,k):
     else:
         #Probability that none of the vertex outside of A_k is u.d by B_m 
         #a subset of A_k
-        rho = [1-cotaExpansionBySubset(n,p,k,m) for m in range(1,k+1)]
+        rho = [1-bundleNewBySubset(n,p,k,m) for m in range(1,k+1)]
         
         #Probability that none of the posible subsets of size m expand outside 
         #of A_k
@@ -66,13 +76,6 @@ def cotaExpansion(n,p,k):
  
         return 1-prod
 
-def cotaExpansionBySubset(n,p,k,m):
-    """
-    Returns the probaility that in a ER graph G a A_m \subset A_k uniquely de-
-    terminates the a vertex outside of A_k.
-    """
-    return 1 - (1- cotaLast(n,p,m))**(n-k) 
-
 def efectiveBundles(n,p,k):
     """
     Returns the lower and upper bundles which determine efective interval to 
@@ -83,14 +86,14 @@ def efectiveBundles(n,p,k):
     i=1
 
     while (tooSmall):
-        actual = cotaExpansionBySubset(n,p,k,i)
+        actual = bundleExpansionBySubset(n,p,k,i)
         if(actual>0.05):
             kMin = i
             i += 1
             tooSmall = False
 
     while (bigEnough):
-        actual = cotaExpansionBySubset(n,p,k,i)
+        actual = bundleExpansionBySubset(n,p,k,i)
         if(actual<0.05):
             kMax = i
             i += 1
