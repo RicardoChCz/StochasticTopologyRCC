@@ -14,47 +14,18 @@ Rigidity phenomena called mathematicians attention because it uses the structure
 
 We have particular interest in studying rigidity in the curve graph associated to a surface $S$. This object appears naturally in the study of $Mod(S)$, the mapping class group of a surface $S$ which is a central object in contemporary mathematical research. The folkloric version of rigidity in this context will mean that if we consider $X$ and $Y$, under suitable conditions, then every homomorphism $Mod(X) \to Mod(Y)$ will be induced by a manipulation of the underlying surfaces.
 
-The curve graph $\Gamma(S)$, is a graph associated to a surface $S$. It encodes intersection patterns of simple closed curves in $S$ and it's highly related to $Mod(S)$, the curve complex $C(S)$ is the flag complex of it. A result due to Ivanov asserts that every automorphism of $C(S)$, is induced by a self-homeomorphism of $S$. This argument is the favorite in the literature due to it's simplicity and resemblance to other proofs.
-
-The concept of a rigid set of the curve graph was introduced by Aramayona and Leininger in \cite[Aramayona, Leininger - 13]{finiteRigidSetsJA}. A rigid set is a full subgraph $Y$ such that any locally injective map from $Y$ to $\Gamma(S_{g},n)$ is the restriction to $Y$ of an automorphism, unique up to the pointwise stabilizer of $Y$ in $Aut(\Gamma(S_{g},n))$.
+The curve graph $\Gamma(S)$, is a graph associated to a surface $S$. It encodes intersection patterns of simple closed curves in $S$ and it's highly related to $Mod(S)$. The curve complex $C(S)$ is merely the flag complex of $\Gamma(S)$. Ivanov sketched in \cite[Ivanov, 1997]{metaconjecture} the proof that every automorphism of $C(S)$, is induced by a self-homeomorphism of $S$. This argument is the favorite in the literature due to its simplicity and resemblance to proofs of other rigidity results.
 
 A research line in the pursuit of rigid sets, lead by Aramayona and Leininger, motivated definitions and techniques that proved in \cite[Aramayona, Leininger - 16]{exhaustionByRigidSets} the existence of an increasing sequence of finite rigid sets that exhaust the curve graph. To do this, they proposed a method called rigid expansions which \textbf{resulted in the a concept of rigidity in the graph theory context}.
 
-Rigidity in graphs is a interesting phenomenon by it's own, regardless of it's interpretation in curve graph. Due to the discrete nature of rigid expansions is reasonable to ask if a probabilistic approach can be provide to study this method; our interest is to address this particular path.
+Rigidity in graphs is, regardless of its interpretation in the curve graph, an interesting phenomenon by it self. Due to the discrete nature of rigid expansions is reasonable to ask if a probabilistic approach can be provide to study this method; our interest is to address this particular path.
 
-We want to answer to the rather vague question: \textit{How \textbf{common} is rigidity in graphs}, specifically by answering \textit{How rigid expansions \textbf{usually} behave}. Also the aim of the thesis is to review the feasibility to \textit{study the curve complex of a surface in a probabilistic point of view.}
+We want to answer the rather vague question: \textit{How \textbf{common} is rigidity in graphs}, specifically by answering \textit{how rigid expansions \textbf{usually} behave}. Also, the aim of the thesis is to review the feasibility to \textit{study the curve complex of a surface in a probabilistic point of view.}
 
-To give formal meaning to the words like "common" or "usually" in the rigidity's panorama is required the use of \textit{simple} probabilistic models which allows to study such complex phenomenon. Then we'll review the conditions under which these models can fit the known properties of the curve graph.
+To give formal meaning to the words like "common" or "usually" in rigidity's panorama, is required the use of \textit{simple} probabilistic models which allows to study such complex phenomenon. Then, we will analyze the conditions under which these models can fit the known properties of the curve graph.
 
-In chapter one, we motivate the study of the curve graph and we'll review the most important properties of it. Then we'll introduce rigidity from the graph theory context.
+In chapter one, we motivate the study of the curve graph and review the most important properties of it. Then, we will introduce rigidity from the graph theory context.
 
-In the second chapter we propose the study of rigidity in random graphs through the Radó graph and the Erdös-Rényi model. In the aim to study the curve graph of a surface with a simple model, we'll justify that the genus of the surface cannot be finite. Thus we'll end up with an asymptotic probabilistic analogue to the result due to Bering and Gaster which state that the Radó graph embeds into the curve graph $C(S)$ of a surface $S$ if and only if $S$ has infinite genus.
+In the second chapter, we propose the study of rigidity in the stochastic context through the Radó graph and the Erdös-Rényi model. In the aim to study the curve graph of a surface with a simple model, we justify that the genus of the surface cannot be finite. Thus, we end up with an asymptotic probabilistic analogue to the result due to Bering and Gaster, which asserts that the Radó graph embeds into the curve graph $C(S)$ of a surface $S$ if and only if $S$ has infinite genus.
 
-A wide range of techniques had been used in this area, among them, algorithms which sample the search space or replicate certain deterministic phenomenon of interest. Also, the implementation of computational tools allows to verify the sharpness of the estimates given, like in \cite{Meshulam13} for example. To do this, we made a computational implementation of the algorithm to do rigid expansions. With the corresponding optimizations that the method require, we were able to take a closer look to rigidity phenomena.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+Finally, we made a computational implementation of the algorithm to do rigid expansions. With the corresponding optimizations that the method require, we were able to take a closer look to rigidity phenomena.
