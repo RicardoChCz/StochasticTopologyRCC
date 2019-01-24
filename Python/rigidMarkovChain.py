@@ -24,9 +24,8 @@ from auxiliar import intervalo
 
 from mpl_toolkits.mplot3d import Axes3D
 from matplotlib import cm
+from matplotlib.pyplot import grid
 from matplotlib.ticker import LinearLocator, FormatStrFormatter
-
-
 
 numExp = 50
 
@@ -92,11 +91,45 @@ def jumpExperiment(G,A,method=1):
 def binomial(n,p,k):
     return comb(n,k)*(p**k)*(1-p)**(n-k)
 
+
+def heatmap(data, ax=None, cbar_kw={}, cbarlabel="", **kwargs):
+    """
+    Create a heatmap from a numpy array and two lists of labels.
+
+    Arguments:
+        data       : A 2D numpy array of shape (N,M)
+
+    Optional arguments:
+        ax         : A matplotlib.axes.Axes instance to which the heatmap
+                     is plotted. If not provided, use current axes or
+                     create a new one.
+        cbar_kw    : A dictionary with arguments to
+                     :meth:`matplotlib.Figure.colorbar`.
+        cbarlabel  : The label for the colorbar
+    All other arguments are directly passed on to the imshow call.
+    """
+
+    if not ax:
+        ax = plt.gca()
+
+    # Plot the heatmap
+    im = ax.imshow(data, **kwargs)
+
+    # Create colorbar
+    cbar = ax.figure.colorbar(im, ax=ax, **cbar_kw)
+    cbar.ax.set_ylabel(cbarlabel, rotation=-90, va="bottom")
+
+
+    # Turn spines off and create white grid.
+    for edge, spine in ax.spines.items():
+        spine.set_visible(False)
+    
+    return im, cbar
+
 if __name__ == "__main__":
     n=30
-    p=0.3
+    p=0.2
     
-    fig, ax = plt.subplots()
     M = [0]*(n+1)    
     #It's not possible to expand startig from empty set
     M[0] = [1] + ([0]*(n))
@@ -107,13 +140,21 @@ if __name__ == "__main__":
         
     #It's already full
     M[n]=([0]*(n))+[1]
-    
-    ax.matshow(M, cmap=plt.cm.Blues)
-    plt.show()
-    
-    fig = plt.figure()
-    ax = fig.gca(projection='3d')
 
+    #Plot heat map
+    fig, ax = plt.subplots(figsize=(6, 4), dpi=100)
+    im, cbar = heatmap(M, ax=ax, cmap="Blues", cbarlabel="Empirical probability")
+    fig.tight_layout()
+    plt.savefig('Figures/Transition-matrix-secuence-of-rigid-expansions.png')
+    plt.show()
+
+    
+    
+    #3D plotting
+    fig = plt.figure(figsize=(6, 4), dpi=100)
+    ax = fig.gca(projection='3d')
+    plt.rcParams['grid.color'] = "#e6e6e6"
+    
     # Make data.
     X = np.arange(0, n+1, 1)
     Y = np.arange(0, n+1, 1)
@@ -121,9 +162,9 @@ if __name__ == "__main__":
     Z = np.asarray(M)
     
     # Plot the surface.
-    surf = ax.plot_surface(X, Y, Z, cmap=cm.coolwarm,
+    surf = ax.plot_surface(X, Y, Z, cmap="Blues",
                        linewidth=0, antialiased=False)
-
+    
     # Customize the z axis.
     ax.set_zlim(0, 1)
     ax.zaxis.set_major_locator(LinearLocator(10))
@@ -131,7 +172,12 @@ if __name__ == "__main__":
 
     # Add a color bar which maps values to colors.
     fig.colorbar(surf, shrink=0.5, aspect=5)
+    ax.w_xaxis.set_pane_color((1.0, 1.0, 1.0, 1.0))
+    ax.w_yaxis.set_pane_color((1.0, 1.0, 1.0, 1.0))
+    ax.w_zaxis.set_pane_color((1.0, 1.0, 1.0, 1.0))
+    plt.savefig('Figures/3D-Transition-matrix-secuence-of-rigid-expansions.png')
     plt.show()
+
 
 
     """
