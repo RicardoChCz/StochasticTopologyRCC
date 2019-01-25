@@ -31,7 +31,7 @@ Let $0 < p < 1$ be fixed, $\G(\N, p)$ consists of all graphs with vertex set $\N
 
 Erdös and Rényi proved in \cite[Erdös, Rényi]{RadoUnique}, that every infinite random graph is isomorphic to the \textbf{Radó graph}. This graph have a countably infinite number of vertices, and can be constructed (with probability one) by deciding independently for each pair of its vertices whether to connect them by an edge or not.
 
-A construction of this graph can be done using binary numbers. To do this, identify the vertices of the graph with the natural numbers, then every edge appears between vertices $x$ and $y$ in the graph (assuming $x < y$) whenever the $x$-th bit of the binary representation of $y$ is nonzero. This means, for example, that all odd-numbered vertices will be neighbors of vertex $0$, and that the larger neighbors of vertex $1$ are all vertices with numbers congruent to $2$ or $3$ mod $4$.
+A construction of this graph can be done using binary numbers. To do this, identify the vertices of the graph with the natural numbers, then every edge appears between vertices $x$ and $y$ in the graph (assuming $x < y$) whenever the $x$-th bit of the binary representation of $y$ is nonzero. This means, for example, that all odd-numbered vertices will be neighbors of vertex $0$, and that the larger neighbors of vertex $1$ are all vertices with numbers congruent to $2$ or $3$ mod $4$. 
 
 \begin{figure}[h!]
 	\centering
@@ -42,7 +42,7 @@ A construction of this graph can be done using binary numbers. To do this, ident
 \subsection{Erdös-Rényi model}
 \begin{defini}
 We will denote by $\G(n,p)$ to the probability space formed by all the graphs of $n$ vertices and probability measure 
-$$ \P(G\in \G(n,p)) = p^{k} (1-p)^{\binom{n}{2}-k} $$
+$$ \P\Big(G\in \G(n,p)\Big) = p^{k} (1-p)^{\binom{n}{2}-k} $$
 where $k$ is the number of edges in $G$, the $\sigma$-algebra is given by the power set.
 \end{defini}
 
@@ -117,9 +117,9 @@ In following table there is a summary of the maximum of the difference between t
 \hline
 n & 5 & 10 & 15 \\
 \hline \hline
- 0.2 & 1e^{-8} & 1e^{-8} & 1e^{-8} \\\hline
- 0.3 & 1e^{-8} & 1e^{-8} & 1e^{-8} \\\hline
- 0.4 & 1e^{-8} & 1e^{-8} & 1e^{-8} \\\hline
+ 0.2 & $1e^{-8}$ & $1e^{-8}$ & $1e^{-8}$ \\\hline
+ 0.3 & $1e^{-8}$ & $1e^{-8}$ & $1e^{-8}$ \\\hline
+ 0.4 & $1e^{-8}$ & $1e^{-8}$ & $1e^{-8}$ \\\hline
 \end{tabular}
 \caption{Maximums of differences between empirical and theoretical probabilities varying $m$ for different values of $n$ and $p$}
 \label{tabla:sencilla}
@@ -161,9 +161,9 @@ The following table let us see that the empirical and theoretical probabilities 
 \hline
 n & 5 & 10 & 15 \\
 \hline \hline
- 0.2 & 1e^{-8} & 1e^{-8} & 1e^{-8} \\\hline
- 0.3 & 1e^{-8} & 1e^{-8} & 1e^{-8} \\\hline
- 0.4 & 1e^{-8} & 1e^{-8} & 1e^{-8} \\\hline
+ 0.2 & $1e^{-8}$ & $1e^{-8}$ & $1e^{-8}$ \\\hline
+ 0.3 & $1e^{-8}$ & $1e^{-8}$ & $1e^{-8}$ \\\hline
+ 0.4 & $1e^{-8}$ & $1e^{-8}$ & $1e^{-8}$ \\\hline
 \end{tabular}
 \caption{Maximums of differences between empirical and theoretical probabilities varying $m$ for different values of $n$ and $p$}
 \label{tabla:sencilla}
@@ -174,10 +174,10 @@ The calculations for the last question are helpful if we want to approximate the
 $$ a_{k,k+s} = \P(A_{k} \text{ generates a rigid expansion by } s \text{ elements})$$
 Notice that, unlike in the stochastic case, the deterministic process stops once a iteration fails to add new vertices. This is because with this approximation we are consider a new $G \in \G(n,p)$ for each step, hence it is allowed to \textit{"have extra tries to expand."}
 
-Unlike past calculations this probability is not that easy to obtain. A first approach to understand this phenomenon is to simulate with our computational tools the following experiment:
+Unlike past calculations this probability are not directly obtainable. A first approach to understand this phenomenon is to simulate with our computational tools the following experiment:
  
 \begin{cajita}
-\textbf{Uniquely determined vertex experiment} \hfill \break
+\textbf{Increasing size by rigid expansions experiment} \hfill \break
 Fixing $n,p,k$.
 \begin{enumerate}
 \item Generate an Erdös-Rényi graph $G\in \G(n,p)$.
@@ -192,29 +192,9 @@ This experiment yields a random variable which depends on $n, p$ and $k$. Fixing
 \clearpage
 \begin{figure}[h!]
 	\centering
-	\includegraphics[scale=0.55]{Python/Figures/Uniquely-determinated-fixed-vertex.png}
-	\caption{Theoretical and empirical probabilities of uniquely determined a vertex. For different values of $n$ and $p$ varying among all the possible values of $m$}
+	\includegraphics[scale=0.7]{Python/Figures/Transition-matrix-secuence-of-rigid-expansions.png}
+	\caption{Empirical transition probability matrix}
 \end{figure}
-
-Notice that there are certain values of $m$ more \textit{effective} than others, in the sense that, depending on the parameters of the model, it is more likely that a subset of certain size uniquely determine a vertex. This can be used, as outlined in the next chapter, to do optimizations.
- 
-In following table there is a summary of the maximum of the difference between these two values for distinct values of $n$ and $p$. These values are indicators that the simulations and the calculations describe the same phenomenon.
-
-\bgroup
-\def\arraystretch{1.5}%  1 is the default, change whatever you need
-\begin{center}
-\begin{tabular}{|c|c|c|c|}
-\hline
-n & 5 & 10 & 15 \\
-\hline \hline
- 0.2 & 1e^{-8} & 1e^{-8} & 1e^{-8} \\\hline
- 0.3 & 1e^{-8} & 1e^{-8} & 1e^{-8} \\\hline
- 0.4 & 1e^{-8} & 1e^{-8} & 1e^{-8} \\\hline
-\end{tabular}
-\caption{Maximums of differences between empirical and theoretical probabilities varying $m$ for different values of $n$ and $p$}
-\label{tabla:sencilla}
-\end{center}
-\bgroup
 
 
 \section{Radó graph as a model for the curve graph}
