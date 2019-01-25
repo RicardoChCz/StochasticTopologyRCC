@@ -1,0 +1,1963 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   id="svg2"
+   sodipodi:version="0.32"
+   inkscape:version="0.92.2 5c3e80d, 2017-08-06"
+   width="920"
+   height="260"
+   version="1.0"
+   sodipodi:docname="Multitoro-con-curvas.svg"
+   inkscape:output_extension="org.inkscape.output.svg.inkscape"
+   inkscape:export-filename="/Users/ricardochcz/Desktop/Locally-infinite.png"
+   inkscape:export-xdpi="111.7449"
+   inkscape:export-ydpi="111.7449">
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs5" />
+  <sodipodi:namedview
+     inkscape:window-height="988"
+     inkscape:window-width="1920"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     guidetolerance="10.0"
+     gridtolerance="10.0"
+     objecttolerance="10.0"
+     borderopacity="1.0"
+     bordercolor="#666666"
+     pagecolor="#ffffff"
+     id="base"
+     inkscape:zoom="1"
+     inkscape:cx="513.55857"
+     inkscape:cy="99.004282"
+     inkscape:window-x="86"
+     inkscape:window-y="133"
+     inkscape:current-layer="svg2"
+     height="260px"
+     width="310px"
+     showgrid="false"
+     inkscape:window-maximized="0" />
+  <path
+     sodipodi:type="arc"
+     style="color:#000000;display:inline;overflow:visible;visibility:visible;opacity:0.7;fill:none;stroke:#f16c20;stroke-width:2.67572188;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:2.67572183, 5.35144365000000022;stroke-dashoffset:0;stroke-opacity:1;marker:none;enable-background:accumulate"
+     id="path4672-0-6-1"
+     sodipodi:cx="182.71745"
+     sodipodi:cy="86.86676"
+     sodipodi:rx="43.29784"
+     sodipodi:ry="61.505436"
+     d="m 204.54114,33.7456 a 43.29784,61.505436 0 0 1 20.78384,64.060223 43.29784,61.505436 0 0 1 -35.25443,49.672947"
+     sodipodi:start="5.240655"
+     sodipodi:end="1.4001433"
+     transform="matrix(0.8568438,0.51557609,-0.50862327,0.86098918,0,0)"
+     sodipodi:open="true"
+     inkscape:export-filename="/Users/ricardochcz/Documents/StochasticTopologyRCC/Figures/Locally-infinite.png"
+     inkscape:export-xdpi="96"
+     inkscape:export-ydpi="96" />
+  <path
+     inkscape:connector-curvature="0"
+     style="opacity:1;fill:none;fill-rule:evenodd;stroke:#a9a9a9;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:0.999237"
+     d="m 120.06719,123.53005 0.5,0.25 c -28.422042,10.56151 -49.253243,57.27496 -39.250002,96.5"
+     id="path4131-73-9-7"
+     sodipodi:nodetypes="ccc"
+     inkscape:export-xdpi="96"
+     inkscape:export-ydpi="96"
+     inkscape:export-filename="/Users/ricardochcz/Documents/StochasticTopologyRCC/Figures/Locally-infinite.png" />
+  <path
+     style="opacity:0.6;fill:none;fill-opacity:1;stroke:#ecaa38;stroke-width:2.36106968;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:4.72214006, 4.72214006000000008;stroke-dashoffset:2.24100018;stroke-opacity:1"
+     id="path5942-7-4"
+     sodipodi:type="arc"
+     sodipodi:cx="680.24451"
+     sodipodi:cy="126.12956"
+     sodipodi:rx="51.989693"
+     sodipodi:ry="41.156475"
+     sodipodi:start="0.26615266"
+     sodipodi:end="3.2942119"
+     d="m 730.40364,136.9546 a 51.989693,41.156475 0 0 1 -60.96567,29.43253 51.989693,41.156475 0 0 1 -40.57884,-46.51448"
+     sodipodi:open="true"
+     inkscape:export-filename="/Users/ricardochcz/Documents/StochasticTopologyRCC/Figures/Locally-infinite.png"
+     inkscape:export-xdpi="96"
+     inkscape:export-ydpi="96" />
+  <path
+     style="fill:#8c8c8c;fill-opacity:1;stroke:#8c8c8c;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+     d="m 833.74998,58.750005 45.375,72.124995"
+     id="path1738-2"
+     inkscape:connector-curvature="0"
+     sodipodi:nodetypes="cc"
+     inkscape:export-filename="/Users/ricardochcz/Documents/StochasticTopologyRCC/Figures/Locally-infinite.png"
+     inkscape:export-xdpi="96"
+     inkscape:export-ydpi="96" />
+  <path
+     style="fill:#8c8c8c;fill-opacity:1;stroke:#8c8c8c;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+     d="m 820.62498,172.875 13.125,-114.124995"
+     id="path1738-0"
+     inkscape:connector-curvature="0"
+     sodipodi:nodetypes="cc"
+     inkscape:export-filename="/Users/ricardochcz/Documents/StochasticTopologyRCC/Figures/Locally-infinite.png"
+     inkscape:export-xdpi="96"
+     inkscape:export-ydpi="96" />
+  <path
+     style="fill:#8c8c8c;stroke:#8c8c8c;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;fill-opacity:1;stroke-miterlimit:4;stroke-dasharray:none"
+     d="m 773.99998,114 59.75,-55.249995"
+     id="path1738"
+     inkscape:connector-curvature="0"
+     inkscape:export-filename="/Users/ricardochcz/Documents/StochasticTopologyRCC/Figures/Locally-infinite.png"
+     inkscape:export-xdpi="96"
+     inkscape:export-ydpi="96" />
+  <path
+     sodipodi:type="arc"
+     style="color:#000000;display:inline;overflow:visible;visibility:visible;opacity:0.7;fill:none;stroke:#f16c20;stroke-width:2.5082314;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:2.50823135, 5.01646269000000000;stroke-dashoffset:0;stroke-opacity:1;marker:none;enable-background:accumulate"
+     id="path4672-0-6"
+     sodipodi:cx="137.38863"
+     sodipodi:cy="114.05785"
+     sodipodi:rx="39.778915"
+     sodipodi:ry="58.827461"
+     d="m 163.0613,69.122003 a 39.778915,58.827461 0 0 1 10.18396,70.407657 39.778915,58.827461 0 0 1 -43.52904,32.25106"
+     sodipodi:start="5.4139147"
+     sodipodi:end="1.7648889"
+     transform="matrix(0.92315814,0.3844204,-0.32302665,0.94638987,0,0)"
+     sodipodi:open="true"
+     inkscape:export-filename="/Users/ricardochcz/Documents/StochasticTopologyRCC/Figures/Locally-infinite.png"
+     inkscape:export-xdpi="96"
+     inkscape:export-ydpi="96" />
+  <path
+     sodipodi:type="arc"
+     style="color:#000000;display:inline;overflow:visible;visibility:visible;opacity:0.7;fill:none;stroke:#1395ba;stroke-width:2.5082314;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:2.50823135, 5.01646269000000000;stroke-dashoffset:0;stroke-opacity:1;marker:none;enable-background:accumulate"
+     id="path4672-0"
+     sodipodi:cx="150.37045"
+     sodipodi:cy="114.37691"
+     sodipodi:rx="39.778915"
+     sodipodi:ry="58.827461"
+     d="m 173.77706,66.811539 a 39.778915,58.827461 0 0 1 13.0501,71.100641 39.778915,58.827461 0 0 1 -44.12911,34.18759"
+     sodipodi:start="5.3414893"
+     sodipodi:end="1.7648889"
+     transform="matrix(0.92315814,0.3844204,-0.32302665,0.94638987,0,0)"
+     sodipodi:open="true"
+     inkscape:export-filename="/Users/ricardochcz/Documents/StochasticTopologyRCC/Figures/Locally-infinite.png"
+     inkscape:export-xdpi="96"
+     inkscape:export-ydpi="96" />
+  <circle
+     style="opacity:1;fill:#ecaa38;fill-opacity:1;stroke:#5ca793;stroke-width:0;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+     id="path1691"
+     cx="833.67883"
+     cy="58.474575"
+     r="7.7781749"
+     inkscape:export-filename="/Users/ricardochcz/Documents/StochasticTopologyRCC/Figures/Locally-infinite.png"
+     inkscape:export-xdpi="96"
+     inkscape:export-ydpi="96" />
+  <circle
+     style="opacity:1;fill:#1395ba;fill-opacity:1;stroke:#b92951;stroke-width:0;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+     id="path1691-6"
+     cx="820.67883"
+     cy="172.22688"
+     r="7.7781749"
+     inkscape:export-filename="/Users/ricardochcz/Documents/StochasticTopologyRCC/Figures/Locally-infinite.png"
+     inkscape:export-xdpi="96"
+     inkscape:export-ydpi="96" />
+  <circle
+     style="opacity:1;fill:#f16c20;fill-opacity:1;stroke:#b92951;stroke-width:0;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+     id="path1691-6-0"
+     cx="880.3479"
+     cy="129.89236"
+     r="7.7781749"
+     inkscape:export-filename="/Users/ricardochcz/Documents/StochasticTopologyRCC/Figures/Locally-infinite.png"
+     inkscape:export-xdpi="96"
+     inkscape:export-ydpi="96" />
+  <circle
+     style="opacity:1;fill:#0c3b55;fill-opacity:0.99215686;stroke:#b92951;stroke-width:0;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+     id="path1691-6-0-2"
+     cx="774.0979"
+     cy="112.89236"
+     r="7.7781749"
+     inkscape:export-filename="/Users/ricardochcz/Documents/StochasticTopologyRCC/Figures/Locally-infinite.png"
+     inkscape:export-xdpi="96"
+     inkscape:export-ydpi="96" />
+  <path
+     inkscape:connector-curvature="0"
+     style="opacity:1;fill:none;fill-rule:evenodd;stroke:#a9a9a9;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:0.999237"
+     d="m 109.31719,116.53004 c -23.836202,-65.45222 134.67737,-56.21662 107.625,-1.25"
+     id="path4294-2-0-7"
+     sodipodi:nodetypes="cc"
+     inkscape:export-xdpi="96"
+     inkscape:export-ydpi="96"
+     inkscape:export-filename="/Users/ricardochcz/Documents/StochasticTopologyRCC/Figures/Locally-infinite.png" />
+  <path
+     style="opacity:1;fill:none;fill-rule:evenodd;stroke:#a9a9a9;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:0.999237"
+     d="m 50.067187,200.53005 c 61.972903,37.86726 149.380553,41.66985 213.019083,4.66447"
+     id="path4298-2-1-9"
+     sodipodi:nodetypes="cc"
+     inkscape:connector-curvature="0"
+     inkscape:export-xdpi="96"
+     inkscape:export-ydpi="96"
+     inkscape:export-filename="/Users/ricardochcz/Documents/StochasticTopologyRCC/Figures/Locally-infinite.png" />
+  <path
+     style="opacity:1;fill:none;fill-rule:evenodd;stroke:#a9a9a9;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:0.999237"
+     d="m 16.4365,152.54892 c 52.428357,80.43118 202.42915,82.10745 250.06234,40.48069"
+     id="path4304-5-8-3"
+     sodipodi:nodetypes="cc"
+     inkscape:connector-curvature="0"
+     inkscape:export-xdpi="96"
+     inkscape:export-ydpi="96"
+     inkscape:export-filename="/Users/ricardochcz/Documents/StochasticTopologyRCC/Figures/Locally-infinite.png" />
+  <path
+     style="opacity:1;fill:none;fill-rule:evenodd;stroke:#a9a9a9;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:0.999237"
+     d="M 13.87784,117.47827 C 36.902387,219.21774 217.5663,223.49331 265.73042,180.3418"
+     id="path2165-2-1-8"
+     sodipodi:nodetypes="cc"
+     inkscape:connector-curvature="0"
+     inkscape:export-xdpi="96"
+     inkscape:export-ydpi="96"
+     inkscape:export-filename="/Users/ricardochcz/Documents/StochasticTopologyRCC/Figures/Locally-infinite.png" />
+  <path
+     style="opacity:1;fill:none;fill-rule:evenodd;stroke:#a9a9a9;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:0.999237"
+     d="m 22.09335,91.2074 c -6.97373,97.87912 166.32244,126.29008 238.61344,72.85629"
+     id="path2167-6-8-0"
+     sodipodi:nodetypes="cc"
+     inkscape:connector-curvature="0"
+     inkscape:export-xdpi="96"
+     inkscape:export-ydpi="96"
+     inkscape:export-filename="/Users/ricardochcz/Documents/StochasticTopologyRCC/Figures/Locally-infinite.png" />
+  <path
+     style="opacity:1;fill:none;fill-rule:evenodd;stroke:#a9a9a9;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:0.999237"
+     d="m 45.781437,60.80181 c -52.463507,73.16727 69.287723,107.96957 117.556503,106.59636 52.72964,-2.87475 74.01355,-12.05082 88.32281,-21.82824"
+     id="path2169-1-0-2"
+     sodipodi:nodetypes="ccc"
+     inkscape:connector-curvature="0"
+     inkscape:export-xdpi="96"
+     inkscape:export-ydpi="96"
+     inkscape:export-filename="/Users/ricardochcz/Documents/StochasticTopologyRCC/Figures/Locally-infinite.png" />
+  <path
+     inkscape:connector-curvature="0"
+     id="path2171-1-4-4"
+     d="m 111.84237,36.18409 c 46.30244,-15.60549 106.44766,-7.17984 134.25272,18.80732 27.80504,25.98712 12.79265,59.74348 -33.50981,75.34903 -46.30244,15.60549 -106.44766,7.17984 -134.252723,-18.80733 -27.76726,-25.9518 -12.84933,-59.64884 33.330783,-75.28852"
+     style="opacity:1;fill:none;fill-opacity:1;stroke:#a9a9a9;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.999237"
+     inkscape:export-xdpi="96"
+     inkscape:export-ydpi="96"
+     inkscape:export-filename="/Users/ricardochcz/Documents/StochasticTopologyRCC/Figures/Locally-infinite.png" />
+  <path
+     inkscape:connector-curvature="0"
+     style="opacity:1;fill:none;fill-opacity:1;stroke:#a9a9a9;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.999237"
+     d="m 120.26311,46.12408 c 38.72418,-13.01375 89.02551,-5.98743 112.27975,15.68382 23.25422,21.67122 10.69889,49.82138 -28.02531,62.83519 -38.72417,13.01375 -89.02551,5.98743 -112.279752,-15.68383 C 69.015177,87.31748 81.491518,59.2168 120.11338,46.17453"
+     id="path2173-17-4-8"
+     inkscape:export-xdpi="96"
+     inkscape:export-ydpi="96"
+     inkscape:export-filename="/Users/ricardochcz/Documents/StochasticTopologyRCC/Figures/Locally-infinite.png" />
+  <path
+     inkscape:connector-curvature="0"
+     id="path3146-2-6-3"
+     d="m 127.43419,59.74959 c 31.90235,-10.94183 73.34238,-5.03417 92.50005,13.1868 19.15764,18.22094 8.81412,41.88931 -23.08825,52.83119 -31.90235,10.94183 -73.34238,5.03417 -92.50005,-13.18681 C 85.214318,94.38458 95.492765,70.75782 127.31083,59.792"
+     style="opacity:1;fill:none;fill-opacity:1;stroke:#a9a9a9;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.999237"
+     inkscape:export-xdpi="96"
+     inkscape:export-ydpi="96"
+     inkscape:export-filename="/Users/ricardochcz/Documents/StochasticTopologyRCC/Figures/Locally-infinite.png" />
+  <path
+     inkscape:connector-curvature="0"
+     style="opacity:1;fill:none;fill-rule:evenodd;stroke:#a9a9a9;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:0.999237"
+     d="m 112.56719,118.65505 c -4.67669,-25.48404 32.24924,-33.72908 49.25005,-33.37034 21.97508,0.46371 58.11425,12.20646 49.99995,33.37034"
+     id="path4117-2-1-9"
+     sodipodi:nodetypes="csc"
+     inkscape:export-xdpi="96"
+     inkscape:export-ydpi="96"
+     inkscape:export-filename="/Users/ricardochcz/Documents/StochasticTopologyRCC/Figures/Locally-infinite.png" />
+  <path
+     inkscape:connector-curvature="0"
+     sodipodi:nodetypes="csc"
+     id="path4119-1-2-0"
+     d="m 115.7112,120.2619 c 0.77329,-13.26579 26.90992,-21.43005 43.47944,-22.08831 21.95534,-0.87222 47.71822,9.25472 50.23093,22.08831"
+     style="opacity:1;fill:none;fill-rule:evenodd;stroke:#a9a9a9;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.999237"
+     inkscape:export-xdpi="96"
+     inkscape:export-ydpi="96"
+     inkscape:export-filename="/Users/ricardochcz/Documents/StochasticTopologyRCC/Figures/Locally-infinite.png" />
+  <path
+     inkscape:connector-curvature="0"
+     style="opacity:1;fill:none;fill-rule:evenodd;stroke:#a9a9a9;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:0.999237"
+     d="m 118.06719,121.65505 c 11.39402,-10.27286 28.13261,-13.93621 43.31294,-14.24169 15.17023,-0.30528 31.58075,3.00467 44.81206,14.24169"
+     id="path4121-6-0-5"
+     sodipodi:nodetypes="csc"
+     inkscape:export-xdpi="96"
+     inkscape:export-ydpi="96"
+     inkscape:export-filename="/Users/ricardochcz/Documents/StochasticTopologyRCC/Figures/Locally-infinite.png" />
+  <path
+     inkscape:connector-curvature="0"
+     sodipodi:nodetypes="csc"
+     id="path4123-9-4-2"
+     d="m 118.10663,122.11561 c 11.38383,-7.06445 28.10743,-9.58368 43.27417,-9.79374 15.15665,-0.20994 31.55247,2.06625 44.77195,9.79374"
+     style="opacity:1;fill:none;fill-rule:evenodd;stroke:#a9a9a9;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.999237"
+     inkscape:export-xdpi="96"
+     inkscape:export-ydpi="96"
+     inkscape:export-filename="/Users/ricardochcz/Documents/StochasticTopologyRCC/Figures/Locally-infinite.png" />
+  <path
+     inkscape:connector-curvature="0"
+     style="opacity:1;fill:none;fill-rule:evenodd;stroke:#a9a9a9;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:0.999237"
+     d="m 157.06719,131.03005 c -2.8609,35.5 -3.99919,71 -3.11612,106.5"
+     id="path4125-2-3-2"
+     sodipodi:nodetypes="cc"
+     inkscape:export-xdpi="96"
+     inkscape:export-ydpi="96"
+     inkscape:export-filename="/Users/ricardochcz/Documents/StochasticTopologyRCC/Figures/Locally-infinite.png" />
+  <path
+     inkscape:connector-curvature="0"
+     style="opacity:1;fill:none;fill-rule:evenodd;stroke:#a9a9a9;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:0.999237"
+     d="m 143.81719,129.78005 c -11.23838,21.34496 -21.83553,58.08113 -14.75,105"
+     id="path4127-4-3-7"
+     sodipodi:nodetypes="cc"
+     inkscape:export-xdpi="96"
+     inkscape:export-ydpi="96"
+     inkscape:export-filename="/Users/ricardochcz/Documents/StochasticTopologyRCC/Figures/Locally-infinite.png" />
+  <path
+     inkscape:connector-curvature="0"
+     style="opacity:1;fill:none;fill-rule:evenodd;stroke:#a9a9a9;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:0.999237"
+     d="m 115.31719,120.03005 c -20.943805,-2.00384 -41.043483,18.82465 -48.646543,35.72445 -7.02611,15.61738 -14.69004,35.58198 -3.60346,54.27555"
+     id="path4133-0-7-9"
+     sodipodi:nodetypes="csc"
+     inkscape:export-xdpi="96"
+     inkscape:export-ydpi="96"
+     inkscape:export-filename="/Users/ricardochcz/Documents/StochasticTopologyRCC/Figures/Locally-infinite.png" />
+  <path
+     inkscape:connector-curvature="0"
+     style="opacity:1;fill:none;fill-rule:evenodd;stroke:#a9a9a9;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:0.999237"
+     d="m 107.81719,115.53004 c -26.477342,-4.81073 -38.567273,10.09204 -50.125003,20.87501 -14.42766,19.17247 -22.27136,38.53859 -14.125,58.375"
+     id="path4135-3-6-0"
+     sodipodi:nodetypes="ccc"
+     inkscape:export-xdpi="96"
+     inkscape:export-ydpi="96"
+     inkscape:export-filename="/Users/ricardochcz/Documents/StochasticTopologyRCC/Figures/Locally-infinite.png" />
+  <path
+     inkscape:connector-curvature="0"
+     style="opacity:1;fill:none;fill-rule:evenodd;stroke:#a9a9a9;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:0.999237"
+     d="m 104.06719,112.53004 c -13.036502,-6.0117 -26.552673,-7.06686 -41.000003,1.5 -26.25852,15.3951 -33.389677,36.0817 -34.292897,40.76257 -0.64313,9.96477 -1.84111,15.86366 -0.091,23.53033"
+     id="path4137-3-1-2"
+     sodipodi:nodetypes="cccc"
+     inkscape:export-xdpi="96"
+     inkscape:export-ydpi="96"
+     inkscape:export-filename="/Users/ricardochcz/Documents/StochasticTopologyRCC/Figures/Locally-infinite.png" />
+  <path
+     inkscape:connector-curvature="0"
+     style="opacity:1;fill:none;fill-rule:evenodd;stroke:#a9a9a9;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:0.999237"
+     d="m 109.24427,116.13292 c -1.75871,-3.87717 -6.61766,-7.96855 -11.667265,-11.84404 -14.991627,-5.71112 -29.262488,-6.51542 -44.724498,1.41421 -14.51766,7.7562 -27.345887,17.20186 -32.526917,34.29469 -1.12221,5.36223 -2.17226,10.72445 -2.82843,16.08668"
+     id="path4139-0-3-3"
+     sodipodi:nodetypes="ccccc"
+     inkscape:export-xdpi="96"
+     inkscape:export-ydpi="96"
+     inkscape:export-filename="/Users/ricardochcz/Documents/StochasticTopologyRCC/Figures/Locally-infinite.png" />
+  <path
+     inkscape:connector-curvature="0"
+     style="opacity:1;fill:none;fill-rule:evenodd;stroke:#a9a9a9;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:0.999237"
+     d="M 110.71026,117.55969 C 107.01621,111.95668 106.31251,105.46184 95.632465,98.98558 83.422108,91.86321 68.352547,89.74442 48.609867,95.8036 26.82353,102.35643 16.20652,119.67276 13.25452,140.35133"
+     id="path4141-2-1-9"
+     sodipodi:nodetypes="cccc"
+     inkscape:export-xdpi="96"
+     inkscape:export-ydpi="96"
+     inkscape:export-filename="/Users/ricardochcz/Documents/StochasticTopologyRCC/Figures/Locally-infinite.png" />
+  <path
+     inkscape:connector-curvature="0"
+     style="opacity:1;fill:none;fill-rule:evenodd;stroke:#a9a9a9;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:0.999237"
+     d="M 112.31719,118.78005 C 110.2816,111.51818 106.22128,102.3314 94.317185,91.78004 70.547267,78.92015 57.920667,83.00135 47.067187,85.28004 28.82127,89.36747 17.56309,100.44262 13.31718,118.53005"
+     id="path4161-8-0-9"
+     sodipodi:nodetypes="cccc"
+     inkscape:export-xdpi="96"
+     inkscape:export-ydpi="96"
+     inkscape:export-filename="/Users/ricardochcz/Documents/StochasticTopologyRCC/Figures/Locally-infinite.png" />
+  <path
+     inkscape:connector-curvature="0"
+     style="opacity:1;fill:none;fill-rule:evenodd;stroke:#a9a9a9;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:0.999237"
+     d="M 113.81719,119.28005 C 113.65751,108.36337 103.13701,91.94671 95.817185,86.28004 64.413787,67.23766 48.162117,74.59209 35.817187,78.53004 c -4.876097,3.52138 -8.956077,6.6447 -12.500007,9.5"
+     id="path4165-8-5-7"
+     sodipodi:nodetypes="cccc"
+     inkscape:export-xdpi="96"
+     inkscape:export-ydpi="96"
+     inkscape:export-filename="/Users/ricardochcz/Documents/StochasticTopologyRCC/Figures/Locally-infinite.png" />
+  <path
+     inkscape:connector-curvature="0"
+     style="opacity:1;fill:none;fill-rule:evenodd;stroke:#a9a9a9;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:0.999237"
+     d="m 115.31719,120.28005 c 0.35037,-13.19018 -2.77856,-26.9722 -17.000005,-39.25001 -22.102928,-18.54451 -33.558408,-15.93139 -45.499998,-15.75 -6.54785,0.85107 -11.8328,2.2086 -15.5,4.25"
+     id="path4167-4-3-0"
+     sodipodi:nodetypes="cccc"
+     inkscape:export-xdpi="96"
+     inkscape:export-ydpi="96"
+     inkscape:export-filename="/Users/ricardochcz/Documents/StochasticTopologyRCC/Figures/Locally-infinite.png" />
+  <path
+     inkscape:connector-curvature="0"
+     style="opacity:1;fill:none;fill-rule:evenodd;stroke:#a9a9a9;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:0.999237"
+     d="m 117.06719,121.53005 c 1.20437,-10.3981 0.5735,-21.6903 -5.5,-32.75001 -7.09288,-13.74364 -19.157132,-24.17302 -36.250003,-31.25 -7.57039,-1.18285 -14.63536,-2.99747 -24.75,-1"
+     id="path4169-6-4-3"
+     sodipodi:nodetypes="cccc"
+     inkscape:export-xdpi="96"
+     inkscape:export-ydpi="96"
+     inkscape:export-filename="/Users/ricardochcz/Documents/StochasticTopologyRCC/Figures/Locally-infinite.png" />
+  <path
+     inkscape:connector-curvature="0"
+     style="opacity:1;fill:none;fill-rule:evenodd;stroke:#a9a9a9;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:0.999237"
+     d="m 118.31719,121.28005 c 2.47731,-13.51513 9.50205,-23.16531 -10.5,-51.25001 -10.916745,-9.22911 -18.146952,-21.22312 -39.000003,-23 l -4.25,-0.5"
+     id="path4171-05-2-9"
+     sodipodi:nodetypes="cccc"
+     inkscape:export-xdpi="96"
+     inkscape:export-ydpi="96"
+     inkscape:export-filename="/Users/ricardochcz/Documents/StochasticTopologyRCC/Figures/Locally-infinite.png" />
+  <path
+     inkscape:connector-curvature="0"
+     style="opacity:1;fill:none;fill-rule:evenodd;stroke:#a9a9a9;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:0.999237"
+     d="m 121.31719,120.53005 c 7.38361,-18.41266 5.44915,-36.504 -6.5,-54.25001 -8.54434,-16.02404 -21.934712,-21.66372 -35.000002,-28"
+     id="path4173-0-4-8"
+     sodipodi:nodetypes="ccc"
+     inkscape:export-xdpi="96"
+     inkscape:export-ydpi="96"
+     inkscape:export-filename="/Users/ricardochcz/Documents/StochasticTopologyRCC/Figures/Locally-infinite.png" />
+  <path
+     inkscape:connector-curvature="0"
+     style="opacity:1;fill:none;fill-rule:evenodd;stroke:#a9a9a9;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:0.999237"
+     d="m 127.47372,117.82747 c 7.31704,-13.96463 3.56293,-27.66041 0.68566,-42.52997 C 118.64332,48.12836 107.28066,39.01254 93.864698,31.45688"
+     id="path4175-1-6-6"
+     sodipodi:nodetypes="ccc"
+     inkscape:export-xdpi="96"
+     inkscape:export-ydpi="96"
+     inkscape:export-filename="/Users/ricardochcz/Documents/StochasticTopologyRCC/Figures/Locally-infinite.png" />
+  <path
+     inkscape:connector-curvature="0"
+     style="opacity:1;fill:none;fill-rule:evenodd;stroke:#a9a9a9;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:0.999237"
+     d="m 108.00684,27.21423 c 16.21997,12.28547 22.04635,25.58755 26.59466,40.12356 4.83384,15.44852 5.87216,40.33967 -1.51382,48.53624"
+     id="path4177-9-9-5"
+     sodipodi:nodetypes="csc"
+     inkscape:export-xdpi="96"
+     inkscape:export-ydpi="96"
+     inkscape:export-filename="/Users/ricardochcz/Documents/StochasticTopologyRCC/Figures/Locally-infinite.png" />
+  <path
+     inkscape:connector-curvature="0"
+     style="opacity:1;fill:none;fill-rule:evenodd;stroke:#a9a9a9;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:0.999237"
+     d="M 141.94797,113.91693 C 150.19343,84.32654 143.76186,53.2645 125.68451,23.32514"
+     id="path4179-36-3-7"
+     sodipodi:nodetypes="cc"
+     inkscape:export-xdpi="96"
+     inkscape:export-ydpi="96"
+     inkscape:export-filename="/Users/ricardochcz/Documents/StochasticTopologyRCC/Figures/Locally-infinite.png" />
+  <path
+     inkscape:connector-curvature="0"
+     style="opacity:1;fill:none;fill-rule:evenodd;stroke:#a9a9a9;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:0.999237"
+     d="m 141.86586,20.97527 c 12.26918,29.24693 12.1447,60.81396 10.29594,91.32034"
+     id="path4181-0-4-6"
+     sodipodi:nodetypes="cc"
+     inkscape:export-xdpi="96"
+     inkscape:export-ydpi="96"
+     inkscape:export-filename="/Users/ricardochcz/Documents/StochasticTopologyRCC/Figures/Locally-infinite.png" />
+  <path
+     inkscape:connector-curvature="0"
+     style="opacity:1;fill:none;fill-rule:evenodd;stroke:#a9a9a9;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:0.999237"
+     d="m 162.06719,112.53004 c 1.59715,-31.1861 0.0792,-61.74918 -0.5,-92.50001"
+     id="path4183-6-4-2"
+     sodipodi:nodetypes="cc"
+     inkscape:export-xdpi="96"
+     inkscape:export-ydpi="96"
+     inkscape:export-filename="/Users/ricardochcz/Documents/StochasticTopologyRCC/Figures/Locally-infinite.png" />
+  <path
+     inkscape:connector-curvature="0"
+     sodipodi:nodetypes="cc"
+     id="path4185-2-1-7"
+     d="m 166.96382,131.03005 c 2.8609,35.5 3.99919,71 3.11612,106.5"
+     style="opacity:1;fill:none;fill-rule:evenodd;stroke:#a9a9a9;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:0.999237"
+     inkscape:export-xdpi="96"
+     inkscape:export-ydpi="96"
+     inkscape:export-filename="/Users/ricardochcz/Documents/StochasticTopologyRCC/Figures/Locally-infinite.png" />
+  <path
+     inkscape:connector-curvature="0"
+     sodipodi:nodetypes="cc"
+     id="path4187-5-4-0"
+     d="m 180.21382,129.78005 c 11.23838,21.34496 21.83553,58.08113 14.75,105"
+     style="opacity:1;fill:none;fill-rule:evenodd;stroke:#a9a9a9;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:0.999237"
+     inkscape:export-xdpi="96"
+     inkscape:export-ydpi="96"
+     inkscape:export-filename="/Users/ricardochcz/Documents/StochasticTopologyRCC/Figures/Locally-infinite.png" />
+  <path
+     inkscape:connector-curvature="0"
+     sodipodi:nodetypes="cc"
+     id="path4189-0-1-3"
+     d="m 192.71382,127.03005 c 27.26865,23.8175 36.94233,79.87482 25.25,102.5"
+     style="opacity:1;fill:none;fill-rule:evenodd;stroke:#a9a9a9;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:0.999237"
+     inkscape:export-xdpi="96"
+     inkscape:export-ydpi="96"
+     inkscape:export-filename="/Users/ricardochcz/Documents/StochasticTopologyRCC/Figures/Locally-infinite.png" />
+  <path
+     inkscape:connector-curvature="0"
+     sodipodi:nodetypes="ccc"
+     id="path4191-3-3-9"
+     d="m 203.96382,123.53005 -0.5,0.25 c 28.42204,10.56151 49.25324,57.27496 39.25,96.5"
+     style="opacity:1;fill:none;fill-rule:evenodd;stroke:#a9a9a9;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:0.999237"
+     inkscape:export-xdpi="96"
+     inkscape:export-ydpi="96"
+     inkscape:export-filename="/Users/ricardochcz/Documents/StochasticTopologyRCC/Figures/Locally-infinite.png" />
+  <path
+     inkscape:connector-curvature="0"
+     sodipodi:nodetypes="csc"
+     id="path4193-5-2-9"
+     d="m 208.71382,120.03005 c 20.9438,-2.00384 41.04348,18.82465 48.64654,35.72445 7.02611,15.61738 14.69004,35.58198 3.60346,54.27555"
+     style="opacity:1;fill:none;fill-rule:evenodd;stroke:#a9a9a9;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.999237"
+     inkscape:export-xdpi="96"
+     inkscape:export-ydpi="96"
+     inkscape:export-filename="/Users/ricardochcz/Documents/StochasticTopologyRCC/Figures/Locally-infinite.png" />
+  <path
+     sodipodi:nodetypes="cc"
+     id="path4195-0-3-9"
+     d="m 216.21382,115.53004 c 7.93105,-1.6054 10.91493,-2.37023 20.65014,2.50698"
+     style="opacity:1;fill:none;fill-rule:evenodd;stroke:#a9a9a9;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:0.999237"
+     inkscape:connector-curvature="0"
+     inkscape:export-xdpi="96"
+     inkscape:export-ydpi="96"
+     inkscape:export-filename="/Users/ricardochcz/Documents/StochasticTopologyRCC/Figures/Locally-infinite.png" />
+  <path
+     sodipodi:nodetypes="ccc"
+     id="path4201-2-4-1"
+     d="m 213.32075,117.55969 c 3.69405,-5.60301 4.39775,-12.09785 15.07779,-18.57411 12.21036,-7.12237 22.03239,-7.49198 38.62656,-8.19628"
+     style="opacity:1;fill:none;fill-rule:evenodd;stroke:#a9a9a9;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:0.999237"
+     inkscape:connector-curvature="0"
+     inkscape:export-xdpi="96"
+     inkscape:export-ydpi="96"
+     inkscape:export-filename="/Users/ricardochcz/Documents/StochasticTopologyRCC/Figures/Locally-infinite.png" />
+  <path
+     style="opacity:1;fill:none;fill-rule:evenodd;stroke:#a9a9a9;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:0.999237"
+     d="m 219.96382,112.53004 c 4.64481,-2.53322 14.80325,-7.11781 27.07288,-2.06951"
+     id="path4215-6-8-7"
+     sodipodi:nodetypes="cc"
+     inkscape:connector-curvature="0"
+     inkscape:export-xdpi="96"
+     inkscape:export-ydpi="96"
+     inkscape:export-filename="/Users/ricardochcz/Documents/StochasticTopologyRCC/Figures/Locally-infinite.png" />
+  <path
+     sodipodi:nodetypes="cc"
+     id="path4221-5-1-2"
+     d="m 211.71382,118.78005 c 8.57462,-24.43999 34.01212,-37.29916 54.97403,-37.08324"
+     style="opacity:1;fill:none;fill-rule:evenodd;stroke:#a9a9a9;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:0.999237"
+     inkscape:connector-curvature="0"
+     inkscape:export-xdpi="96"
+     inkscape:export-ydpi="96"
+     inkscape:export-filename="/Users/ricardochcz/Documents/StochasticTopologyRCC/Figures/Locally-infinite.png" />
+  <path
+     sodipodi:nodetypes="cc"
+     id="path4223-1-7-3"
+     d="m 210.21382,119.28005 c 8.9235,-41.64529 43.47664,-46.51598 56.2428,-46.16056"
+     style="opacity:1;fill:none;fill-rule:evenodd;stroke:#a9a9a9;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:0.999237"
+     inkscape:connector-curvature="0"
+     inkscape:export-xdpi="96"
+     inkscape:export-ydpi="96"
+     inkscape:export-filename="/Users/ricardochcz/Documents/StochasticTopologyRCC/Figures/Locally-infinite.png" />
+  <path
+     sodipodi:nodetypes="cc"
+     id="path4225-8-6-6"
+     d="m 208.71382,120.28005 c 1.08897,-34.70704 31.44592,-55.50807 57.81464,-55.75158"
+     style="opacity:1;fill:none;fill-rule:evenodd;stroke:#a9a9a9;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:0.999237"
+     inkscape:connector-curvature="0"
+     inkscape:export-xdpi="96"
+     inkscape:export-ydpi="96"
+     inkscape:export-filename="/Users/ricardochcz/Documents/StochasticTopologyRCC/Figures/Locally-infinite.png" />
+  <path
+     sodipodi:nodetypes="ccc"
+     id="path4227-2-7-5"
+     d="m 206.96382,121.53005 c -1.20437,-10.3981 -0.5735,-21.6903 5.5,-32.75001 13.63615,-20.82545 36.91958,-33.019 54.46975,-32.94967"
+     style="opacity:1;fill:none;fill-rule:evenodd;stroke:#a9a9a9;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:0.999237"
+     inkscape:connector-curvature="0"
+     inkscape:export-xdpi="96"
+     inkscape:export-ydpi="96"
+     inkscape:export-filename="/Users/ricardochcz/Documents/StochasticTopologyRCC/Figures/Locally-infinite.png" />
+  <path
+     inkscape:connector-curvature="0"
+     sodipodi:nodetypes="ccc"
+     id="path4229-4-3-5"
+     d="m 205.71382,121.28005 c -5.82944,-36.68971 15.42951,-70.65077 49.5,-74.25001 l 4.25,-0.5"
+     style="opacity:1;fill:none;fill-rule:evenodd;stroke:#a9a9a9;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:0.999237"
+     inkscape:export-xdpi="96"
+     inkscape:export-ydpi="96"
+     inkscape:export-filename="/Users/ricardochcz/Documents/StochasticTopologyRCC/Figures/Locally-infinite.png" />
+  <path
+     inkscape:connector-curvature="0"
+     sodipodi:nodetypes="cc"
+     id="path4231-7-7-8"
+     d="m 202.71382,120.53005 c -11.5271,-38.99619 11.16077,-72.09623 41.5,-82.25001"
+     style="opacity:1;fill:none;fill-rule:evenodd;stroke:#a9a9a9;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:0.999237"
+     inkscape:export-xdpi="96"
+     inkscape:export-ydpi="96"
+     inkscape:export-filename="/Users/ricardochcz/Documents/StochasticTopologyRCC/Figures/Locally-infinite.png" />
+  <path
+     inkscape:connector-curvature="0"
+     sodipodi:nodetypes="ccc"
+     id="path4233-4-2-1"
+     d="m 196.55729,117.82747 c -7.31704,-13.96463 -3.56293,-27.66041 -0.68566,-42.52997 9.51606,-27.16914 20.87872,-36.28496 34.29468,-43.84062"
+     style="opacity:1;fill:none;fill-rule:evenodd;stroke:#a9a9a9;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:0.999237"
+     inkscape:export-xdpi="96"
+     inkscape:export-ydpi="96"
+     inkscape:export-filename="/Users/ricardochcz/Documents/StochasticTopologyRCC/Figures/Locally-infinite.png" />
+  <path
+     inkscape:connector-curvature="0"
+     sodipodi:nodetypes="csc"
+     id="path4235-7-5-4"
+     d="m 216.02417,27.21423 c -16.21997,12.28547 -22.04635,25.58755 -26.59466,40.12356 -4.83384,15.44852 -5.87216,40.33967 1.51382,48.53624"
+     style="opacity:1;fill:none;fill-rule:evenodd;stroke:#a9a9a9;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:0.999237"
+     inkscape:export-xdpi="96"
+     inkscape:export-ydpi="96"
+     inkscape:export-filename="/Users/ricardochcz/Documents/StochasticTopologyRCC/Figures/Locally-infinite.png" />
+  <path
+     inkscape:connector-curvature="0"
+     sodipodi:nodetypes="cc"
+     id="path4237-2-6-7"
+     d="M 182.08304,113.91693 C 173.83758,84.32654 180.26915,53.2645 198.3465,23.32514"
+     style="opacity:1;fill:none;fill-rule:evenodd;stroke:#a9a9a9;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:0.999237"
+     inkscape:export-xdpi="96"
+     inkscape:export-ydpi="96"
+     inkscape:export-filename="/Users/ricardochcz/Documents/StochasticTopologyRCC/Figures/Locally-infinite.png" />
+  <path
+     inkscape:connector-curvature="0"
+     sodipodi:nodetypes="cc"
+     id="path4239-2-2-1"
+     d="m 182.16515,20.97527 c -12.26918,29.24693 -12.1447,60.81396 -10.29594,91.32034"
+     style="opacity:1;fill:none;fill-rule:evenodd;stroke:#a9a9a9;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:0.999237"
+     inkscape:export-xdpi="96"
+     inkscape:export-ydpi="96"
+     inkscape:export-filename="/Users/ricardochcz/Documents/StochasticTopologyRCC/Figures/Locally-infinite.png" />
+  <path
+     style="opacity:1;fill:none;fill-rule:evenodd;stroke:#a9a9a9;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:0.999237"
+     d="m 319.17092,116.53004 c -23.8362,-65.45222 134.67737,-56.21662 107.625,-1.25"
+     id="path4294-3"
+     sodipodi:nodetypes="cc"
+     inkscape:connector-curvature="0"
+     inkscape:export-xdpi="96"
+     inkscape:export-ydpi="96"
+     inkscape:export-filename="/Users/ricardochcz/Documents/StochasticTopologyRCC/Figures/Locally-infinite.png" />
+  <path
+     style="opacity:1;fill:none;fill-rule:evenodd;stroke:#a9a9a9;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:0.999237"
+     d="m 270.41597,205.19452 c 58.30194,33.65266 139.08294,45.81282 202.06181,0.89158"
+     id="path4298-8"
+     sodipodi:nodetypes="cc"
+     inkscape:connector-curvature="0"
+     inkscape:export-xdpi="96"
+     inkscape:export-ydpi="96"
+     inkscape:export-filename="/Users/ricardochcz/Documents/StochasticTopologyRCC/Figures/Locally-infinite.png" />
+  <path
+     style="opacity:1;fill:none;fill-rule:evenodd;stroke:#a9a9a9;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:0.999237"
+     d="m 269.64337,180.383 c 59.81538,35.95138 157.03455,43.68751 205.19867,0.536"
+     id="path2165-4"
+     sodipodi:nodetypes="cc"
+     inkscape:connector-curvature="0"
+     inkscape:export-xdpi="96"
+     inkscape:export-ydpi="96"
+     inkscape:export-filename="/Users/ricardochcz/Documents/StochasticTopologyRCC/Figures/Locally-infinite.png" />
+  <path
+     style="opacity:1;fill:none;fill-rule:evenodd;stroke:#a9a9a9;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:0.999237"
+     d="m 273.17554,164.42914 c 32.60558,21.02928 125.09398,53.06834 197.38498,-0.36545"
+     id="path2167-8"
+     sodipodi:nodetypes="cc"
+     inkscape:connector-curvature="0"
+     inkscape:export-xdpi="96"
+     inkscape:export-ydpi="96"
+     inkscape:export-filename="/Users/ricardochcz/Documents/StochasticTopologyRCC/Figures/Locally-infinite.png" />
+  <path
+     style="opacity:1;fill:none;fill-rule:evenodd;stroke:#a9a9a9;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:0.999237"
+     d="m 282.00577,145.73398 c 26.36599,17.07705 49.44737,22.10451 91.1859,21.66419 52.72964,-2.87475 72.73082,-11.35115 86.2238,-24.16048"
+     id="path2169-0"
+     sodipodi:nodetypes="ccc"
+     inkscape:connector-curvature="0"
+     inkscape:export-xdpi="96"
+     inkscape:export-ydpi="96"
+     inkscape:export-filename="/Users/ricardochcz/Documents/StochasticTopologyRCC/Figures/Locally-infinite.png" />
+  <path
+     id="path2171-4"
+     d="m 321.6961,36.18409 c 46.30244,-15.60549 106.44766,-7.17984 134.25272,18.80732 27.80504,25.98712 12.79265,59.74348 -33.50981,75.34903 -46.30244,15.60549 -106.44766,7.17984 -134.25272,-18.80733 -27.76726,-25.9518 -12.84933,-59.64884 33.33078,-75.28852"
+     style="opacity:1;fill:none;fill-opacity:1;stroke:#a9a9a9;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.999237"
+     inkscape:connector-curvature="0"
+     inkscape:export-xdpi="96"
+     inkscape:export-ydpi="96"
+     inkscape:export-filename="/Users/ricardochcz/Documents/StochasticTopologyRCC/Figures/Locally-infinite.png" />
+  <path
+     style="opacity:1;fill:none;fill-opacity:1;stroke:#a9a9a9;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.999237"
+     d="m 330.11684,46.12408 c 38.72418,-13.01375 89.02551,-5.98743 112.27975,15.68382 23.25422,21.67122 10.69889,49.82138 -28.02531,62.83519 -38.72417,13.01375 -89.02551,5.98743 -112.27975,-15.68383 C 278.86891,87.31748 291.34525,59.2168 329.96711,46.17453"
+     id="path2173-6"
+     inkscape:connector-curvature="0"
+     inkscape:export-xdpi="96"
+     inkscape:export-ydpi="96"
+     inkscape:export-filename="/Users/ricardochcz/Documents/StochasticTopologyRCC/Figures/Locally-infinite.png" />
+  <path
+     id="path3146-03"
+     d="m 337.28792,59.74959 c 31.90235,-10.94183 73.34238,-5.03417 92.50005,13.1868 19.15764,18.22094 8.81412,41.88931 -23.08825,52.83119 -31.90235,10.94183 -73.34238,5.03417 -92.50005,-13.18681 C 295.06805,94.38458 305.3465,70.75782 337.16456,59.792"
+     style="opacity:1;fill:none;fill-opacity:1;stroke:#a9a9a9;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.999237"
+     inkscape:connector-curvature="0"
+     inkscape:export-xdpi="96"
+     inkscape:export-ydpi="96"
+     inkscape:export-filename="/Users/ricardochcz/Documents/StochasticTopologyRCC/Figures/Locally-infinite.png" />
+  <path
+     style="opacity:1;fill:none;fill-rule:evenodd;stroke:#a9a9a9;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:0.999237"
+     d="m 322.42092,118.65505 c -4.67669,-25.48404 32.24924,-33.72908 49.25005,-33.37034 21.97508,0.46371 58.11425,12.20646 49.99995,33.37034"
+     id="path4117-26"
+     sodipodi:nodetypes="csc"
+     inkscape:connector-curvature="0"
+     inkscape:export-xdpi="96"
+     inkscape:export-ydpi="96"
+     inkscape:export-filename="/Users/ricardochcz/Documents/StochasticTopologyRCC/Figures/Locally-infinite.png" />
+  <path
+     sodipodi:nodetypes="csc"
+     id="path4119-94"
+     d="m 325.56493,120.2619 c 0.77329,-13.26579 26.90992,-21.43005 43.47944,-22.08831 21.95534,-0.87222 47.71822,9.25472 50.23093,22.08831"
+     style="opacity:1;fill:none;fill-rule:evenodd;stroke:#a9a9a9;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.999237"
+     inkscape:connector-curvature="0"
+     inkscape:export-xdpi="96"
+     inkscape:export-ydpi="96"
+     inkscape:export-filename="/Users/ricardochcz/Documents/StochasticTopologyRCC/Figures/Locally-infinite.png" />
+  <path
+     style="opacity:1;fill:none;fill-rule:evenodd;stroke:#a9a9a9;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:0.999237"
+     d="m 327.92092,121.65505 c 11.39402,-10.27286 28.13261,-13.93621 43.31294,-14.24169 15.17023,-0.30528 31.58075,3.00467 44.81206,14.24169"
+     id="path4121-1"
+     sodipodi:nodetypes="csc"
+     inkscape:connector-curvature="0"
+     inkscape:export-xdpi="96"
+     inkscape:export-ydpi="96"
+     inkscape:export-filename="/Users/ricardochcz/Documents/StochasticTopologyRCC/Figures/Locally-infinite.png" />
+  <path
+     sodipodi:nodetypes="csc"
+     id="path4123-37"
+     d="m 327.96036,122.11561 c 11.38383,-7.06445 28.10743,-9.58368 43.27417,-9.79374 15.15665,-0.20994 31.55247,2.06625 44.77195,9.79374"
+     style="opacity:1;fill:none;fill-rule:evenodd;stroke:#a9a9a9;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.999237"
+     inkscape:connector-curvature="0"
+     inkscape:export-xdpi="96"
+     inkscape:export-ydpi="96"
+     inkscape:export-filename="/Users/ricardochcz/Documents/StochasticTopologyRCC/Figures/Locally-infinite.png" />
+  <path
+     style="opacity:1;fill:none;fill-rule:evenodd;stroke:#a9a9a9;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:0.999237"
+     d="m 366.92092,131.03005 c -2.8609,35.5 -3.99919,72.125 -3.11612,107.625"
+     id="path4125-88"
+     sodipodi:nodetypes="cc"
+     inkscape:connector-curvature="0"
+     inkscape:export-xdpi="96"
+     inkscape:export-ydpi="96"
+     inkscape:export-filename="/Users/ricardochcz/Documents/StochasticTopologyRCC/Figures/Locally-infinite.png" />
+  <path
+     style="opacity:1;fill:none;fill-rule:evenodd;stroke:#a9a9a9;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:0.999237"
+     d="m 353.67092,129.78005 c -11.23838,21.34496 -21.83553,58.08113 -14.75,105"
+     id="path4127-38"
+     sodipodi:nodetypes="cc"
+     inkscape:connector-curvature="0"
+     inkscape:export-xdpi="96"
+     inkscape:export-ydpi="96"
+     inkscape:export-filename="/Users/ricardochcz/Documents/StochasticTopologyRCC/Figures/Locally-infinite.png" />
+  <path
+     style="opacity:1;fill:none;fill-rule:evenodd;stroke:#a9a9a9;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:0.999237"
+     d="m 341.17092,127.03005 c -27.26865,23.8175 -36.69233,81.24982 -25,103.875"
+     id="path4129-1"
+     sodipodi:nodetypes="cc"
+     inkscape:connector-curvature="0"
+     inkscape:export-xdpi="96"
+     inkscape:export-ydpi="96"
+     inkscape:export-filename="/Users/ricardochcz/Documents/StochasticTopologyRCC/Figures/Locally-infinite.png" />
+  <path
+     style="opacity:1;fill:none;fill-rule:evenodd;stroke:#a9a9a9;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:0.999237"
+     d="m 329.92092,123.53005 0.5,0.25 c -28.42204,10.56151 -49.25324,57.27496 -39.25,96.5"
+     id="path4131-5"
+     sodipodi:nodetypes="ccc"
+     inkscape:connector-curvature="0"
+     inkscape:export-xdpi="96"
+     inkscape:export-ydpi="96"
+     inkscape:export-filename="/Users/ricardochcz/Documents/StochasticTopologyRCC/Figures/Locally-infinite.png" />
+  <path
+     style="opacity:1;fill:none;fill-rule:evenodd;stroke:#a9a9a9;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:0.999237"
+     d="m 325.17092,120.03005 c -20.9438,-2.00384 -41.54139,18.60935 -48.64654,35.72445 -6.01871,14.49805 -10.51787,30.94624 -3.60346,54.27555"
+     id="path4133-3"
+     sodipodi:nodetypes="csc"
+     inkscape:connector-curvature="0"
+     inkscape:export-xdpi="96"
+     inkscape:export-ydpi="96"
+     inkscape:export-filename="/Users/ricardochcz/Documents/StochasticTopologyRCC/Figures/Locally-infinite.png" />
+  <path
+     style="opacity:1;fill:none;fill-rule:evenodd;stroke:#a9a9a9;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:0.999237"
+     d="m 317.67092,115.53004 c -6.49531,-1.88715 -13.2224,-1.2793 -21.27207,2.50698"
+     id="path4135-5"
+     sodipodi:nodetypes="cc"
+     inkscape:connector-curvature="0"
+     inkscape:export-xdpi="96"
+     inkscape:export-ydpi="96"
+     inkscape:export-filename="/Users/ricardochcz/Documents/StochasticTopologyRCC/Figures/Locally-infinite.png" />
+  <path
+     style="opacity:1;fill:none;fill-rule:evenodd;stroke:#a9a9a9;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:0.999237"
+     d="m 313.92092,112.53004 c -9.90314,-5.02222 -17.84941,-5.7807 -26.05831,-2.06951"
+     id="path4137-4"
+     sodipodi:nodetypes="cc"
+     inkscape:connector-curvature="0"
+     inkscape:export-xdpi="96"
+     inkscape:export-ydpi="96"
+     inkscape:export-filename="/Users/ricardochcz/Documents/StochasticTopologyRCC/Figures/Locally-infinite.png" />
+  <path
+     style="opacity:1;fill:none;fill-rule:evenodd;stroke:#a9a9a9;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:0.999237"
+     d="m 326.92092,121.53005 c 1.20437,-10.3981 0.5735,-21.6903 -5.5,-32.75001 -7.09288,-13.74364 -19.15713,-24.17302 -36.25,-31.25 -7.57039,-1.18285 -7.88949,-2.06457 -18.23735,-1.69967"
+     id="path4169-3"
+     sodipodi:nodetypes="cccc"
+     inkscape:connector-curvature="0"
+     inkscape:export-xdpi="96"
+     inkscape:export-ydpi="96"
+     inkscape:export-filename="/Users/ricardochcz/Documents/StochasticTopologyRCC/Figures/Locally-infinite.png" />
+  <path
+     style="opacity:1;fill:none;fill-rule:evenodd;stroke:#a9a9a9;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:0.999237"
+     d="m 328.17092,121.28005 c 5.82944,-36.68971 -15.42951,-70.65077 -49.5,-74.25001 l -4.25,-0.5"
+     id="path4171-6"
+     sodipodi:nodetypes="ccc"
+     inkscape:connector-curvature="0"
+     inkscape:export-xdpi="96"
+     inkscape:export-ydpi="96"
+     inkscape:export-filename="/Users/ricardochcz/Documents/StochasticTopologyRCC/Figures/Locally-infinite.png" />
+  <path
+     style="opacity:1;fill:none;fill-rule:evenodd;stroke:#a9a9a9;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:0.999237"
+     d="m 331.17092,120.53005 c 7.38361,-18.41266 5.44915,-36.504 -6.5,-54.25001 -8.54434,-16.02404 -21.93471,-21.66372 -35,-28"
+     id="path4173-5"
+     sodipodi:nodetypes="ccc"
+     inkscape:connector-curvature="0"
+     inkscape:export-xdpi="96"
+     inkscape:export-ydpi="96"
+     inkscape:export-filename="/Users/ricardochcz/Documents/StochasticTopologyRCC/Figures/Locally-infinite.png" />
+  <path
+     style="opacity:1;fill:none;fill-rule:evenodd;stroke:#a9a9a9;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:0.999237"
+     d="m 337.32745,117.82747 c 7.31704,-13.96463 3.56293,-27.66041 0.68566,-42.52997 -9.51606,-27.16914 -20.87872,-36.28496 -34.29468,-43.84062"
+     id="path4175-9"
+     sodipodi:nodetypes="ccc"
+     inkscape:connector-curvature="0"
+     inkscape:export-xdpi="96"
+     inkscape:export-ydpi="96"
+     inkscape:export-filename="/Users/ricardochcz/Documents/StochasticTopologyRCC/Figures/Locally-infinite.png" />
+  <path
+     style="opacity:1;fill:none;fill-rule:evenodd;stroke:#a9a9a9;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:0.999237"
+     d="m 317.86057,27.21423 c 16.21997,12.28547 22.04635,25.58755 26.59466,40.12356 4.83384,15.44852 5.87216,40.33967 -1.51382,48.53624"
+     id="path4177-5"
+     sodipodi:nodetypes="csc"
+     inkscape:connector-curvature="0"
+     inkscape:export-xdpi="96"
+     inkscape:export-ydpi="96"
+     inkscape:export-filename="/Users/ricardochcz/Documents/StochasticTopologyRCC/Figures/Locally-infinite.png" />
+  <path
+     style="opacity:1;fill:none;fill-rule:evenodd;stroke:#a9a9a9;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:0.999237"
+     d="M 351.8017,113.91693 C 360.04716,84.32654 353.61559,53.2645 335.53824,23.32514"
+     id="path4179-4"
+     sodipodi:nodetypes="cc"
+     inkscape:connector-curvature="0"
+     inkscape:export-xdpi="96"
+     inkscape:export-ydpi="96"
+     inkscape:export-filename="/Users/ricardochcz/Documents/StochasticTopologyRCC/Figures/Locally-infinite.png" />
+  <path
+     style="opacity:1;fill:none;fill-rule:evenodd;stroke:#a9a9a9;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:0.999237"
+     d="m 351.71959,20.97527 c 12.26918,29.24693 12.1447,60.81396 10.29594,91.32034"
+     id="path4181-9"
+     sodipodi:nodetypes="cc"
+     inkscape:connector-curvature="0"
+     inkscape:export-xdpi="96"
+     inkscape:export-ydpi="96"
+     inkscape:export-filename="/Users/ricardochcz/Documents/StochasticTopologyRCC/Figures/Locally-infinite.png" />
+  <path
+     style="opacity:1;fill:none;fill-rule:evenodd;stroke:#a9a9a9;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:0.999237"
+     d="m 371.92092,112.53004 c 1.59715,-31.1861 0.0792,-61.74918 -0.5,-92.50001"
+     id="path4183-1"
+     sodipodi:nodetypes="cc"
+     inkscape:connector-curvature="0"
+     inkscape:export-xdpi="96"
+     inkscape:export-ydpi="96"
+     inkscape:export-filename="/Users/ricardochcz/Documents/StochasticTopologyRCC/Figures/Locally-infinite.png" />
+  <path
+     sodipodi:nodetypes="cc"
+     id="path4185-7"
+     d="m 376.81755,131.03005 c 2.8609,35.5 3.99919,71 3.11612,106.5"
+     style="opacity:1;fill:none;fill-rule:evenodd;stroke:#a9a9a9;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:0.999237"
+     inkscape:connector-curvature="0"
+     inkscape:export-xdpi="96"
+     inkscape:export-ydpi="96"
+     inkscape:export-filename="/Users/ricardochcz/Documents/StochasticTopologyRCC/Figures/Locally-infinite.png" />
+  <path
+     sodipodi:nodetypes="cc"
+     id="path4187-55"
+     d="m 390.06755,129.78005 c 11.23838,21.34496 21.83553,58.08113 14.75,105"
+     style="opacity:1;fill:none;fill-rule:evenodd;stroke:#a9a9a9;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:0.999237"
+     inkscape:connector-curvature="0"
+     inkscape:export-xdpi="96"
+     inkscape:export-ydpi="96"
+     inkscape:export-filename="/Users/ricardochcz/Documents/StochasticTopologyRCC/Figures/Locally-infinite.png" />
+  <path
+     sodipodi:nodetypes="cc"
+     id="path4189-4"
+     d="m 402.56755,127.03005 c 27.26865,23.8175 36.94233,79.87482 25.25,102.5"
+     style="opacity:1;fill:none;fill-rule:evenodd;stroke:#a9a9a9;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:0.999237"
+     inkscape:connector-curvature="0"
+     inkscape:export-xdpi="96"
+     inkscape:export-ydpi="96"
+     inkscape:export-filename="/Users/ricardochcz/Documents/StochasticTopologyRCC/Figures/Locally-infinite.png" />
+  <path
+     sodipodi:nodetypes="ccc"
+     id="path4191-1"
+     d="m 413.81755,123.53005 -0.5,0.25 c 28.42204,10.56151 49.25324,57.27496 39.25,96.5"
+     style="opacity:1;fill:none;fill-rule:evenodd;stroke:#a9a9a9;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:0.999237"
+     inkscape:connector-curvature="0"
+     inkscape:export-xdpi="96"
+     inkscape:export-ydpi="96"
+     inkscape:export-filename="/Users/ricardochcz/Documents/StochasticTopologyRCC/Figures/Locally-infinite.png" />
+  <path
+     sodipodi:nodetypes="csc"
+     id="path4193-8"
+     d="m 418.56755,120.03005 c 20.9438,-2.00384 41.30395,18.70986 48.64654,35.72445 6.67986,15.47888 13.02163,34.91462 3.60346,54.27555"
+     style="opacity:1;fill:none;fill-rule:evenodd;stroke:#a9a9a9;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.999237"
+     inkscape:connector-curvature="0"
+     inkscape:export-xdpi="96"
+     inkscape:export-ydpi="96"
+     inkscape:export-filename="/Users/ricardochcz/Documents/StochasticTopologyRCC/Figures/Locally-infinite.png" />
+  <path
+     sodipodi:nodetypes="cc"
+     id="path4195-8"
+     d="m 426.06755,115.53004 c 7.43513,-1.61227 15.10591,-0.54262 21.10369,2.98598"
+     style="opacity:1;fill:none;fill-rule:evenodd;stroke:#a9a9a9;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:0.999237"
+     inkscape:connector-curvature="0"
+     inkscape:export-xdpi="96"
+     inkscape:export-ydpi="96"
+     inkscape:export-filename="/Users/ricardochcz/Documents/StochasticTopologyRCC/Figures/Locally-infinite.png" />
+  <path
+     sodipodi:nodetypes="ccc"
+     id="path4201-3"
+     d="m 423.17448,117.55969 c 3.69405,-5.60301 4.39775,-12.09785 15.07779,-18.57411 12.21036,-7.12237 24.33981,-7.29162 38.5453,-6.23804"
+     style="opacity:1;fill:none;fill-rule:evenodd;stroke:#a9a9a9;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:0.999237"
+     inkscape:connector-curvature="0"
+     inkscape:export-xdpi="96"
+     inkscape:export-ydpi="96"
+     inkscape:export-filename="/Users/ricardochcz/Documents/StochasticTopologyRCC/Figures/Locally-infinite.png" />
+  <path
+     style="opacity:1;fill:none;fill-rule:evenodd;stroke:#a9a9a9;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:0.999237"
+     d="m 429.81755,112.53004 c 15.06895,-5.28016 22.44022,-3.25005 26.87343,-1.1422"
+     id="path4215-5"
+     sodipodi:nodetypes="cc"
+     inkscape:connector-curvature="0"
+     inkscape:export-xdpi="96"
+     inkscape:export-ydpi="96"
+     inkscape:export-filename="/Users/ricardochcz/Documents/StochasticTopologyRCC/Figures/Locally-infinite.png" />
+  <path
+     style="opacity:1;fill:none;fill-rule:evenodd;stroke:#a9a9a9;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:0.999237"
+     d="m 424.64047,116.08873 c 1.75871,-3.87717 6.61766,-7.96855 11.66726,-11.84404 14.99163,-5.71112 22.34582,-2.42087 40.80214,-1.37275"
+     id="path4217-2"
+     sodipodi:nodetypes="ccc"
+     inkscape:connector-curvature="0"
+     inkscape:export-xdpi="96"
+     inkscape:export-ydpi="96"
+     inkscape:export-filename="/Users/ricardochcz/Documents/StochasticTopologyRCC/Figures/Locally-infinite.png" />
+  <path
+     sodipodi:nodetypes="cc"
+     id="path4221-2"
+     d="M 421.56755,118.78005 C 430.14217,94.34006 454.06372,80.548 476.54158,81.69681"
+     style="opacity:1;fill:none;fill-rule:evenodd;stroke:#a9a9a9;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:0.999237"
+     inkscape:connector-curvature="0"
+     inkscape:export-xdpi="96"
+     inkscape:export-ydpi="96"
+     inkscape:export-filename="/Users/ricardochcz/Documents/StochasticTopologyRCC/Figures/Locally-infinite.png" />
+  <path
+     sodipodi:nodetypes="cc"
+     id="path4223-6"
+     d="m 420.06755,119.28005 c 8.9235,-41.64529 43.83706,-46.54513 56.60322,-46.18971"
+     style="opacity:1;fill:none;fill-rule:evenodd;stroke:#a9a9a9;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:0.999237"
+     inkscape:connector-curvature="0"
+     inkscape:export-xdpi="96"
+     inkscape:export-ydpi="96"
+     inkscape:export-filename="/Users/ricardochcz/Documents/StochasticTopologyRCC/Figures/Locally-infinite.png" />
+  <path
+     sodipodi:nodetypes="cc"
+     id="path4225-6"
+     d="m 418.56755,120.28005 c 1.08897,-34.70704 31.7647,-55.50807 58.13342,-55.75158"
+     style="opacity:1;fill:none;fill-rule:evenodd;stroke:#a9a9a9;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:0.999237"
+     inkscape:connector-curvature="0"
+     inkscape:export-xdpi="96"
+     inkscape:export-ydpi="96"
+     inkscape:export-filename="/Users/ricardochcz/Documents/StochasticTopologyRCC/Figures/Locally-infinite.png" />
+  <path
+     sodipodi:nodetypes="ccc"
+     id="path4227-78"
+     d="m 416.81755,121.53005 c -1.20437,-10.3981 -0.5735,-21.6903 5.5,-32.75001 13.63615,-20.82545 36.91958,-33.019 54.46975,-32.94967"
+     style="opacity:1;fill:none;fill-rule:evenodd;stroke:#a9a9a9;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:0.999237"
+     inkscape:connector-curvature="0"
+     inkscape:export-xdpi="96"
+     inkscape:export-ydpi="96"
+     inkscape:export-filename="/Users/ricardochcz/Documents/StochasticTopologyRCC/Figures/Locally-infinite.png" />
+  <path
+     sodipodi:nodetypes="ccc"
+     id="path4229-41"
+     d="m 415.56755,121.28005 c -5.82944,-36.68971 15.42951,-70.65077 49.5,-74.25001 l 4.25,-0.5"
+     style="opacity:1;fill:none;fill-rule:evenodd;stroke:#a9a9a9;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:0.999237"
+     inkscape:connector-curvature="0"
+     inkscape:export-xdpi="96"
+     inkscape:export-ydpi="96"
+     inkscape:export-filename="/Users/ricardochcz/Documents/StochasticTopologyRCC/Figures/Locally-infinite.png" />
+  <path
+     sodipodi:nodetypes="cc"
+     id="path4231-71"
+     d="m 412.56755,120.53005 c -11.88183,-39.52829 8.26442,-68.94074 41.5,-82.25001"
+     style="opacity:1;fill:none;fill-rule:evenodd;stroke:#a9a9a9;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:0.999237"
+     inkscape:connector-curvature="0"
+     inkscape:export-xdpi="96"
+     inkscape:export-ydpi="96"
+     inkscape:export-filename="/Users/ricardochcz/Documents/StochasticTopologyRCC/Figures/Locally-infinite.png" />
+  <path
+     sodipodi:nodetypes="ccc"
+     id="path4233-8"
+     d="m 406.41102,117.82747 c -7.31704,-13.96463 -3.56293,-27.66041 -0.68566,-42.52997 9.51606,-27.16914 20.87872,-36.28496 34.29468,-43.84062"
+     style="opacity:1;fill:none;fill-rule:evenodd;stroke:#a9a9a9;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:0.999237"
+     inkscape:connector-curvature="0"
+     inkscape:export-xdpi="96"
+     inkscape:export-ydpi="96"
+     inkscape:export-filename="/Users/ricardochcz/Documents/StochasticTopologyRCC/Figures/Locally-infinite.png" />
+  <path
+     sodipodi:nodetypes="csc"
+     id="path4235-78"
+     d="m 425.8779,27.21423 c -16.21997,12.28547 -22.04635,25.58755 -26.59466,40.12356 -4.83384,15.44852 -5.87216,40.33967 1.51382,48.53624"
+     style="opacity:1;fill:none;fill-rule:evenodd;stroke:#a9a9a9;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:0.999237"
+     inkscape:connector-curvature="0"
+     inkscape:export-xdpi="96"
+     inkscape:export-ydpi="96"
+     inkscape:export-filename="/Users/ricardochcz/Documents/StochasticTopologyRCC/Figures/Locally-infinite.png" />
+  <path
+     sodipodi:nodetypes="cc"
+     id="path4237-77"
+     d="M 391.93677,113.91693 C 383.69131,84.32654 390.12288,53.2645 408.20023,23.32514"
+     style="opacity:1;fill:none;fill-rule:evenodd;stroke:#a9a9a9;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:0.999237"
+     inkscape:connector-curvature="0"
+     inkscape:export-xdpi="96"
+     inkscape:export-ydpi="96"
+     inkscape:export-filename="/Users/ricardochcz/Documents/StochasticTopologyRCC/Figures/Locally-infinite.png" />
+  <path
+     sodipodi:nodetypes="cc"
+     id="path4239-4"
+     d="M 392.01888,20.97527 C 379.7497,50.2222 379.87418,81.78923 381.72294,112.29561"
+     style="opacity:1;fill:none;fill-rule:evenodd;stroke:#a9a9a9;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:0.999237"
+     inkscape:connector-curvature="0"
+     inkscape:export-xdpi="96"
+     inkscape:export-ydpi="96"
+     inkscape:export-filename="/Users/ricardochcz/Documents/StochasticTopologyRCC/Figures/Locally-infinite.png" />
+  <path
+     style="opacity:1;fill:none;fill-rule:evenodd;stroke:#a9a9a9;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:0.999237"
+     d="m 269.60898,193.34943 c 68.28754,37.28486 158.14835,41.46728 205.78154,-0.15941"
+     id="path4304-1-4"
+     sodipodi:nodetypes="cc"
+     inkscape:connector-curvature="0"
+     inkscape:export-xdpi="96"
+     inkscape:export-ydpi="96"
+     inkscape:export-filename="/Users/ricardochcz/Documents/StochasticTopologyRCC/Figures/Locally-infinite.png" />
+  <path
+     inkscape:connector-curvature="0"
+     style="opacity:1;fill:none;fill-rule:evenodd;stroke:#a9a9a9;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:0.999237"
+     d="m 323.67092,119.28005 c -0.15968,-10.91668 -10.68018,-27.33334 -18,-33.00001 -17.29339,-12.39551 -31.76706,-13.1337 -39.2143,-13.16055"
+     id="path4165-9-91"
+     sodipodi:nodetypes="ccc"
+     inkscape:export-xdpi="96"
+     inkscape:export-ydpi="96"
+     inkscape:export-filename="/Users/ricardochcz/Documents/StochasticTopologyRCC/Figures/Locally-infinite.png" />
+  <path
+     inkscape:connector-curvature="0"
+     style="opacity:1;fill:none;fill-rule:evenodd;stroke:#a9a9a9;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:0.999237"
+     d="m 633.91224,116.53004 c 23.8362,-65.45222 -134.67737,-56.21662 -107.625,-1.25"
+     id="path4294-2-5"
+     sodipodi:nodetypes="cc"
+     inkscape:export-xdpi="96"
+     inkscape:export-ydpi="96"
+     inkscape:export-filename="/Users/ricardochcz/Documents/StochasticTopologyRCC/Figures/Locally-infinite.png" />
+  <path
+     style="opacity:1;fill:none;fill-rule:evenodd;stroke:#a9a9a9;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:0.999237"
+     d="m 693.3993,200.51974 c -63.29221,36.54795 -136.94185,52.35319 -212.784,5.45298"
+     id="path4298-2-5"
+     sodipodi:nodetypes="cc"
+     inkscape:connector-curvature="0"
+     inkscape:export-xdpi="96"
+     inkscape:export-ydpi="96"
+     inkscape:export-filename="/Users/ricardochcz/Documents/StochasticTopologyRCC/Figures/Locally-infinite.png" />
+  <path
+     style="opacity:1;fill:none;fill-rule:evenodd;stroke:#a9a9a9;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:0.999237"
+     d="M 726.79292,152.54892 C 674.36457,232.9801 525.82143,234.7584 478.18824,193.13164"
+     id="path4304-5-5"
+     sodipodi:nodetypes="cc"
+     inkscape:connector-curvature="0"
+     inkscape:export-xdpi="96"
+     inkscape:export-ydpi="96"
+     inkscape:export-filename="/Users/ricardochcz/Documents/StochasticTopologyRCC/Figures/Locally-infinite.png" />
+  <path
+     style="opacity:1;fill:none;fill-rule:evenodd;stroke:#a9a9a9;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:0.999237"
+     d="M 729.35158,117.47827 C 706.32704,219.21774 526.47941,223.9306 478.31529,180.77909"
+     id="path2165-2-8"
+     sodipodi:nodetypes="cc"
+     inkscape:connector-curvature="0"
+     inkscape:export-xdpi="96"
+     inkscape:export-ydpi="96"
+     inkscape:export-filename="/Users/ricardochcz/Documents/StochasticTopologyRCC/Figures/Locally-infinite.png" />
+  <path
+     style="opacity:1;fill:none;fill-rule:evenodd;stroke:#a9a9a9;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:0.999237"
+     d="m 721.13607,91.2074 c 6.97373,97.87912 -166.32243,126.29008 -238.61343,72.85629"
+     id="path2167-6-2"
+     sodipodi:nodetypes="cc"
+     inkscape:connector-curvature="0"
+     inkscape:export-xdpi="96"
+     inkscape:export-ydpi="96"
+     inkscape:export-filename="/Users/ricardochcz/Documents/StochasticTopologyRCC/Figures/Locally-infinite.png" />
+  <path
+     style="opacity:1;fill:none;fill-rule:evenodd;stroke:#a9a9a9;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:0.999237"
+     d="m 697.44799,60.80181 c 52.4635,73.16727 -69.28772,107.96957 -117.5565,106.59636 -52.72964,-2.87475 -75.47798,-12.54799 -86.91539,-24.16048"
+     id="path2169-1-9"
+     sodipodi:nodetypes="ccc"
+     inkscape:connector-curvature="0"
+     inkscape:export-xdpi="96"
+     inkscape:export-ydpi="96"
+     inkscape:export-filename="/Users/ricardochcz/Documents/StochasticTopologyRCC/Figures/Locally-infinite.png" />
+  <path
+     inkscape:connector-curvature="0"
+     id="path2171-1-8"
+     d="M 631.38706,36.18409 C 585.08462,20.5786 524.9394,29.00425 497.13434,54.99141 c -27.80504,25.98712 -12.79265,59.74348 33.50981,75.34903 46.30244,15.60549 106.44766,7.17984 134.25272,-18.80733 27.76726,-25.9518 12.84933,-59.64884 -33.33078,-75.28852"
+     style="opacity:1;fill:none;fill-opacity:1;stroke:#a9a9a9;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.999237"
+     inkscape:export-xdpi="96"
+     inkscape:export-ydpi="96"
+     inkscape:export-filename="/Users/ricardochcz/Documents/StochasticTopologyRCC/Figures/Locally-infinite.png" />
+  <path
+     inkscape:connector-curvature="0"
+     style="opacity:1;fill:none;fill-opacity:1;stroke:#a9a9a9;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.999237"
+     d="M 622.96632,46.12408 C 584.24214,33.11033 533.94081,40.13665 510.68657,61.8079 c -23.25422,21.67122 -10.69889,49.82138 28.02531,62.83519 38.72417,13.01375 89.02551,5.98743 112.27975,-15.68383 23.22262,-21.64178 10.74628,-49.74246 -27.87558,-62.78473"
+     id="path2173-17-2"
+     inkscape:export-xdpi="96"
+     inkscape:export-ydpi="96"
+     inkscape:export-filename="/Users/ricardochcz/Documents/StochasticTopologyRCC/Figures/Locally-infinite.png" />
+  <path
+     inkscape:connector-curvature="0"
+     id="path3146-2-0"
+     d="m 615.79524,59.74959 c -31.90235,-10.94183 -73.34238,-5.03417 -92.50005,13.1868 -19.15764,18.22094 -8.81412,41.88931 23.08825,52.83119 31.90235,10.94183 73.34238,5.03417 92.50005,-13.18681 C 658.01511,94.38458 647.73666,70.75782 615.9186,59.792"
+     style="opacity:1;fill:none;fill-opacity:1;stroke:#a9a9a9;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.999237"
+     inkscape:export-xdpi="96"
+     inkscape:export-ydpi="96"
+     inkscape:export-filename="/Users/ricardochcz/Documents/StochasticTopologyRCC/Figures/Locally-infinite.png" />
+  <path
+     inkscape:connector-curvature="0"
+     style="opacity:1;fill:none;fill-rule:evenodd;stroke:#a9a9a9;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:0.999237"
+     d="M 630.66224,118.65505 C 635.33893,93.17101 598.413,84.92597 581.41219,85.28471 c -21.97508,0.46371 -58.11425,12.20646 -49.99995,33.37034"
+     id="path4117-2-7"
+     sodipodi:nodetypes="csc"
+     inkscape:export-xdpi="96"
+     inkscape:export-ydpi="96"
+     inkscape:export-filename="/Users/ricardochcz/Documents/StochasticTopologyRCC/Figures/Locally-infinite.png" />
+  <path
+     inkscape:connector-curvature="0"
+     sodipodi:nodetypes="csc"
+     id="path4119-1-4"
+     d="m 627.51823,120.2619 c -0.77329,-13.26579 -26.90992,-21.43005 -43.47944,-22.08831 -21.95534,-0.87222 -47.71822,9.25472 -50.23093,22.08831"
+     style="opacity:1;fill:none;fill-rule:evenodd;stroke:#a9a9a9;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.999237"
+     inkscape:export-xdpi="96"
+     inkscape:export-ydpi="96"
+     inkscape:export-filename="/Users/ricardochcz/Documents/StochasticTopologyRCC/Figures/Locally-infinite.png" />
+  <path
+     inkscape:connector-curvature="0"
+     style="opacity:1;fill:none;fill-rule:evenodd;stroke:#a9a9a9;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:0.999237"
+     d="m 625.16224,121.65505 c -11.39402,-10.27286 -28.13261,-13.93621 -43.31294,-14.24169 -15.17023,-0.30528 -31.58075,3.00467 -44.81206,14.24169"
+     id="path4121-6-8"
+     sodipodi:nodetypes="csc"
+     inkscape:export-xdpi="96"
+     inkscape:export-ydpi="96"
+     inkscape:export-filename="/Users/ricardochcz/Documents/StochasticTopologyRCC/Figures/Locally-infinite.png" />
+  <path
+     inkscape:connector-curvature="0"
+     sodipodi:nodetypes="csc"
+     id="path4123-9-5"
+     d="m 625.1228,122.11561 c -11.38383,-7.06445 -28.10743,-9.58368 -43.27417,-9.79374 -15.15665,-0.20994 -31.55247,2.06625 -44.77195,9.79374"
+     style="opacity:1;fill:none;fill-rule:evenodd;stroke:#a9a9a9;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.999237"
+     inkscape:export-xdpi="96"
+     inkscape:export-ydpi="96"
+     inkscape:export-filename="/Users/ricardochcz/Documents/StochasticTopologyRCC/Figures/Locally-infinite.png" />
+  <path
+     inkscape:connector-curvature="0"
+     style="opacity:1;fill:none;fill-rule:evenodd;stroke:#a9a9a9;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:0.999237"
+     d="m 586.16224,131.03005 c 2.8609,35.5 3.99919,71 3.11612,106.5"
+     id="path4125-2-8"
+     sodipodi:nodetypes="cc"
+     inkscape:export-xdpi="96"
+     inkscape:export-ydpi="96"
+     inkscape:export-filename="/Users/ricardochcz/Documents/StochasticTopologyRCC/Figures/Locally-infinite.png" />
+  <path
+     inkscape:connector-curvature="0"
+     style="opacity:1;fill:none;fill-rule:evenodd;stroke:#a9a9a9;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:0.999237"
+     d="m 599.41224,129.78005 c 11.23838,21.34496 21.83553,58.08113 14.75,105"
+     id="path4127-4-30"
+     sodipodi:nodetypes="cc"
+     inkscape:export-xdpi="96"
+     inkscape:export-ydpi="96"
+     inkscape:export-filename="/Users/ricardochcz/Documents/StochasticTopologyRCC/Figures/Locally-infinite.png" />
+  <path
+     inkscape:connector-curvature="0"
+     style="opacity:1;fill:none;fill-rule:evenodd;stroke:#a9a9a9;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:0.999237"
+     d="m 611.91224,127.03005 c 27.26865,23.8175 36.94233,79.87482 25.25,102.5"
+     id="path4129-61-6"
+     sodipodi:nodetypes="cc"
+     inkscape:export-xdpi="96"
+     inkscape:export-ydpi="96"
+     inkscape:export-filename="/Users/ricardochcz/Documents/StochasticTopologyRCC/Figures/Locally-infinite.png" />
+  <path
+     inkscape:connector-curvature="0"
+     style="opacity:1;fill:none;fill-rule:evenodd;stroke:#a9a9a9;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:0.999237"
+     d="m 623.16224,123.53005 -0.5,0.25 c 28.42204,10.56151 49.25324,57.27496 39.25,96.5"
+     id="path4131-73-2"
+     sodipodi:nodetypes="ccc"
+     inkscape:export-xdpi="96"
+     inkscape:export-ydpi="96"
+     inkscape:export-filename="/Users/ricardochcz/Documents/StochasticTopologyRCC/Figures/Locally-infinite.png" />
+  <path
+     inkscape:connector-curvature="0"
+     style="opacity:1;fill:none;fill-rule:evenodd;stroke:#a9a9a9;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:0.999237"
+     d="m 627.91224,120.03005 c 20.9438,-2.00384 41.04348,18.82465 48.64654,35.72445 7.02611,15.61738 14.69004,35.58198 3.60346,54.27555"
+     id="path4133-0-2"
+     sodipodi:nodetypes="csc"
+     inkscape:export-xdpi="96"
+     inkscape:export-ydpi="96"
+     inkscape:export-filename="/Users/ricardochcz/Documents/StochasticTopologyRCC/Figures/Locally-infinite.png" />
+  <path
+     inkscape:connector-curvature="0"
+     style="opacity:1;fill:none;fill-rule:evenodd;stroke:#a9a9a9;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:0.999237"
+     d="m 635.41224,115.53004 c 26.47734,-4.81073 38.56727,10.09204 50.125,20.87501 14.42766,19.17247 22.27136,38.53859 14.125,58.375"
+     id="path4135-3-5"
+     sodipodi:nodetypes="ccc"
+     inkscape:export-xdpi="96"
+     inkscape:export-ydpi="96"
+     inkscape:export-filename="/Users/ricardochcz/Documents/StochasticTopologyRCC/Figures/Locally-infinite.png" />
+  <path
+     inkscape:connector-curvature="0"
+     style="opacity:1;fill:none;fill-rule:evenodd;stroke:#a9a9a9;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:0.999237"
+     d="m 639.16224,112.53004 c 13.0365,-6.0117 26.55267,-7.06686 41,1.5 26.25852,15.3951 33.38967,36.0817 34.29289,40.76257 0.64313,9.96477 1.84111,15.86366 0.091,23.53033"
+     id="path4137-3-2"
+     sodipodi:nodetypes="cccc"
+     inkscape:export-xdpi="96"
+     inkscape:export-ydpi="96"
+     inkscape:export-filename="/Users/ricardochcz/Documents/StochasticTopologyRCC/Figures/Locally-infinite.png" />
+  <path
+     inkscape:connector-curvature="0"
+     style="opacity:1;fill:none;fill-rule:evenodd;stroke:#a9a9a9;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:0.999237"
+     d="m 633.98516,116.13292 c 1.75871,-3.87717 6.61766,-7.96855 11.66726,-11.84404 14.99163,-5.71112 29.26249,-6.51542 44.7245,1.41421 14.51766,7.7562 27.34588,17.20186 32.52691,34.29469 1.12221,5.36223 2.17226,10.72445 2.82843,16.08668"
+     id="path4139-0-2"
+     sodipodi:nodetypes="ccccc"
+     inkscape:export-xdpi="96"
+     inkscape:export-ydpi="96"
+     inkscape:export-filename="/Users/ricardochcz/Documents/StochasticTopologyRCC/Figures/Locally-infinite.png" />
+  <path
+     inkscape:connector-curvature="0"
+     style="opacity:1;fill:none;fill-rule:evenodd;stroke:#a9a9a9;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:0.999237"
+     d="m 632.51917,117.55969 c 3.69405,-5.60301 4.39775,-12.09785 15.07779,-18.57411 12.21036,-7.12237 27.27992,-9.24116 47.0226,-3.18198 21.78633,6.55283 32.40334,23.86916 35.35534,44.54773"
+     id="path4141-2-7"
+     sodipodi:nodetypes="cccc"
+     inkscape:export-xdpi="96"
+     inkscape:export-ydpi="96"
+     inkscape:export-filename="/Users/ricardochcz/Documents/StochasticTopologyRCC/Figures/Locally-infinite.png" />
+  <path
+     inkscape:connector-curvature="0"
+     style="opacity:1;fill:none;fill-rule:evenodd;stroke:#a9a9a9;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:0.999237"
+     d="m 629.41224,119.28005 c 0.15968,-10.91668 10.68018,-27.33334 18,-33.00001 31.4034,-19.04238 47.65507,-11.68795 60,-7.75 4.87609,3.52138 8.95607,6.6447 12.5,9.5"
+     id="path4165-8-1"
+     sodipodi:nodetypes="cccc"
+     inkscape:export-xdpi="96"
+     inkscape:export-ydpi="96"
+     inkscape:export-filename="/Users/ricardochcz/Documents/StochasticTopologyRCC/Figures/Locally-infinite.png" />
+  <path
+     inkscape:connector-curvature="0"
+     style="opacity:1;fill:none;fill-rule:evenodd;stroke:#a9a9a9;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:0.999237"
+     d="m 627.91224,120.28005 c -0.35037,-13.19018 2.77856,-26.9722 17,-39.25001 22.10293,-18.54451 33.55841,-15.93139 45.5,-15.75 6.54785,0.85107 11.8328,2.2086 15.5,4.25"
+     id="path4167-4-5"
+     sodipodi:nodetypes="cccc"
+     inkscape:export-xdpi="96"
+     inkscape:export-ydpi="96"
+     inkscape:export-filename="/Users/ricardochcz/Documents/StochasticTopologyRCC/Figures/Locally-infinite.png" />
+  <path
+     inkscape:connector-curvature="0"
+     style="opacity:1;fill:none;fill-rule:evenodd;stroke:#a9a9a9;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:0.999237"
+     d="m 626.16224,121.53005 c -1.20437,-10.3981 -0.5735,-21.6903 5.5,-32.75001 15.29733,-23.13662 36.58993,-36.78322 61,-32.25"
+     id="path4169-6-2"
+     sodipodi:nodetypes="ccc"
+     inkscape:export-xdpi="96"
+     inkscape:export-ydpi="96"
+     inkscape:export-filename="/Users/ricardochcz/Documents/StochasticTopologyRCC/Figures/Locally-infinite.png" />
+  <path
+     inkscape:connector-curvature="0"
+     style="opacity:1;fill:none;fill-rule:evenodd;stroke:#a9a9a9;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:0.999237"
+     d="m 624.91224,121.28005 c -5.82944,-36.68971 15.42951,-70.65077 49.5,-74.25001 l 4.25,-0.5"
+     id="path4171-05-1"
+     sodipodi:nodetypes="ccc"
+     inkscape:export-xdpi="96"
+     inkscape:export-ydpi="96"
+     inkscape:export-filename="/Users/ricardochcz/Documents/StochasticTopologyRCC/Figures/Locally-infinite.png" />
+  <path
+     inkscape:connector-curvature="0"
+     style="opacity:1;fill:none;fill-rule:evenodd;stroke:#a9a9a9;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:0.999237"
+     d="m 621.91224,120.53005 c -7.38361,-18.41266 -5.44915,-36.504 6.5,-54.25001 8.54434,-16.02404 21.93471,-21.66372 35,-28"
+     id="path4173-0-1"
+     sodipodi:nodetypes="ccc"
+     inkscape:export-xdpi="96"
+     inkscape:export-ydpi="96"
+     inkscape:export-filename="/Users/ricardochcz/Documents/StochasticTopologyRCC/Figures/Locally-infinite.png" />
+  <path
+     inkscape:connector-curvature="0"
+     style="opacity:1;fill:none;fill-rule:evenodd;stroke:#a9a9a9;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:0.999237"
+     d="m 615.75571,117.82747 c -7.31704,-13.96463 -3.56293,-27.66041 -0.68566,-42.52997 9.51606,-27.16914 20.87872,-36.28496 34.29468,-43.84062"
+     id="path4175-1-0"
+     sodipodi:nodetypes="ccc"
+     inkscape:export-xdpi="96"
+     inkscape:export-ydpi="96"
+     inkscape:export-filename="/Users/ricardochcz/Documents/StochasticTopologyRCC/Figures/Locally-infinite.png" />
+  <path
+     inkscape:connector-curvature="0"
+     style="opacity:1;fill:none;fill-rule:evenodd;stroke:#a9a9a9;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:0.999237"
+     d="m 635.22259,27.21423 c -16.21997,12.28547 -22.04635,25.58755 -26.59466,40.12356 -4.83384,15.44852 -5.87216,40.33967 1.51382,48.53624"
+     id="path4177-9-1"
+     sodipodi:nodetypes="csc"
+     inkscape:export-xdpi="96"
+     inkscape:export-ydpi="96"
+     inkscape:export-filename="/Users/ricardochcz/Documents/StochasticTopologyRCC/Figures/Locally-infinite.png" />
+  <path
+     inkscape:connector-curvature="0"
+     style="opacity:1;fill:none;fill-rule:evenodd;stroke:#a9a9a9;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:0.999237"
+     d="M 601.28146,113.91693 C 593.036,84.32654 599.46757,53.2645 617.54492,23.32514"
+     id="path4179-36-8"
+     sodipodi:nodetypes="cc"
+     inkscape:export-xdpi="96"
+     inkscape:export-ydpi="96"
+     inkscape:export-filename="/Users/ricardochcz/Documents/StochasticTopologyRCC/Figures/Locally-infinite.png" />
+  <path
+     inkscape:connector-curvature="0"
+     style="opacity:1;fill:none;fill-rule:evenodd;stroke:#a9a9a9;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:0.999237"
+     d="m 601.36357,20.97527 c -12.26918,29.24693 -12.1447,60.81396 -10.29594,91.32034"
+     id="path4181-0-7"
+     sodipodi:nodetypes="cc"
+     inkscape:export-xdpi="96"
+     inkscape:export-ydpi="96"
+     inkscape:export-filename="/Users/ricardochcz/Documents/StochasticTopologyRCC/Figures/Locally-infinite.png" />
+  <path
+     inkscape:connector-curvature="0"
+     style="opacity:1;fill:none;fill-rule:evenodd;stroke:#a9a9a9;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:0.999237"
+     d="m 581.16224,112.53004 c -1.59715,-31.1861 -0.0792,-61.74918 0.5,-92.50001"
+     id="path4183-6-6"
+     sodipodi:nodetypes="cc"
+     inkscape:export-xdpi="96"
+     inkscape:export-ydpi="96"
+     inkscape:export-filename="/Users/ricardochcz/Documents/StochasticTopologyRCC/Figures/Locally-infinite.png" />
+  <path
+     inkscape:connector-curvature="0"
+     sodipodi:nodetypes="cc"
+     id="path4185-2-0"
+     d="m 576.26561,131.03005 c -2.8609,35.5 -3.99919,71 -3.11612,106.5"
+     style="opacity:1;fill:none;fill-rule:evenodd;stroke:#a9a9a9;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:0.999237"
+     inkscape:export-xdpi="96"
+     inkscape:export-ydpi="96"
+     inkscape:export-filename="/Users/ricardochcz/Documents/StochasticTopologyRCC/Figures/Locally-infinite.png" />
+  <path
+     inkscape:connector-curvature="0"
+     sodipodi:nodetypes="cc"
+     id="path4187-5-0"
+     d="m 563.01561,129.78005 c -11.23838,21.34496 -21.83553,58.08113 -14.75,105"
+     style="opacity:1;fill:none;fill-rule:evenodd;stroke:#a9a9a9;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:0.999237"
+     inkscape:export-xdpi="96"
+     inkscape:export-ydpi="96"
+     inkscape:export-filename="/Users/ricardochcz/Documents/StochasticTopologyRCC/Figures/Locally-infinite.png" />
+  <path
+     inkscape:connector-curvature="0"
+     sodipodi:nodetypes="cc"
+     id="path4189-0-9"
+     d="m 550.51561,127.03005 c -27.26865,23.8175 -36.94233,79.87482 -25.25,102.5"
+     style="opacity:1;fill:none;fill-rule:evenodd;stroke:#a9a9a9;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:0.999237"
+     inkscape:export-xdpi="96"
+     inkscape:export-ydpi="96"
+     inkscape:export-filename="/Users/ricardochcz/Documents/StochasticTopologyRCC/Figures/Locally-infinite.png" />
+  <path
+     inkscape:connector-curvature="0"
+     sodipodi:nodetypes="ccc"
+     id="path4191-3-5"
+     d="m 539.26561,123.53005 0.5,0.25 c -28.42204,10.56151 -49.25324,57.27496 -39.25,96.5"
+     style="opacity:1;fill:none;fill-rule:evenodd;stroke:#a9a9a9;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:0.999237"
+     inkscape:export-xdpi="96"
+     inkscape:export-ydpi="96"
+     inkscape:export-filename="/Users/ricardochcz/Documents/StochasticTopologyRCC/Figures/Locally-infinite.png" />
+  <path
+     inkscape:connector-curvature="0"
+     sodipodi:nodetypes="csc"
+     id="path4193-5-6"
+     d="m 534.51561,120.03005 c -20.9438,-2.00384 -41.04467,18.82412 -48.64654,35.72445 -7.02479,15.61738 -11.56733,35.58198 -3.60346,54.27555"
+     style="opacity:1;fill:none;fill-rule:evenodd;stroke:#a9a9a9;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.999237"
+     inkscape:export-xdpi="96"
+     inkscape:export-ydpi="96"
+     inkscape:export-filename="/Users/ricardochcz/Documents/StochasticTopologyRCC/Figures/Locally-infinite.png" />
+  <path
+     sodipodi:nodetypes="cc"
+     id="path4195-0-2"
+     d="m 527.01561,115.53004 c -6.50224,-0.67937 -12.63605,-0.0703 -19.2379,4.1521"
+     style="opacity:1;fill:none;fill-rule:evenodd;stroke:#a9a9a9;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:0.999237"
+     inkscape:connector-curvature="0"
+     inkscape:export-xdpi="96"
+     inkscape:export-ydpi="96"
+     inkscape:export-filename="/Users/ricardochcz/Documents/StochasticTopologyRCC/Figures/Locally-infinite.png" />
+  <path
+     sodipodi:nodetypes="cc"
+     id="path4199-1-85"
+     d="m 528.44269,116.13292 c -1.75871,-3.87717 -6.61766,-7.96855 -11.66726,-11.84404"
+     style="opacity:1;fill:none;fill-rule:evenodd;stroke:#a9a9a9;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:0.999237"
+     inkscape:connector-curvature="0"
+     inkscape:export-xdpi="96"
+     inkscape:export-ydpi="96"
+     inkscape:export-filename="/Users/ricardochcz/Documents/StochasticTopologyRCC/Figures/Locally-infinite.png" />
+  <path
+     sodipodi:nodetypes="ccc"
+     id="path4201-2-9"
+     d="m 529.90868,117.55969 c -3.69405,-5.60301 -4.0442,-13.2469 -14.72424,-19.72315 -12.21036,-7.12237 -21.23613,-5.44426 -38.38687,-5.089"
+     style="opacity:1;fill:none;fill-rule:evenodd;stroke:#a9a9a9;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:0.999237"
+     inkscape:connector-curvature="0"
+     inkscape:export-xdpi="96"
+     inkscape:export-ydpi="96"
+     inkscape:export-filename="/Users/ricardochcz/Documents/StochasticTopologyRCC/Figures/Locally-infinite.png" />
+  <path
+     style="opacity:1;fill:none;fill-rule:evenodd;stroke:#a9a9a9;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:0.999237"
+     d="m 523.26561,112.53004 c -11.92043,-4.81372 -17.76057,-2.62455 -25.74872,-1.1422"
+     id="path4215-6-4"
+     sodipodi:nodetypes="cc"
+     inkscape:connector-curvature="0"
+     inkscape:export-xdpi="96"
+     inkscape:export-ydpi="96"
+     inkscape:export-filename="/Users/ricardochcz/Documents/StochasticTopologyRCC/Figures/Locally-infinite.png" />
+  <path
+     style="opacity:1;fill:none;fill-rule:evenodd;stroke:#a9a9a9;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:0.999237"
+     d="M 528.44269,116.13292 C 517.78714,97.31934 493.96896,101.85214 476.94953,102.91613"
+     id="path4217-4-3"
+     sodipodi:nodetypes="cc"
+     inkscape:connector-curvature="0"
+     inkscape:export-xdpi="96"
+     inkscape:export-ydpi="96"
+     inkscape:export-filename="/Users/ricardochcz/Documents/StochasticTopologyRCC/Figures/Locally-infinite.png" />
+  <path
+     sodipodi:nodetypes="cc"
+     id="path4221-5-9"
+     d="M 531.51561,118.78005 C 522.94099,94.34006 499.01944,80.548 476.54158,81.69681"
+     style="opacity:1;fill:none;fill-rule:evenodd;stroke:#a9a9a9;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:0.999237"
+     inkscape:connector-curvature="0"
+     inkscape:export-xdpi="96"
+     inkscape:export-ydpi="96"
+     inkscape:export-filename="/Users/ricardochcz/Documents/StochasticTopologyRCC/Figures/Locally-infinite.png" />
+  <path
+     sodipodi:nodetypes="cc"
+     id="path4223-1-0"
+     d="M 533.01561,119.28005 C 524.09211,77.63476 489.43693,72.73492 476.67077,73.09034"
+     style="opacity:1;fill:none;fill-rule:evenodd;stroke:#a9a9a9;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:0.999237"
+     inkscape:connector-curvature="0"
+     inkscape:export-xdpi="96"
+     inkscape:export-ydpi="96"
+     inkscape:export-filename="/Users/ricardochcz/Documents/StochasticTopologyRCC/Figures/Locally-infinite.png" />
+  <path
+     sodipodi:nodetypes="cc"
+     id="path4225-8-5"
+     d="M 534.51561,120.28005 C 533.42664,85.57301 503.06969,64.77198 476.70097,64.52847"
+     style="opacity:1;fill:none;fill-rule:evenodd;stroke:#a9a9a9;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:0.999237"
+     inkscape:connector-curvature="0"
+     inkscape:export-xdpi="96"
+     inkscape:export-ydpi="96"
+     inkscape:export-filename="/Users/ricardochcz/Documents/StochasticTopologyRCC/Figures/Locally-infinite.png" />
+  <path
+     sodipodi:nodetypes="ccc"
+     id="path4227-2-6"
+     d="m 536.26561,121.53005 c 1.20437,-10.3981 0.5735,-21.6903 -5.5,-32.75001 -13.63615,-20.82545 -36.91958,-33.019 -54.46975,-32.94967"
+     style="opacity:1;fill:none;fill-rule:evenodd;stroke:#a9a9a9;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:0.999237"
+     inkscape:connector-curvature="0"
+     inkscape:export-xdpi="96"
+     inkscape:export-ydpi="96"
+     inkscape:export-filename="/Users/ricardochcz/Documents/StochasticTopologyRCC/Figures/Locally-infinite.png" />
+  <path
+     inkscape:connector-curvature="0"
+     sodipodi:nodetypes="cc"
+     id="path4229-4-36"
+     d="m 537.51561,121.28005 c 5.9117,-39.64144 -16.7085,-70.39218 -53.75,-74.75001"
+     style="opacity:1;fill:none;fill-rule:evenodd;stroke:#a9a9a9;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:0.999237"
+     inkscape:export-xdpi="96"
+     inkscape:export-ydpi="96"
+     inkscape:export-filename="/Users/ricardochcz/Documents/StochasticTopologyRCC/Figures/Locally-infinite.png" />
+  <path
+     inkscape:connector-curvature="0"
+     sodipodi:nodetypes="ccc"
+     id="path4231-7-3"
+     d="m 540.51561,120.53005 c 7.38361,-18.41266 5.44915,-36.504 -6.5,-54.25001 -8.54434,-16.02404 -21.93471,-21.66372 -35,-28"
+     style="opacity:1;fill:none;fill-rule:evenodd;stroke:#a9a9a9;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:0.999237"
+     inkscape:export-xdpi="96"
+     inkscape:export-ydpi="96"
+     inkscape:export-filename="/Users/ricardochcz/Documents/StochasticTopologyRCC/Figures/Locally-infinite.png" />
+  <path
+     inkscape:connector-curvature="0"
+     sodipodi:nodetypes="ccc"
+     id="path4233-4-0"
+     d="M 546.67214,117.82747 C 553.98918,103.86284 550.23507,90.16706 547.3578,75.2975 537.84174,48.12836 526.47908,39.01254 513.06312,31.45688"
+     style="opacity:1;fill:none;fill-rule:evenodd;stroke:#a9a9a9;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:0.999237"
+     inkscape:export-xdpi="96"
+     inkscape:export-ydpi="96"
+     inkscape:export-filename="/Users/ricardochcz/Documents/StochasticTopologyRCC/Figures/Locally-infinite.png" />
+  <path
+     inkscape:connector-curvature="0"
+     sodipodi:nodetypes="csc"
+     id="path4235-7-8"
+     d="m 527.20526,27.21423 c 16.21997,12.28547 22.04635,25.58755 26.59466,40.12356 4.83384,15.44852 5.87216,40.33967 -1.51382,48.53624"
+     style="opacity:1;fill:none;fill-rule:evenodd;stroke:#a9a9a9;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:0.999237"
+     inkscape:export-xdpi="96"
+     inkscape:export-ydpi="96"
+     inkscape:export-filename="/Users/ricardochcz/Documents/StochasticTopologyRCC/Figures/Locally-infinite.png" />
+  <path
+     inkscape:connector-curvature="0"
+     sodipodi:nodetypes="cc"
+     id="path4237-2-4"
+     d="M 561.14639,113.91693 C 569.39185,84.32654 562.96028,53.2645 544.88293,23.32514"
+     style="opacity:1;fill:none;fill-rule:evenodd;stroke:#a9a9a9;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:0.999237"
+     inkscape:export-xdpi="96"
+     inkscape:export-ydpi="96"
+     inkscape:export-filename="/Users/ricardochcz/Documents/StochasticTopologyRCC/Figures/Locally-infinite.png" />
+  <path
+     inkscape:connector-curvature="0"
+     sodipodi:nodetypes="cc"
+     id="path4239-2-0"
+     d="m 561.06428,20.97527 c 12.26918,29.24693 12.1447,60.81396 10.29594,91.32034"
+     style="opacity:1;fill:none;fill-rule:evenodd;stroke:#a9a9a9;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:0.999237"
+     inkscape:export-xdpi="96"
+     inkscape:export-ydpi="96"
+     inkscape:export-filename="/Users/ricardochcz/Documents/StochasticTopologyRCC/Figures/Locally-infinite.png" />
+  <path
+     inkscape:connector-curvature="0"
+     style="opacity:1;fill:none;fill-rule:evenodd;stroke:#a9a9a9;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:0.999237"
+     d="m 325.17092,120.28005 c 0.35037,-13.19018 -2.77856,-26.9722 -17,-39.25001 C 290.31558,65.32232 275.07435,64.58963 266.52846,64.52847"
+     id="path4167-42-4"
+     sodipodi:nodetypes="ccc"
+     inkscape:export-xdpi="96"
+     inkscape:export-ydpi="96"
+     inkscape:export-filename="/Users/ricardochcz/Documents/StochasticTopologyRCC/Figures/Locally-infinite.png" />
+  <path
+     inkscape:connector-curvature="0"
+     style="opacity:1;fill:none;fill-rule:evenodd;stroke:#a9a9a9;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:0.999237"
+     d="m 319.098,116.13292 c -1.75871,-3.87717 -6.50105,-9.36789 -11.55065,-13.24338 -14.99163,-5.71112 -21.37329,-4.18319 -39.75059,-3.83331"
+     id="path4139-3-3-6"
+     sodipodi:nodetypes="ccc"
+     inkscape:export-xdpi="96"
+     inkscape:export-ydpi="96"
+     inkscape:export-filename="/Users/ricardochcz/Documents/StochasticTopologyRCC/Figures/Locally-infinite.png" />
+  <path
+     inkscape:connector-curvature="0"
+     sodipodi:nodetypes="ccc"
+     id="path4159-0-1-6"
+     d="M 320.56399,117.55969 C 316.86994,111.95668 316.16624,105.46184 305.4862,98.98558 293.27584,91.86322 282.91959,90.67732 267.0251,90.7893"
+     style="opacity:1;fill:none;fill-rule:evenodd;stroke:#a9a9a9;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:0.999237"
+     inkscape:export-xdpi="96"
+     inkscape:export-ydpi="96"
+     inkscape:export-filename="/Users/ricardochcz/Documents/StochasticTopologyRCC/Figures/Locally-infinite.png" />
+  <path
+     inkscape:connector-curvature="0"
+     style="opacity:1;fill:none;fill-rule:evenodd;stroke:#a9a9a9;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:0.999237"
+     d="m 322.17092,118.78005 c -2.03559,-7.26187 -6.09591,-16.44865 -18,-27.00001 -17.00644,-9.36154 -27.32926,-9.44663 -37.48307,-10.08323"
+     id="path4161-0-5-4"
+     sodipodi:nodetypes="ccc"
+     inkscape:export-xdpi="96"
+     inkscape:export-ydpi="96"
+     inkscape:export-filename="/Users/ricardochcz/Documents/StochasticTopologyRCC/Figures/Locally-infinite.png" />
+  <path
+     style="opacity:1;fill:none;stroke:#a9a9a9;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:0.999237"
+     d="m 251.66075,145.56993 c 11.8676,-6.69279 21.57572,-5.07161 30.34502,0.16405"
+     id="path3067-3"
+     inkscape:connector-curvature="0"
+     sodipodi:nodetypes="cc"
+     inkscape:export-xdpi="96"
+     inkscape:export-ydpi="96"
+     inkscape:export-filename="/Users/ricardochcz/Documents/StochasticTopologyRCC/Figures/Locally-infinite.png" />
+  <path
+     style="opacity:1;fill:none;stroke:#a9a9a9;stroke-width:0.97064018px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:0.999237"
+     d="m 247.0367,110.46053 c 15.0365,4.10611 28.83693,3.63289 40.82591,0"
+     id="path3069-8"
+     inkscape:connector-curvature="0"
+     sodipodi:nodetypes="cc"
+     inkscape:export-xdpi="96"
+     inkscape:export-ydpi="96"
+     inkscape:export-filename="/Users/ricardochcz/Documents/StochasticTopologyRCC/Figures/Locally-infinite.png" />
+  <path
+     style="opacity:1;fill:none;stroke:#a9a9a9;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:0.999237"
+     d="m 236.86396,118.03702 c 23.99795,8.0291 42.47549,5.38543 59.53489,0"
+     id="path3071-4"
+     inkscape:connector-curvature="0"
+     sodipodi:nodetypes="cc"
+     inkscape:export-xdpi="96"
+     inkscape:export-ydpi="96"
+     inkscape:export-filename="/Users/ricardochcz/Documents/StochasticTopologyRCC/Figures/Locally-infinite.png" />
+  <path
+     style="opacity:1;fill:none;stroke:#a9a9a9;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:0.999237"
+     d="m 260.70679,164.06369 c 3.31292,-1.5043 6.89266,-2.40824 11.94448,0"
+     id="path3073-0"
+     inkscape:connector-curvature="0"
+     sodipodi:nodetypes="cc"
+     inkscape:export-xdpi="96"
+     inkscape:export-ydpi="96"
+     inkscape:export-filename="/Users/ricardochcz/Documents/StochasticTopologyRCC/Figures/Locally-infinite.png" />
+  <path
+     style="opacity:1;fill:none;stroke:#a9a9a9;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:0.999237"
+     d="m 265.73042,180.3418 c 1.19501,-0.74846 3.48758,-0.44178 3.91295,0.0412"
+     id="path7583-09"
+     inkscape:connector-curvature="0"
+     sodipodi:nodetypes="cc"
+     inkscape:export-xdpi="96"
+     inkscape:export-ydpi="96"
+     inkscape:export-filename="/Users/ricardochcz/Documents/StochasticTopologyRCC/Figures/Locally-infinite.png" />
+  <path
+     style="opacity:1;fill:none;stroke:#a9a9a9;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:0.999237"
+     d="m 270.41597,205.19452 c -2.28856,-1.31473 -4.73018,-1.32845 -7.3297,0"
+     id="path7585-3"
+     inkscape:connector-curvature="0"
+     sodipodi:nodetypes="cc"
+     inkscape:export-xdpi="96"
+     inkscape:export-ydpi="96"
+     inkscape:export-filename="/Users/ricardochcz/Documents/StochasticTopologyRCC/Figures/Locally-infinite.png" />
+  <path
+     style="opacity:1;fill:none;stroke:#a9a9a9;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:0.999237"
+     d="m 265.98786,193.46209 c 1.19501,-0.74846 3.48758,-0.44178 3.91295,0.0412"
+     id="path7583-0-7"
+     inkscape:connector-curvature="0"
+     sodipodi:nodetypes="cc"
+     inkscape:export-xdpi="96"
+     inkscape:export-ydpi="96"
+     inkscape:export-filename="/Users/ricardochcz/Documents/StochasticTopologyRCC/Figures/Locally-infinite.png" />
+  <path
+     style="opacity:1;fill:none;stroke:#a9a9a9;stroke-width:0.97064018px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:0.999237"
+     d="m 456.69098,111.38784 c 15.0365,4.10611 28.83693,3.63289 40.82591,0"
+     id="path3069-3-5"
+     inkscape:connector-curvature="0"
+     sodipodi:nodetypes="cc"
+     inkscape:export-xdpi="96"
+     inkscape:export-ydpi="96"
+     inkscape:export-filename="/Users/ricardochcz/Documents/StochasticTopologyRCC/Figures/Locally-infinite.png" />
+  <path
+     style="opacity:1;fill:none;stroke:#a9a9a9;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:0.999237"
+     d="m 447.17124,118.51602 c 23.99795,8.0291 43.54707,6.55155 60.60647,1.16612"
+     id="path3071-9-7"
+     inkscape:connector-curvature="0"
+     sodipodi:nodetypes="cc"
+     inkscape:export-xdpi="96"
+     inkscape:export-ydpi="96"
+     inkscape:export-filename="/Users/ricardochcz/Documents/StochasticTopologyRCC/Figures/Locally-infinite.png" />
+  <path
+     style="opacity:1;fill:none;stroke:#a9a9a9;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:0.999237"
+     d="m 459.41547,143.23769 c 15.19557,-8.02651 24.84569,-5.13008 33.56063,0"
+     id="path7644-2"
+     inkscape:connector-curvature="0"
+     sodipodi:nodetypes="cc"
+     inkscape:export-xdpi="96"
+     inkscape:export-ydpi="96"
+     inkscape:export-filename="/Users/ricardochcz/Documents/StochasticTopologyRCC/Figures/Locally-infinite.png" />
+  <path
+     style="opacity:1;fill:none;fill-opacity:1;stroke:#a9a9a9;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:0.999237"
+     d="m 470.56052,164.06369 c 6.12956,-4.28438 9.31109,-2.34287 11.96212,0"
+     id="path7646-9"
+     inkscape:connector-curvature="0"
+     sodipodi:nodetypes="cc"
+     inkscape:export-xdpi="96"
+     inkscape:export-ydpi="96"
+     inkscape:export-filename="/Users/ricardochcz/Documents/StochasticTopologyRCC/Figures/Locally-infinite.png" />
+  <path
+     style="opacity:1;fill:none;stroke:#a9a9a9;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:0.999237"
+     d="m 474.84204,180.919 c 1.75433,-1.15139 2.52663,-0.50242 3.37888,0"
+     id="path7648-7"
+     inkscape:connector-curvature="0"
+     sodipodi:nodetypes="cc"
+     inkscape:export-xdpi="96"
+     inkscape:export-ydpi="96"
+     inkscape:export-filename="/Users/ricardochcz/Documents/StochasticTopologyRCC/Figures/Locally-infinite.png" />
+  <path
+     style="opacity:1;fill:none;stroke:#a9a9a9;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:0.999237"
+     d="m 475.39052,193.19002 c 1.18366,-0.64148 2.01224,-0.52206 2.65292,0"
+     id="path7650-5"
+     inkscape:connector-curvature="0"
+     sodipodi:nodetypes="cc"
+     inkscape:export-xdpi="96"
+     inkscape:export-ydpi="96"
+     inkscape:export-filename="/Users/ricardochcz/Documents/StochasticTopologyRCC/Figures/Locally-infinite.png" />
+  <path
+     style="opacity:1;fill:none;stroke:#a9a9a9;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:0.999237"
+     d="m 472.64269,205.97272 c 2.65754,-1.85487 5.45937,-2.35228 8.11691,-0.0206"
+     id="path7652-6"
+     inkscape:connector-curvature="0"
+     sodipodi:nodetypes="cc"
+     inkscape:export-xdpi="96"
+     inkscape:export-ydpi="96"
+     inkscape:export-filename="/Users/ricardochcz/Documents/StochasticTopologyRCC/Figures/Locally-infinite.png" />
+  <path
+     style="opacity:1;fill:none;fill-opacity:1;stroke:#a9a9a9;stroke-width:2.20155478;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.999237"
+     id="path7654-9-3"
+     sodipodi:type="arc"
+     sodipodi:cx="-582.16949"
+     sodipodi:cy="128.42271"
+     sodipodi:rx="148.88474"
+     sodipodi:ry="109.34319"
+     sodipodi:start="0.8302029"
+     sodipodi:end="5.4342719"
+     d="M -481.71309,209.12546 A 148.88474,109.34319 0 0 1 -688.35862,205.0646 148.88474,109.34319 0 0 1 -690.2925,53.253333 148.88474,109.34319 0 0 1 -483.7866,46.353778"
+     sodipodi:open="true"
+     transform="scale(-1,1)"
+     inkscape:export-xdpi="96"
+     inkscape:export-ydpi="96"
+     inkscape:export-filename="/Users/ricardochcz/Documents/StochasticTopologyRCC/Figures/Locally-infinite.png" />
+  <path
+     style="opacity:1;fill:none;fill-opacity:1;stroke:#a9a9a9;stroke-width:2.20000005;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.999237"
+     id="path7654-2-4-0"
+     sodipodi:type="arc"
+     sodipodi:cx="371.72037"
+     sodipodi:cy="129.14287"
+     sodipodi:rx="147.69572"
+     sodipodi:ry="110.06783"
+     sodipodi:start="0.82755816"
+     sodipodi:end="2.3056857"
+     d="m 471.66247,210.18375 a 147.69572,110.06783 0 0 1 -198.97284,0.61899"
+     sodipodi:open="true"
+     inkscape:export-xdpi="96"
+     inkscape:export-ydpi="96"
+     inkscape:export-filename="/Users/ricardochcz/Documents/StochasticTopologyRCC/Figures/Locally-infinite.png" />
+  <path
+     style="opacity:1;fill:none;fill-opacity:1;stroke:#a9a9a9;stroke-width:1;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.999237"
+     id="path5942-6-9"
+     sodipodi:type="arc"
+     sodipodi:cx="680.14825"
+     sodipodi:cy="130.17859"
+     sodipodi:rx="50.787674"
+     sodipodi:ry="46.925293"
+     sodipodi:start="3.3645029"
+     sodipodi:end="0.14490667"
+     d="M 630.61716,119.80487 A 50.787674,46.925293 0 0 1 689.43597,84.044623 50.787674,46.925293 0 0 1 730.40364,136.9546"
+     sodipodi:open="true"
+     inkscape:export-xdpi="96"
+     inkscape:export-ydpi="96"
+     inkscape:export-filename="/Users/ricardochcz/Documents/StochasticTopologyRCC/Figures/Locally-infinite.png" />
+  <path
+     style="opacity:1;fill:none;stroke:#a9a9a9;stroke-width:2.20000005;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.999237"
+     d="m 469.31755,46.53004 c 7.47183,2.81204 10.86855,1.30924 14.44806,0"
+     id="path7694-4"
+     inkscape:connector-curvature="0"
+     sodipodi:nodetypes="cc"
+     inkscape:export-xdpi="96"
+     inkscape:export-ydpi="96"
+     inkscape:export-filename="/Users/ricardochcz/Documents/StochasticTopologyRCC/Figures/Locally-infinite.png" />
+  <path
+     style="opacity:1;fill:none;stroke:#a9a9a9;stroke-width:2.20000005;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.999237"
+     d="m 481.71311,209.12546 c -4.47825,-3.32152 -8.27841,-0.1707 -10.60761,1.40869"
+     id="path7696-8"
+     inkscape:connector-curvature="0"
+     sodipodi:nodetypes="cc"
+     inkscape:export-xdpi="96"
+     inkscape:export-ydpi="96"
+     inkscape:export-filename="/Users/ricardochcz/Documents/StochasticTopologyRCC/Figures/Locally-infinite.png" />
+  <path
+     style="opacity:1;fill:none;stroke:#a9a9a9;stroke-width:2.20000005;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.999237"
+     d="m 257.61289,46.24902 c 8.16938,3.22063 12.75815,1.41913 17.58355,-0.41635"
+     id="path7692-5"
+     inkscape:connector-curvature="0"
+     sodipodi:nodetypes="cc"
+     inkscape:export-xdpi="96"
+     inkscape:export-ydpi="96"
+     inkscape:export-filename="/Users/ricardochcz/Documents/StochasticTopologyRCC/Figures/Locally-infinite.png" />
+  <path
+     style="opacity:1;fill:none;stroke:#a9a9a9;stroke-width:2.20000005;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.999237"
+     d="m 272.68962,210.80274 c -6.57461,-4.5041 -9.24466,-2.74644 -13.01978,-0.70331"
+     id="path7698-5"
+     inkscape:connector-curvature="0"
+     sodipodi:nodetypes="cc"
+     inkscape:export-xdpi="96"
+     inkscape:export-ydpi="96"
+     inkscape:export-filename="/Users/ricardochcz/Documents/StochasticTopologyRCC/Figures/Locally-infinite.png" />
+  <path
+     style="opacity:1;fill:none;fill-opacity:1;stroke:#a9a9a9;stroke-width:2.20000005;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.999237"
+     id="path7654-2-42"
+     sodipodi:type="arc"
+     sodipodi:cx="371.72037"
+     sodipodi:cy="129.14287"
+     sodipodi:rx="147.69572"
+     sodipodi:ry="110.06783"
+     sodipodi:start="4.0001472"
+     sodipodi:end="5.4342719"
+     d="m 275.19645,45.832668 a 147.69572,110.06783 0 0 1 194.12112,0.697376"
+     sodipodi:open="true"
+     inkscape:export-xdpi="96"
+     inkscape:export-ydpi="96"
+     inkscape:export-filename="/Users/ricardochcz/Documents/StochasticTopologyRCC/Figures/Locally-infinite.png" />
+  <path
+     style="opacity:1;fill:none;fill-rule:evenodd;stroke:#a9a9a9;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:0.999237"
+     d="m 214.78674,116.13292 c 1.75871,-3.87717 6.61766,-7.96855 11.66726,-11.84404 14.99163,-5.71112 23.08207,-5.23269 41.34276,-5.23265"
+     id="path4217-4-5-1"
+     sodipodi:nodetypes="ccc"
+     inkscape:connector-curvature="0"
+     inkscape:export-xdpi="96"
+     inkscape:export-ydpi="96"
+     inkscape:export-filename="/Users/ricardochcz/Documents/StochasticTopologyRCC/Figures/Locally-infinite.png" />
+  <path
+     style="opacity:1;fill:none;fill-opacity:1;stroke:#ecaa38;stroke-width:2.48169684;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+     id="path5942-6"
+     sodipodi:type="arc"
+     sodipodi:cx="679.42505"
+     sodipodi:cy="129.73003"
+     sodipodi:rx="51.531013"
+     sodipodi:ry="45.876751"
+     sodipodi:start="3.3645029"
+     sodipodi:end="0.14490667"
+     d="m 629.169,119.58811 a 51.531013,45.876751 0 0 1 59.67971,-34.96119 51.531013,45.876751 0 0 1 41.56728,51.72771"
+     sodipodi:open="true"
+     inkscape:export-filename="/Users/ricardochcz/Documents/StochasticTopologyRCC/Figures/Locally-infinite.png"
+     inkscape:export-xdpi="96"
+     inkscape:export-ydpi="96" />
+  <path
+     inkscape:connector-curvature="0"
+     style="opacity:1;fill:none;fill-rule:evenodd;stroke:#a9a9a9;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:0.999237"
+     d="m 131.31719,127.03005 c -27.26865,23.8175 -36.942335,79.87482 -25.25,102.5"
+     id="path4129-61-3-3"
+     sodipodi:nodetypes="cc"
+     inkscape:export-xdpi="96"
+     inkscape:export-ydpi="96"
+     inkscape:export-filename="/Users/ricardochcz/Documents/StochasticTopologyRCC/Figures/Locally-infinite.png" />
+  <path
+     inkscape:connector-curvature="0"
+     sodipodi:nodetypes="cc"
+     id="path4147-2-5"
+     d="m 135.79351,129.15631 c -29.58115,6.22375 -31.87986,31.15216 -12.76291,34.3319"
+     style="fill:none;stroke:#1395ba;stroke-width:2.5;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+     inkscape:export-filename="/Users/ricardochcz/Documents/StochasticTopologyRCC/Figures/Locally-infinite.png"
+     inkscape:export-xdpi="96"
+     inkscape:export-ydpi="96" />
+  <path
+     inkscape:connector-curvature="0"
+     sodipodi:nodetypes="ccc"
+     id="path4149-4-2-6"
+     d="m 120.16841,123.55304 0.5,0.25 c -28.422043,10.56151 -48.722914,59.04273 -38.719673,98.26777"
+     style="fill:none;fill-rule:evenodd;stroke:#f16c20;stroke-width:2.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+     inkscape:export-xdpi="96"
+     inkscape:export-ydpi="96"
+     inkscape:export-filename="/Users/ricardochcz/Documents/StochasticTopologyRCC/Figures/Locally-infinite.png" />
+  <path
+     style="fill:none;stroke:#1395ba;stroke-width:2.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+     d="m 57.793407,136.42804 c 0.133994,0.59796 18.412394,15.46011 14.21182,32.61183"
+     id="path4652-3"
+     inkscape:connector-curvature="0"
+     sodipodi:nodetypes="cc"
+     inkscape:export-filename="/Users/ricardochcz/Documents/StochasticTopologyRCC/Figures/Locally-infinite.png"
+     inkscape:export-xdpi="96"
+     inkscape:export-ydpi="96" />
+  <path
+     sodipodi:type="arc"
+     style="color:#000000;display:inline;overflow:visible;visibility:visible;fill:none;stroke:#1395ba;stroke-width:2.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;enable-background:accumulate"
+     id="path4612-5-8"
+     sodipodi:cx="162.24992"
+     sodipodi:cy="93.275314"
+     sodipodi:rx="129.19568"
+     sodipodi:ry="73.329498"
+     d="M 57.793415,136.42804 A 129.19568,73.329498 0 0 1 62.597207,46.605972"
+     sodipodi:start="2.5124188"
+     sodipodi:end="3.8314581"
+     sodipodi:open="true"
+     inkscape:export-filename="/Users/ricardochcz/Documents/StochasticTopologyRCC/Figures/Locally-infinite.png"
+     inkscape:export-xdpi="96"
+     inkscape:export-ydpi="96" />
+  <path
+     sodipodi:type="arc"
+     style="color:#000000;display:inline;overflow:visible;visibility:visible;fill:none;stroke:#f16c20;stroke-width:2.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;enable-background:accumulate"
+     id="path4612-5-9-3"
+     sodipodi:cx="160.73154"
+     sodipodi:cy="100.1588"
+     sodipodi:rx="138.68953"
+     sodipodi:ry="89.647415"
+     d="M 48.599117,152.91424 A 138.68953,89.647415 0 0 1 23.181464,88.690845"
+     sodipodi:start="2.5124188"
+     sodipodi:end="3.269867"
+     sodipodi:open="true"
+     inkscape:export-filename="/Users/ricardochcz/Documents/StochasticTopologyRCC/Figures/Locally-infinite.png"
+     inkscape:export-xdpi="96"
+     inkscape:export-ydpi="96" />
+  <path
+     style="fill:none;stroke:#f16c20;stroke-width:2.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+     d="m 47.942607,152.37389 c 3.044701,2.76607 13.964479,9.61355 12.64932,17.92433"
+     id="path4652-3-5"
+     inkscape:connector-curvature="0"
+     sodipodi:nodetypes="cc"
+     inkscape:export-filename="/Users/ricardochcz/Documents/StochasticTopologyRCC/Figures/Locally-infinite.png"
+     inkscape:export-xdpi="96"
+     inkscape:export-ydpi="96" />
+  <path
+     inkscape:connector-curvature="0"
+     sodipodi:nodetypes="cc"
+     id="path4149-6-1-0"
+     d="m 60.591927,170.29822 c -0.94967,5.47542 -8.254841,19.13709 3.6669,42.13888"
+     style="fill:none;stroke:#f16c20;stroke-width:2.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+     inkscape:export-filename="/Users/ricardochcz/Documents/StochasticTopologyRCC/Figures/Locally-infinite.png"
+     inkscape:export-xdpi="96"
+     inkscape:export-ydpi="96" />
+  <path
+     inkscape:connector-curvature="0"
+     sodipodi:nodetypes="cc"
+     id="path4149-6-4"
+     d="m 72.415977,168.30609 c -0.92853,6.54686 -12.136924,29.95292 1.817502,49.85433"
+     style="fill:none;stroke:#1395ba;stroke-width:2.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+     inkscape:export-filename="/Users/ricardochcz/Documents/StochasticTopologyRCC/Figures/Locally-infinite.png"
+     inkscape:export-xdpi="96"
+     inkscape:export-ydpi="96" />
+  <path
+     sodipodi:type="arc"
+     style="color:#000000;display:inline;overflow:visible;visibility:visible;fill:none;stroke:#f16c20;stroke-width:2.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;enable-background:accumulate"
+     id="path4612-0-5"
+     sodipodi:cx="163.23851"
+     sodipodi:cy="104.50177"
+     sodipodi:rx="120.46638"
+     sodipodi:ry="85.862587"
+     d="m 216.11643,27.352973 a 120.46638,85.862587 0 0 1 61.34846,104.424757 120.46638,85.862587 0 0 1 -137.22825,57.0069"
+     sodipodi:start="5.1668114"
+     sodipodi:end="1.7629162"
+     sodipodi:open="true"
+     inkscape:export-filename="/Users/ricardochcz/Documents/StochasticTopologyRCC/Figures/Locally-infinite.png"
+     inkscape:export-xdpi="96"
+     inkscape:export-ydpi="96" />
+  <path
+     inkscape:connector-curvature="0"
+     sodipodi:nodetypes="cc"
+     id="path4147-2-5-2"
+     d="m 151.02393,132.13336 c -28.81173,10.1437 -29.40701,51.46881 -10.7873,56.65127"
+     style="fill:none;stroke:#f16c20;stroke-width:2.5;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+     inkscape:export-filename="/Users/ricardochcz/Documents/StochasticTopologyRCC/Figures/Locally-infinite.png"
+     inkscape:export-xdpi="96"
+     inkscape:export-ydpi="96" />
+  <path
+     sodipodi:type="arc"
+     style="color:#000000;display:inline;overflow:visible;visibility:visible;fill:none;stroke:#1395ba;stroke-width:2.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;enable-background:accumulate"
+     id="path4612-0"
+     sodipodi:cx="156.97336"
+     sodipodi:cy="92.754852"
+     sodipodi:rx="120.58347"
+     sodipodi:ry="73.699509"
+     d="m 209.90268,26.53476 a 120.58347,73.699509 0 0 1 59.45091,92.9387 120.58347,73.699509 0 0 1 -146.57806,43.95493"
+     sodipodi:start="5.1668114"
+     sodipodi:end="1.8583456"
+     sodipodi:open="true"
+     inkscape:export-filename="/Users/ricardochcz/Documents/StochasticTopologyRCC/Figures/Locally-infinite.png"
+     inkscape:export-xdpi="96"
+     inkscape:export-ydpi="96" />
+  <path
+     inkscape:connector-curvature="0"
+     style="fill:none;stroke:#0d3c55;stroke-width:2.49234891;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;opacity:0.99"
+     d="M 99.171364,28.75257 C 153.30153,10.25591 223.61464,20.24255 256.12031,51.04426 288.62595,81.84591 271.07561,121.8562 216.94546,140.35292 162.81533,158.84958 92.502193,148.86294 59.996533,118.06124 27.53507,87.30142 44.974951,47.36146 98.962071,28.82427"
+     id="path4290-3-2"
+     inkscape:export-filename="/Users/ricardochcz/Documents/StochasticTopologyRCC/Figures/Locally-infinite.png"
+     inkscape:export-xdpi="96"
+     inkscape:export-ydpi="96" />
+  <path
+     style="opacity:1;fill:none;fill-opacity:1;stroke:#a9a9a9;stroke-width:2.19810677;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.999237"
+     id="path7654-5"
+     sodipodi:type="arc"
+     sodipodi:cx="160.26778"
+     sodipodi:cy="128.94818"
+     sodipodi:rx="147.32416"
+     sodipodi:ry="110.15558"
+     sodipodi:start="0.8302029"
+     sodipodi:end="5.4342719"
+     d="M 259.67122,210.25052 A 147.32416,110.15558 0 0 1 55.191705,206.15949 147.32416,110.15558 0 0 1 53.278091,53.220315 147.32416,110.15558 0 0 1 257.61945,46.269498"
+     sodipodi:open="true"
+     inkscape:export-xdpi="96"
+     inkscape:export-ydpi="96"
+     inkscape:export-filename="/Users/ricardochcz/Documents/StochasticTopologyRCC/Figures/Locally-infinite.png" />
+</svg>
