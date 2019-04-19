@@ -24,7 +24,7 @@ Python
 └── _thresholds_erdos_renyi.py
 └── main.py
 ```
-Alt-Auxiliar files
+### Auxiliar files
 ------
 **__aux_graphic.py** - Methods to generate graphical visualization of rigid expansions.
 
@@ -35,7 +35,7 @@ Alt-Auxiliar files
 **__rigid_expansion.py** - Computational experimentation to generate rigid expansions of a subgraph.
 
 
-Alt-Indepent files
+#### Indepent files
 ------
 **_expansion_visualization.py** - Generates visualization of a rigid expansion
 
@@ -47,8 +47,7 @@ Alt-Indepent files
 
 **_thresholds_erdos_renyi.py** - Proability thresholds for Erdös-Renyi model.
 
-
-Alt-Main files
+### Main files
 ------
 **main.py** - Exceute all the functions according thesis workflow
 
