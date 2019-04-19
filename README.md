@@ -1,7 +1,8 @@
 # StochasticTopologyRCC
 Thesis work
 
-The scripts which made possible the rigid expansions simulations are under the folder Python. It contains the following files:
+The sripts which made possible the rigid expansions simulations are under the folder Python. It contains the following files: 
+
 ---
 ```
 Python
@@ -25,14 +26,23 @@ Python
 └── main.py
 ```
 **_aux_graphic.py** - Methods to generate graphical visualization of rigid expansions.
-**_aux.py** - Auxiliar functions
-**_bundles.py** - Bundles of probability aproximations
-**asympthotic_behavor.py** - Plot functions to understand asympthotic behavor of Erdös-Rényi Model
-**experimentation_goodness_of_fit.py** - Functions to calculate goodness of fit for experimentations
-**rigid_expansion.py** - Computational experimentation to generate rigid expansions of a subgraph
-**rigid_markov_chain.py** - Computational experimentation to describe rigid expansions as a stochastic process
-**rigidity_probabilities.py** - Computational experiments related to rigid expansions
-**thresholds_erdos_renyi.py** - Proability thresholds for Erdös-Renyi model
+
+**_aux.py** - Auxiliar functions.
+
+**_bundles.py** - Bundles of probability aproximations.
+
+**asympthotic_behavor.py** - Plot functions to understand asympthotic behavor of Erdös-Rényi Model.
+
+**experimentation_goodness_of_fit.py** - Functions to calculate goodness of fit for experimentations.
+
+**rigid_expansion.py** - Computational experimentation to generate rigid expansions of a subgraph.
+
+**rigid_markov_chain.py** - Computational experimentation to describe rigid expansions as a stochastic process.
+
+**rigidity_probabilities.py** - Computational experiments related to rigid expansions.
+
+**thresholds_erdos_renyi.py** - Proability thresholds for Erdös-Renyi model.
+
 
 **main.py** - Exceute all the functions according thesis workflow
 
