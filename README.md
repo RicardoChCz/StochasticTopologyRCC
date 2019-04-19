@@ -1,6 +1,8 @@
 # StochasticTopologyRCC
 Thesis work
 
+---
+
 The sripts which made possible the rigid expansions simulations are under the folder Python. It contains the following files: 
 
 ```
