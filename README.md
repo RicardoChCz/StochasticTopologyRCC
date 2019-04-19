@@ -1,7 +1,5 @@
 # StochasticTopologyRCC
-Thesis work
-
----
+_Thesis work_ 
 
 The sripts which made possible the rigid expansions simulations are under the folder Python. It contains the following files: 
 
@@ -25,7 +23,6 @@ Python
 └── main.py
 ```
 ### Auxiliar files
-------
 **__aux_graphic.py** - Methods to generate graphical visualization of rigid expansions.
 
 **__aux.py** - Auxiliar functions.
@@ -36,7 +33,6 @@ Python
 
 
 #### Indepent files
-------
 **_expansion_visualization.py** - Generates visualization of a rigid expansion
 
 **_random_graphs.py** - Random graphs generator
@@ -48,14 +44,11 @@ Python
 **_thresholds_erdos_renyi.py** - Proability thresholds for Erdös-Renyi model.
 
 ### Main files
-------
 **main.py** - Exceute all the functions according thesis workflow
 
 ---
 
 ## GenerateAlgorithm
-Appendix
+_Appendix_
 
----
-Implementation for this can be found in:
-[External repository](https://github.com/RicardoChCz/GenerateAlgorithm)
+Implementation for this can be found in [External repository](https://github.com/RicardoChCz/GenerateAlgorithm)
