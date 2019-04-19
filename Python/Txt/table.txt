@@ -1,0 +1,17 @@
+\begin{table}[htbp]
+\begin{center}
+\bgroup
+\def\arraystretch{1.5}
+\begin{tabular}{|c|c|c|c|}
+\hline
+\diagbox[width=1.3cm, height=0.8cm]{$p$}{$n$} & 5 & 10 & 15 \\
+\hline
+ 0.2 & $1e^{-8}$ & $1e^{-8}$ & $1e^{-8}$ \\\hline
+ 0.3 & $1e^{-8}$ & $1e^{-8}$ & $1e^{-8}$ \\\hline
+ 0.4 & $1e^{-8}$ & $1e^{-8}$ & $1e^{-8}$ \\\hline
+\end{tabular}
+\egroup
+\caption{Maximums of differences between empirical and theoretical probabilities varying $m$ for different values of $n$ and $p$}
+\label{tabla:sencilla}
+\end{center}
+\end{table}
