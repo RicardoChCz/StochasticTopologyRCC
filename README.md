@@ -19,8 +19,8 @@ Python
 └── _bundles.py
 └── _experimentation_goodness_of_fit.py
 └── _rigid_expansion.py
-└── _rigid_markov_chain.py
-└── _rigidity_probabilities.py
+└── _rigidity_experiments.py
+└── _rigidity_markov_chain.py
 └── _thresholds_erdos_renyi.py
 └── main.py
 ```
