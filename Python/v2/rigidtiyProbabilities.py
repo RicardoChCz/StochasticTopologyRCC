@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""
+ab"""
 Created on Tue May 22 11:31:44 2018
 
 @author: Ricardo Chávez Cáliz
@@ -131,7 +131,7 @@ def probabilitySubset(n,p,k,m):
 
 def doesItExpands(G,A):
     """
-    Given a graph G and a subset A, returns succes or failure to the question
+    Given a graph G and a subset A, returns success or failure to the question
     of wheter A expands or doesn't.
     
     Input: Graph G (dictionary), set A 
@@ -247,11 +247,11 @@ def individualExperiments(n,p,evento):
     I = intervalo(0,n+1,1)
     density= [0]*(len(I))
     bundle1= [0]*(len(I))
+
     
     for i in I:
         if evento == 1:
             density[i] = probabilityLast(n,p,i)
-            scatterColor = '#0074d9'
             bundle1[i] = bundleLast(n,p,i)
             lineColor = '#001f3f'
                     
@@ -283,7 +283,6 @@ def individualExperiments(n,p,evento):
         
     plt.show()
     
-def subsetExperiments(n,P):
     """
     Print curves with aproximated probabilities and its bundles
     Input: int n , list P
@@ -339,7 +338,6 @@ if __name__ == "__main__":
     # 4. Expansion
     """
 
-    """
     N=[5,7,10]
     P=[0.2,0.5,0.8]
     
@@ -356,3 +354,4 @@ if __name__ == "__main__":
     P=[0.2,0.5,0.8]
     
     subsetExperiments(n,P)
+    """
