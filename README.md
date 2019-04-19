@@ -24,8 +24,8 @@ Python
 └── _thresholds_erdos_renyi.py
 └── main.py
 ```
-### Auxiliar files
-
+Alt-Auxiliar files
+------
 **__aux_graphic.py** - Methods to generate graphical visualization of rigid expansions.
 
 **__aux.py** - Auxiliar functions.
@@ -35,8 +35,8 @@ Python
 **__rigid_expansion.py** - Computational experimentation to generate rigid expansions of a subgraph.
 
 
-### Independent files
-
+Alt-Indepent files
+------
 **_expansion_visualization.py** - Generates visualization of a rigid expansion
 
 **_random_graphs.py** - Random graphs generator
@@ -48,8 +48,15 @@ Python
 **_thresholds_erdos_renyi.py** - Proability thresholds for Erdös-Renyi model.
 
 
-### Main file
-
+Alt-Main files
+------
 **main.py** - Exceute all the functions according thesis workflow
 
 ---
+
+## GenerateAlgorithm
+Appendix
+
+---
+Implementation for this can be found in:
+[External repository](https://github.com/RicardoChCz/GenerateAlgorithm)
