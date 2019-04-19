@@ -12,18 +12,16 @@ Python
 │   └── rigid_expansion_gif
 │   │   └── index.js
 │   └──Figures-used-in-latex-files.png
-│
-├── Functions
-│   └── _aux_graphic.py
-│   └── _aux.py
-│   └── _bundles.py
-│   └── asympthotic_behavor.py
-│   └── experimentation_goodness_of_fit.py
-│   └── rigid_expansion.py
-│   └── rigid_markov_chain.py
-│   └── rigidity_probabilities.py
-│   └── thresholds_erdos_renyi.py
-│
+│   
+└── _asympthotic_behavor.py
+└── _aux_graphic.py
+└── _aux.py
+└── _bundles.py
+└── _experimentation_goodness_of_fit.py
+└── _rigid_expansion.py
+└── _rigid_markov_chain.py
+└── _rigidity_probabilities.py
+└── _thresholds_erdos_renyi.py
 └── main.py
 ```
 **_aux_graphic.py** - Methods to generate graphical visualization of rigid expansions.
