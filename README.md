@@ -32,7 +32,7 @@ Python
 **__rigid_expansion.py** - Computational experimentation to generate rigid expansions of a subgraph.
 
 
-#### Indepent files
+### Indepent files
 **_expansion_visualization.py** - Generates visualization of a rigid expansion
 
 **_random_graphs.py** - Random graphs generator
