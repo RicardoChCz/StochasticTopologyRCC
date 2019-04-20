@@ -104,25 +104,9 @@ For these calculations we repeated this experiment 500 times and count the numbe
 Notice that there are certain values of $m$ more \textit{effective} than others, in the sense that, depending on the parameters of the model, it is more likely that a subset of certain size uniquely determine a vertex. This can be used, as described in the next chapter, to do optimizations in the simulations.
  
 The following table is a summary of the maximum of differences between these two values for distinct values of $n$ and $p$. These values are indicators that the simulations and the calculations actually describe the same event.
- \vspace{0.3cm}
-\begin{table}[htbp]
- \begin{center}
-\bgroup
-\def\arraystretch{1.5}
-\begin{tabular}{|c|c|c|c|}
-\hline
-\diagbox[width=1.3cm, height=0.8cm]{$p$}{$n$} & 5 & 10 & 15 \\
-\hline
- 0.2 & $1e^{-8}$ & $1e^{-8}$ & $1e^{-8}$ \\\hline
- 0.3 & $1e^{-8}$ & $1e^{-8}$ & $1e^{-8}$ \\\hline
- 0.4 & $1e^{-8}$ & $1e^{-8}$ & $1e^{-8}$ \\\hline
-\end{tabular}
-\egroup
-\caption{Maximums of differences between empirical and theoretical probabilities varying $m$ for different values of $n$ and $p$}
-\label{tabla:sencilla}
-\end{center}
-\end{table}
- \vspace{-0.3cm}
+\vspace{0.3cm}
+\input{Python/Txt/table.txt}
+\vspace{-0.3cm}
  
 For the second event, if $A_k$ does not generate a rigid expansion is because none of the subsets of $A_{k}$ determined uniquely a vertex outside of it. We have:
 $$\P(A_k \text{ generates a rigid expansion}) = 1 -  \prod_{m=1}^{k} (\rho_{m,k})^{\binom{k}{m}}$$
