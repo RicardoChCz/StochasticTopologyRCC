@@ -7,18 +7,23 @@ Created on Tue Mar 26 13:21:40 2019
 Methods to generate .txt information to be used in LaTeX work
 """
 
-def write_table():
+def write_table(filename, caption, label, values):
     """
     Write .txt file displaying a table with goodness of fit tests
     Input: filename (str), caption(str), label(str), values(arr)
     Output: .txt file
     """
     # Filename to write
-    filename = "Txt/table.txt"
+    path = "Txt/"+ filename +".txt"
     # Open the file with writing permission
-    myfile = open(filename, 'w')
-    
-    table = """
+    myfile = open(path, 'w')
+    table_content = ""
+    for r in values:
+        for c in r:
+            table_content +=  '$' + str(c) + '$ &'
+        table_content += '\\\\\hline'
+
+    table_begin = """
             \\begin{table}[htbp]
             \\begin{center}
             \\bgroup
@@ -27,17 +32,9 @@ def write_table():
             \hline
             \diagbox[width=1.3cm, height=0.8cm]{$p$}{$n$} & 5 & 10 & 15 \\\\
             \hline
-             0.2 & $1e^{-8}$ & $1e^{-8}$ & $1e^{-8}$ \\\\\hline
-             0.3 & $1e^{-8}$ & $1e^{-8}$ & $1e^{-8}$ \\\\\hline
-             0.4 & $1e^{-8}$ & $1e^{-8}$ & $1e^{-8}$ \\\\\hline
-            \end{tabular}
-            \egroup
-            \caption{Maximums of differences between empirical and theoretical probabilities varying $m$ for different values of $n$ and $p$, PYTHON}
-            \label{tabla:sencilla}
-            \end{center}
-            \end{table}
             """
-
+    table_end = "\end{tabular}\egroup" + "\caption{"+caption+"}"+"\label{"+label+"}"+"\end{center}\end{table}"
+    table = table_begin+table_content+table_end
     # Write a line to the file
     myfile.write(table)
  
@@ -45,4 +42,9 @@ def write_table():
     myfile.close()
 
 if __name__ == "__main__":
-    write_table()
+    array = [
+      [1,2,3],
+      [3,4,5],
+      [6,7,8],
+    ]
+    write_table("table","caption","label",array)

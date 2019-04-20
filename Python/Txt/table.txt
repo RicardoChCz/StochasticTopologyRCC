@@ -7,13 +7,4 @@
             \hline
             \diagbox[width=1.3cm, height=0.8cm]{$p$}{$n$} & 5 & 10 & 15 \\
             \hline
-             0.2 & $1e^{-8}$ & $1e^{-8}$ & $1e^{-8}$ \\\hline
-             0.3 & $1e^{-8}$ & $1e^{-8}$ & $1e^{-8}$ \\\hline
-             0.4 & $1e^{-8}$ & $1e^{-8}$ & $1e^{-8}$ \\\hline
-            \end{tabular}
-            \egroup
-            \caption{Maximums of differences between empirical and theoretical probabilities varying $m$ for different values of $n$ and $p$, PYTHON}
-            \label{tabla:sencilla}
-            \end{center}
-            \end{table}
-            
+            $1$ &$2$ &$3$ &\\\hline$3$ &$4$ &$5$ &\\\hline$6$ &$7$ &$8$ &\\\hline\end{tabular}\egroup\caption{caption}\label{label}\end{center}\end{table}
