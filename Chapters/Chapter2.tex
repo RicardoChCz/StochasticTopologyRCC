@@ -105,7 +105,7 @@ Notice that there are certain values of $m$ more \textit{effective} than others,
  
 The following table is a summary of the maximum of differences between these two values for distinct values of $n$ and $p$. These values are indicators that the simulations and the calculations actually describe the same event.
 \vspace{0.3cm}
-\input{Python/Txt/table.txt}
+\input{Python/Txt/Uniquely-determinated-fixed-vertex-table-errors.txt}
 \vspace{-0.3cm}
  
 For the second event, if $A_k$ does not generate a rigid expansion is because none of the subsets of $A_{k}$ determined uniquely a vertex outside of it. We have:
@@ -130,31 +130,15 @@ Again, we repeated this experiment 500 times and calculated the empiric probabil
 
 \begin{figure}[h!]
 	\centering
-	\includegraphics[scale=0.55]{Python/Figures/Expansion-probability.png}
+	\includegraphics[scale=0.55]{Python/Figures/Expansion-probability-table-error.png}
 	\caption{Theoretical and empirical probabilities of expanding $A_{k}$. For different values of $n$ and $p$ varying among all the possible values of $k$}
 \end{figure}
 
 The empirical and theoretical probabilities agree again.
- \vspace{0.3cm}
-\begin{table}[htbp]
-\begin{center}
-\bgroup
-\def\arraystretch{1.5}
-\begin{tabular}{|c|c|c|c|}
-\hline
-n & 5 & 10 & 15 \\
-\hline
- 0.2 & $1e^{-8}$ & $1e^{-8}$ & $1e^{-8}$ \\\hline
- 0.3 & $1e^{-8}$ & $1e^{-8}$ & $1e^{-8}$ \\\hline
- 0.4 & $1e^{-8}$ & $1e^{-8}$ & $1e^{-8}$ \\\hline
-\end{tabular}
-\egroup
-\caption{Maximums of differences between empirical and theoretical probabilities varying $m$ for different values of $n$ and $p$}
-\label{tabla:sencilla}
-\end{center}
-\end{table}
+\vspace{0.3cm}
+\input{Python/Txt/Uniquely-determinated-fixed-vertex-table-errors.txt}
 \vspace{-0.3cm}
- 
+
 The calculations for the last question are helpful if we want to approximate the sequence of rigid expansions of $A_{k}$ by a Markov chain. Consider $\{0,1, \dots n\}$ as the states space of the Markov chain with transition matrix given by:
 $$ a_{k,k+s} = \P(A_{k} \text{ generates a rigid expansion by } s \text{ elements})$$
 Notice that the deterministic process stops once a iteration fails to add new vertices. In our stochastic approximation a new $G \in \G(n,p)$ is considered for each step, hence, it is allowed to \textit{"have extra tries to expand".}
