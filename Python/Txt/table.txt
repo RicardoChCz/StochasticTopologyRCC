@@ -1,6 +1,0 @@
-
-            \begin{table}[htbp]
-            \begin{center}
-            \bgroup
-            \def\arraystretch{1.5}
-            \begin{tabular}{|c|c|c|c|}\hline\diagbox[width=1.3cm, height=0.8cm]{$p$}{$n$}&5&10&15\\ \hline$0.2$& $1$& $2$& $3$\\\hline$0.3$& $3$& $4$& $5$\\\hline$0$& $6$& $7$& $8$\\\hline\end{tabular}\egroup\caption{caption}\label{label}\end{center}\end{table}

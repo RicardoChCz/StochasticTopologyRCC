@@ -13,6 +13,7 @@ from __aux import random_set
 from __aux import power_set
 from __aux import intervalo
 from __aux import is_notempty
+from __aux_text import write_table
 from __rigid_expansion import single_verification
 from __rigid_expansion import is_this_uniquely_det
 from __bundles import bundle_last
@@ -175,7 +176,6 @@ def set_of_experiments(N,P,event):
     r,c =len(N),len(P)
 
     goodness_of_fit = [[0]*c]*r
-    print(goodness_of_fit)
     
     f, axarr = plt.subplots(r, c,figsize=(9, 6), dpi=100)
     k=l=0
@@ -230,18 +230,20 @@ def set_of_experiments(N,P,event):
 
     if event == 1:
         plt.savefig('Figures/Uniquely-determinated-fixed-vertex.png')
+        write_table("Uniquely-determinated-fixed-vertex-table-errors","caption","label",N,P,goodness_of_fit)
         plt.show()
     elif event == 2:
         plt.savefig('Figures/Uniquely-determinated-any-vertex.png')
+        write_table("uniq-det-any-table-errors","caption","label",N,P,goodness_of_fit)
         plt.show()
 
     else:
         plt.savefig('Figures/Expansion-probability.png')
+        write_table("Expansion-probability-table-errors","caption","label",N,P,goodness_of_fit)
         plt.show()
 
     plt.tight_layout()
 
-    print(goodness_of_fit)
     return goodness_of_fit
     
 def individual_experiments(n,p,event):
@@ -253,7 +255,6 @@ def individual_experiments(n,p,event):
     I = intervalo(0,n+1,1)
     density= [0]*(len(I))
     bundle= [0]*(len(I))
-
     
     for i in I:
         if event == 1:

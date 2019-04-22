@@ -48,13 +48,3 @@ def write_table(filename, caption, label, N,P,values):
  
     # Close the file
     myfile.close()
-
-if __name__ == "__main__":
-    N=[5,10,15]
-    P=[0.2,0.3,0,4]
-    array = [
-      [1,2,3],
-      [3,4,5],
-      [6,7,8],
-    ]
-    write_table("table","caption","label",N,P,array)
