@@ -31,11 +31,7 @@ def write_table(filename, caption, label, N,P,values):
         columns_string += "c|"
         head_string += '&' + str(n)
 
-    table_columns = "\\begin{tabular}{|"+columns_string+"}\hline"
-
-    for n in N:
-        head_string += "c|"
-
+    table_columns = "\\begin{tabular}{|c|"+columns_string+"}\hline"
     table_head = "\diagbox[width=1.3cm, height=0.8cm]{$p$}{$n$}" + head_string + "\\\\ \hline"
 
     table_content = ""
