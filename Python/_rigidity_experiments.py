@@ -165,9 +165,6 @@ def probability_rigid_expansion(n,p,k):
          
     return successes/float(total)
 
-"""
-Funciones para graficar
-"""   
 
 def set_of_experiments(N,P,event):
     """
@@ -176,37 +173,41 @@ def set_of_experiments(N,P,event):
     Output: -
     """
     r,c =len(N),len(P)
-        
+
+    goodness_of_fit = [[0]*c]*r
+    print(goodness_of_fit)
+    
     f, axarr = plt.subplots(r, c,figsize=(9, 6), dpi=100)
     k=l=0
     for n in N:
         I = intervalo(0,n+1,1)
         density = [0]*(len(I))
-        bundle1 = [0]*(len(I))
-
+        bundle = [0]*(len(I))
         for p in P:
-            for i in I:
+            for i in I:                
                 if event == 1:                    
                     density[i] = probability_last(n,p,i)
+                    bundle[i] = bundle_last(n,p,i)
                     scatter_color = '#0074d9'
-                    bundle1[i] = bundle_last(n,p,i)
                     line_color = '#001f3f'
 
                 elif event == 2:
                     density[i] = probability_anyone(n,p,i)
-                    scatter_color = '#FF851B'
-                    bundle1[i] = bundle_anyone(n,p,i)
+                    bundle[i] = bundle_anyone(n,p,i)
                     line_color = '#FF4136'
+                    scatter_color = '#FF851B'
 
                 else:
                     density[i] = probability_rigid_expansion(n,p,i)
-                    scatter_color = '#eb7ab1'
-                    bundle1[i] = bundle_expansion(n,p,i)
+                    bundle[i] = bundle_expansion(n,p,i)
                     line_color = '#85144b'
+                    scatter_color = '#eb7ab1'
                     
+            goodness_of_fit[N.index(n)][P.index(p)] = max([abs(x - y) for x, y in zip(density, bundle)])
+                     
             axarr[k, l].plot(I, density,'o',markersize=5,alpha=0.8,
                  color=scatter_color, label="Experimentation")
-            axarr[k, l].plot(I, bundle1,linewidth=1.5,linestyle='-',
+            axarr[k, l].plot(I, bundle,linewidth=1.5,linestyle='-',
                  color=line_color,label="Expected value")
             
             #Boxes
@@ -239,6 +240,9 @@ def set_of_experiments(N,P,event):
         plt.show()
 
     plt.tight_layout()
+
+    print(goodness_of_fit)
+    return goodness_of_fit
     
 def individual_experiments(n,p,event):
     """
@@ -248,30 +252,30 @@ def individual_experiments(n,p,event):
     """
     I = intervalo(0,n+1,1)
     density= [0]*(len(I))
-    bundle1= [0]*(len(I))
+    bundle= [0]*(len(I))
 
     
     for i in I:
         if event == 1:
             density[i] = probability_last(n,p,i)
-            bundle1[i] = bundle_last(n,p,i)
+            bundle[i] = bundle_last(n,p,i)
             scatter_color = '#FF851B'
             line_color = '#001f3f'
                     
         elif event == 2:
             density[i] = probability_anyone(n,p,i)
             scatter_color = '#FF851B'
-            bundle1[i] = bundle_anyone(n,p,i)
+            bundle[i] = bundle_anyone(n,p,i)
             line_color = '#FF4136'
         else:
             density[i] = probability_rigid_expansion(n,p,i)
             scatter_color = '#eb7ab1'
-            bundle1[i] = bundle_expansion(n,p,i)
+            bundle[i] = bundle_expansion(n,p,i)
             line_color = '#85144b'
                 
     plt.plot(I, density,'o',markersize=5,alpha=0.8,
                  color=scatter_color, label="Experimentation")
-    plt.plot(I, bundle1,linewidth=1.5,linestyle='-',
+    plt.plot(I, bundle,linewidth=1.5,linestyle='-',
                 color=line_color,label="Expected value")
 
     plt.legend(bbox_to_anchor=(1.05, 1), loc='upper left', 
@@ -299,19 +303,19 @@ if __name__ == "__main__":
     n,p=15,0.5
     print("EMPIRICAL VS ESTIMATED PROBABILITIES. n="+ str(n)+ " , p=" + str(p))
     print("Event 1. Prob. of a fixed vertex being uniquely det.")
-    individual_experiments(15,0.5,event=1)
+    #individual_experiments(15,0.5,event=1)
 
     print("Event 2. Prob. of any vertex being uniquely det.")
-    individual_experiments(15,0.5,event=2)
+    #individual_experiments(15,0.5,event=2)
     
     print("Event 3. Prob. that a subset generates a rigid expansion.")
-    individual_experiments(15,0.5,event=3)
+    #individual_experiments(15,0.5,event=3)
 
     #------------------------------------------------------------------------
     N,P=[5,7,10],[0.2,0.5,0.8]
     print("EMPIRICAL VS ESTIMATED PROBABILITIES. N="+ str(n)+ " , P=" + str(p))
     print("Event 1. Prob. of a fixed vertex being uniquely det.")
-    set_of_experiments(N,P,1)
+    print(set_of_experiments(N,P,1))
 
     print("Event 2. Prob. of any vertex being uniquely det.")
     set_of_experiments(N,P,2) 

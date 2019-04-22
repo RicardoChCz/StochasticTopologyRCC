@@ -44,3 +44,4 @@ def visual_rigid_exp(G,S,filenames,i):
     plt.savefig('Figures/rigid_expansion_gif/rigid_exp_'+str(i)+'.png')
     filenames.append('Figures/rigid_expansion_gif/rigid_exp_'+str(i)+'.png')
     plt.show()
+
