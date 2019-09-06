@@ -1,6 +1,0 @@
-
-            \begin{table}[htbp]
-            \begin{center}
-            \bgroup
-            \def\arraystretch{1.5}
-            \begin{tabular}{|c|c|c|c|}\hline\diagbox[width=1.3cm, height=0.8cm]{$p$}{$n$}&5&7&10\\ \hline$0.2$& $0.009942100875673602$& $0.007370971679687501$& $0.02562466232893447$\\\hline$0.2$& $0.009942100875673602$& $0.007370971679687501$& $0.02562466232893447$\\\hline$0.2$& $0.009942100875673602$& $0.007370971679687501$& $0.02562466232893447$\\\hline\end{tabular}\egroup\caption{caption}\label{label}\end{center}\end{table}

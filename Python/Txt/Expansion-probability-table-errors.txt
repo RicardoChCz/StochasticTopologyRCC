@@ -3,4 +3,4 @@
             \begin{center}
             \bgroup
             \def\arraystretch{1.5}
-            \begin{tabular}{|c|c|c|c|}\hline\diagbox[width=1.3cm, height=0.8cm]{$p$}{$n$}&5&7&10\\ \hline$0.2$& $0.37239115790268074$& $0.16874879296659495$& $0.29802676481278645$\\\hline$0.2$& $0.37239115790268074$& $0.16874879296659495$& $0.29802676481278645$\\\hline$0.2$& $0.37239115790268074$& $0.16874879296659495$& $0.29802676481278645$\\\hline\end{tabular}\egroup\caption{caption}\label{label}\end{center}\end{table}
+            \begin{tabular}{|c|c|c|c|}\hline\diagbox[width=1.3cm, height=0.8cm]{$p$}{$n$}&5&7&10\\ \hline$0.2$& $3.57E-01$& $1.72E-01$& $2.78E-01$\\\hline$0.2$& $3.57E-01$& $1.72E-01$& $2.78E-01$\\\hline$0.2$& $3.57E-01$& $1.72E-01$& $2.78E-01$\\\hline\end{tabular}\egroup\caption{Supremum of absolute differences between hypothesized and empirical probabilities}\label{gofExp3}\end{center}\end{table}
