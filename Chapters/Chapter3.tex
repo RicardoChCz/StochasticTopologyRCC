@@ -24,13 +24,13 @@ In this chapter we use the outlined probabilistic material to accomplish an effi
 
 All the computational experimentation was develop in \texttt{python}, it provide simple and flexible representations of networks as well as clear and concise expressions of network algorithms. The \texttt{\href{https://networkx.github.io/}{NetworkX}} library allowed to create and modify graphs as objects (dictionaries) and provided more features such as numerical linear algebra and drawing.
 
-\section{Simulating graphs in $G(n,p)$}
+\section{Simulating Erdös-Rényi random graphs}
 
 There is a direct algorithm to obtain a graph in $G(n,p)$, it simulate a $Bernoulli(p)$ r.v. for each of the $\frac{n(n-1)}{2}$ possible edges. Thus, it runs in $O(n^2)$ time. It is possible to do faster algorithms for small values of $p$ that runs in $O(n + m)$ time, where $m$ is the expected number of edges, which equals $\frac{pn(n - 1)}{2}$ \cite{fastER}.
 
 In the figure \ref{fig:ErdosRenyi10} appears a set of graphs obtained with such algorithm, fixing $n=10$ an varying the parameter $p$.
 
-\begin{figure}[h!]
+\begin{figure}[h]
 	\centering
 	\includegraphics[scale=0.85]{Figures/ER-10.png}
 	\caption{Erdös-Rényi random graphs with $n$ fixed and varying $p$}
