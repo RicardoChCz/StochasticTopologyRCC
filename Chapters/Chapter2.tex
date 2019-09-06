@@ -10,13 +10,11 @@
 
 The use of the probabilistic method in discrete mathematics has become a prominent idea in the area in recent times. It provide existence proofs where objects have certain desirable properties and it is not always easy to construct explicit examples. This has been just the beginning of the use of probabilistic tools in a deterministic context.
 
-Complex topological spaces arise quite natural in a lot of scientific contexts. Probability theory implement different approaches to model those spaces; even in complex configurations, it can be possible by doing approximations, to study topological invariants. 
-
-In this sense, stochastic topology can be thought as a tool for topology in the same sense as statistical mechanics is used to study a macroscopic physical system when the classical mechanics finds these systems very complicated to solve.
+Complex topological spaces arise quite natural in a lot of scientific contexts. Probability theory implement different approaches to model those spaces; even in complex configurations, it can be possible by doing approximations, to study topological invariants. In this sense, stochastic topology can be thought as a tool for topology in the same sense as statistical mechanics is used to study a macroscopic physical system when the classical mechanics finds these systems very complicated to solve. 
 
 Stochastic topology finds its early motivation in applied problems. Nevertheless, in recent articles it has been used to provide a deeper insight for theoretical questions. For example, with probabilistic analogs of very classical topology conjectures, like Whitehead conjecture \cite{Costa15}.
 
-Probability theory can help us to understand the ubiquity of certain mathematical phenomena. For example, \textit{many} simplicial complexes and posets which arise from combinatorial constructions are homotopy equivalent to a wedge of spheres, or the well known fact that hiperbolicity is \textit{quite common} in random groups. With Probability theory we can give formal meaning to expressions like \textit{"quite common"} or \textit{"many"}.
+Probability theory can help us understand the ubiquity of certain mathematical phenomena. For example, \textit{many} simplicial complexes and posets which arise from combinatorial constructions are homotopy equivalent to a wedge of spheres, or that hiperbolicity is \textit{common} in random groups. With Probability theory we can give formal meaning to these expressions.
 
 In this chapter we review rigid expansions in simple probabilistic models. Afterwards, we analyze the feasibility of modeling the curve graph using these proposals.
 
@@ -27,7 +25,7 @@ Familiarity with basic concepts in probability theory such as probability spaces
 \subsection{The Radó graph}
 Let $0 < p < 1$ be fixed, $\G(\N, p)$ is the probability space which consists of all graphs with vertex set $\N$, whose edges are chosen independently and with probability $p$. In other words, a random graph $G \in \G(\N,p)$ is a collection $(X_{ij}) = \{ X_{ij} : 1 \leq i < j\}$ of independent $Bernoulli(p)$ r.v., where a pair $ij$ is an edge of $G$ if and only if $X_{ij} = 1$.
 
-Erdös and Rényi proved in \cite[Erdös, Rényi]{RadoUnique}, that every infinite random graph is isomorphic to the \textbf{Radó graph}. A construction of this graph can be done using binary numbers. To do this, identify the vertices of the graph with the natural numbers, then every edge appears between vertices $x$ and $y$ in the graph (assuming $x < y$) whenever the $x$-th bit of the binary representation of $y$ is nonzero. This means, for example, that all odd-numbered vertices will be neighbors of vertex $0$, and that the larger neighbors of vertex $1$ are all vertices with numbers congruent to $2$ or $3$ mod $4$. 
+Erdös and Rényi proved in \cite[Erdös, Rényi]{RadoUnique}, that every infinite random graph is isomorphic to the \textbf{Radó graph}. A construction of this graph can be done using binary numbers; identify the vertices of the graph with the natural numbers and then every edge appears between vertices $x$ and $y$ in the graph (assuming $x < y$) whenever the $x$-th bit of the binary representation of $y$ is nonzero. This means, for example, that all odd-numbered vertices will be neighbors of vertex $0$, and that the larger neighbors of vertex $1$ are all vertices with numbers congruent to $2$ or $3$ mod $4$.
 
 \begin{figure}[h!]
 	\centering
@@ -46,13 +44,13 @@ where $k$ is the number of edges in $G$, the $\sigma$-algebra is given by the po
 
 Note: There is a variation of the model, where we rather choose randomly exactly $m$ edges among the $\binom{n}{2}$ possible.
 
-We can also think this model like $\binom{n}{2}$ i.i.d. $Bernoulli(p)$ that represent the edges. Using what we know about this r.v. we can immediately get some properties of the degree of a given vertex $v$.
+We can also think this model like $\binom{n}{2}$ i.i.d. $Bernoulli(p)$ that represent the edges. From this, we can immediately get some properties of the degree of a vertex $v$.
 
 \begin{itemize}
 \item The probability that a given vertex $v$ has degree $k$ is given by
 $$b(k; n-1,p) = \binom{n-1}{k} \cdot p^{k} \cdot (p-1)^{n-k-1}$$
 \item The expected degree is $(n-1)\cdot p$
-\item The variance of this degree is $(n-1)\cdot p \cdot (1-p)$
+\item The variance of this degree is $(n-1)\cdot (1-p) \cdot p$
 \end{itemize}
 
 The degree distribution can be helpful to do optimizations in the rigid expansions algorithms. This is outlined in the next chapter.
@@ -61,11 +59,11 @@ The degree distribution can be helpful to do optimizations in the rigid expansio
 
  We will focus in the rigidity calculations for the finite case. Then, we will analyze when $n$ tends to infinite. For this, we need the calculations of the probability that the following events occur.
 
-\begin{itemize}
+\begin{enumerate}
 \item A vertex $v$ is uniquely determined by $A_{m}$, a subset of vertices of size $m$
 \item $A_k$ generate a rigid expansion
 \item $A_k$ generate a rigid expansion with $s$ new elements
-\end{itemize}
+\end{enumerate}
 
 For the calculations concerning the first event, take a look to following picture
 
@@ -75,13 +73,12 @@ For the calculations concerning the first event, take a look to following pictur
 	\caption{Probability of uniquely determined vertices}
 \end{figure}
 
-If $<A_{m}> = v$, there is a edge between $v$ and every vertex in $A$, and none of the remaining $n-m-1$ vertices is also connected to every vertex in $A$, i.e.
-$$\P (E_m) = \P(<A_{m}> = v) = p^{m}(1-p^{m})^{n-m-1}$$
+If $\langle A_{m} \rangle = v$, there is a edge between $v$ and every vertex in $A$, and none of the remaining $n-m-1$ vertices is also connected to every vertex in $A$, i.e.
+$$\P (E_m) = \P(\langle A_{m}\rangle = v) = p^{m}(1-p^{m})^{n-m-1}$$
 Using the \texttt{networkx} library in \texttt{python} we reproduce the following experiment:
 
 \begin{cajita}
-\textbf{Uniquely determined vertex experiment} \hfill \break
-Fixing $n,p,m$.
+\textbf{Uniquely determined vertex experiment.} Fixed $n,p,m$.
 \begin{enumerate}
 \item Generate an Erdös-Rényi graph $G\in \G(n,p)$ with labeled vertices.
 \item Excluding the $n$-th vertex, take a random subset of vertices of size $m$.
@@ -89,7 +86,7 @@ Fixing $n,p,m$.
 \end{enumerate}
 \end{cajita}
 
-In the next chapter we explain how to generate random graphs for the first. To simplify the process we took, without loosing generality, the last vertex as a particular element of the experiment. When $m=n$ there is no need to do the experiment.
+In the next chapter we explain how to generate random graphs for the first step of the experiment. To simplify the process we took, without loosing generality, the last vertex as a particular element of the experiment. When $m=n$ there is no need to do the experiment.
 
 Fixing $n$ and $p$ we computed the empiric probability for each possible value of $m$. In the following figure appear these estimates together with the theoretical calculations.
 
@@ -99,13 +96,14 @@ Fixing $n$ and $p$ we computed the empiric probability for each possible value o
 	\caption{Theoretical and empirical probabilities of uniquely determined a vertex. For different values of $n$ and $p$ varying among all the possible values of $m$}
 \end{figure}
 
-For these calculations we repeated this experiment 500 times and count the number of times that the random set uniquely determine the $n$-th vertex. The empiric probability is the ratio of times when this happened.
+For these calculations we calculated the empiric probability by repeating this experiment 500 times and counting the number of times that the random set uniquely determine the $n$-th vertex.
 
 Notice that there are certain values of $m$ more \textit{effective} than others, in the sense that, depending on the parameters of the model, it is more likely that a subset of certain size uniquely determine a vertex. This can be used, as described in the next chapter, to do optimizations in the simulations.
  
-The following table is a summary of the maximum of differences between these two values for distinct values of $n$ and $p$. These values are indicators that the simulations and the calculations actually describe the same event.
+We calculated the MSE for this experiment with distinct $n$ and $p$ values.
+
 \vspace{0.3cm}
-\input{Python/Txt/table.txt}
+\input{Python/Txt/Uniquely-determinated-fixed-vertex-table-errors.txt}
 \vspace{-0.3cm}
  
 For the second event, if $A_k$ does not generate a rigid expansion is because none of the subsets of $A_{k}$ determined uniquely a vertex outside of it. We have:
@@ -135,26 +133,10 @@ Again, we repeated this experiment 500 times and calculated the empiric probabil
 \end{figure}
 
 The empirical and theoretical probabilities agree again.
- \vspace{0.3cm}
-\begin{table}[htbp]
-\begin{center}
-\bgroup
-\def\arraystretch{1.5}
-\begin{tabular}{|c|c|c|c|}
-\hline
-n & 5 & 10 & 15 \\
-\hline
- 0.2 & $1e^{-8}$ & $1e^{-8}$ & $1e^{-8}$ \\\hline
- 0.3 & $1e^{-8}$ & $1e^{-8}$ & $1e^{-8}$ \\\hline
- 0.4 & $1e^{-8}$ & $1e^{-8}$ & $1e^{-8}$ \\\hline
-\end{tabular}
-\egroup
-\caption{Maximums of differences between empirical and theoretical probabilities varying $m$ for different values of $n$ and $p$}
-\label{tabla:sencilla}
-\end{center}
-\end{table}
+\vspace{0.3cm}
+\input{Python/Txt/Uniquely-determinated-fixed-vertex-table-errors.txt}
 \vspace{-0.3cm}
- 
+
 The calculations for the last question are helpful if we want to approximate the sequence of rigid expansions of $A_{k}$ by a Markov chain. Consider $\{0,1, \dots n\}$ as the states space of the Markov chain with transition matrix given by:
 $$ a_{k,k+s} = \P(A_{k} \text{ generates a rigid expansion by } s \text{ elements})$$
 Notice that the deterministic process stops once a iteration fails to add new vertices. In our stochastic approximation a new $G \in \G(n,p)$ is considered for each step, hence, it is allowed to \textit{"have extra tries to expand".}
@@ -192,7 +174,7 @@ In chapter one we settled the bases to model the curve graph associated to any g
 \item Infinite diameter
 \end{enumerate}
 
-The Radó graph satisfy that every finite or countably infinite graph is an induced subgraph of it \cite{DarReferenciaAqui1}. The restriction in the clique number of $C(S)$ implies that, if $S$ is a surface of finite genus, is not possible that the Radó graph is embedded into $C(S)$. Even more, a result by by Bering and Gaster \cite{beringGaster} state that the converse is also valid.
+The Radó graph satisfy that every finite or countably infinite graph is an induced subgraph of it \cite{theRandomGraph}. The restriction in the clique number of $C(S)$ implies that, if $S$ is a surface of finite genus, is not possible that the Radó graph is embedded into $C(S)$. Even more, a result by by Bering and Gaster \cite{beringGaster} state that the converse is also valid.
 
 \begin{theorem}
 The random graph embeds into the curve graph $C(S)$ of a surface $S$ if and only if $S$ has infinite genus.
@@ -225,7 +207,7 @@ $$\lim_{n \to \infty} \P(G \in \G(n,p) \text{ is disconnected}) = 1$$
 \end{itemize}
 \end{theorem}
  
-This can be proven by first showing that for a large $n$ almost all graphs consists of a connected graph having $n-k$ effective vertices and $k$ isolated points, the theorem follows from a counting argument. The complete proof can be found in \cite[Erdös-Rényi, p. 59]{OnRandomGraphs}.
+This can be proven by first showing that for a large $n$ almost all graphs consists of a connected graph having $n-k$ effective vertices and $k$ isolated points, the theorem follows from a counting argument. The complete proof can be found in \cite[Erdös-Rényi, p. 59]{Erdos59}.
  
 \subsection{Locally infinity}
 
@@ -308,7 +290,7 @@ $$E_{r} = (2\pi)^{- 1/2} n^{n+ 1/2} (n - r)^{-n+r-1/2} r^{-r-1/2} p^{r(r- 1)/2}$
 Taking $r$ as a fixed finite number we have
 $$\displaystyle\lim_{n\to \infty } E_{r} = \displaystyle\lim_{n\to \infty} c_{r}\cdot \frac{n^{n+1/2}}{(n-r)^{n+1/2}} \cdot (n-r)^{r}\cdot p^{r(r-1)/2} = c_{r}\cdot \displaystyle\lim_{n\to \infty}  (n)^{r}\cdot p^{r(r-1)/2}$$
 Taking $p=\epsilon/n^{a}$ as in \ref{conectivityRCC} it results in
-$$\displaystyle\lim_{n\to \infty } E_{r} =  c_{r}\cdot \displaystyle\lim_{n\to \infty}  (n)^{r}\cdot\Big(\frac{1}{n^a}\Big)^{r/2}\cdo \Big(\frac{1}{n^a}\Big)^{r/2}
+$$\displaystyle\lim_{n\to \infty } E_{r} =  c_{r}\cdot \displaystyle\lim_{n\to \infty}  (n)^{r}\cdot\Big(\frac{1}{n^a}\Big)^{r/2}\cdot \Big(\frac{1}{n^a}\Big)^{r/2}
 \cdot\frac{1}{n^a}$$
 
 
