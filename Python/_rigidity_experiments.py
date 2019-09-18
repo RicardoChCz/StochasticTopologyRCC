@@ -24,16 +24,18 @@ from math import floor
 from time import clock
 from numpy.random import randint
 from scipy.special import comb
+from decimal import Decimal
 
 num_experiments = 500
+caption_goodness_of_fit = "Supremum of absolute differences between hypothesized and empirical probabilities"
 
 """
-1. Functions to determine whether or not a vertex v is uniquely determinated by
-a random subset of vertices of the graph in G(n,p).
+1. Functions to determine whether or not a vertex v is uniquely determinated 
+by a random subset of vertices of the graph in G(n,p).
 """
 def probability_last(n,p,k):
     """
-    Returns the probability (aproximated) that in a G(n,p) i.e. ER-model a 
+    Returns the empirical probability that in a G(n,p) i.e. ER-model a 
     random set of size k uniqely determines the nth-vertex.
     Input:(int, float, int)
     Output: float
@@ -125,7 +127,7 @@ def probability_subset(n,p,k,m):
         return successes/float(num_experiments)
 
 """
-4. Funciones para determinar si un conjunto de tamaño m puede expandirse
+4. Functions to determine if a set of size m can expand
 """    
 
 def does_it_expands(G,A):
@@ -152,7 +154,7 @@ def does_it_expands(G,A):
 def probability_rigid_expansion(n,p,k):
     """
     Returns the probability (aproximated) that in a G(n,p) i.e. ER-model a 
-    random set of size k generates a rigid expantion
+    random set of size k generates a rigid expansion
     Input: int n, float p, int k
     Output: float
     """
@@ -203,8 +205,8 @@ def set_of_experiments(N,P,event):
                     line_color = '#85144b'
                     scatter_color = '#eb7ab1'
                     
-            goodness_of_fit[N.index(n)][P.index(p)] = max([abs(x - y) for x, y in zip(density, bundle)])
-                     
+            goodness_of_fit[N.index(n)][P.index(p)] = '%.2E' % Decimal(max([abs(x - y) for x, y in zip(density, bundle)]))
+            
             axarr[k, l].plot(I, density,'o',markersize=5,alpha=0.8,
                  color=scatter_color, label="Experimentation")
             axarr[k, l].plot(I, bundle,linewidth=1.5,linestyle='-',
@@ -228,18 +230,20 @@ def set_of_experiments(N,P,event):
             axarr[i,j].spines['top'].set_color('white')
             axarr[i,j].spines['right'].set_color('white')
 
+    print("GOF", goodness_of_fit)
+    
     if event == 1:
         plt.savefig('Figures/Uniquely-determinated-fixed-vertex.png')
-        write_table("Uniquely-determinated-fixed-vertex-table-errors","caption","label",N,P,goodness_of_fit)
+        write_table("Uniquely-determinated-fixed-vertex-table-errors",caption_goodness_of_fit,"gofExp1",N,P,goodness_of_fit)
         plt.show()
     elif event == 2:
         plt.savefig('Figures/Uniquely-determinated-any-vertex.png')
-        write_table("uniq-det-any-table-errors","caption","label",N,P,goodness_of_fit)
+        write_table("Uniquely-det-any-table-errors",caption_goodness_of_fit,"gofExp2",N,P,goodness_of_fit)
         plt.show()
 
     else:
         plt.savefig('Figures/Expansion-probability.png')
-        write_table("Expansion-probability-table-errors","caption","label",N,P,goodness_of_fit)
+        write_table("Expansion-probability-table-errors",caption_goodness_of_fit,"gofExp3",N,P,goodness_of_fit)
         plt.show()
 
     plt.tight_layout()
