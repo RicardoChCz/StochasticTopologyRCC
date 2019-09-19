@@ -233,16 +233,16 @@ def set_of_experiments(N,P,event):
     print("GOF", goodness_of_fit)
     
     if event == 1:
-        plt.savefig('Figures/Uniquely-determinated-fixed-vertex.png')
+        plt.savefig('Figures/Uniquely-determinated-fixed-vertex.png', bbox_inches="tight")
         write_table("Uniquely-determinated-fixed-vertex-table-errors",caption_goodness_of_fit,"gofExp1",N,P,goodness_of_fit)
         plt.show()
     elif event == 2:
-        plt.savefig('Figures/Uniquely-determinated-any-vertex.png')
+        plt.savefig('Figures/Uniquely-determinated-any-vertex.png', bbox_inches="tight")
         write_table("Uniquely-det-any-table-errors",caption_goodness_of_fit,"gofExp2",N,P,goodness_of_fit)
         plt.show()
 
     else:
-        plt.savefig('Figures/Expansion-probability.png')
+        plt.savefig('Figures/Expansion-probability.png', bbox_inches="tight")
         write_table("Expansion-probability-table-errors",caption_goodness_of_fit,"gofExp3",N,P,goodness_of_fit)
         plt.show()
 
@@ -287,11 +287,11 @@ def individual_experiments(n,p,event):
                  borderaxespad=0.)
             
     if event == 1:
-        plt.savefig('Figures/Single-uniquely-determinated-fixed-vertex.png')
+        plt.savefig('Figures/Single-uniquely-determinated-fixed-vertex.png', bbox_inches="tight")
     elif event == 2:
-        plt.savefig('Figures/Single-uniquely-determinated-any-vertex.png')
+        plt.savefig('Figures/Single-uniquely-determinated-any-vertex.png', bbox_inches="tight")
     else:
-        plt.savefig('Figures/Single-expansion-probability.png')
+        plt.savefig('Figures/Single-expansion-probability.png', bbox_inches="tight")
         
     plt.show()
 
@@ -317,7 +317,7 @@ if __name__ == "__main__":
     #individual_experiments(15,0.5,event=3)
 
     #------------------------------------------------------------------------
-    N,P=[5,7,10],[0.2,0.5,0.8]
+    N,P=[8,15,20],[0.1,0.5,0.75]
     print("EMPIRICAL VS ESTIMATED PROBABILITIES. N="+ str(n)+ " , P=" + str(p))
     print("Event 1. Prob. of a fixed vertex being uniquely det.")
     print(set_of_experiments(N,P,1))

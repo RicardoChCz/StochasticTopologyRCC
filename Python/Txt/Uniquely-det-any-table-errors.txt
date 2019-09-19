@@ -3,4 +3,4 @@
             \begin{center}
             \bgroup
             \def\arraystretch{1.5}
-            \begin{tabular}{|c|c|c|c|}\hline\diagbox[width=1.3cm, height=0.8cm]{$p$}{$n$}&5&7&10\\ \hline$0.2$& $5.55E-02$& $9.95E-02$& $9.12E-02$\\\hline$0.2$& $5.55E-02$& $9.95E-02$& $9.12E-02$\\\hline$0.2$& $5.55E-02$& $9.95E-02$& $9.12E-02$\\\hline\end{tabular}\egroup\caption{Supremum of absolute differences between hypothesized and empirical probabilities}\label{gofExp2}\end{center}\end{table}
+            \begin{tabular}{|c|c|c|c|}\hline\diagbox[width=1.3cm, height=0.8cm]{$p$}{$n$}&8&15&20\\ \hline$0.1$& $2.27E-02$& $1.01E-01$& $6.78E-02$\\\hline$0.1$& $2.27E-02$& $1.01E-01$& $6.78E-02$\\\hline$0.1$& $2.27E-02$& $1.01E-01$& $6.78E-02$\\\hline\end{tabular}\egroup\caption{Supremum of absolute differences between hypothesized and empirical probabilities}\label{gofExp2}\end{center}\end{table}
