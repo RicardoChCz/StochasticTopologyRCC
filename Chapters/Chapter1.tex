@@ -8,13 +8,13 @@
 
 %----------------------------------------------------------------------------------------
 
-The study of surfaces in a strictly topological viewpoint has made us to forgot significant information about them. A way to revert this is to attach a group to it, the \textbf{mapping class group} of the surface. It is denoted by $Mod(S)$ and encode the \textit{symmetries} of the surface. This group is defined as the set of isotopy classes of orientation-preserving homeomorphisms of $S$. In the first section of this chapter we give the formal definition of this group and establish the very important role of this concept in Mathematics. 
+The study of surfaces in a strictly topological viewpoint has made us to forget significant information about them. A way to revert this is to attach a group to it, the \textbf{mapping class group} of the surface. It is denoted by $Mod(S)$ and encodes the \textit{symmetries} of the surface. This group is defined as the set of isotopy classes of orientation-preserving homeomorphisms of $S$. In the first section of this chapter we give the formal definition of this group and establish the very important role of this concept in Mathematics. 
 
 The \textbf{curve complex} of the surface, denoted by $C(S)$ appears naturally in the study of $Mod(S)$. It is a simplicial complex that encodes intersection patterns of simple closed curves in $S$. We focus part of the discussion in the relationship between the algebraic structure of $Mod(S)$ and the combinatorial topology of $S$.
 
-Many of the progress in understanding $Mod(S)$ has been possible by a well-known comparison among two very important classes of groups: arithmetic groups and mapping class groups. In this parallelism panorama arises the desire for an equivalent, until some extent, of the Margulis Superrigidity for mapping class groups.
+Many of the progress in understanding $Mod(S)$ has been possible by a well-known analogy among two very important classes of groups: arithmetic groups and mapping class groups. In this parallelism panorama arises the desire for an equivalent result to the Margulis Superrigidity for mapping class groups.
 
-In the last section of this chapter we settle the bases to understand rigidity in a graph theory context. An approach called \textit{rigid expansions}, see \cite[Aramayona 16]{finiteRigidSetsJA} and \cite[Hernandez 16]{exhaustionCurveGraph}, allows us to build up subgraphs preserving the rigidity property and is compatible with a stochastic scheme.
+In the last section of this chapter we settle the bases to understand rigidity within a Graph theory context. An approach called \textit{rigid expansions}, see \cite[Aramayona 16]{finiteRigidSetsJA} and \cite[Hernandez 16]{exhaustionCurveGraph}, allows us to build up subgraphs preserving the rigidity property and is compatible with a stochastic scheme.
  
 Many results and definitions in this chapter where extracted from \cite[Farb]{Farb}. They are quite popular and equivalents can easily be found in the literature, however they are written here to establish nomenclature. Familiarity with basic concepts will be assumed.
 
@@ -26,7 +26,7 @@ We have the following fundamental, well-known result about surfaces.
 Any closed, connected, orientable surface is homeomorphic to the connect sum of a 2-dimensional sphere with $g \geq 0$ tori. Any compact, connected, orientable surface is obtained from a closed surface by removing $b \geq 0 $ open disks with disjoint closures. Even more, the set of homeomorphism types of compact surfaces is in bijective correspondence with the set $\{ (g, b) : g, b \geq 0\}$.
 \end{theorem}
 
-We are so familiarize with this result that we usually forget what it is saying. It seems like, in the eyes of a topologyst, there is nothing much interesting about surfaces, but this is because we are forgetting all the geometric information about them. $Mod(S)$ helps to recover this data, the magic happens when this group acts on the \textbf{Teichmüller space} of $S$, that is the space of hyperbolic metrics on $S$ up to isotopy. A central result is that this action is properly discontinuous and the quotient space $M(S) = Teich(S)/ Mod(S)$ is the \textbf{moduli space of Riemannian surfaces homeomorphic to $S$}. The space $M(S)$ is a essential object in mathematics and the group $Mod(S)$ encodes most of the topological features of $M(S)$.
+We are so familiarized with this result that we usually forget what it is saying. It seems like, in the eyes of a topologist, there is nothing much interesting about surfaces, but this is because we are forgetting all the geometric information about them. $Mod(S)$ helps to recover this data, the magic happens when this group acts on the \textbf{Teichmüller space} of $S$, that is the space of hyperbolic metrics on $S$ up to isotopy. A central result is that this action is properly discontinuous and the quotient space $M(S) = Teich(S)/ Mod(S)$ is the \textbf{moduli space of Riemannian surfaces homeomorphic to $S$}. The space $M(S)$ is a essential object in mathematics and the group $Mod(S)$ encodes most of the topological features of $M(S)$.
 
 $Mod(S)$, $Teich(S)$, and $M(S)$ can be found in a lot of different contexts in mathematics: hyperbolic geometry, algebraic geometry, combinatorial group theory, symplectic geometry, 3-manifold theory, dynamics and so on. The algebraic structure of $Mod(S)$, the geometry of $Teich(S)$, and the topology of $M(S)$ are just the strands which are used to weave the rich tapestry of the nature of the surface.
 
@@ -63,7 +63,7 @@ Given a homeomorphism $f: S \to  S$, there is a map $g$ isotopic to $f$ such tha
 
 The definition of a \textbf{pseudo-Anosov map} relies on the notion of a measured foliation, a geometric structure on $S$. It consists of a singular foliation and a measure in the transverse direction (i.e. that is constant in transverse arches). For the full definition of pseudo-Anosov elements and the proof of this theorem we can refer to \cite[Farb, Chapter 13]{Farb}.
 
-The study of mapping class groups is a wide and challenging area by it self. It is outside of the interests of this thesis to review the details and repercussions of this vastly field. Yet, there are a number of known properties of $Mod(S)$ that it would be nice to have in mind in further work, although different tools might be required.
+The study of mapping class groups is a wide and challenging area. It is outside of the interests of this thesis to review the details and repercussions of this vastly field. Yet, there are a number of known properties of $Mod(S)$ that it would be nice to have in mind in further work, although different tools might be required.
 
 \begin{itemize}
 \item Finitely generated and presented
@@ -135,7 +135,7 @@ where $i(c_{i},c_{i+1})=0$, this can be done proceeding by induction over $i(a,b
 
 \subsection{Locally infinite}
 \begin{theorem}
-If $3g+m\geq 5$, then $\Gamma(S_{g,n})$ is locally infinity.
+If $3g+m\geq 5$, then $\Gamma(S_{g,n})$ is locally infinite.
 \end{theorem}
 The idea behind the proof is that given any $\alpha \in \Gamma(S)$ we can construct a family of isotopy classes of curves which are disjoint to $\alpha$. The following picture gives us an intuitive idea on how to do this whenever there are enough holes.
 \vspace{0.5cm}

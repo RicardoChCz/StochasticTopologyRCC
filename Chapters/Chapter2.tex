@@ -8,13 +8,13 @@
 
 %----------------------------------------------------------------------------------------
 
-The use of the probabilistic method in discrete mathematics has become a prominent idea in the area in recent times. It provide existence proofs where objects have certain desirable properties and it is not always easy to construct explicit examples. This has been just the beginning of the use of probabilistic tools in a deterministic context.
+The use of the probabilistic method in discrete mathematics has become a prominent idea in the area in recent times. It provides existence proofs where objects have certain desirable properties and the construction of explicit examples is challenging. This has been just the beginning of the use of probabilistic tools within a deterministic context.
 
 Complex topological spaces arise quite natural in a lot of scientific contexts. Probability theory implement different approaches to model those spaces; even in complex configurations, it can be possible by doing approximations, to study topological invariants. In this sense, stochastic topology can be thought as a tool for topology in the same sense as statistical mechanics is used to study a macroscopic physical system when the classical mechanics finds these systems very complicated to solve. 
 
-Stochastic topology finds its early motivation in applied problems. Nevertheless, in recent articles it has been used to provide a deeper insight for theoretical questions. For example, with probabilistic analogs of very classical topology conjectures, like Whitehead conjecture \cite{Costa15}.
+Stochastic topology finds its early motivation in applied problems. Nevertheless, in recent articles it has been used to provide a deeper insight for theoretical questions. For example, with probabilistic analogs of very classical topology conjectures, like Whitehead's Asphericity Conjecture \cite{Costa15}.
 
-Probability theory can help us understand the ubiquity of certain mathematical phenomena. For example, \textit{many} simplicial complexes and posets which arise from combinatorial constructions are homotopy equivalent to a wedge of spheres, or that hiperbolicity is \textit{common} in random groups. With Probability theory we can give formal meaning to these expressions.
+Probability theory can help us to understand the ubiquity of certain mathematical phenomena. For example, \textit{many} simplicial complexes and posets which arise from combinatorial constructions are homotopy equivalent to a wedge of spheres, or that hiperbolicity is \textit{common} in random groups. With Probability theory we can give formal meaning to these expressions.
 
 In this chapter we review rigid expansions in simple probabilistic models. Afterwards, we analyze the feasibility of modeling the curve graph using these proposals.
 
@@ -34,7 +34,7 @@ Erdös and Rényi proved in \cite[Erdös, Rényi]{RadoUnique}, that every infini
 \end{figure}
 
 \subsection{Erdös-Rényi model}
-Erdös-Rényi model is the finite version of the Radó graph. In this model the parameter $p$ is usually taken as a function of $n$. This provide, unlike the past model, a variety of graphs when $n$ tends to infinity.
+The Erdös-Rényi model for random graphs is the finite version of the Radó graph. In this model the parameter $p$ is usually taken as a function of $n$. This provides, unlike the past model, a variety of graphs when $n$ tends to infinity.
 
 \begin{defini}
 Denote by $\G(n,p)$ to the probability space formed by all the graphs of $n$ vertices and probability measure 
@@ -164,7 +164,7 @@ This experiment yields a random variable which depends on $n, p$ and $k$. Fixing
 
 \section{Radó graph as a model for the curve graph}
 
-In chapter one we outlined the properties of the curve graph associated to any given surface. Summarizing the results, the exposed models should, at least, guarantee the following properties:
+In chapter one, we outlined the properties of the curve graph associated to any given surface. Summarizing the results, the exposed models should, at least, guarantee the following properties:
 
 \begin{enumerate}
 \item Countably infinite number of vertices
@@ -180,7 +180,7 @@ The Radó graph satisfy that every finite or countably infinite graph is an indu
 The random graph embeds into the curve graph $C(S)$ of a surface $S$ if and only if $S$ has infinite genus.
 \end{theorem}
 
-Therefore, if we want to study the curve graph of a \textbf{surface of finite genus} using the Radó graph, we have to think it as a subgraph of it. A simple but naive approach to do it is to take a random subset of vertices of a graph $G\in \G(\N, p)$ and then consider the vertex induced subgraph. It turns out that for a.e. $G\in \G(\N, p)$ the sequence $cl(G_n)$ is almost entirely determined.
+Therefore, if we want to study the curve graph of a \textbf{surface of finite genus} using the Radó graph, we have to think it as a subgraph of it. A simple approach to do it is to take a random subset of vertices of a graph $G\in \G(\N, p)$ and then consider the vertex induced subgraph. It turns out that for a.e. $G\in \G(\N, p)$ the sequence $cl(G_n)$ is almost entirely determined.
 
 \begin{theorem}
 For a.e. $G \in \G(\N,p)$ there is a constant $m_0 = m_{0}(G)$ such that if $n \geq m_o$ and $n'_{r} \leq n \leq n_{r+1}$, then $cl(G_{n}) = r$.
@@ -209,7 +209,7 @@ $$\lim_{n \to \infty} \P(G \in \G(n,p) \text{ is disconnected}) = 1$$
  
 This can be proven by first showing that for a large $n$ almost all graphs consists of a connected graph having $n-k$ effective vertices and $k$ isolated points, the theorem follows from a counting argument. The complete proof can be found in \cite[Erdös-Rényi, p. 59]{Erdos59}.
  
-\subsection{Locally infinity}
+\subsection{Locally infinite}
 
 The following theorem gives a complete description of the degree distribution; consider $X_{k} = X_{k} (G)$, the random variable that describes the number of vertices of degree $k$ in a graph $G$.
 
@@ -229,7 +229,7 @@ for every fixed $r$.
 
 The hypothesis on $p$ appears when we consider a loose upper bound on the expected degree of $X_ {k}$. If $pn^{2} \to \infty $ then almost every $ G \in \G (n, p) $ consist of independent edges and isolated vertices. The complete argument of this claim among with the proof of the theorem can be found in \cite[Bollobás, p.61]{Bollobas}.
 
-If $k$ is a finite fixed number and $\lim \lambda_{k}(n) = 0$ then a.a.s there are no vertices of finite degree. In the second case there are an infinite number of vertices with degree $k$. In the third case we can describe explicitly the degree distribution, it will concentrated in a finite range around the mean $\lambda_{k}$. 
+If $k$ is a finite fixed number and $\lim \lambda_{k}(n) = 0$ then a.a.s. there are no vertices of finite degree. In the second case there are an infinite number of vertices with degree $k$. In the third case we can describe explicitly the degree distribution, it will concentrated in a finite range around the mean $\lambda_{k}$. 
 
 To ensure the locally infinite property using this theorem, $p = p(n)$ needs to satisfy the first case for any fixed $k$ i.e.
 $$\lambda_{k} = n \binom{n-1}{k} p^{k} (1-p)^{n-k-1} \to 0$$
