@@ -8,25 +8,25 @@
 
 %----------------------------------------------------------------------------------------
 
-Nowadays Scientific Computing is one the most important tools for Science. Computational implementation became crucial when the problem cannot be solved by traditional experimental or theoretical means. There are a number or reasons why this might happen, for example whenever experimentation may be dangerous, to expensive or time-consuming.
+Nowadays Scientific Computing is one the most important tools for Science. It becames crucial when the problem cannot be solved by traditional experimental or theoretical means. There are a number or reasons why this might happen, for example whenever experimentation may be dangerous, to expensive or time-consuming.
 
-Stochastic topology has embraced the methods of scientific computing to provide a better insight of complex phenomena. For theoretical develop it has allowed, for example, to verify if the established conditions in a probabilistic model are sharp enough (\cite{Meshulam13}). 
+Stochastic topology has embraced the methods of scientific computing to provide a better insight of complex phenomena. For theoretical development it has allowed, for example, to verify if the established conditions in a probabilistic model are sharp enough (\cite{Meshulam13}). 
 
-Computational develop mixed with a strong probability background has demonstrated to be efficient and powerful. Algorithms based in random sampling has provided state-of-the-art techniques due to their great degree of flexibility and reliability.
+Computational tools mixed with strong probability background has demonstrated to be powerful and insightful. Algorithms based in random sampling provide state-of-the-art techniques due to their great degree of flexibility and reliability.
 
-The PageRank algorithm, was the first method used by Google to order search results \cite{pageRank}. It outputs a probability distribution used to represent the likelihood that a person randomly clicking on links will arrive at any particular page.
+PageRank algorithm was the first method used by Google to order search results \cite{pageRank}. It outputs a probability distribution used to represent the likelihood that a person randomly clicking on links will arrive at any particular page.
 
 In motion planning, the use of Rapidly-exploring random trees (RRTs) are one of the most successful algorithms \cite{Alcazar15}. Problems in motion planning consist on finding a collision-free path that connects an initial configuration of geometric bodies to a final goal configuration. A RRT is a rooted tree that grows from a starting configuration by using random samples from the search space. 
 
 In Bayesian Inference there is a family of algorithms, known collectively as Markov Chain Monte Carlo (MCMC), that allow us to approximate the posterior distribution as calculated by Bayes' Theorem.
 
-In this chapter we use the outlined probabilistic material to accomplish an efficient implementation of rigidity phenomenon in graphs. This resulted in a computational tool that provide a richer insight of the concept. We describe our results with their technical difficulties and the actions taken to endure them.
+In this chapter we use the outlined probabilistic material to accomplish an efficient implementation of rigidity phenomenon in graphs. This resulted in a computational tool that provides a richer insight of the concept. We describe our results with their technical difficulties and the actions taken to endure them.
 
-All the computational experimentation was develop in \texttt{python}, it provide simple and flexible representations of networks as well as clear and concise expressions of network algorithms. The \texttt{\href{https://networkx.github.io/}{NetworkX}} library allowed to create and modify graphs as objects (dictionaries) and provided more features such as numerical linear algebra and drawing.
+All the computational experimentation was developed in \texttt{python}. We used \texttt{\href{https://networkx.github.io/}{NetworkX}} library to create and modify graphs as objects (dictionaries).
 
 \section{Simulating Erdös-Rényi random graphs}
 
-There is a direct algorithm to obtain a graph in $G(n,p)$, it simulate a $Bernoulli(p)$ r.v. for each of the $\frac{n(n-1)}{2}$ possible edges. Thus, it runs in $O(n^2)$ time. It is possible to do faster algorithms for small values of $p$ that runs in $O(n + m)$ time, where $m$ is the expected number of edges, which equals $\frac{pn(n - 1)}{2}$ \cite{fastER}.
+There is a direct algorithm to obtain a graph in $G(n,p)$, it simulate a $Bernoulli(p)$ r.v. for each of the $\frac{n(n-1)}{2}$ possible edges. Thus, it runs in $O(n^2)$ time. It is possible to execute faster algorithms for small values of $p$ that runs in $O(n + m)$ time, where $m$ is the expected number of edges, which equals to $\frac{pn(n - 1)}{2}$ \cite{fastER}.
 
 In the figure \ref{fig:ErdosRenyi10} appears a set of graphs obtained with such algorithm, fixing $n=10$ an varying the parameter $p$.
 
