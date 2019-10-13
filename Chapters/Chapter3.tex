@@ -16,7 +16,7 @@ All the computational experimentation was developed in \texttt{python}. We used 
 
 \section{Simulating Erdös-Rényi random graphs}
 
-There is a direct algorithm to obtain a graph in $G(n,p)$, it simulates a $Bernoulli(p)$ r.v. for each of the $\frac{n(n-1)}{2}$ possible edges. Thus, it runs in $O(n^2)$ time. It is possible to execute faster algorithms for small values of $p$ that runs in $O(n + m)$ time, where $m$ is the expected number of edges, which equals to $\frac{pn(n - 1)}{2}$ \cite{fastER}.
+There is a direct algorithm to obtain a graph in $G(n,p)$, it simulates a $Bernoulli(p)$ r.v. for each of the $\frac{n(n-1)}{2}$ possible edges. Thus, it runs in $O(n^2)$ time. It is possible to execute faster algorithms for small values of $p$ that runs in $O(n + m)$ time, where $m$ is the expected number of edges, which equals to $\frac{pn(n - 1)}{2}$ \cite[Batagelj, Brandes 05]{fastER}.
 
 In the figure \ref{fig:ErdosRenyi10} appears a set of graphs obtained with such algorithm, fixing $n=10$ an varying the parameter $p$.
 
@@ -110,12 +110,12 @@ Otherwise:\hfill \break
 
 \section{Conclusions}
 
-Stochastic topology has embraced the methods of scientific computing to provide a better insight of complex phenomena. For theoretical means it has allowed, for example, to verify whether the established conditions in a probabilistic model are sharp enough (\cite{Meshulam13}).
+Stochastic topology has embraced the methods of scientific computing to provide a better insight of complex phenomena. For theoretical means it has allowed, for example, to verify whether the established conditions in a probabilistic model are sharp enough (\cite[Aronshtam 13]{Meshulam13}).
 
 Computational tools mixed with strong probability background has demonstrated to be powerful and insightful. Algorithms based in random sampling provide state-of-the-art techniques due to their great degree of flexibility and reliability.
 
-One example of this is the PageRank algorithm, it was the first method used by Google to order search results \cite{pageRank}. It outputs a probability distribution used to represent the likelihood that a person randomly clicking on links will arrive at any particular page.
+One example of this is the PageRank algorithm, it was the first method used by Google to order search results \cite[Page 99]{pageRank}. It outputs a probability distribution used to represent the likelihood that a person randomly clicking on links will arrive at any particular page.
 
-In motion planning, the use of Rapidly-exploring random trees (RRTs) are one of the most successful algorithms \cite{Alcazar15}. Problems in motion planning consist on finding a collision-free path that connects an initial configuration of geometric bodies to a final goal configuration. A RRT is a rooted tree that grows from a starting configuration by using random samples from the search space. 
+In motion planning, the use of Rapidly-exploring random trees (RRTs) are one of the most successful algorithms \cite[Alcazar 15]{Alcazar15}. Problems in motion planning consist on finding a collision-free path that connects an initial configuration of geometric bodies to a final goal configuration. A RRT is a rooted tree that grows from a starting configuration by using random samples from the search space. 
 
 In Bayesian Inference there is a family of algorithms, known collectively as Markov Chain Monte Carlo (MCMC), that allow us to approximate the posterior distribution as calculated by Bayes' Theorem.

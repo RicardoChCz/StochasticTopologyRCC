@@ -6,9 +6,9 @@
 
 \lhead{Appendix A. \emph{The generate algorithm}} % Change X to a consecutive letter; this is for the header on each page - perhaps a shortened title
 
-In this section we describe the algorithm due to \cite[Broder]{Broder89}. Given a not directed graph $G$ with $n$ vertices it produces a maximal tree of $G$ sampled uniformly among all the possibles. For almost every graph the expected executed time of the algorithm is $O(n\cdot log(n) )$ for each tree and O($n^{3}$) in the worst cases. 
+In this section we describe the algorithm due to \cite[Broder 89]{Broder89}. Given a not directed graph $G$ with $n$ vertices it produces a maximal tree of $G$ sampled uniformly among all the possibles. For almost every graph the expected executed time of the algorithm is $O(n\cdot log(n) )$ for each tree and O($n^{3}$) in the worst cases. 
 
-One of the first algorithms published for this problem has execution time $O (n^{5})$. It is based on the fact that the total number of directed trees in a graph can be explicitly calculated through a determinant of $n \times n$ size. The algorithm consider the edges of the graph labeled from $1$ to $m$, each maximal tree is label by the set of its edges. This induces a lexicographic order in the set of trees and the same tree can be find calculation at most $m$ determinants. Further improvements by \cite{CDM88} reduce the number of calculations, thus reducing the execution time to $O(n^3)$ or $O(L(n))$, where $L(n)$ is the execution time of multiplying matrices of size $n\times n$, but the new algorithms turn out to be far more complicated.
+One of the first algorithms published for this problem has execution time $O (n^{5})$. It is based on the fact that the total number of directed trees in a graph can be explicitly calculated through a determinant of $n \times n$ size. The algorithm consider the edges of the graph labeled from $1$ to $m$, each maximal tree is label by the set of its edges. This induces a lexicographic order in the set of trees and the same tree can be find calculation at most $m$ determinants. Further improvements by \cite[Colbourn 89]{CDM88} reduce the number of calculations, thus reducing the execution time to $O(n^3)$ or $O(L(n))$, where $L(n)$ is the execution time of multiplying matrices of size $n\times n$, but the new algorithms turn out to be far more complicated.
 
 For an stochastic approach, consider a particle that moves among vertices in a graph. At each step it moves, choosing uniformly random, from the current vertex to a neighbor of it. This stochastic process is a Markov chain called \textbf{Random Walk}.
 
@@ -29,7 +29,7 @@ For an stochastic approach, consider a particle that moves among vertices in a g
 
 $T$ is a maximal tree because it contains $|V| - 1$ edges; it has an edge for every vertex in $G$ except for $s$, and by construction it does not contains cycles.
 
-The \texttt{Generate} algorithm is based in a simulation of Markov chains in the space of interest. In this case, the Markov chain has a stationary distribution $\pi_{i}=d_{i}/\sum_{j\in V} d_{j}$ where $d_{i}$ is the degree of the vertex $i$. The pounded digraph associated to this chain $G_M =(V,E')$, is obtained by replacing each edge $\{i,j\}\in A$ by two directed edges; $(i,j)$ with weight $1/d_{i}$ and $(j,i)$ with weight $1/d_{j}$. The justification that the algorithm actually provides a method to sample with uniform distribution is summarized in the next three results, their proofs can be found in \cite{Broder89}.
+The \texttt{Generate} algorithm is based in a simulation of Markov chains in the space of interest. In this case, the Markov chain has a stationary distribution $\pi_{i}=d_{i}/\sum_{j\in V} d_{j}$ where $d_{i}$ is the degree of the vertex $i$. The pounded digraph associated to this chain $G_M =(V,E')$, is obtained by replacing each edge $\{i,j\}\in A$ by two directed edges; $(i,j)$ with weight $1/d_{i}$ and $(j,i)$ with weight $1/d_{j}$. The justification that the algorithm actually provides a method to sample with uniform distribution is summarized in the next three results, their proofs can be found in \cite[Broder 89]{Broder89}.
 
 Let $\mathcal{T}_{i}(G_{M})$ be the family of maximal directed trees of $G_{M}$ with root $i$, when the root is not under consideration it will be denoted simply by $\mathcal{T}(G_{M})$.
 
@@ -62,7 +62,7 @@ This algorithm can be implemented using \texttt{Python}. Fixing $G$ as the compl
 	\label{fig:Arboles8}
 \end{figure}
 
-The expected execution time of the algorithm per tree is equal to $\E(C_{s})$. It is known that for the connected graph $\E(C_{v}) = O(n^{3})$, nevertheless in \cite{boundsoncovertime} there is a proof that if the transition matrix of a random walk have the second greater eigenvalue bounded away from 1, then the expected covering time is only $O(n\cdot log(n))$. Almost every graph in the Erdös-Rényi model satisfy this condition when $p > \frac{c\cdot log(n)}{n}$, in particular when $p=\frac{1}{2}$ and for almost every d-regular graphs \cite{secondEigenValue}. 
+The expected execution time of the algorithm per tree is equal to $\E(C_{s})$. It is known that for the connected graph $\E(C_{v}) = O(n^{3})$, nevertheless in \cite[Broder, Andrei 89]{boundsoncovertime} there is a proof that if the transition matrix of a random walk have the second greater eigenvalue bounded away from 1, then the expected covering time is only $O(n\cdot log(n))$. Almost every graph in the Erdös-Rényi model satisfy this condition when $p > \frac{c\cdot log(n)}{n}$, in particular when $p=\frac{1}{2}$ and for almost every d-regular graphs \cite[Friedman 89]{secondEigenValue}. 
 In the figure \ref{fig:tiemposGEN} appear the results of the execution time of the implemented algorithm.
 \begin{figure}[h!]
 	\centering
