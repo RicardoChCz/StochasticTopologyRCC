@@ -53,20 +53,20 @@ $$\P(F_{C} = T) = \frac{\prod_{(i,j)\in T} P_{i,j}}{\sum_{T\in T(G_{M})} \prod_{
 (Proof of the \texttt{Generate} algorithm) Let $M$ be a simple random walk in a connected non-directed graph $G = (V, E)$, staring from a vertex $s$, $G_{M}$ the directed graph associated to $M$ and covering time $C$ for $G$ starting from the stationary distribution, we have $F_{C}$ without considering direction is a maximal tree of $G$ with random uniform distribution among all the maximal possible trees of $G$.
 \end{coro}
 
-This algorithm can be implemented using \texttt{Python}. Fixing $G$ as the complete graph $K_{n}$ it was possible, using the generate algorithm, to sample uniformly from the set of maximal trees with $n$ vertices. In the figure \ref{fig:Arboles8} appear a set of trees obtained with this method, which are drawn using the function \texttt{draw$\_$random} of the \texttt{NetworX} library.
+This algorithm can be implemented using \texttt{Python}. Fixing $G$ as the complete graph $K_{n}$ it was possible, using the generate algorithm, to sample uniformly from the set of maximal trees with $n$ vertices. In the figure \ref{fig:RandromTrees} appear a set of trees obtained with this method, which are drawn using the function \texttt{draw$\_$random} of the \texttt{NetworX} library.
 
 \begin{figure}[h!]
 	\centering
-	\includegraphics[scale=0.8]{Python/Figures/Arboles8.png}
-	\caption{Maximal tree chosen randomly with uniform distribution among all the possible ones in complete graph (8) of vertices.}	
-	\label{fig:Arboles8}
+	\includegraphics[scale=0.8]{Python/Figures/Tree-sample10.png}
+	\caption{Maximal tree chosen randomly with uniform distribution among all the possible ones in complete graph (10) of vertices.}
+	\label{fig:RandromTrees}
 \end{figure}
 
 The expected execution time of the algorithm per tree is equal to $\E(C_{s})$. It is known that for the connected graph $\E(C_{v}) = O(n^{3})$, nevertheless in \cite[Broder, Andrei 89]{boundsoncovertime} there is a proof that if the transition matrix of a random walk have the second greater eigenvalue bounded away from 1, then the expected covering time is only $O(n\cdot log(n))$. Almost every graph in the Erdös-Rényi model satisfy this condition when $p > \frac{c\cdot log(n)}{n}$, in particular when $p=\frac{1}{2}$ and for almost every d-regular graphs \cite[Friedman 89]{secondEigenValue}. 
 In the figure \ref{fig:tiemposGEN} appear the results of the execution time of the implemented algorithm.
 \begin{figure}[h!]
 	\centering
-	\includegraphics[scale=0.8]{Python/Figures/Time-generate.png}
+	\includegraphics[scale=0.8]{Python/Figures/Time-execution-generate-algorithm.png}
 	\caption{ Execution time of the algorithm in seconds varying the size of the tree. It appears the normal and the logarithmic scale}
 	\label{fig:tiemposGEN}
 \end{figure}
