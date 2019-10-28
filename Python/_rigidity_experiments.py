@@ -266,7 +266,6 @@ def individual_experiments(n,p,event):
             bundle[i] = bundle_last(n,p,i)
             scatter_color = '#FF851B'
             line_color = '#001f3f'
-                    
         elif event == 2:
             density[i] = probability_anyone(n,p,i)
             scatter_color = '#FF851B'
@@ -277,7 +276,7 @@ def individual_experiments(n,p,event):
             scatter_color = '#eb7ab1'
             bundle[i] = bundle_expansion(n,p,i)
             line_color = '#85144b'
-                
+
     plt.plot(I, density,'o',markersize=5,alpha=0.8,
                  color=scatter_color, label="Experimentation")
     plt.plot(I, bundle,linewidth=1.5,linestyle='-',
@@ -285,7 +284,7 @@ def individual_experiments(n,p,event):
 
     plt.legend(bbox_to_anchor=(1.05, 1), loc='upper left', 
                  borderaxespad=0.)
-            
+
     if event == 1:
         plt.savefig('Figures/Single-uniquely-determinated-fixed-vertex.png', bbox_inches="tight")
     elif event == 2:

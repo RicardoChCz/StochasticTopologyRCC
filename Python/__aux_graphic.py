@@ -45,3 +45,14 @@ def visual_rigid_exp(G,S,filenames,i):
     filenames.append('Figures/rigid_expansion_gif/rigid_exp_'+str(i)+'.png')
     plt.show()
 
+def color_template_3():
+    return(["#0d3c55","#f16c20","#1395ba"])
+
+def color_template_6():
+    return(["#0d3c55","#1395ba","#a2b86c","#ebc844","#f16c20","#c02e1d"])
+
+def color_template_12():
+    return(["#0d3c55","#0f5b78","#117899","#1395ba","#5ca793","#a2b86c","#ebc844","#ecaa38","#ef8b2c","#f16c20","#d94e1f","#c02e1d"])
+
+def plot_lines_styles():
+    return(["-","--","-.",":"])
