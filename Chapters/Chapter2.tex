@@ -8,13 +8,13 @@
 
 %----------------------------------------------------------------------------------------
 
-The use of the probabilistic method in discrete mathematics has become a prominent idea in the area in recent times. It provide existence proofs where objects have certain desirable properties and it is not always easy to construct explicit examples. This has been just the beginning of the use of probabilistic tools in a deterministic context.
+The use of the probabilistic method in discrete mathematics has become a prominent idea in the area in recent times. It provides existence proofs where objects have certain desirable properties and the construction of explicit examples is challenging. This has been just the beginning of the use of probabilistic tools within a deterministic context.
 
 Complex topological spaces arise quite natural in a lot of scientific contexts. Probability theory implement different approaches to model those spaces; even in complex configurations, it can be possible by doing approximations, to study topological invariants. In this sense, stochastic topology can be thought as a tool for topology in the same sense as statistical mechanics is used to study a macroscopic physical system when the classical mechanics finds these systems very complicated to solve. 
 
-Stochastic topology finds its early motivation in applied problems. Nevertheless, in recent articles it has been used to provide a deeper insight for theoretical questions. For example, with probabilistic analogs of very classical topology conjectures, like Whitehead conjecture \cite{Costa15}.
+Stochastic topology finds its early motivation in applied problems. Nevertheless, in recent articles it has been used to provide a deeper insight for theoretical questions. For example, with probabilistic analogs of very classical topology conjectures, like Whitehead's Asphericity Conjecture \cite[Costa, Faber 15]{Costa15}.
 
-Probability theory can help us understand the ubiquity of certain mathematical phenomena. For example, \textit{many} simplicial complexes and posets which arise from combinatorial constructions are homotopy equivalent to a wedge of spheres, or that hiperbolicity is \textit{common} in random groups. With Probability theory we can give formal meaning to these expressions.
+Probability theory can help us to understand the ubiquity of certain mathematical phenomena. For example, \textit{many} simplicial complexes and posets which arise from combinatorial constructions are homotopy equivalent to a wedge of spheres, or that hiperbolicity is \textit{common} in random groups. With Probability theory we can give formal meaning to these expressions.
 
 In this chapter we review rigid expansions in simple probabilistic models. Afterwards, we analyze the feasibility of modeling the curve graph using these proposals.
 
@@ -25,7 +25,7 @@ Familiarity with basic concepts in probability theory such as probability spaces
 \subsection{The Radó graph}
 Let $0 < p < 1$ be fixed, $\G(\N, p)$ is the probability space which consists of all graphs with vertex set $\N$, whose edges are chosen independently and with probability $p$. In other words, a random graph $G \in \G(\N,p)$ is a collection $(X_{ij}) = \{ X_{ij} : 1 \leq i < j\}$ of independent $Bernoulli(p)$ r.v., where a pair $ij$ is an edge of $G$ if and only if $X_{ij} = 1$.
 
-Erdös and Rényi proved in \cite[Erdös, Rényi]{RadoUnique}, that every infinite random graph is isomorphic to the \textbf{Radó graph}. A construction of this graph can be done using binary numbers; identify the vertices of the graph with the natural numbers and then every edge appears between vertices $x$ and $y$ in the graph (assuming $x < y$) whenever the $x$-th bit of the binary representation of $y$ is nonzero. This means, for example, that all odd-numbered vertices will be neighbors of vertex $0$, and that the larger neighbors of vertex $1$ are all vertices with numbers congruent to $2$ or $3$ mod $4$.
+Erdös and Rényi proved in \cite[Erdös, Rényi 63]{RadoUnique}, that every infinite random graph is isomorphic to the \textbf{Radó graph}. A construction of this graph can be done using binary numbers; identify the vertices of the graph with the natural numbers and then every edge appears between vertices $x$ and $y$ in the graph (assuming $x < y$) whenever the $x$-th bit of the binary representation of $y$ is nonzero. This means, for example, that all odd-numbered vertices will be neighbors of vertex $0$, and that the larger neighbors of vertex $1$ are all vertices with numbers congruent to $2$ or $3$ mod $4$.
 
 \begin{figure}[h!]
 	\centering
@@ -34,7 +34,7 @@ Erdös and Rényi proved in \cite[Erdös, Rényi]{RadoUnique}, that every infini
 \end{figure}
 
 \subsection{Erdös-Rényi model}
-Erdös-Rényi model is the finite version of the Radó graph. In this model the parameter $p$ is usually taken as a function of $n$. This provide, unlike the past model, a variety of graphs when $n$ tends to infinity.
+The Erdös-Rényi model for random graphs is the finite version of the Radó graph. In this model the parameter $p$ is usually taken as a function of $n$. This provides, unlike the past model, a variety of graphs when $n$ tends to infinity.
 
 \begin{defini}
 Denote by $\G(n,p)$ to the probability space formed by all the graphs of $n$ vertices and probability measure 
@@ -164,7 +164,7 @@ This experiment yields a random variable which depends on $n, p$ and $k$. Fixing
 
 \section{Radó graph as a model for the curve graph}
 
-In chapter one we outlined the properties of the curve graph associated to any given surface. Summarizing the results, the exposed models should, at least, guarantee the following properties:
+In chapter one, we outlined the properties of the curve graph associated to any given surface. Summarizing the results, the exposed models should, at least, guarantee the following properties:
 
 \begin{enumerate}
 \item Countably infinite number of vertices
@@ -174,13 +174,13 @@ In chapter one we outlined the properties of the curve graph associated to any g
 \item Infinite diameter
 \end{enumerate}
 
-The Radó graph satisfy that every finite or countably infinite graph is an induced subgraph of it \cite{theRandomGraph}. The restriction in the clique number of $C(S)$ implies that, if $S$ is a surface of finite genus, is not possible that the Radó graph is embedded into $C(S)$. Even more, a result by Bering and Gaster \cite{beringGaster} state that the converse is also valid.
+The Radó graph satisfy that every finite or countably infinite graph is an induced subgraph of it \cite[Cameron 97]{theRandomGraph}. The restriction in the clique number of $C(S)$ implies that, if $S$ is a surface of finite genus, is not possible that the Radó graph is embedded into $C(S)$. Even more, a result by Bering and Gaster \cite[Bering, Gaster 17]{beringGaster} state that the converse is also valid.
 
 \begin{theorem}
 The random graph embeds into the curve graph $C(S)$ of a surface $S$ if and only if $S$ has infinite genus.
 \end{theorem}
 
-Therefore, if we want to study the curve graph of a \textbf{surface of finite genus} using the Radó graph, we have to think it as a subgraph of it. A simple but naive approach to do it is to take a random subset of vertices of a graph $G\in \G(\N, p)$ and then consider the vertex induced subgraph. It turns out that for a.e. $G\in \G(\N, p)$ the sequence $cl(G_n)$ is almost entirely determined.
+Therefore, if we want to study the curve graph of a \textbf{surface of finite genus} using the Radó graph, we have to think it as a subgraph of it. A simple approach to do it is to take a random subset of vertices of a graph $G\in \G(\N, p)$ and then consider the vertex induced subgraph. It turns out that for a.e. $G\in \G(\N, p)$ the sequence $cl(G_n)$ is almost entirely determined.
 
 \begin{theorem}
 For a.e. $G \in \G(\N,p)$ there is a constant $m_0 = m_{0}(G)$ such that if $n \geq m_o$ and $n'_{r} \leq n \leq n_{r+1}$, then $cl(G_{n}) = r$.
@@ -190,7 +190,7 @@ The theorem states that if $r$ is fixed and finite, the number of vertices shoul
 
 Notice that the \textbf{clique number property is not generic} at all, unlike the others listed above, the clique number is the only property which actually depends on the genus of the surface.
 
-Prohibited configurations appear often in the literature, for example in \cite{Alcazar15} they want to ensure that a random graph does not have cycles (in this case it is implied that the clique number is 2). A discrete MCMC algorithm was used to sample uniformly random trees of size $n$, with the \texttt{generate algorithm}. It produces a maximal tree of any not directed graph with $n$ vertices uniformly among all the possible ones. In the appendix we summarize the results of this method, for a deeper analysis look at \cite{Broder89}.
+Prohibited configurations appear often in the literature, for example in \cite[Alcazar 15]{Alcazar15} they want to ensure that a random graph does not have cycles (in this case it is implied that the clique number is 2). A discrete MCMC algorithm was used to sample uniformly random trees of size $n$, with the \texttt{generate algorithm}. It produces a maximal tree of any not directed graph with $n$ vertices uniformly among all the possible ones. In the appendix we summarize the results of this method, for a deeper analysis look at \cite[Broder 89]{Broder89}.
 
 Even if we can provide an analog of the generate algorithm to ensure a fixed clique number, the idea is to study rigid expansions with a \textbf{simple probabilistic approach}. In this spirit, it remains to examine the plausibility of the Erdös-Rényi model and do an asymptotic analysis.
 
@@ -207,9 +207,9 @@ $$\lim_{n \to \infty} \P(G \in \G(n,p) \text{ is disconnected}) = 1$$
 \end{itemize}
 \end{theorem}
  
-This can be proven by first showing that for a large $n$ almost all graphs consists of a connected graph having $n-k$ effective vertices and $k$ isolated points, the theorem follows from a counting argument. The complete proof can be found in \cite[Erdös-Rényi, p. 59]{Erdos59}.
+This can be proven by first showing that for a large $n$ almost all graphs consists of a connected graph having $n-k$ effective vertices and $k$ isolated points, the theorem follows from a counting argument. The complete proof can be found in \cite[Erdös-Rényi, p.~59]{Erdos59}.
  
-\subsection{Locally infinity}
+\subsection{Locally infinite}
 
 The following theorem gives a complete description of the degree distribution; consider $X_{k} = X_{k} (G)$, the random variable that describes the number of vertices of degree $k$ in a graph $G$.
 
@@ -227,9 +227,9 @@ for every fixed $r$.
 \end{itemize}
 \end{theorem}
 
-The hypothesis on $p$ appears when we consider a loose upper bound on the expected degree of $X_ {k}$. If $pn^{2} \to \infty $ then almost every $ G \in \G (n, p) $ consist of independent edges and isolated vertices. The complete argument of this claim among with the proof of the theorem can be found in \cite[Bollobás, p.61]{Bollobas}.
+The hypothesis on $p$ appears when we consider a loose upper bound on the expected degree of $X_ {k}$. If $pn^{2} \to \infty $ then almost every $ G \in \G (n, p) $ consist of independent edges and isolated vertices. The complete argument of this claim among with the proof of the theorem can be found in \cite[Bollobás, p.~61]{Bollobas}.
 
-If $k$ is a finite fixed number and $\lim \lambda_{k}(n) = 0$ then a.a.s there are no vertices of finite degree. In the second case there are an infinite number of vertices with degree $k$. In the third case we can describe explicitly the degree distribution, it will concentrated in a finite range around the mean $\lambda_{k}$. 
+If $k$ is a finite fixed number and $\lim \lambda_{k}(n) = 0$ then a.a.s. there are no vertices of finite degree. In the second case there are an infinite number of vertices with degree $k$. In the third case we can describe explicitly the degree distribution, it will concentrated in a finite range around the mean $\lambda_{k}$. 
 
 To ensure the locally infinite property using this theorem, $p = p(n)$ needs to satisfy the first case for any fixed $k$ i.e.
 $$\lambda_{k} = n \binom{n-1}{k} p^{k} (1-p)^{n-k-1} \to 0$$
@@ -281,7 +281,7 @@ $$\binom{n}{r} p^{\binom{r}{2}} \to \infty \text{ and } \binom{n}{r+1} p^{\binom
 Then a.e $G\in\G(n,p)$ has clique number $r$.
 \end{theorem}
 
-The second condition on $p$ implies that almost no $G\in\G(n,p)$ contains a $K^{r+1}$ so $cl(G_{p})\leq r$ asymptotically almost surely. The first condition on $p$ is simply that $\E (X_{r}) \to  \infty$, where $X_r$ denote the random variable which counts the number of $r-$cliques in a graph $G$. This theorem can be proven using the calculations for $\E(X_{r})$ and a first moment argument. A full proof can be find in \cite[Bollobás, p.290]{Bollobas}.
+The second condition on $p$ implies that almost no $G\in\G(n,p)$ contains a $K^{r+1}$ so $cl(G_{p})\leq r$ asymptotically almost surely. The first condition on $p$ is simply that $\E (X_{r}) \to  \infty$, where $X_r$ denote the random variable which counts the number of $r-$cliques in a graph $G$. This theorem can be proven using the calculations for $\E(X_{r})$ and a first moment argument. A full proof can be find in \cite[Bollobás, p.~290]{Bollobas}.
 
 Notice that in the hypothesis of the theorem $r$ is not fixed. Due that $r=3g-3+m$ this implies that the curve graph could corresponds to a surface whether of infinite diameter or with an infinite number of punctures
 
@@ -301,7 +301,7 @@ $$\displaystyle\lim_{n\to \infty } E_{r} =  c_{r}\cdot \displaystyle\lim_{n\to \
 
 The diameter of a graph $G$, denoted by $diam(G)$, is the maximal distance between pairs of vertices of $G$.
 
-For surfaces of finite genus we should had ensure infinite diameter. There are a number of theorems that state the conditions under this can be done \cite[Bollobás, p.259]{Bollobas}. Nevertheless, by the past results we must guarantee that the diameter is equal to 2, so the model match the properties of curve graphs for infinite genus surfaces.
+For surfaces of finite genus we should had ensure infinite diameter. There are a number of theorems that state the conditions under this can be done \cite[Bollobás, p.~259]{Bollobas}. Nevertheless, by the past results we must guarantee that the diameter is equal to 2, so the model match the properties of curve graphs for infinite genus surfaces.
 
 \begin{theorem}
 If $p$ is taken fixed $G(n,p)$ has diameter 2 with high probability 
@@ -321,7 +321,7 @@ $$\frac{(pn)^{d-1}}{n} \to 0 \text{ and } \frac{(pn)^{d}}{n} \to \infty $$
 then, with probability approaching 1 as $n$ goes to infinity $G\in\G(n,p)$ has diameter $d$
 \end{theorem}
 
-The proof of this theorem is due to Klee and Larman and can be find in \cite{diameters}. For $d=2$ this mean that $p(n)= \frac{f(n)}{n^{1/2}}$ where $f(n)\in o(n^{1/2})$ and $f(n)\to \infty$.
+The proof of this theorem is due to Klee and Larman and can be find in \cite[Klee, Larman 81]{diameters}. For $d=2$ this mean that $p(n)= \frac{f(n)}{n^{1/2}}$ where $f(n)\in o(n^{1/2})$ and $f(n)\to \infty$.
 
 Coupling with the expression for $p(n)$ in \ref{conectivityRCC}, this lead us to $a<\frac{1}{2}$
 

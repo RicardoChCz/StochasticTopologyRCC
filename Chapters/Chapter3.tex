@@ -8,25 +8,15 @@
 
 %----------------------------------------------------------------------------------------
 
-Nowadays Scientific Computing is one the most important tools for Science. It becames crucial when the problem cannot be solved by traditional experimental or theoretical means. There are a number or reasons why this might happen, for example whenever experimentation may be dangerous, to expensive or time-consuming.
+Nowadays Scientific Computing is one the most important tools for Science. It became crucial when the problem cannot be solved by traditional experimental or theoretical means. There are a number or reasons why this might happen, for example whenever experimentation may be dangerous, to expensive or time-consuming.
 
-Stochastic topology has embraced the methods of scientific computing to provide a better insight of complex phenomena. For theoretical development it has allowed, for example, to verify if the established conditions in a probabilistic model are sharp enough (\cite{Meshulam13}). 
-
-Computational tools mixed with strong probability background has demonstrated to be powerful and insightful. Algorithms based in random sampling provide state-of-the-art techniques due to their great degree of flexibility and reliability.
-
-PageRank algorithm was the first method used by Google to order search results \cite{pageRank}. It outputs a probability distribution used to represent the likelihood that a person randomly clicking on links will arrive at any particular page.
-
-In motion planning, the use of Rapidly-exploring random trees (RRTs) are one of the most successful algorithms \cite{Alcazar15}. Problems in motion planning consist on finding a collision-free path that connects an initial configuration of geometric bodies to a final goal configuration. A RRT is a rooted tree that grows from a starting configuration by using random samples from the search space. 
-
-In Bayesian Inference there is a family of algorithms, known collectively as Markov Chain Monte Carlo (MCMC), that allow us to approximate the posterior distribution as calculated by Bayes' Theorem.
-
-In this chapter we use the outlined probabilistic material to accomplish an efficient implementation of rigidity phenomenon in graphs. This resulted in a computational tool that provides a richer insight of the concept. We describe our results with their technical difficulties and the actions taken to endure them.
+In this chapter we use the outlined probabilistic material to accomplish an efficient implementation of rigidity phenomenon in graphs. We describe our results with their technical difficulties and the actions taken to endure them.
 
 All the computational experimentation was developed in \texttt{python}. We used \texttt{\href{https://networkx.github.io/}{NetworkX}} library to create and modify graphs as objects (dictionaries).
 
 \section{Simulating Erdös-Rényi random graphs}
 
-There is a direct algorithm to obtain a graph in $G(n,p)$, it simulate a $Bernoulli(p)$ r.v. for each of the $\frac{n(n-1)}{2}$ possible edges. Thus, it runs in $O(n^2)$ time. It is possible to execute faster algorithms for small values of $p$ that runs in $O(n + m)$ time, where $m$ is the expected number of edges, which equals to $\frac{pn(n - 1)}{2}$ \cite{fastER}.
+There is a direct algorithm to obtain a graph in $G(n,p)$, it simulates a $Bernoulli(p)$ r.v. for each of the $\frac{n(n-1)}{2}$ possible edges. Thus, it runs in $O(n^2)$ time. It is possible to execute faster algorithms for small values of $p$ that runs in $O(n + m)$ time, where $m$ is the expected number of edges, which equals to $\frac{pn(n - 1)}{2}$ \cite[Batagelj, Brandes 05]{fastER}.
 
 In the figure \ref{fig:ErdosRenyi10} appears a set of graphs obtained with such algorithm, fixing $n=10$ an varying the parameter $p$.
 
@@ -40,13 +30,13 @@ In the figure \ref{fig:ErdosRenyi10} appears a set of graphs obtained with such 
 Figure \ref{fig:tiemposER} show the execution times varying $n$
 \begin{figure}[h!]
 	\centering
-	\includegraphics[scale=0.8]{Python/Figures/Times-ER.png}
+	\includegraphics[scale=0.7]{Python/Figures/Times-ER.png}
 	\caption{Execution times varying $n$. Both normal and logarithmic scale appear in the figure}
 	\label{fig:tiemposER}
 \end{figure}
 
-\section{Rigid expansions algorithm}
-A priory, the algorithm to determine a rigid expansion is supposed to be executed in a large amount of time. As the definition let us see, it depends on the size of $ G $, and it depends exponentially on the size of $A$; it must check among all the possible subsets of $A$, that is $2^{m}$ verifications, where $|A|=m$. Thus, it is important to do some optimization to the algorithms and evaluate when this have more impact in the expected execution time according to the parameters taken.
+\section{Rigid expansions algorithms}
+A priory, the algorithm to determine a rigid expansion is supposed to be executed in a large amount of time. As the definition let us see, it depends on the size of $G$, and it depends exponentially on the size of $A$; it must check among all the possible subsets of $A$, that is $2^{m}$ verifications, where $|A|=m$. Thus, it is important to do some optimization to the algorithms and evaluate when this have more impact in the expected execution time according to the parameters taken.
 
 The following is the straightforward algorithm for rigid expansions.
 
@@ -70,15 +60,13 @@ The following is the straightforward algorithm for rigid expansions.
 \end{enumerate}
 \end{cajita}
 
-In step two the iterations were indexed by \texttt{generators}. These are iterators in \texttt{python} were you can only iterate over once, so they do not store all the values in memory.
-
-We proposed the following optimizations:
+To optimize memory in step two the iterations were indexed by \texttt{generators}. For time-execution optimizations, we implemented the following:
 
 \begin{enumerate}
 \item \textbf{Consideration of isolated vertices and leaves.} None of the isolated vertices in $A$ have any influence in rigid expansions, so they should not be consider. Also, whenever $A$ contains a leave is convenient to ignore them; the unique neighbor of a leave, which we will call \textit{petioles} should be automatically added in the first expansion an then it does not contribute in uniquely determine new vertices. This means that the input should be replace with:
 $$A' = A - \{v: deg(v)\leq 1 \} \cup \{u: \exists x, N(x)=\{u\}\} $$
 and add them again by the end of the expansions.
-\item \textbf{Relative size of $A$.} In Step 2, if $A$ big enough is faster to check if a vertex outside of $A$ can be uniquely determinate by a subset of $A$. This can reduce dramatically the execution time when $p$ is small; it reduce the size of revisions by taking only the \textit{effective} part of $A$, this is convenient to do whenever
+\item \textbf{Relative size of $A$.} In Step 2, if $A$ is big enough is faster to check if a vertex outside of $A$ can be uniquely determinate by a subset of $A$. This can reduce dramatically the execution time when $p$ is small; it reduce the size of revisions by taking only the \textit{effective} part of $A$, this is convenient to do whenever
 $$k\cdot log(2) > log(n-k) + (kp)\cdot log(2)$$
 were $k$ is the size of $A$
 
@@ -118,12 +106,16 @@ Otherwise:\hfill \break
 \end{enumerate}
 \end{cajita}
 
+\section{Time execution comparison}
+
 \section{Conclusions}
 
-%Conclusiones sobre tu experimentación computacional.
+Stochastic topology has embraced the methods of scientific computing to provide a better insight of complex phenomena. For theoretical means it has allowed, for example, to verify whether the established conditions in a probabilistic model are sharp enough (\cite[Aronshtam 13]{Meshulam13}).
 
+Computational tools mixed with strong probability background has demonstrated to be powerful and insightful. Algorithms based in random sampling provide state-of-the-art techniques due to their great degree of flexibility and reliability.
 
+One example of this is the PageRank algorithm, it was the first method used by Google to order search results \cite[Page 99]{pageRank}. It outputs a probability distribution used to represent the likelihood that a person randomly clicking on links will arrive at any particular page.
 
+In motion planning, the use of Rapidly-exploring random trees (RRTs) are one of the most successful algorithms \cite[Alcazar 15]{Alcazar15}. Problems in motion planning consist on finding a collision-free path that connects an initial configuration of geometric bodies to a final goal configuration. A RRT is a rooted tree that grows from a starting configuration by using random samples from the search space. 
 
-
-
+In Bayesian Inference there is a family of algorithms, known collectively as Markov Chain Monte Carlo (MCMC), that allow us to approximate the posterior distribution as calculated by Bayes' Theorem.
