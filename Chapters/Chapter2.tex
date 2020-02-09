@@ -10,22 +10,22 @@
 
 The use of the probabilistic method in discrete mathematics has become a prominent idea in the area in recent times. It provides existence proofs where objects have certain desirable properties and the construction of explicit examples is challenging. This has been just the beginning of the use of probabilistic tools within a deterministic context.
 
-Complex topological spaces arise quite natural in a lot of scientific contexts. Probability theory implement different approaches to model those spaces; even in complex configurations, it can be possible by doing approximations, to study topological invariants. In this sense, stochastic topology can be thought as a tool for topology in the same sense as statistical mechanics is used to study a macroscopic physical system when the classical mechanics finds these systems very complicated to solve. 
+Complex topological spaces arise quite natural in a lot of scientific contexts. Probability theory implements different approaches to model those spaces; even in complex configurations, it can be possible by doing approximations, to study topological invariants. In this sense, stochastic topology can be thought as a tool for topology in the same sense as statistical mechanics is used to study a macroscopic physical system when the classical mechanics finds these systems very complicated to solve. 
 
 Stochastic topology finds its early motivation in applied problems. Nevertheless, in recent articles it has been used to provide a deeper insight for theoretical questions. For example, with probabilistic analogs of very classical topology conjectures, like Whitehead's Asphericity Conjecture \cite[Costa, Faber 15]{Costa15}.
 
-Probability theory can help us to understand the ubiquity of certain mathematical phenomena. For example, \textit{many} simplicial complexes and posets which arise from combinatorial constructions are homotopy equivalent to a wedge of spheres, or that hiperbolicity is \textit{common} in random groups. With Probability theory we can give formal meaning to these expressions.
+Probability theory can help us understand the ubiquity of certain mathematical phenomena. For example, \textit{many} simplicial complexes and posets which arise from combinatorial constructions are homotopy equivalent to a wedge of spheres, or that hiperbolicity is \textit{common} in random groups. With Probability theory we can give formal meaning to these expressions.
 
 In this chapter we review rigid expansions in simple probabilistic models. Afterwards, we analyze the feasibility of modeling the curve graph using these proposals.
 
-Familiarity with basic concepts in probability theory such as probability spaces, random variables, and basic theorems will be assumed.
+Familiarity with basic concepts in probability theory such as probability spaces, random variables, and basic theorems are assumed.
 
 \section{Models for random graphs}
 
 \subsection{The Radó graph}
-Let $0 < p < 1$ be fixed, $\G(\N, p)$ is the probability space which consists of all graphs with vertex set $\N$, whose edges are chosen independently and with probability $p$. In other words, a random graph $G \in \G(\N,p)$ is a collection $(X_{ij}) = \{ X_{ij} : 1 \leq i < j\}$ of independent $Bernoulli(p)$ r.v., where a pair $ij$ is an edge of $G$ if and only if $X_{ij} = 1$.
+Let $0 < p < 1$ be fixed, $\G(\N, p)$ is the probability space which consists of all graphs with vertex set $\N$, whose edges are chosen independently with probability $p$. In other words, a random graph $G \in \G(\N,p)$ is a collection $(X_{ij}) = \{ X_{ij} : 1 \leq i < j\}$ of independent $Bernoulli(p)$ r.v., where a pair $ij$ is an edge of $G$ if and only if $X_{ij} = 1$.
 
-Erdös and Rényi proved in \cite[Erdös, Rényi 63]{RadoUnique}, that every infinite random graph is isomorphic to the \textbf{Radó graph}. A construction of this graph can be done using binary numbers; identify the vertices of the graph with the natural numbers and then every edge appears between vertices $x$ and $y$ in the graph (assuming $x < y$) whenever the $x$-th bit of the binary representation of $y$ is nonzero. This means, for example, that all odd-numbered vertices will be neighbors of vertex $0$, and that the larger neighbors of vertex $1$ are all vertices with numbers congruent to $2$ or $3$ mod $4$.
+Erdös and Rényi proved in \cite[Erdös, Rényi 63]{RadoUnique}, that every countably infinite random graph is isomorphic to the \textbf{Radó graph}. A construction of this graph can be done using binary numbers; identify the vertices of the graph with the natural numbers and then every edge appears between vertices $x$ and $y$ in the graph (assuming $x < y$) whenever the $x$-th bit of the binary representation of $y$ is nonzero. This means, for example, that all odd-numbered vertices will be neighbors of vertex $0$, and that the larger neighbors of vertex $1$ are all vertices with numbers congruent to $2$ or $3$ mod $4$.
 
 \begin{figure}[h!]
 	\centering
@@ -60,12 +60,12 @@ The degree distribution can be helpful to do optimizations in the rigid expansio
  We will focus in the rigidity calculations for the finite case. Then, we will analyze when $n$ tends to infinite. For this, we need the calculations of the probability that the following events occur.
 
 \begin{enumerate}
-\item A vertex $v$ is uniquely determined by $A_{m}$, a subset of vertices of size $m$
-\item $A_k$ generate a rigid expansion
-\item $A_k$ generate a rigid expansion with $s$ new elements
+\item Given $v$ a vertex and $A_{m}$ a subset of vertices of size $m$, $v=\langle A_{m}\rangle$. Let's call $E_{m}$ to this event.
+\item $A_k$ generates a rigid expansion.
+\item $A_k$ generates a rigid expansion with $s$ new elements.
 \end{enumerate}
 
-For the calculations concerning the first event, take a look to following picture
+For the calculations concerning the first event, take a look to following figure
 
 \begin{figure}[h!]
 	\centering
@@ -82,13 +82,13 @@ Using the \texttt{networkx} library in \texttt{python} we reproduce the followin
 \begin{enumerate}
 \item Generate an Erdös-Rényi graph $G\in \G(n,p)$ with labeled vertices.
 \item Excluding the $n$-th vertex, take a random subset of vertices of size $m$.
-\item Verify if this random set uniquely determine the $n$-th vertex.
+\item Verify if this subset uniquely determine the $n$-th vertex.
 \end{enumerate}
 \end{cajita}
 
-In the next chapter we explain how to generate random graphs for the first step of the experiment. To simplify the process we took, without loosing generality, the last vertex as a particular element of the experiment. When $m=n$ there is no need to do the experiment.
+In the next chapter we explain how to generate random graphs for the first step of the experiment. To simplify the process we took, without loosing generality, the last vertex as a particular element of the experiment.
 
-Fixing $n$ and $p$ we computed the empiric probability for each possible value of $m$.
+Fixing different values for $n$ and $p$ is possible to compute the empiric probability for each possible value of $m$.
 
 \begin{figure}[h!]\label{figureExp1}
 	\centering
@@ -100,7 +100,7 @@ For these estimations we calculated the empiric probability by repeating this ex
 
 Notice that there are certain values of $m$ more \textit{effective} than others, in the sense that, depending on the parameters of the model, is more likely that a subset of certain size uniquely determine a vertex. This can be used, as described in the next chapter, to do optimizations in the simulations.
 
-In the following table appear calculations of the supremum of absolute differences between hypothesized and empirical probabilities, the supremum being taken over all $m$, with $0<m<n$.
+In the following table appear the supremum of absolute differences between hypothesized and empirical probability $\forall m \in \{1,2, \dots n\}$ for the different values of $n$ and $p$.
 
 \vspace{0.3cm} 
 \input{Python/Txt/Uniquely-determinated-fixed-vertex-table-errors.txt}
@@ -121,7 +121,7 @@ Just as before, we reproduce the following experiment:
 \end{enumerate}
 \end{cajita}
 
-Notice that the third step is a critical point in this experiment; we must verify among \textbf{all the possible subsets} of $A_{k}$. In the next chapter we explain the optimizations that needed to be done to perform this experiment.
+Notice that the third step is a critical point of the experiment; we must verify among \textbf{all the possible subsets} of $A_{k}$. In the next chapter we explain the optimizations that needed to be done.
 
 Again, we repeated this experiment 500 times and calculated the empiric probability that a random set generates a rigid expansion.
 
@@ -131,7 +131,7 @@ Again, we repeated this experiment 500 times and calculated the empiric probabil
 	\caption{Theoretical and empirical probabilities of expanding $A_{k}$. For different values of $n$ and $p$ varying among all the possible values of $k$}
 \end{figure}
 
-In the following table appear calculations of the supremum of absolute differences between hypothesized and empirical probabilities, the supremum being taken over all $k$, with $0<k<n$.
+In the following table appear the supremum of absolute differences between hypothesized and empirical probabilities $\forall k \in \{1,2, \dots n\}$ for the different values of $n$ and $p$.
 
 \vspace{0.3cm}
 \input{Python/Txt/Uniquely-determinated-fixed-vertex-table-errors.txt}
@@ -148,7 +148,7 @@ This probability calculations are more difficult to obtain. To start understandi
 Let $n,p,k$ be fixed.
 \begin{enumerate}
 \item Generate an Erdös-Rényi graph $G\in \G(n,p)$.
-\item Take a random set of vertices $A_{k}$.
+\item Take $A_{k}$ a random set of $k$ vertices.
 \item Produce the first rigid expansion from the graph spanned by $A_{k}$
 \item Return the size of the expanded subgraph
 \end{enumerate}
