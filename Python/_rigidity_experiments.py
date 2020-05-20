@@ -307,13 +307,13 @@ if __name__ == "__main__":
     n,p=15,0.5
     print("EMPIRICAL VS ESTIMATED PROBABILITIES. n="+ str(n)+ " , p=" + str(p))
     print("Event 1. Prob. of a fixed vertex being uniquely det.")
-    #individual_experiments(15,0.5,event=1)
+    individual_experiments(15,0.5,event=1)
 
     print("Event 2. Prob. of any vertex being uniquely det.")
-    #individual_experiments(15,0.5,event=2)
+    individual_experiments(15,0.5,event=2)
     
     print("Event 3. Prob. that a subset generates a rigid expansion.")
-    #individual_experiments(15,0.5,event=3)
+    individual_experiments(15,0.5,event=3)
 
     #------------------------------------------------------------------------
     N,P=[8,15,20],[0.1,0.5,0.75]

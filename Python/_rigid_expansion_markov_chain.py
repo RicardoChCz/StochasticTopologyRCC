@@ -146,8 +146,6 @@ if __name__ == "__main__":
     plt.savefig('Figures/Transition-matrix-secuence-of-rigid-expansions.png')
     plt.show()
 
-    
-    
     #3D plotting
     fig = plt.figure(figsize=(6, 4), dpi=100)
     ax = fig.gca(projection='3d')
