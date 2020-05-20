@@ -39,7 +39,7 @@ def calculate_mean_expansion_time(n, p, k, case, number_of_experiments):
         sumation += clock() - starting_time
     return 1000 * sumation/number_of_experiments
 
-def time_execution_performance(n, p, samples_size):
+def time_execution_performance(n, p, samples_size, log_scale=False):
     """
     Plots a mean time rigid expansions experiments varing n, p  and k.
     Input: n (max graph size), p (list), samples_size(int)
@@ -71,20 +71,22 @@ def time_execution_performance(n, p, samples_size):
                     _k = floor(_n * _proportion)
                     t[i] = calculate_mean_expansion_time(_n, 
                       _p, _k, case, sample_size)
+                if log_scale:
+                    t = log(t)
                 axarr[r,c].plot(n_interval, t, label=case['name'],
                     linestyle=styles[case_index%len(cases)], color=colors[case_index])
             # Set labels for plot in row r and col c
             axarr[r, c].spines['top'].set_color('white')
             axarr[r, c].spines['right'].set_color('white')
             axarr[r, c].set_title('p = ' + str(_p) + ', k_prop = ' + str(_proportion), backgroundcolor='silver')
-            axarr[r, c].set_ylabel('Time (ms)')
+            axarr[r, c].set_ylabel('Time (ms)' + (' (log scale)' if log_scale else ''))
             axarr[r, c].set_xlabel('Number of vertices')
             if r == 0 and c == len(p)-1:
                 axarr[r,c].legend(bbox_to_anchor=(1.05, 1), loc='upper left', borderaxespad=0.)
 
     fig.subplots_adjust(bottom=0.2)
     plt.tight_layout()
-    plt.savefig("Figures/Time-execution-rigid-expansions.png", bbox_inches='tight')
+    plt.savefig('Figures/Time-execution-rigid-expansions'+('-log-scale' if log_scale else '')+'.png', bbox_inches='tight')
     plt.show()
 
 if __name__ == "__main__":
@@ -97,3 +99,4 @@ if __name__ == "__main__":
     p = [0.1, 0.5, 0.9]
 
     time_execution_performance(n, p, sample_size)
+    time_execution_performance(n, p, sample_size, True)
