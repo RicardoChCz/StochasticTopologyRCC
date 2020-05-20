@@ -140,9 +140,9 @@ def does_it_expands(G,A):
     """
     P = [x for x in power_set(A)]
     
-    #Hacer optimiación de acuerdo donde es más posible encontrar expansiones
+    #Optmize acording with tresholds with more likely subsets
     
-    #Buscar si hay hojas y ahí preguntarte por expansiones
+    #Look for leaves and check for expansions
     for i in range (0, len(P)):
         I = single_verification(G,P[i])
         if len(I) == 1 and next(iter(I)) not in A:
