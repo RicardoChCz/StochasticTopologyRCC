@@ -100,7 +100,7 @@ For these estimations we calculated the empiric probability by repeating this ex
 
 Notice that there are certain values of $m$ more \textit{effective} than others, in the sense that, depending on the parameters of the model, is more likely that a subset of certain size uniquely determine a vertex. This can be used, as described in the next chapter, to do optimizations in the simulations.
 
-In the following table appear the supremum of absolute differences between hypothesized and empirical probability $\forall m \in \{1,2, \dots n\}$ for the different values of $n$ and $p$.
+In this table appear the supremum of absolute differences between hypothesized and empirical probability $\forall m \in \{1,2, \dots n\}$ for the different values of $n$ and $p$.
 
 \vspace{0.3cm} 
 \input{Python/Txt/Uniquely-determinated-fixed-vertex-table-errors.txt}
@@ -176,7 +176,7 @@ In chapter one we outlined the properties of the curve graph associated to a sur
 
 The Radó graph satisfy that every finite or countably infinite graph is an induced subgraph of it \cite[Cameron 97]{theRandomGraph}. The the clique number property of $C(S)$ implies that, if $S$ is a surface of finite genus, is not possible that the Radó graph is embedded into $C(S)$. Even more, a result by Bering and Gaster \cite[Bering, Gaster 17]{beringGaster} state that the converse is also valid.
 
-\begin{theorem}
+\begin{theorem}\label{beringAndGaster}
 The random graph embeds into the curve graph $C(S)$ of a surface $S$ if and only if $S$ has infinite genus.
 \end{theorem}
 
@@ -197,7 +197,7 @@ There's a chance of finding an analog of the generate algorithm to ensure a fixe
 \section{Erdös-Rényi as a model for the curve graph}
 
 \subsection{Connectivity}
-\begin{theorem}
+\begin{theorem}\label{connectivityER}
 Let $\omega(n)$ be a function that tends to infinity arbitrarily slow as $n$ tends to infinity
 \begin{itemize}
 \item If $p\geq \frac{log(n)+ \omega(n)}{n}$ then 
@@ -213,9 +213,9 @@ This theorem can be proven by first showing that for a large $n$ almost all grap
  
 \subsection{Locally infinite}
 
-We need to take $p(n)$ in a way that the expected degree grows as long with the vertices, i.e $n p\to \infty$. Notice that the conditions for the connectivity threshold are more than enough to ensure this. The full argument is stated in the following theorem:
+To fulfill this property we need to take $p(n)$ in a way that the expected degree grows along with the vertices, i.e $n p\to \infty$. Notice that the conditions for the connectivity threshold are more than enough to ensure this. The full argument is stated in the following theorem:
 
-\begin{theorem}\label{conectivityRCC}
+\begin{theorem}\label{locallyInfiniteER}
 Let $G \in \G(n,p)$ and $D_{n} \sim b(k; n-1,p)$ the random variable that describes the degree of a vertex in $G$. Take $p(n)=\frac{\epsilon}{n^{a}}$ with fixed $\epsilon,a >0$ then:
 \begin{itemize}
     \item If $a\geq 1$ then $\{D_{n}\} \xrightarrow[]{p} c $, where $c$ is a finite constant.
@@ -224,7 +224,7 @@ Let $G \in \G(n,p)$ and $D_{n} \sim b(k; n-1,p)$ the random variable that descri
 \end{theorem}
 
 \begin{proof}
-When $a=1$ this is the Binomial's Poisson approximation, so $c=\epsilon$.
+When $a=1$ this is the Binomial's Poisson approximation.
 
 For $a>1$ take $k=0$ so we have:
 $$\displaystyle\lim_{n\to \infty} \P(D_n = 0) = \displaystyle\lim_{n\to \infty } \left( 1 - \frac{\epsilon}{n^a}\right)^n = \displaystyle\lim_{n\to \infty} exp\left( ln \left( 1 - \frac{\epsilon}{n^a}\right)^n\right) = \displaystyle\lim_{n\to \infty} exp\left(n \cdot ln \left( 1 - \frac{\epsilon}{n^a}\right)\right)$$
@@ -258,74 +258,111 @@ where $s=k(1-a)>0$, hence $\displaystyle\lim_{n\to \infty } \P\Big(D_n=k\Big) = 
 
 So, when $a<1$ we obtain the locally infinite property and this condition is always satisfied in the connectivity threshold.
 
+Consider $X_{k} = X_{k} (G)$, the random variable that describes the number of vertices of degree $k$ in a graph $G$. The following theorem gives a complete description of the degree distribution. 
+
+\begin{theorem}\label{degreeTheorem}
+Let $\epsilon>0$ be fixed, $\epsilon n^{-3/2} \leq p = p(n) \leq 1 - \epsilon n^{-3/2}$, let $k = k(n)$ be a natural number and set $\lambda_{k} = \lambda_{k}(n) = \E(X_{k}) = n\cdot b(k;n - 1,p)$. Then the following assertions hold.
+
+\begin{itemize}
+\item If $\lim\limits_{n\to \infty} \lambda_{k}(n) = 0$, then $\lim\limits_{n\to \infty} \P(X_{k} = 0) = 1$. 
+\item If $\lim\limits_{n\to \infty} \lambda_{k}(n) = \infty$, then $\lim\limits_{n\to \infty} \P(X_{k} > t) = 1$
+for every fixed $t$.
+\item If $0 < \lim\limits_{n\to \infty} \lambda_{k}(n) < \lim\limits_{n\to \infty} \lambda_{k}(n) < \infty$,
+then $X_{k}$ has asymptotically Poisson distribution with mean $\lambda_{k}$: 
+$$P(X_{k} = r) \sim e^{\lambda_{k}}\cdot \lambda_{k}^{r}/ r!$$
+for every fixed $r$.
+\end{itemize}
+\end{theorem}
+
+The $\epsilon n^{-3/2} \leq p = p(n) \leq 1 - \epsilon n^{-3/2}$ hypothesis is to rule out when we consider a loose upper bound on the expected degree of $X_ {k}$, if $pn^{2} \to \infty $ then almost every $ G \in \G (n, p) $ consist of independent edges and isolated vertices.
+
+The first assertion comes directly from Markov's inequality and implies that if $k$ is a finite fixed number and $\lim \lambda_{k}(n) = 0$ then a.a.s. there are no vertices of degree $k$. In the second case there are an infinite number of vertices with degree $k$. In the third case we can describe explicitly the degree distribution. The complete arguments for proving this theorem can be found in \cite[Bollobás, p.~61]{Bollobas}.
+
 \subsection{Clique number}
 
-\begin{theorem}
+As outlined for the Radó graph model, the clique number is a highly restrictive property, for the Erdös Rényi model it's not different. Let $X_r$ be the random variable that counts the number of $r-$cliques in a graph $G$, we are looking for a threshold were:
+$$\lim\limits_{n \to \infty}\E(X_{r}) > 0 \text{ and } \lim\limits_{n \to \infty}\E (X_{r+1}) = 0$$
+But this is not possible if $r$ is a fixed finite number. The closest we can get is stated in the following result:
+\begin{theorem}\label{cliqueNumberER}
 Let $r = r(n) = O(n^{1/3})$ and let $p=p(n)$, $0<p<1$, be such that
 $$\binom{n}{r} p^{\binom{r}{2}} \to \infty \text{ and } \binom{n}{r+1} p^{\binom{r+1}{2}} \to 0 $$
 Then a.e $G\in\G(n,p)$ has clique number $r$.
 \end{theorem}
 
-The second condition on $p$ implies that almost no $G\in\G(n,p)$ contains a $K^{r+1}$ so $cl(G_{p})\leq r$ asymptotically almost surely. The first condition on $p$ is simply that $\E (X_{r}) \to  \infty$, where $X_r$ denote the random variable which counts the number of $r-$cliques in a graph $G$. This theorem can be proven using the calculations for $\E(X_{r})$ and a first moment argument. A full proof can be find in \cite[Bollobás, p.~290]{Bollobas}.
+ This theorem can be proven using the calculations for $\E(X_{r})$ and a first moment argument. A full proof can be find in \cite[Bollobás, p.~290]{Bollobas}.
 
-Notice that in the hypothesis of the theorem $r$ is not fixed. Due that $r=3g-3+m$ this implies that the curve graph could corresponds to a surface whether of infinite diameter or with an infinite number of punctures
-
-with the Stirling approximation for $\binom{n}{r}$ we can try to fit this result with the previous expressions.
-$$E_{r} = (2\pi)^{- 1/2} n^{n+ 1/2} (n - r)^{-n+r-1/2} r^{-r-1/2} p^{r(r- 1)/2}$$
-Taking $r$ as a fixed finite number we have
-$$\displaystyle\lim_{n\to \infty } E_{r} = \displaystyle\lim_{n\to \infty} c_{r}\cdot \frac{n^{n+1/2}}{(n-r)^{n+1/2}} \cdot (n-r)^{r}\cdot p^{r(r-1)/2} = c_{r}\cdot \displaystyle\lim_{n\to \infty}  (n)^{r}\cdot p^{r(r-1)/2}$$
-Taking $p=\epsilon/n^{a}$ as in \ref{conectivityRCC} it results in
-$$\displaystyle\lim_{n\to \infty } E_{r} =  c_{r}\cdot \displaystyle\lim_{n\to \infty}  (n)^{r}\cdot\Big(\frac{1}{n^a}\Big)^{r/2}\cdot \Big(\frac{1}{n^a}\Big)^{r/2}
-\cdot\frac{1}{n^a}$$
-
-
-
-. Again, \textbf{this property interfere with the proposed model}. We can still provide an analogue of Bering and Gaster result.
+Given that $r(n)$ must grow along with $n$ and $r=3g-3+m$, this implies that the curve graph corresponds to a surface with infinite genus or with an infinite number of punctures.
 
 \subsection{Diameter}
 
 The diameter of a graph $G$, denoted by $diam(G)$, is the maximal distance between pairs of vertices of $G$.
 
-For surfaces of finite genus we should had ensure infinite diameter. There are a number of theorems that state the conditions under this can be done \cite[Bollobás, p.~259]{Bollobas}. Nevertheless, by the past results we must guarantee that the diameter is equal to 2, so the model match the properties of curve graphs for infinite genus surfaces.
+If we want to model a surface of finite genus we must ensure infinite diameter, there are a number of theorems that describe the conditions under which this can be achieved \cite[Bollobás, p.~259]{Bollobas}.
+
+Following the past result we now must guarantee that the diameter is equal to 2. The idea is to have an analogue of Bering and Gaster result (Theorem \ref{beringAndGaster}).
+
+\begin{theorem}\label{diameterER}
+Let $d$ be a fixed integer $d$, if 
+$$\frac{(pn)^{d-1}}{n} \to 0 \text{ and } \frac{(pn)^{d}}{n} \to \infty $$
+then, a.a.s $G\in\G(n,p)$ has diameter $d$
+\end{theorem}
+
+The proof of this theorem is due to Klee and Larman and can be find in \cite[Klee, Larman 81]{diameters}. For $d=2$ this means we are looking that $p(n)\to 0$ and $p^2 \dot n\to \infty$, i.e $p(n)= \frac{f(n)}{n^{1/2}}$ where $f(n)\in o(n^{1/2})$ and $f(n)\to \infty$.
+
+Using the expression for $p(n)$ in \ref{locallyInfiniteER}, we must have $a<\frac{1}{2}$ to ensure diameter 2.
+
+To conclude, the following result states that Erdös-Rényi graphs, that asymptotically approach the Radó graph, naturally satisfy the condition for the diameter. This give us some insight about the interconnection between the object of study and the models when an asymptotic context is taken; the diameter condition of the curve graph appears naturally when modeling a surface of infinite genus.
 
 \begin{theorem}
 If $p$ is taken fixed $G(n,p)$ has diameter 2 with high probability 
 \end{theorem}
 
 \begin{proof}
-Consider the random variable $X_{n}$ which is the number of vertex pairs in a graph in $\G(n,p)$ with no common neighbors. By Markov's inequality we have that
-$$\P(X_{n} \geq 1)\leq \E(X_{n}) = \binom{n}{2} \cdot \P(\text{two vertices doesn't have common neighbors}) = \binom{n}{2} (1-p^{2})^{n-2}$$
-which tends to zero as $n\to \infty$
+Let $X_{n}$ be random variable that counts the number of vertex pairs in a graph in $\G(n,p)$ with no common neighbors. By Markov's inequality we have that
+\begin{center}
+\begin{tabular}{ r c l }
+ $\P(X_{n} \geq 1)\leq \E(X_{n})$ & = & $\binom{n}{2} \cdot \P(\text{Two vertices doesn't have common neighbors})$ \\
+ & = & $\binom{n}{2} (1-p^{2})^{n-2}$
+\end{tabular}
+\end{center}
+where $\lim\limits_{n \to \infty}\binom{n}{2} (1-p^{2})^{n-2} = 0$
 \end{proof}
 
-Although this result has a simple proof, the following theorem allows a broader type of functions to be taken, letting us refine the previous thresholds.
+\section{Conclusions}
 
+Theorems \ref{connectivityER}, \ref{locallyInfiniteER} and \ref{diameterER} give the thresholds where each of the properties of the curve graph of infinite genus surface are satisfied. Theorem \ref{cliqueNumberER} describe the asymptotic behaviour of the clique number.
+
+In summary, if $\epsilon, a > 0$ are fixed real numbers and $\omega(n)$ a function that tends to infinity arbitrary slow, we have:
+\begin{enumerate}
+    \item $p\geq \frac{log(n)+ \omega(n)}{n}$ $\implies$ a.a.s $G\in\G(np)$ is connected
+    \item $p=\frac{\epsilon}{n^{a}}$ with $a<1$ $\implies$ a.a.s $G\in\G(np)$ is locally infinite
+    \item $p=(n) = \frac{f(n)}{n^{1/2}}$ with $f(n)\in o(n^{1/2})$ and $f(n)\to \infty$, particularly if $p(n)=\frac{\epsilon}{n^{a}}$ $a<\frac{1}{2}$ $\implies$ a.a.s  $G\in\G(np)$ have diameter 2
+    \item $r = r(n) = O(n^{1/3})$ with $\binom{n}{r} p^{\binom{r}{2}} \to \infty \text{ and } \binom{n}{r+1} p^{\binom{r+1}{2}} \to 0 $ $implies$ a.a.s $G\in\G(n,p)$ has clique number $r$.
+\end{enumerate}
+
+For the simplified form of $p(n) = \frac{\epsilon}{n^{a}}$ we can plot the following thresholds:
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[scale=0.7]{Python/Figures/ER-thresholds.png}
+	\caption{Thresholds for the properties of the curve complex}
+\end{figure}
+
+Some particular properties of the random graphs, such as a fixed clique number, will be linked to the asymptotic behaviour of the vertices. Meanwhile some conditions, like diameter 2, are strong enough that other properties come along.
+
+The clique number property is highly restrictive when setting a generic model, thus a different techniques must be implemented. The problem with this approach is that we'll end up with a model so complicated that it won't be suitable for studying further phenomena.
+
+There is a lot of progress in the study of random clique complexes that can help understand better the curve complex for infinite genus surfaces, for example in \cite[Khale,09]{kahle2009topology} we find the following result:
 \begin{theorem}
-Let $d$ be a fixed integer $d$, if 
-$$\frac{(pn)^{d-1}}{n} \to 0 \text{ and } \frac{(pn)^{d}}{n} \to \infty $$
-then, with probability approaching 1 as $n$ goes to infinity $G\in\G(n,p)$ has diameter $d$
+If $p=n^{a}$, with $a < -1/k$ or
+$a > -1/2k+1$, then the k-th homology group of $X(G(n, p))$ is almost always vanishing, and if $-1/k < a < -1/(k + 1)$, then it is almost always nonvanishing
 \end{theorem}
+Although interpretation might not be direct, the thresholds are within those defined for $C(S)$.
 
-The proof of this theorem is due to Klee and Larman and can be find in \cite[Klee, Larman 81]{diameters}. For $d=2$ this mean that $p(n)= \frac{f(n)}{n^{1/2}}$ where $f(n)\in o(n^{1/2})$ and $f(n)\to \infty$.
+Studying a concept from the stochastic perspective could be helpful to understand its particularities. Also, the challenges to explain a phenomena in a specific framework, although it can be defined in a general manner.
 
-Coupling with the expression for $p(n)$ in \ref{conectivityRCC}, this lead us to $a<\frac{1}{2}$
+From the Gaster and Bering result, we can also conclude that some objects, with apparently very particular constructions, end up being very much a like generic objects.
 
+Using Erdös-Rényi model can bring insightful results of the asymptotic behavior of certain properties that in the Radó graph are given immediately.
 
-
-%In the first chapter we mention that 
-%That's why it's worth to enunciate the following theorem which can be found in \cite[Khale, 16]{Khale}.
-%\begin{theorem}
-%Let $k \geq 3$ and $\epsilon > 0$ be fixed. If
-%$$\left(\frac{(C_{k} + \epsilon \text{log } n} {n} \right) n^{1/k} \leq p \leq \frac{n^{-\epsilon}}{n^{1/(k+1)+\epsilon}}$$
-%where $C_{3} = 3$ and $C_{k} = k/2 + 1$ for $k > 3$, then w.h.p. $X$ is rationally homotopy equivalent to a bouquet of $k$-dimensional spheres.
-%\end{theorem}
-
-%We can use the Erdös-Rényi model to obtain random simplicial complexes through clique complexes. The clique complex or flag complex $X(G)$, of a graph $G$ is the simplicial complex with all complete subgraphs of $G$ as its faces. The 1-skeleton of $X(G)$ is $G$ itself. $X(G(n, p))$ will be abbreviated by $X(n, p)$ for now on.
-%The main remaining conjecture for the topology of random clique complexes is that these rational homotopy equivalences are actually homotopy equivalences.
-
-%\begin{conje}
-%The bouquet-of-spheres conjecture.
-%Let $k \geq 3$ and $\epsilon > 0$ be fixed. If
-%$$\frac{n^{\epsilon}}{n^{1/k}} \leq p \leq \frac{n^{-\epsilon}}{n^{1/(k+1)}}$$
-%then w.h.p. $X$ is homotopy equivalent to a bouquet of $k$-spheres.
-%\end{conje}
+Understanding the probabilistic nature of anything, in which computational operations are involved, can be helpful when optimizing procedures. This is extended in the next chapter.
