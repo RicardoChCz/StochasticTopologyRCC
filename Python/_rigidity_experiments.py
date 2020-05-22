@@ -5,25 +5,18 @@ Created on Tue May 22 11:31:44 2018
 
 Computational experiments related to rigid expansions
 """
-import numpy as np
 import networkx as nx
 import matplotlib.pyplot as plt
 
 from __aux import random_set
 from __aux import power_set
 from __aux import intervalo
-from __aux import is_notempty
 from __aux_text import write_table
 from __rigid_expansion import single_verification
 from __rigid_expansion import is_this_uniquely_det
 from __bundles import bundle_last
 from __bundles import bundle_anyone
-from __bundles import bundle_new_by_subset
 from __bundles import bundle_expansion
-from math import floor
-from time import clock
-from numpy.random import randint
-from scipy.special import comb
 from decimal import Decimal
 
 num_experiments = 500
@@ -167,7 +160,6 @@ def probability_rigid_expansion(n,p,k):
         successes = successes + does_it_expands(G,A)
          
     return successes/float(total)
-
 
 def set_of_experiments(N,P,event):
     """

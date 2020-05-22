@@ -7,18 +7,10 @@ Computational experimentation to generate rigid expansions of a subgraph
 """
 import imageio
 import networkx as nx
-import matplotlib.pyplot as plt
-import matplotlib.colors as colors
 
-from __aux import random_set
 from __aux import power_set
-from __aux import power_set_efective
-from __aux_graphic import layout_graph
 from __aux_graphic import visual_rigid_exp
-
-from numpy.random import randint
 from numpy import log
-from time import clock
 
 def single_verification(G,S):
     """
@@ -27,21 +19,16 @@ def single_verification(G,S):
     Input: Graph G (dictionary), S set
     Output: Set
     """
-    if len(S)==0:
+    i = 0
+    S = list(S)
+    if len(S) == 0:
         return set()
-    else:        
-        n=len(S)
-        neigh = [0]*n
-        S = list(S)
-        for i in range(0, n):
-            neigh[i] = G.neighbors(S[i])
-
-        #Optmizar empezando en el más pequeño y detener cuando sea vacio.
-        intersection = G.neighbors(S[0])    
-        for i in range(0,n):
-            intersection = set(intersection).intersection(neigh[i])        
-    
-        return set(intersection)
+    else:
+        intersection = set(G.neighbors(S[i]))
+        while len(intersection) != 0 and i < len(S)-1:
+            i += 1
+            intersection = set(intersection).intersection(G.neighbors(S[i]))
+        return intersection
 
 def is_this_uniquely_det(G,A,v):
     """
@@ -59,86 +46,105 @@ def is_this_uniquely_det(G,A,v):
     else:
         return 0
 
-def iterative_expansion(G,A,R, visual=True, method=1):
+def iterative_expansion(G, A, G_r, A_r, p, visual=True, optimized=True):
     """
     Auxiliar method which give a single Expansion in the algorithm rigid
     expansion. Given a graph G and a subset of vertices A, returns the set 
     of vertices that can be uniquely determined using A
-    Input: Graph G (dictionary), set A 
-    Output: Set
+    Input: Graph G (dictionary), set A to expand, set R for optmization, 
+           float p as parameter, boolean options
+    Output: Set, expanded A
     """
-    i=0
+    i = 0
+    n = len(G.nodes)
+    k = len(A)
+
     if(visual):
         filenames = []
-        print("We begin with A = "+ str(A))
-        visual_rigid_exp(G,A.union(R),filenames,i)
+        print("We begin with A = "+ str(A.union(A_r)))
+        visual_rigid_exp(G, A, G_r, A_r, filenames,i)
+  
+    if k == 0:
+        return A.union(A_r)
 
-    if method==1:    
-        expand = single_expansion
-    else:
+    #Optimization 2
+    if optimized and k*log(2) > (log(n-k) + (k*p)*log(2)):
+        faster_with_complement = True
         expand = single_expansion_complement
+    else:
+        faster_with_complement = False
+        expand = single_expansion
 
-    A,are_there_new_ones = expand(G,A)
-
+    #Iterative
+    A,are_there_new_ones = expand(G, A, A_r)
     while are_there_new_ones:
+        # Change expansion method if convinient. Optimization 2
+        if optimized and not faster_with_complement:
+            k = len(A)
+            if k*log(2) > (log(n-k) + (k*p)*log(2)):
+                faster_with_complement = True
+                expand = single_expansion_complement
+  
         if(visual):
             i+=1
-            print("Expansion "+ str(i) + ", with A="+ str(A))
-            visual_rigid_exp(G,A.union(R),filenames,i)
+            print("Expansion "+ str(i) + ", with A="+ str(A.union(A_r)))
+            visual_rigid_exp(G, A, G_r, A_r, filenames,i)
 
-        A,are_there_new_ones = expand(G,A)
+        A,are_there_new_ones = expand(G, A, A_r, optimized)
 
     #Generate gif
     if(visual):
-        print("I'm done doing expansions!")
+        print("Generating gif... ")
         images = []
         for filename in filenames:
             images.append(imageio.imread(filename))
             imageio.mimsave('Figures/rigid_expansion_gif/rigid_expansion.gif', images, duration=1)
 
-    return A.union(R)
+    return A.union(A_r)
 
 def sparse_graph_optimization(G,A):
     """
     ---------------------------------------------------------------------------
     Optimization.
     ---------------------------------------------------------------------------
-    Hermits (no neighbors). This vertices don't have an effect to rigid 
-    expansions, that's why it's posible to remove them.
-    Leaves should be removed and petioles (neighbors of leaves) should be added
-    to the set to expand.
-    
+    Isolated vertices. This vertices don't have an effect to rigid expansions.
+    A-Leaves. Leaves in A, should be removed and petioles (neighbors of leaves) 
+    should be added A.
     ---------------------------------------------------------------------------
-    Given a graph G and a subset of vertices A, returns two parts:
-    1. The usefull set A' without leves and isolated points but with petioles
-    added.
-    2. Leaves and isolated points.
-    Input: Graph G (dictionary), set A 
-    Output: (set, set)
+    Given a graph G and a subset of vertices A, returns:
+    1. G' - Graph without isolated vertices and A-leaves.
+    2. A' - The usefull set A; without leaves or isolated points but with 
+    petioles added.
+    3. R - Removed vertices ie G = G' \cup R.
+    Input: Graph G (dictionary), set A
+    Output: (G', A', G_removed, A_removed) - (dictionary, set, set)
     """
+
+    isolates = set(v for v in nx.isolates(G))
+    A_isolates = isolates.intersection(A)
+    G_isolates = isolates.difference(A_isolates)
     
-    A=list(A)
-    hermits = []
-    leaves = []
+    G.remove_nodes_from(isolates)
+
+    A = A.difference(A_isolates)
+    A_leaves = []
+    A_petioles = []
     for u in A:
-        N = list(G.neighbors(u))
-        if len(N) == 0:
-            hermits.append(u)
-        elif len(N) == 1:
-            leaves.append(u)
-            #Adding petioles
-            A=A+N
+        if G.degree[u] == 1:
+            A_leaves.append(u)
+            uniq_neigh = list(G.neighbors(u))[0]
+            if G.degree[uniq_neigh] == 1:
+                A_leaves.append(uniq_neigh)
+            else:
+                A_petioles.append(uniq_neigh)
+                
+            
+    A = A.difference(set(A_leaves))
+    A = A.union(set(A_petioles))
 
-    leaves= set(leaves)
-    hermits= set(hermits)
-    A=set(A)
-    A = A.difference(leaves)
-    A = A.difference(hermits)
-    R=leaves.union(hermits)
-    
-    return(A, R)
+    return(G, A, G_isolates, A_isolates.union(A_leaves))
 
-def single_expansion(G,A):
+def single_expansion(G, A, A_removed, optimized=True):
     """
     Auxiliar method which give a single Expansion in the algorithm rigid
     expansion. Given a graph G and a subset of vertices A, returns the set 
@@ -147,8 +153,8 @@ def single_expansion(G,A):
     Output: Set
     """
     N = set()
-    
-    for S in power_set(A):      
+
+    for S in power_set(A):
         I = single_verification(G,S)
         if len(I)==1 and next(iter(I)) not in A:
             N = N.union(I)
@@ -162,15 +168,16 @@ def single_expansion(G,A):
         
     return (A,are_there_new_ones)
 
-def single_expansion_complement(G,A):
+def single_expansion_complement(G, A, A_removed, optimized=True):
     """
     Auxiliar method which give a single Expansion in the algorithm rigid
     expansion. Given a graph G and a subset of vertices A, returns the set 
-    of vertices that can be uniquely determined using A, this algorithm review
+    of vertices that can be uniquely determined using A. This algorithm review
     which of the vertices in the complement can be u.d. using A
     Input: Graph G (dictionary), set A 
     Output: Set
     """
+    A = A.union(A_removed)
     B = set(G.nodes) - A
     N = set()
 
@@ -191,7 +198,7 @@ def single_expansion_complement(G,A):
         
     return (A,are_there_new_ones)
 
-def rigid_expansion(G,A,p,visual=True):
+def rigid_expansion(G,A,p,visual=True, optimized=True):
     """
     Given a graph G and a subset of vertices A, returns the set obtained by a
     sequence of rigid expansions
@@ -199,14 +206,10 @@ def rigid_expansion(G,A,p,visual=True):
     Output: Set
     """
     #Optimization 1
-    A,R = sparse_graph_optimization(G,A)   
-    
-    #Optimization 2
-    n,k=len(G.nodes),len(A)
-    if k*log(2) < log(n-k) + (k*p)*log(2):
-        method = 1
+    if optimized:
+        G,A,G_r,A_r = sparse_graph_optimization(G,A)
     else:
-        method = 2
-
+        G_r, A_r = set(), set()
+    
     #Call iterative method wich gives multiple single expansions
-    return (iterative_expansion(G,A,R,visual,method))
+    return (iterative_expansion(G,A,G_r,A_r,p,visual,optimized))

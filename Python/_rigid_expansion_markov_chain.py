@@ -20,9 +20,6 @@ from __rigid_expansion import single_expansion_complement
 from __rigid_expansion import sparse_graph_optimization
 
 from scipy.special import comb
-from mpl_toolkits.mplot3d import Axes3D
-from matplotlib import cm
-from matplotlib.pyplot import grid
 from matplotlib.ticker import LinearLocator, FormatStrFormatter
 
 numExp = 50
@@ -77,14 +74,14 @@ def jump_experiment(G,A,method=1):
     Output: Int
     """
     #Optimization 1
-    A,R = sparse_graph_optimization(G,A)
+    G, A, G_r, A_r = sparse_graph_optimization(G,A)
     
     if method==1:    
-        A = single_expansion(G,A)[0]
+        A = single_expansion(G, A, A_r)[0]
     else:
-        A = single_expansion_complement(G,A)[0]
-        
-    return len(A.union(R))
+        A = single_expansion_complement(G, A,  A_r)[0]
+
+    return len(A.union(A_r))
 
 def binomial(n,p,k):
     return comb(n,k)*(p**k)*(1-p)**(n-k)
@@ -174,9 +171,6 @@ if __name__ == "__main__":
     plt.savefig('Figures/3D-Transition-matrix-secuence-of-rigid-expansions.png')
     plt.show()
 
-
-
-    """
     k = 50
     sample = sampleJump(n,p,k,1000)
     
@@ -195,4 +189,3 @@ if __name__ == "__main__":
     plt.plot(I, density, color="#800000",linewidth=1.5, label="densidad")
     plt.title("Histogram")
     plt.show()
-    """

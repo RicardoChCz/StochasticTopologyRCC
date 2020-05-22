@@ -6,14 +6,12 @@ Created on Wed Jan 17 17:55:08 2018
 Optimization analysis for rigid expansions
 """
 from _execution_tests import er_graph
-from _rigidity_experiments import does_it_expands
 from __aux import random_set
 from __aux import intervalo
 from __aux_graphic import color_template_3
 from __aux_graphic import plot_lines_styles
 from __rigid_expansion import rigid_expansion
 
-from numpy.random import randint
 from numpy import log
 from time import clock
 import networkx as nx
@@ -32,10 +30,10 @@ def calculate_mean_expansion_time(n, p, k, case, number_of_experiments):
         starting_time = clock()
         if(case['optimizations'] == "none"):
             G = er_graph(n,p)
-            does_it_expands(G,A)
+            rigid_expansion(G,A,p,False,False)
         else:
             G = nx.fast_gnp_random_graph(n, p)
-            does_it_expands(G,A)
+            rigid_expansion(G,A,p,False,True)
         sumation += clock() - starting_time
     return 1000 * sumation/number_of_experiments
 
@@ -45,9 +43,9 @@ def time_execution_performance(n, p, samples_size, log_scale=False):
     Input: n (max graph size), p (list), samples_size(int)
     Output: Mean time, float
     """
-    n_interval = intervalo(3,n,2)
-    k_proportion = [0.25, 0.5, 0.75]
 
+    n_interval = intervalo(3,n+2,2)
+    k_proportion = [0.25, 0.5, 0.75]
     # For the plotting
     rows = len(k_proportion)
     cols = len(p)
@@ -76,6 +74,7 @@ def time_execution_performance(n, p, samples_size, log_scale=False):
                 axarr[r,c].plot(n_interval, t, label=case['name'],
                     linestyle=styles[case_index%len(cases)], color=colors[case_index])
             # Set labels for plot in row r and col c
+            print('Just finished', r,c)
             axarr[r, c].spines['top'].set_color('white')
             axarr[r, c].spines['right'].set_color('white')
             axarr[r, c].set_title('p = ' + str(_p) + ', k_prop = ' + str(_proportion), backgroundcolor='silver')

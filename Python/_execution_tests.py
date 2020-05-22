@@ -16,7 +16,6 @@ from numpy.random import randint
 from __aux_graphic import color_template_6
 from __aux_graphic import plot_lines_styles
 
-
 def _bernoulli(p):
     """
     Simulates a Bernoulli(p) r.v
@@ -56,7 +55,6 @@ def er_graph(n,p):
             if _bernoulli(p):
                 G.add_edge(i,j)
     return G
-
 
 def generate_algorithm(G):
     """
@@ -116,9 +114,9 @@ def draw_generate_trees(n):
     plt.savefig('Figures/Tree-sample'+str(n)+'.png')
     plt.show()
 
-def time_execution_performance(experimental_interval, number_of_experiments, xlabel,algorithms,label):
+def time_execution_performance(experimental_interval, number_of_experiments, xlabel,algorithms, label):
     plt.gcf().clear()
-    fig, axarr = plt.subplots(1, 2, figsize=(6,3),dpi=80)    
+    fig, axarr = plt.subplots(1, 2, figsize=(8,3),dpi=80)    
     colors = color_template_6()
     styles = plot_lines_styles()
     c=0
@@ -157,6 +155,7 @@ def time_execution_performance(experimental_interval, number_of_experiments, xla
         c += 1
         
     plt.legend(bbox_to_anchor=(1.05, 1), loc='upper left', borderaxespad=0.)
+    plt.tight_layout()
     plt.savefig("Figures/Time-execution-"+label+".png", bbox_inches='tight')
     plt.show()
 

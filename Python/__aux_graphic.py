@@ -6,26 +6,14 @@ Created on Tue Mar 26 13:21:40 2019
 
 Methods to generate graphical visualization of rigid expansions
 """
-import imageio
 import networkx as nx
 import matplotlib.pyplot as plt
-import matplotlib.colors as colors
-from numpy.random import randint
-
-from __aux import random_set
 
 def layout_graph(G, S):
-    #Position of vertices
     pos=nx.circular_layout(G)
-    #Size
     fig = plt.figure(figsize=(7, 7))
-    #Background
     fig.set_facecolor('white')
-    #Colors
-    colors=['#020A18']*len(G.nodes())
-    #Paint S
-    for j in S:    
-        colors[j]='#FFA500'
+    colors=['#FFA500' if v in S else '#1395BA' for v in G.nodes]
 
     #Edges
     nx.draw_networkx_edges(G, pos, alpha=0.8, edge_color='#020a18')
@@ -39,8 +27,10 @@ def layout_graph(G, S):
     plt.ylim(-1.05, 1.05)
     plt.axis('off')
 
-def visual_rigid_exp(G,S,filenames,i):
-    layout_graph(G,S)
+def visual_rigid_exp(G, A, G_r, A_r, filenames, i):
+    A = A.union(A_r)
+    G.add_nodes_from(list(G_r.union(A_r)))
+    layout_graph(G,A)
     plt.savefig('Figures/rigid_expansion_gif/rigid_exp_'+str(i)+'.png')
     filenames.append('Figures/rigid_expansion_gif/rigid_exp_'+str(i)+'.png')
     plt.show()

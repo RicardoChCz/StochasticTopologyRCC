@@ -6,13 +6,8 @@ Created on Tue Mar 26 13:21:40 2019
 
 Methods to generate graphical visualization of rigid expansions
 """
-import imageio
 import networkx as nx
 import matplotlib.pyplot as plt
-import matplotlib.colors as colors
-from numpy.random import randint
-
-from __aux import random_set
 
 def layout_graph(G, S):
     #Position of vertices
