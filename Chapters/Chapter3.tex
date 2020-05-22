@@ -8,7 +8,7 @@
 
 %----------------------------------------------------------------------------------------
 
-Nowadays Scientific Computing is one the most important tools for Science. It became crucial when the problem cannot be solved by traditional experimental or theoretical means. There are a number or reasons why this might happen, for example whenever experimentation may be dangerous, to expensive or time-consuming.
+Nowadays Scientific Computing is one the most important tools that we have. It becomes crucial when the problem cannot be solved by traditional experimental or theoretical means. There are a number or reasons why this might happen, for example whenever experimentation may be dangerous, to expensive or time-consuming.
 
 In this chapter we use the outlined probabilistic material to accomplish an efficient implementation of rigidity phenomenon in graphs. We describe our results with their technical difficulties and the actions taken to endure them.
 
@@ -36,7 +36,7 @@ Figure \ref{fig:tiemposER} show the execution times varying $n$
 \end{figure}
 
 \section{Rigid expansions algorithms}
-A priory, the algorithm to determine a rigid expansion is supposed to be executed in a large amount of time. As the definition let us see, it depends on the size of $G$, and it depends exponentially on the size of $A$; it must check among all the possible subsets of $A$, that is $2^{m}$ verifications, where $|A|=m$. Thus, it is important to do some optimization to the algorithms and evaluate when this have more impact in the expected execution time according to the parameters taken.
+A priory, the algorithm to determine a rigid expansion is supposed to be executed in a large amount of time. As the definition let us see, it depends on the size of $G$, and exponentially on the size of $A$; it must check among all the possible subsets of $A$, that's $2^{m}$ verifications, where $|A|=m$. Thus, it is important to do some optimization to the algorithms and evaluate when this have more impact in the expected execution time according to the parameters taken.
 
 The following is the straightforward algorithm for rigid expansions.
 
@@ -63,14 +63,14 @@ The following is the straightforward algorithm for rigid expansions.
 To optimize memory in step two the iterations were indexed by \texttt{generators}. For time-execution optimizations, we implemented the following:
 
 \begin{enumerate}
-\item \textbf{Consideration of isolated vertices and leaves.} None of the isolated vertices in $A$ have any influence in rigid expansions, so they should not be consider. Also, whenever $A$ contains a leave is convenient to ignore them; the unique neighbor of a leave, which we will call \textit{petioles} should be automatically added in the first expansion an then it does not contribute in uniquely determine new vertices. This means that the input should be replace with:
+\item \textbf{Consideration of isolated vertices and leaves.} None of the isolated vertices in $G$ have any influence in rigid expansions, so they should not be consider. Also, whenever $A$ contains a leave is convenient to ignore them; the unique neighbor of a leave, which we will call \textit{petioles} should be automatically added in the first expansion an then it does not contribute in uniquely determine new vertices. This means that the input should be replace with:
 $$A' = A - \{v: deg(v)\leq 1 \} \cup \{u: \exists x, N(x)=\{u\}\} $$
-and add them again by the end of the expansions.
+and add them again by the end of the expansions. This will be particularly helpful for small values of $p$.
 \item \textbf{Relative size of $A$.} In Step 2, if $A$ is big enough is faster to check if a vertex outside of $A$ can be uniquely determinate by a subset of $A$. This can reduce dramatically the execution time when $p$ is small; it reduce the size of revisions by taking only the \textit{effective} part of $A$, this is convenient to do whenever
 $$k\cdot log(2) > log(n-k) + (kp)\cdot log(2)$$
-were $k$ is the size of $A$
+where $k$ is the size of $A$
 
-\item \textbf{Restriction to effective subsets}. Calculations in Chapter 2 showed that there are subsets which are more likely to generate rigid expansions than others. This depend on the parameters of the space and the size of the subsets. If we restrict to these effective subsets we can reduce the number of verifications.
+\item \textbf{Restriction to effective subsets}. Calculations in Chapter 2 showed that some subsets are more likely to generate rigid expansions than others. This depend on the parameters of the space and the size of the subsets. If we restrict verifications to these effective subsets we can reduce the number of verifications.
 \end{enumerate}
 
 With these optimizations we obtain the following algorithm
@@ -107,15 +107,39 @@ Otherwise:\hfill \break
 \end{cajita}
 
 \section{Time execution comparison}
+We know that, given a $G\in\G(n,p)$ and a subset $A$ of $k$ vertices, the task of finding the first rigid expansion of $A$ in $G$ depends on $n,p,k$. To keep track of the execution time for the optimizations implemented, we measured the time for the rigid expansion varying the parameters. We took $k$ in some proportion of $n$, explicitly: $1/4$, $1/2$ and $3/4$, and for each collection of $n,p,k$ we measured the execution time for 30 different rigid expansions and afterwards we took a mean.
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[scale=0.7]{Python/Figures/Time-execution-er-generation-algoriths.png}
+	\caption{Execution times varying $n$. Both normal and logarithmic scale appear in the figure}
+	\label{fig:tiemposER}
+\end{figure}
+
+Because of the nature of rigid expansions we expect to see an exponential increment of the time a rigid expansion takes when increasing $n$, also considering that we must execute the tests for a. Notice as well that several optimizations ahve more impact in sparse graphs 
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[scale=0.7]{Python/Figures/Time-execution-rigi.png}
+	\caption{Execution times varying $n$. Both normal and logarithmic scale appear in the figure}
+	\label{fig:tiemposER}
+\end{figure}
+
+
+
 
 \section{Conclusions}
 
-Stochastic topology has embraced the methods of scientific computing to provide a better insight of complex phenomena. For theoretical means it has allowed, for example, to verify whether the established conditions in a probabilistic model are sharp enough (\cite[Aronshtam 13]{Meshulam13}).
+Probabilistic optimization and the understanding the combinatorial nature of rigid expansions allowed us to execute experiments for larger graphs that otherwise could not have been performed.
 
-Computational tools mixed with strong probability background has demonstrated to be powerful and insightful. Algorithms based in random sampling provide state-of-the-art techniques due to their great degree of flexibility and reliability.
+In general, the use of probability theory in computational has demonstrated to be powerful and efficient. Algorithms based in random sampling provide state-of-the-art techniques due to their great degree of flexibility and reliability. 
 
-One example of this is the PageRank algorithm, it was the first method used by Google to order search results \cite[Page 99]{pageRank}. It outputs a probability distribution used to represent the likelihood that a person randomly clicking on links will arrive at any particular page.
+To name a few:
+\begin{itemize}
+\item The PageRank algorithm was the first method used by Google to order search results \cite[Page 99]{pageRank}. It outputs a probability distribution used to represent the likelihood that a person randomly clicking on links will arrive at any particular page.
+\item In motion planning, the use of Rapidly-exploring random trees (RRTs) are one of the most successful algorithms \cite[Alcazar 15]{Alcazar15}. Problems in motion planning consist on finding a collision-free path that connects an initial configuration of geometric bodies to a final goal configuration. A RRT is a rooted tree that grows from a starting configuration by using random samples from the search space.
+\end{itemize}
 
-In motion planning, the use of Rapidly-exploring random trees (RRTs) are one of the most successful algorithms \cite[Alcazar 15]{Alcazar15}. Problems in motion planning consist on finding a collision-free path that connects an initial configuration of geometric bodies to a final goal configuration. A RRT is a rooted tree that grows from a starting configuration by using random samples from the search space. 
+But it also works in the opposite direction, the use of computational tools can bring value for theoretical means. For theoretical means it has allowed, for example, to verify whether the established conditions in a probabilistic model are sharp enough (\cite[Aronshtam 13]{Meshulam13}).
 
-In Bayesian Inference there is a family of algorithms, known collectively as Markov Chain Monte Carlo (MCMC), that allow us to approximate the posterior distribution as calculated by Bayes' Theorem.
+Bottom line, the use of computational tools can be very helpful to understand a topic even in the most theoretical contexts.
