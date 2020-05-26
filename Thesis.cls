@@ -42,6 +42,7 @@
 \setlength{\parindent}{0pt}
 \setlength{\parskip}{2.0ex plus0.5ex minus0.2ex}
 \usepackage{vmargin}
+
 %----------------------------------------------------------------------------------------
 %	MARGINS
 %----------------------------------------------------------------------------------------
@@ -102,6 +103,7 @@
 \usepackage{rotating}
 \usepackage{listings}
 \usepackage{lstpatch}
+\usepackage{helvet}
 \lstset{captionpos=b,
         frame=tb,
         basicstyle=\scriptsize\ttfamily,
@@ -135,7 +137,7 @@
 \newcommand*{\FACULTY}[1]{\def\FACNAME{#1}}
 \newcommand*{\subject}[1]{\def\subjectname{#1}}
 \newcommand*{\keywords}[1]{\def\keywordnames{#1}}
-
+\newcommand{\fancyfont}{\fontfamily{phv}\selectfont}
 %----------------------------------------------------------------------------------------
 %	DOCUMENT VARIABLES
 %	Fill in the lines below to update the thesis template
@@ -161,12 +163,12 @@
 \keywords{} % Keywords for your thesis - this is not currently used anywhere in the template, cite it with \keywordnames if you want it
 %-------------------------------------------------   
 \university{\texorpdfstring{ % Your university's URL
-                {UMSNH-UNAM}} % Your university's name - this is currently used in the title page
-                {UMSNH}}
+                {Universidad Michoacana de San Nicol\'as de Hidalgo}} % Your university's name - this is currently used in the title page
+                {Universidad Michoacana de San Nicol\'as de Hidalgo}}
 %-------------------------------------------------   
 \UNIVERSITY{\texorpdfstring{\href{} % Your university's URL
-                {UMSNH-UNAM}} % Your university's name in capitals - this is currently used in the abstract page
-                {UMSNH-UNAM}}
+                {UNIVERSIDAD MICHOACANA DE SAN NICOL\'AS DE HIDALGO}} % Your university's name in capitals - this is currently used in the abstract page
+                {UNIVERSIDAD MICHOACANA DE SAN NICOL\'AS DE HIDALGO}}
 %-------------------------------------------------                
 \department{\texorpdfstring{\href{} % Your department's URL
                 {Posgrado Conjunto en Ciencias Matem\'aticas}} % Your department's name - used in the title page and abstract
@@ -202,39 +204,116 @@
   \hypersetup{pdfkeywords=\keywordnames}
   \thispagestyle{empty}
   \begin{titlepage}
+    \fancyfont
     \let\footnotesize\small
     \let\footnoterule\relax
     \let \footnote \thanks
     \setcounter{footnote}{0}
-    \null\vfil
-    \vskip 60\p@
+    \null
     \begin{center}
       \setlength{\parskip}{0pt}
-      {\large\textbf{\UNIVNAME}\par}
-      \vfill
-      {\huge \bf \@title \par}
-      \vfill
-      {\LARGE by \par}
-      \smallskip
-      {\LARGE \authornames \par}
-      \vfill
+      \begin{figure}[]
+        \centering
+	    \includegraphics[scale=1]{Figures/UMSNH.png}
+      \end{figure}
+      {\LARGE Universidad Michocana de \break San Nicol\'as de Hidalgo \par}
+      \bigskip
+      
+      {\Large Posgrado Conjunto en Ciencias Matem\'aticas \par}
+      {\large UNAM-UMSNH\par}
+      \bigskip
+
+      {\LARGE \textbf{Stochastic Topology in the Curve Complex of a Surface} \par}
+      \bigskip
+      
       {\large A thesis submitted in partial fulfillment for the \par}
-      {\large degree of \degreename \par}
+      {\large degree of \textbf{\degreename} \par}
       \bigskip
+      
+      {\large by: \par}
+      {\LARGE \textbf{Ricardo Esteban Ch\'avez C\'aliz} \par}
+      {\large ricardo.ch.cz@gmail.com \par}
+      {\large 1150505J \par}
       \bigskip
-      {\large in the \par}
-      {\large \facname \par}
-      {\large \deptname \par} 
+
+      {\large Supervisor: \par}
+      {\LARGE \textbf{Dr. No\'e B\'arcenas Torres} \par}
+      {\large barcenas@matmor.unam.mx \par}
       \bigskip
-      \bigskip
-      \bigskip
-      {\Large \@date \par}
-      \bigskip
+
+      {\large MORELIA, MICH., May 2020 \par}
+      \medskip
+      
+      \begin{figure}[h!]
+        \centering
+	    \includegraphics[scale=1]{Figures/UNAM.png}
+      \end{figure}
     \end{center}
     \par
     \@thanks
     \vfil\null
   \end{titlepage}
+  
+  \setcounter{footnote}{0}%
+  \global\let\thanks\relax
+  \global\let\maketitle\relax
+  \global\let\@thanks\@empty
+  \global\let\@author\@empty
+  \global\let\@date\@empty
+  \global\let\@title\@empty
+  \global\let\title\relax
+  \global\let\author\relax
+  \global\let\date\relax
+  \global\let\and\relax
+  \cleardoublepage
+  
+  \begin{titlepage}
+    \fancyfont
+    \let\footnotesize\small
+    \let\footnoterule\relax
+    \let \footnote \thanks
+    \setcounter{footnote}{0}
+    \null
+    \begin{center}
+      \setlength{\parskip}{0pt}
+      \begin{figure}[]
+        \centering
+	    \includegraphics[scale=1]{Figures/UNAM.png}
+      \end{figure}
+      {\LARGE Universidad Nacional Aut\'onoma de M\'exico \par}
+      \bigskip
+      
+      {\Large Posgrado Conjunto en Ciencias Matem\'aticas \par}
+      {\large UNAM-UMSNH\par}
+      \bigskip
+
+      {\LARGE \textbf{Stochastic Topology in the Curve Complex of a Surface} \par}
+      \bigskip
+      
+      {\large A thesis submitted in partial fulfillment for the \par}
+      {\large degree of \textbf{\degreename} \par}
+      \bigskip
+      
+      {\large by: \par}
+      {\LARGE \textbf{Ricardo Esteban Ch\'avez C\'aliz} \par}
+      {\large ricardo.ch.cz@gmail.com \par}
+      {\large 1150505J \par}
+      \bigskip
+
+      {\large Supervisor: \par}
+      {\LARGE \textbf{Dr. No\'e B\'arcenas Torres} \par}
+      {\large barcenas@matmor.unam.mx \par}
+      \bigskip
+
+      {\large MORELIA, MICH., May 2020 \par}
+      \medskip
+      
+    \end{center}
+    \par
+    \@thanks
+    \vfil\null
+  \end{titlepage}
+  
   \setcounter{footnote}{0}%
   \global\let\thanks\relax
   \global\let\maketitle\relax
@@ -258,15 +337,7 @@
   \null\vfil
   \begin{center}
     \setlength{\parskip}{0pt}
-    {\normalsize \UNIVNAME \par} % University name in capitals
-    \bigskip
     {\huge{\textit{Abstract}} \par}
-    \bigskip
-    {\normalsize Facultad de Ciencias F\'isico-Matem\'aticas \par} % 
-    \medskip
-    {\normalsize\bf \@title \par} % Thesis title
-    \medskip
-    {\normalsize por \authornames \par} % Author name
     \bigskip
   \end{center}
 }
@@ -282,11 +353,11 @@
     \bigskip
     {\huge{\textit{Resumen}} \par}
     \bigskip
-    {\normalsize Facultad de Ciencias F\'isico-Matem\'aticas \par} % Department name
+    {\normalsize Posgrado Conjunto en Ciencias Matem\'aticas \par} % Department name
      \medskip
     {\normalsize\bf \@title \par} % Thesis title
     \medskip
-    {\normalsize por \authornames \par} % Author name
+    {\normalsize by \authornames \par} % Author name
     \bigskip
   \end{center}
 }
