@@ -8,37 +8,37 @@
 
 %----------------------------------------------------------------------------------------
 
-Nowadays Scientific Computing is one the most important tools that we have for Stochastic means. It becomes crucial when the problem cannot be solved by traditional experimentation or theoretical means. There are a number or reasons why this might happen, for example whenever experimentation may be dangerous, to expensive or time-consuming.
+Nowadays Scientific Computing is one of the most important tools that we have for Stochastic means. It becomes crucial when the problem cannot be solved by traditional experimentation or theoretical means. There are many reasons why this might happen, for example whenever experimentation may be dangerous, too expensive, or time-consuming.
 
-In this chapter we use the outlined probabilistic material to accomplish an efficient implementation of rigidity phenomenon in graphs. We describe our results with their technical difficulties and the actions taken to endure them.
+In this chapter, we use the outlined probabilistic material to accomplish an efficient implementation of the rigidity phenomenon in graphs. We describe our results with their technical difficulties and the actions taken to endure them.
 
 All the computational experimentation was developed in \texttt{python}. We used \texttt{\href{https://networkx.github.io/}{NetworkX}} library to create and modify graphs.
 
-\section{Simulating Erdös-Rényi random graphs}
+\section{Simulating Erdős-Rényi random graphs}
 
 There is a direct algorithm to obtain a graph in $G(n,p)$, it simulates a $Bernoulli(p)$ r.v. for each of the $\frac{n(n-1)}{2}$ possible edges. Thus, it runs in $O(n^2)$ time. 
 
 It is possible to execute faster algorithms for small values of $p$. It runs in $O(n + m)$ time, where $m$ is the expected number of edges, which equals to $\frac{pn(n - 1)}{2}$. This is the one that we use for generating all the graphs in our executions. Details in performance and accuracy can be found in \cite[Batagelj, Brandes 05]{fastER}.
 
-Visual aid is helpful while writing the code for the experimentation. In Figure \ref{fig:ErdosRenyi10} appear a set of graphs obtained with the built in algorithms for Erdös–Rényi graphs, fixing $n=10$ an varying the parameter $p$.
+Visual aid is helpful while writing the code for the experimentation. In Figure \ref{fig:ErdosRenyi10} appear a set of graphs obtained with the built-in algorithms for Erdős–Rényi graphs, fixing $n=10$ an varying the parameter $p$.
 
 \begin{figure}[h]
 	\centering
 	\includegraphics[scale=0.85]{Figures/ER-10.png}
-	\caption{Erdös-Rényi random graphs with $n$ fixed and varying $p$}
+	\caption{Erdős-Rényi random graphs with $n$ fixed and varying $p$.}
 	\label{fig:ErdosRenyi10}
 \end{figure}
 
-Figure \ref{fig:tiemposER} show the execution times varying $n$
+Figure \ref{fig:tiemposER} shows the execution times when varying $n$.
 \begin{figure}[h!]
 	\centering
 	\includegraphics[scale=0.7]{Python/Figures/Time-execution-er-generation-algoriths.png}
-	\caption{Execution times varying $n$. Both normal and logarithmic scale appear in the figure}
+	\caption{Execution times varying $n$. Normal and log scales.}
 	\label{fig:tiemposER}
 \end{figure}
 
 \section{Rigid expansions algorithms}
-A priory, the algorithm to determine a rigid expansion is supposed to be executed in a large amount of time. As the definition let us see, it depends on the size of $G$, and exponentially on the size of $A$; it must check among all the possible subsets of $A$, that's $2^{k}$ verifications, where $|A|=k$. Thus, it is important to do some optimizations and evaluate when they have more impact in the expected execution time according to the parameters taken.
+A priory, the algorithm to determine a rigid expansion is supposed to be executed in a large amount of time. As the definition lets us see, it depends on the size of $G$, and exponentially on the size of $A$; it must check among all possible subsets of $A$, that's $2^{k}$ verifications, where $|A|=k$. Thus, it is important to do some optimizations and evaluate when they have more impact on the expected execution time according to the parameters taken.
 
 The following is the straightforward algorithm for rigid expansions.
 
@@ -48,17 +48,17 @@ The following is the straightforward algorithm for rigid expansions.
 \begin{tabular}{ l l }
 \texttt{Input:} &  \texttt{Random graph $G$ (dictionary),} \\
                 &  \texttt{set of vertices $A$ (array).}\\
-\texttt{Output:} & \texttt{Set of vertices obtained after expanding $A$ (array)} \\
+\texttt{Output:} & \texttt{Set of vertices obtained after expanding $A$ (array)}.\\
 \end{tabular}
 \begin{enumerate}
-\item Initialize N as empty (the set of new vertices)
+\item Initialize N as empty (the set of new vertices).
 \item For every $B$, subset of A:\hfill \break
 \hphantom{12} If $\bigcap\limits_{b\in B} N(b) = v$ and $v\not\in A\cup N$: \hfill \break
-\hphantom{1234} Add $v$ to $N$
+\hphantom{1234} Add $v$ to $N$.
 \item If $N$ is not empty: \hfill \break
 \hphantom{12} Replace $A$ by $A\cup N$ and return to step 1. \hfill \break
       Otherwise:\hfill \break
-\hphantom{12} Return $A$
+\hphantom{12} Return $A$.
 \end{enumerate}
 \end{cajita}
 
@@ -67,17 +67,17 @@ To optimize memory in step two the iterations were indexed by \texttt{generators
 For time-execution optimizations, we implemented the following:
 
 \begin{enumerate}
-\item \textbf{Consideration of isolated vertices and leaves.} None of the isolated vertices in $G$ have any influence in rigid expansions, so they should not be consider. Also, whenever $A$ contains a leave is convenient to ignore them; the unique neighbor of a leave, which we will call \textit{petioles} should be automatically added in the first expansion an then it does not contribute to uniquely determine new vertices. This means that the input should be replace with:
-$$A' = A \cup \{u: \exists x, N(x)=\{u\}\} - \{v: deg(v)\leq 1 \}  $$
+\item \textbf{Consideration of isolated vertices and leaves.} None of the isolated vertices in $G$ have any influence in rigid expansions, so they should not be considered. Also, whenever $A$ contains a leaf is convenient to ignore them; the unique neighbor of a leaf, which we will call \textit{petioles} should be automatically added in the first expansion an then it does not contribute to uniquely determine new vertices. This means that the input should be replaced with:
+$$A' = A \cup \{u: \exists x, N(x)=\{u\}\} - \{v: deg(v)\leq 1 \},$$
 and add them again by the end of the expansions. This will be particularly helpful for small values of $p$.
-\item \textbf{Relative size of $A$.} In Step 2, if $A$ is big enough is faster to check if a vertex outside of $A$ can be uniquely determinate by a subset of $A$. This can reduce dramatically the execution time when $p$ is small; it reduce the size of revisions by taking only the \textit{effective} part of $A$, this is convenient to do whenever
-$$k\cdot log(2) > log(n-k) + (kp)\cdot log(2)$$
-where $k$ is the size of $A$
+\item \textbf{Relative size of $A$.} In Step 2, if $A$ is big enough is faster to check if a vertex outside of $A$ can be uniquely determinate by a subset of $A$. This can reduce dramatically the execution time when $p$ is small; it reduces the size of revisions by taking only the \textit{effective} part of $A$, this is convenient to do whenever
+$$k\cdot log(2) > log(n-k) + (kp)\cdot log(2),$$
+where $k$ is the size of $A$.
 
-\item \textbf{Restriction to effective subsets}. Calculations in Chapter \ref{Chapter2} showed that some subsets are more likely to generate rigid expansions than others. This depend on the parameters of the space and the size of the subsets. If we restrict verifications to these effective subsets we can reduce the number of verifications.
+\item \textbf{Restriction to effective subsets}. Calculations in chapter \ref{Chapter2} showed that some subsets are more likely to generate rigid expansions than others. This depends on the parameters of the space and the size of the subsets. If we restrict verifications to these effective subsets we can reduce the number of verifications.
 \end{enumerate}
 
-With these optimizations we obtain the following algorithm
+With these optimizations we obtain the following algorithm:
 
 \begin{cajita}
 \textbf{Optimized Rigid Expansions Algorithm} \hfill \break
@@ -85,75 +85,75 @@ With these optimizations we obtain the following algorithm
 \begin{tabular}{ l l }
 \texttt{Input:} &  \texttt{Random graph $G$ (dictionary),} \\
                 &  \texttt{set of vertices $A$ (array),} \\
-                &  \texttt{$n$(int) and $p$(float)} \\
-\texttt{Output:} & \texttt{Set of vertices obtained after expanding $A$ (array)} \\
+                &  \texttt{$n$(int) and $p$(float)}. \\
+\texttt{Output:} & \texttt{Set of vertices obtained after expanding $A$ (array)}. \\
 \end{tabular}
 \begin{enumerate}
-\item Remove isolated vertices and replace $A$ with $A'$
+\item Remove isolated vertices and replace $A$ with $A'$.
 \item Calculate the range of effective subsets.\hfill \break
 If $k\cdot log(2) > log(n-k) + (kp)\cdot log(2)$: \hfill \break
 \hphantom{12} For every $v\in V-A$:\hfill \break
 \hphantom{1234} Take $C = A\cap N(v)$ and for every $B$, effective subset of C:\hfill \break
 \hphantom{123456} If $\bigcap\limits_{b\in B} N(b) = v$ and $v\not\in A\cup N$: \hfill \break
-\hphantom{12341234} Add $v$ to $N$
+\hphantom{12341234} Add $v$ to $N$.
 
 Otherwise:\hfill \break
 \hphantom{12} For every $B$, effective subset of A:\hfill \break
 \hphantom{1234} If $\bigcap\limits_{b\in B} N(b) = v$ and $v\not\in A\cup N$: \hfill \break
-\hphantom{123456} Add $v$ to $N$
+\hphantom{123456} Add $v$ to $N$.
 
 \item If $N$ is not empty: \hfill \break
 \hphantom{12} Replace $A$ with $A\cup N$, initialize $N$ as empty and return to step 3. \hfill \break
       Otherwise:\hfill \break
-\hphantom{12} Return $A\cup\{v: deg(v)\leq 1 \}$
+\hphantom{12} Return $A\cup\{v: deg(v)\leq 1 \}$.
 \end{enumerate}
 \end{cajita}
 
 \section{Time execution comparison}
-The task of finding the first rigid expansion of $A\subset V$ of size $k$ in $G\in\G(n,p)$ depends on $n,p,k$. To keep track of the enhancements implemented we measured the execution time varying the parameters.
+The task of finding the first rigid expansion of $A\subset V$ of size $k$ in $G\in\G(n,p)$ depends on $n,p,k$. To keep track of the enhancements implemented we measured the execution time, varying the parameters.
 
-For each collection of $n, p$ and $k$ we calculated the mean execution time for 30 different rigid expansions, with and without optimizations. We took $k$ in some proportion of $n$, explicitly: $1/4$, $1/2$ and $3/4$. 
+For each collection of $n, p$, and $k$ we calculated the mean execution time for 30 different rigid expansions, with and without optimizations. We took $k$ in some proportion of $n$, explicitly: $1/4$, $1/2$ and $3/4$. 
 
 Having a larger $n$ impacts heavily when executing the non-optimized algorithm and even in certain thresholds the enhancement algorithms still take to much time. Also, considering the nature of rigid expansions and that we must execute multiple tests for each collection of parameters, $n$ is fixed to be small, 20 in this case. 
 
-Results are presented in Figure \ref{fig:executionTimesRigidExpansion}
+Results are presented in Figure \ref{fig:executionTimesRigidExpansion}.
 
 \begin{figure}[h!]
 	\centering
 	\includegraphics[scale=0.45]{Python/Figures/Time-execution-rigid-expansions.png}
-	\caption{Mean execution time varying $n, p$ and $k$ for 30 rigid expansions. Measured in ms }
+	\caption{Mean execution time varying $n, p$ and $k$ for 30 rigid expansions. Measured in ms.}
 	\label{fig:executionTimesRigidExpansion}
 \end{figure}
 
-Notice that this enhancements have an important impact in reducing the execution time. The results presented in Chapter \ref{Chapter2} were obtained with these optimizations, so we can also conclude that accuracy is not compromised.
+Notice that these enhancements have an important impact on reducing the execution time. The results presented in Chapter \ref{Chapter2} were obtained with these optimizations, so we can also conclude that accuracy is not compromised.
 
-We expect to see an exponential behaviour for the execution time. To have a better comparison we can use the logarithmic scale.
+We expect to see an exponential behavior for the execution time. To have a better comparison we can use the logarithmic scale.
 
 Results in log scale are presented in Figure \ref{fig:executionTimesRigidExpansionLog}
 
 \begin{figure}[h!]
 	\centering
 	\includegraphics[scale=0.45]{Python/Figures/Time-execution-rigid-expansions-log-scale.png}
-	\caption{Mean execution time varying $n, p$ and $k$ for 30 rigid expansions. Measured in ms. Log scale }
+	\caption{Mean execution time varying $n, p$ and $k$ for 30 rigid expansions. Measured in ms. log scale.}
 	\label{fig:executionTimesRigidExpansionLog}
 \end{figure}
 
-Notice that optimizations have more impact for lower values of $p$, this sounds reasonable giving that the firsts proposed optimizations are explicitly helpful for sparse graphs. 
+Notice that optimizations have more impact for lower values of $p$, this sounds reasonable given that the firsts proposed optimizations are explicitly helpful for sparse graphs. 
 
-Increasing $k$ has a big impact in performance that corresponds with still having to search among an exponentially bigger number of subsets. Even using the second and third optimization we are still obtaining the same exponential behaviour.
+Increasing $k$ has a big impact on performance that corresponds with still having to search among an exponentially bigger number of subsets. Even using the second and third optimization we are still obtaining the same exponential behavior.
 
-Further optimizations can be performed, such as excluding the parts of $G$ that are not connected with vertices of $A$, nevertheless this will only will have impact in sparse graphs as well.
+Further optimizations can be implemented, such as excluding the parts of $G$ that are not connected with vertices of $A$, nevertheless, this will only have an impact in sparse graphs as well.
 
 \section{Conclusions}
 
-Probabilistic optimization and the understanding the combinatorial nature of rigid expansions allowed us to execute experiments for larger graphs that otherwise could not have been performed.
+We could not have done experiments on larger graphs without probabilistic optimizations. The understanding of the combinatorial nature of rigid expansions was also key.
 
-In general, the use of probability theory in computational has demonstrated to be powerful and efficient. Algorithms based in random sampling provide state-of-the-art techniques due to their great degree of flexibility and reliability. 
+In general, the use of probability theory in computational has demonstrated to be powerful and efficient. Algorithms based on random sampling provide state-of-the-art techniques due to their great degree of flexibility and reliability. 
 
 To name a few:
 \begin{itemize}
 \item The PageRank algorithm was the first method used by Google to order search results \cite[Page 99]{pageRank}. It outputs a probability distribution used to represent the likelihood that a person randomly clicking on links will arrive at any particular page.
-\item In motion planning, the use of Rapidly-exploring random trees (RRTs) are one of the most successful algorithms \cite[Alcazar 15]{Alcazar15}. Problems in motion planning consist on finding a collision-free path that connects an initial configuration of geometric bodies to a final goal configuration. A RRT is a rooted tree that grows from a starting configuration by using random samples from the search space.
+\item In motion planning, the use of Rapidly-exploring random trees (RRTs) are one of the most successful algorithms \cite[Alcazar 15]{Alcazar15}. Problems in motion planning consist of finding a collision-free path that connects an initial configuration of geometric bodies to a final goal configuration. A RRT is a rooted tree that grows from a starting configuration by using random samples from the search space.
 \end{itemize}
 
 But it also works in the opposite direction, the use of computational tools can bring value for theoretical means. For theoretical means it has allowed, for example, to verify whether the established conditions in a probabilistic model are sharp enough (\cite[Aronshtam 13]{Meshulam13}).
