@@ -6,7 +6,7 @@
 
 \lhead{Appendix A. \emph{The generate algorithm}} % Change X to a consecutive letter; this is for the header on each page - perhaps a shortened title
 
-In this section we describe the algorithm due to \cite[Broder 89]{Broder89}. Given a not directed graph $G$ with $n$ vertices it produces a maximal tree of $G$ sampled uniformly among all the possibles. For almost every graph the expected executed time of the algorithm is $O(n\cdot log(n) )$ for each tree and O($n^{3}$) in the worst cases. 
+In this section we describe the algorithm due to \cite[Broder 89]{Broder89}. Given a not directed graph $G$ with $n$ vertices, it produces a maximal tree of $G$ sampled uniformly among all the possible ones. For almost every graph the expected executed time of the algorithm is $O(n\cdot log(n) )$ for each tree and O($n^{3}$) in the worst cases. 
 
 One of the first algorithms published for this problem has execution time $O (n^{5})$. It is based on the fact that the total number of directed trees in a graph can be explicitly calculated through a determinant of $n \times n$ size. The algorithm considers the edges of the graph labeled from $1$ to $m$, each maximal tree is labeled by the set of its edges. This induces a lexicographic order in the set of trees and the same tree can be found by calculating at most $m$ determinants. Further improvements by \cite[Colbourn 89]{CDM88} reduce the number of calculations, thus reducing the execution time to $O(n^3)$ or $O(L(n))$, where $L(n)$ is the execution time of multiplying matrices of size $n\times n$, but the new algorithms turn out to be far more complicated.
 
@@ -38,11 +38,11 @@ Let $M$ be a irreducible Markov chain in $n$ states with stationary distribution
 where $\omega(T) = \prod_{a\in A(T)}\omega(a)$, this means that the weight of the a directed tree is defined as the product of the weight of the edges of the tree.
 \end{theorem}
 
-We define the (\textit{forward tree}) at time $t$, $F_{t}$ as follows: Let $I_{t}$ be the set of states visited before time $t+1$. For every $i\in I_{t}$, let $p(i,t)$ the first time that the state $i$ was visited. The root of the tree $F_{t}$ is $\{(X_{p(i,t)},X_{p(i,t)-1}) | i\in I_{t}-X_{0}\}$, where $(X_{t})_{t\in \N}$ corresponds to the Markov chain given by the random walk. In other words $F_{t}$ is constructed by overlapping the first entrance at each state with inverted orientation. Clearly $F_{t}$ is a directed tree with root where each edge points from the leaves to the root.
+We define the (\textit{forward tree}) at time $t$, $F_{t}$ as follows: Let $I_{t}$ be the set of states visited before time $t+1$. For every $i\in I_{t}$, let $p(i,t)$ be the first time that the state $i$ was visited. The root of the tree $F_{t}$ is $\{(X_{p(i,t)},X_{p(i,t)-1}) | i\in I_{t}-X_{0}\}$, where $(X_{t})_{t\in \N}$ corresponds to the Markov chain given by the random walk. In other words $F_{t}$ is constructed by overlapping the first entrance at each state with inverted orientation. Clearly $F_{t}$ is a directed tree with root where each edge points from the leaves to the root.
 
 Let $C$ be the \textit{covering time}, i.e. the first time that all the states where visited. Clearly for $t\geq C$ the tree $F_{t}$ is a directed maximal tree and $F_{t}=F_{C}$. Note that with the past definition, the random walk $\{X_{t}\}$ in the vertices of $G_{M}$ induces a Markov chain $\{F_{t}\}$ in the space of all directed trees of $G_{M}$, it is called forward trees chain.
 
-For this chain, every no maximal tree is a transitive state and every maximal tree is an absorbent state. Even more, the next theorem establishes the distribution of  $F_{C}$.
+For this chain, every non-maximal tree is a transitive state and every maximal tree is an absorbent state. Even more, the next theorem establishes the distribution of  $F_{C}$.
 
 \begin{theorem}
 With the same notation and conditions of the past theorem. Let $F_{C}$ be the forward tree in time $C$. Then, for any maximal directed tree with root $T$ of $G_{M}$ we have
@@ -53,7 +53,7 @@ $$\P(F_{C} = T) = \frac{\prod_{(i,j)\in T} P_{i,j}}{\sum_{T\in T(G_{M})} \prod_{
 (Proof of the \texttt{Generate} algorithm) Let $M$ be a simple random walk in a connected non-directed graph $G = (V, E)$ starting from a vertex $s$ and $G_{M}$ the directed graph associated to $M$ and covering time $C$ for $G$. Starting from the stationary distribution, we have that $F_{C}$, without considering direction, is a maximal tree of $G$ with random uniform distribution among all the maximal possible trees of $G$.
 \end{coro}
 
-This algorithm can be implemented using \texttt{Python}. Fixing $G$ as the complete graph $K_{n}$ it was possible, using the generate algorithm, to sample uniformly from the set of maximal trees with $n$ vertices. In figure \ref{fig:RandromTrees} appear a set of trees obtained with this method, which are drawn using the function \texttt{draw$\_$random} of the \texttt{NetworX} library.
+This algorithm can be implemented using \texttt{Python}. Fixing $G$ as the complete graph $K_{n}$ it was possible, using the generate algorithm, to sample uniformly from the set of maximal trees with $n$ vertices. In figure \ref{fig:RandromTrees} appears a set of trees obtained with this method, which are drawn using the function \texttt{draw$\_$random} of the \texttt{NetworX} library.
 
 \begin{figure}[h!]
 	\centering
