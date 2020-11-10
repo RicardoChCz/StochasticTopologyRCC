@@ -241,7 +241,7 @@
       {\large barcenas@matmor.unam.mx \par}
       \bigskip
 
-      {\large MORELIA, MICH., May 2020 \par}
+      {\large MORELIA, MICH., October 2020 \par}
       \medskip
       
       \begin{figure}[h!]
@@ -305,7 +305,7 @@
       {\large barcenas@matmor.unam.mx \par}
       \bigskip
 
-      {\large MORELIA, MICH., May 2020 \par}
+      {\large MORELIA, MICH., October 2020 \par}
       \medskip
       
     \end{center}
@@ -349,15 +349,7 @@
   \null\vfil
   \begin{center}
     \setlength{\parskip}{0pt}
-    {\normalsize \UNIVNAME \par} % University name in capitals
-    \bigskip
     {\huge{\textit{Resumen}} \par}
-    \bigskip
-    {\normalsize Posgrado Conjunto en Ciencias Matem\'aticas \par} % Department name
-     \medskip
-    {\normalsize\bf \@title \par} % Thesis title
-    \medskip
-    {\normalsize by \authornames \par} % Author name
     \bigskip
   \end{center}
 }
